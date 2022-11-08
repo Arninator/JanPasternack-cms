@@ -3,8 +3,8 @@ import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
 import { reduce } from "lodash";
-import "./style.module.css"
-import SPDLogoWhite from "./src/img/SPD_Logo_Weiss.png"
+import SPDLogoWhite from "../img/SPD_Logo_Weiss.png";
+import "../components/style.css";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -41,7 +41,14 @@ const Navbar = class extends React.Component {
       <header>
         <div id="menu-div">
           <nav>
-            <img className="spd-logo black" src={ SPDLogoWhite } alt="SPD Logo" />
+            <img 
+              className="spdLogo"
+              src={ SPDLogoWhite } 
+              alt="SPD Logo"
+              style={{
+                diplay: "flex"
+              }}
+            />
               <ul className="menu-column">
                 <li>Programm</li>
                 <li>Über</li>
