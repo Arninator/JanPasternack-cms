@@ -103,7 +103,7 @@
     --spd-red: rgb(227, 0, 15);
     --background-color: rgb(240, 240, 240);
 
-    --cover-img: local('imgs\janCover.jpg');
+    /* --cover-img: local('imgs\janCover.jpg'); */
 }
 * {
     margin: 0px;
@@ -117,22 +117,28 @@
     list-style: none;
     transition: ease 0.5s;
 }
-body {
+/* body {
     position:absolute;
     background-color: var(--background-color);
-}
+} */
 header {
-    position: sticky;
+    /* position: sticky;
     position: -webkit-sticky;
     top: 0;
 
-    z-index: 10;
+    z-index: 10; */
 }
 #menu-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
+    z-index: 10;
     
     width: 100%;
 }
