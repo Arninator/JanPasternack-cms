@@ -4,7 +4,14 @@ import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
 import { reduce } from "lodash";
 import SPDLogoWhite from "../img/SPD_Logo_Weiss.png";
+import JanCover from "../img/janCover.jpg"
 import "../components/style.css";
+
+// const { JSDOM } = require( "jsdom" );
+// const { window } = new JSDOM( "" );
+// const $ = require( "jquery" )( window );
+
+import $ from "jquery";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -13,6 +20,75 @@ const Navbar = class extends React.Component {
       active: false,
       navBarActiveClass: "",
     };
+  }
+
+  componentDidMount () {
+
+    // apiCalendar.handleAuthClick();
+    fetch("https://www.googleapis.com/calendar/v3/calendars/ar.maxnold@gmail.com/events?key=AIzaSyB7GfNxM4TXXtDue-64TMEzOViC8dTIgmA")
+    // fetch("https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyD3HySl2mo7m_5cjUwhltGmDt29yJ4U5uU")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            termine: result.items
+          });
+        },
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+
+
+    $(document).ready(function() {
+      $(window).scroll(function() {
+
+          /* sticky menu */
+          $("#menu-div").each(function() {
+              var menu_top = $(this).offset().top;
+              var window_top = $(window).scrollTop();
+
+              if (window_top > ($(window).height()) / 90.) {
+                  $(this).css("background-color", "rgb(227, 0, 15)");
+                  $("ul").addClass("menu-row");
+                  $("ul").removeClass("menu-column");
+                  $(".spd-logo").css("height", "3vh");
+              } else {
+                  $(this).css("background-color", "transparent");
+                  $("ul").addClass("menu-column");
+                  $("ul").removeClass("menu-row");
+                  $(".spd-logo").css("height", "5vh");
+              }
+          })
+
+          /* position of fade in and out objects */
+          $('.fade-in').each(function(index){
+              
+              var object_top = $(this).offset().top;
+              var object_bottom = $(this).offset().top + $(this).outerHeight();
+              var window_top = $(window).scrollTop();
+              var window_bottom = $(window).scrollTop() + $(window).height();
+              
+              /* if its half seen, fade it in */
+              if (window_bottom - object_top > ($(this).outerHeight() / 2.)){
+                  $(this).css("opacity", "1");
+              } else {
+                  $(this).css("opacity", "0");
+              }
+          }); 
+      
+      });
+      
+      // $(".spd-logo").hover(function() {
+      //     $(".spd-logo").attr("src", logoBlack);
+      // }, function() {
+      //     $(".spd-logo").attr("src", logoWhite);
+      // });
+    });
   }
 
   toggleHamburger() {
@@ -39,7 +115,28 @@ const Navbar = class extends React.Component {
     return (
       //NEW
       <header>
-        <div id="menu-div">
+        <img 
+          src={ JanCover}
+          style={{
+            gridArea: "1/1",
+            // You can set a maximum height for the image, if you wish.
+            maxHeight: "100vh",
+          }}
+          layout="fullWidth"
+          // You can optionally force an aspect ratio for the generated image
+          aspectratio={3 / 1}
+        />
+        <div 
+          id="menu-div"
+          style={{
+            // By using the same grid area for both, they are stacked on top of each other
+            gridArea: "1/1",
+            position: "relative",
+            // This centers the other elements inside the hero component
+            placeItems: "center",
+            display: "grid",
+          }}
+        >
           <nav>
             <img 
               className="spdLogo"
