@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { h3 } from "./style.module.css";
 
 export default function FullWidthImage(props) {
   const {
