@@ -52,7 +52,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <img 
+      {/* <img 
         src={ JanCover }
         objectFit={"cover"}
         // objectPosition={imgPosition}
@@ -68,7 +68,7 @@ const TemplateWrapper = ({ children }) => {
         // This is a presentational image, so the alt should be an empty string
         alt=""
         // formats={["auto", "webp", "avif"]}
-      />
+      /> */}
       <div>{children}</div>
       <Footer />
     </div>
