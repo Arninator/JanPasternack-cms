@@ -110,23 +110,23 @@
     padding: 0px;
 
     /* border: 1px solid black; */
-    border-radius: 3px;
+    border-radius: 0px;
 
     font-family: 'SPD TheSans Versal', monospace;
 
     list-style: none;
     transition: ease 0.5s;
 }
-/* body {
-    position:absolute;
-    background-color: var(--background-color);
-} */
+body {
+    padding-top: 10vh;
+}
 header {
-    /* position: sticky;
+    position: sticky;
     position: -webkit-sticky;
     top: 0;
 
-    z-index: 10; */
+    width: 100%;
+    z-index: 1;
 }
 #menu-div {
     display: flex;
@@ -134,12 +134,8 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-
-    z-index: 10;
     
+
     width: 100%;
 }
 .spdLogo {
@@ -215,14 +211,7 @@ li:hover {
     cursor: pointer;
 }
 
-#cover-img {
-    position: relative;
-    top: -30vh;
 
-    width: 100%;
-
-    border-radius: 0%;
-}
 .fade-in {
     opacity: 0;
 }

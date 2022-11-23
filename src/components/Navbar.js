@@ -67,22 +67,22 @@ const Navbar = class extends React.Component {
 
           /* position of fade in and out objects */
           $('.fade-in').each(function(index){
-              
+
               var object_top = $(this).offset().top;
               var object_bottom = $(this).offset().top + $(this).outerHeight();
               var window_top = $(window).scrollTop();
               var window_bottom = $(window).scrollTop() + $(window).height();
-              
+
               /* if its half seen, fade it in */
               if (window_bottom - object_top > ($(this).outerHeight() / 2.)){
                   $(this).css("opacity", "1");
               } else {
                   $(this).css("opacity", "0");
               }
-          }); 
-      
+          });
+
       });
-      
+
       // $(".spd-logo").hover(function() {
       //     $(".spd-logo").attr("src", logoBlack);
       // }, function() {
@@ -114,33 +114,22 @@ const Navbar = class extends React.Component {
   render() {
     return (
       //NEW
-      <header>
-        <img 
-          src={ JanCover}
-          style={{
-            gridArea: "1/1",
-            // You can set a maximum height for the image, if you wish.
-            maxHeight: "100vh",
-          }}
-          layout="fullWidth"
-          // You can optionally force an aspect ratio for the generated image
-          aspectratio={3 / 1}
-        />
-        <div 
+      <header
+        style={{
+
+        }}>
+        <div
           id="menu-div"
           style={{
-            // By using the same grid area for both, they are stacked on top of each other
-            gridArea: "1/1",
-            position: "relative",
-            // This centers the other elements inside the hero component
-            placeItems: "center",
-            display: "grid",
+            position: "-webkit-sticky",
+            position: "sticky",
+            top: "0",
           }}
         >
           <nav>
-            <img 
+            <img
               className="spdLogo"
-              src={ SPDLogoWhite } 
+              src={ SPDLogoWhite }
               alt="SPD Logo"
               style={{
                 diplay: "flex"

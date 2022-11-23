@@ -6,6 +6,8 @@ import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
+import JanCover from "../img/janCover.jpg"
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
@@ -50,6 +52,23 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
+      <img 
+        src={ JanCover }
+        objectFit={"cover"}
+        // objectPosition={imgPosition}
+        style={{
+          height: "100%",
+          width: "auto",
+
+          position: "absolute",
+          top: "0"
+        }}
+        // You can optionally force an aspect ratio for the generated image
+        aspectratio={3 / 1}
+        // This is a presentational image, so the alt should be an empty string
+        alt=""
+        // formats={["auto", "webp", "avif"]}
+      />
       <div>{children}</div>
       <Footer />
     </div>
