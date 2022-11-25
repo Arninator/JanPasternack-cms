@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
-import logo from "../img/SPD_Logo_Schwarz_RGB.png";
+import logo from "../img/SPD_Logo_Weiss.png";
+import logoBlack from "../img/SPD_Logo_Schwarz_RGB.png";
 import { reduce } from "lodash";
-// import "../components/style.css";
+import "../components/style.css";
 
 // const { JSDOM } = require( "jsdom" );
 // const { window } = new JSDOM( "" );
@@ -46,20 +47,17 @@ const Navbar = class extends React.Component {
       $(window).scroll(function() {
 
           /* sticky menu */
-          $("#menu-div").each(function() {
+          $(".navbar").each(function() {
               var menu_top = $(this).offset().top;
               var window_top = $(window).scrollTop();
 
               if (window_top > ($(window).height()) / 90.) {
                   $(this).css("background-color", "rgb(227, 0, 15)");
-                  $("ul").addClass("menu-row");
-                  $("ul").removeClass("menu-column");
-                  $(".spd-logo").css("height", "3vh");
+                  $(".navbar-item").css("color", "white");                  
               } else {
                   $(this).css("background-color", "transparent");
-                  $("ul").addClass("menu-column");
-                  $("ul").removeClass("menu-row");
-                  $(".spd-logo").css("height", "5vh");
+                  $("#spd-logo").prop.src = { logo };
+                  $(".navbar-item").css("color", "black");
               }
           })
 
@@ -86,6 +84,12 @@ const Navbar = class extends React.Component {
       // }, function() {
       //     $(".spd-logo").attr("src", logoWhite);
       // });
+    });
+
+    $("#spd-logo").hover(function() {
+      $( this ).attr("src", logoBlack);
+    }, function() {
+      $( this ).attr("src", logo);
     });
   }
 
@@ -118,10 +122,10 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
         style={{
           position: "sticky",
-          top: "0px",
+          top: "1px",
           margin: "0",
           padding: "0",
-          
+          backgroundColor: "transparent",
         }}
       >
         <div 
@@ -134,14 +138,28 @@ const Navbar = class extends React.Component {
             width: "100vw",
           }}
           >
-          <div className="navbar-brand">
+          <div 
+            className="navbar-brand container"
+          >
             <a 
               href="https://www.spd.de/" 
               className="navbar-item" 
-              title="Logo"
+              title="SPD-Logo"
               target="_blank"
+              style={{
+                margin: "0 5vw",
+                padding: "2vh 2vw",
+                height: "7vh",
+                backgroundColor: "transparent"
+                // backgroundColor: "rgb(227, 0, 15)"
+              }}
             >
-              <img src={logo} alt="SPD Logo" />
+              <img
+                id="spd-logo"
+                className="spd-logo-class"
+                src={ logo } 
+                alt="SPD Logo"
+              />
             </a>
             {/* Hamburger menu */}
             <div
@@ -160,11 +178,16 @@ const Navbar = class extends React.Component {
           <div
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
-            style={{
-              backgroundColor: "red",
-            }}
           >
-            <div className="navbar-start has-text-centered">
+            <div 
+              className="navbar-start has-text-centered"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-around",
+
+                width: "100%"
+              }}>
               <Link className="navbar-item" to="/about">
                 About
               </Link>
@@ -180,11 +203,38 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/contact/examples">
                 Form Examples
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                TESTTESTTEST
-              </Link>
+              <div
+                className="navbar-item"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "flex-end"
+                }}
+              >
+                <a 
+                  className="navbar-item" 
+                  href="https://www.instagram.com"
+                  target="_blank"
+                >
+                  <i className="fa fa-instagram"></i>
+                </a>
+                <a 
+                  className="navbar-item" 
+                  href=""
+                  target="_blank"
+                >
+                  <i className="fa fa-facebook"></i>
+                </a>
+                <a 
+                  className="navbar-item" 
+                  href=""
+                  target="_blank"
+                >
+                  <i className="fa fa-linkedin"></i>
+                </a>
+              </div>
             </div>
-            <div className="navbar-end has-text-centered">
+            {/* <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
                 href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
@@ -195,7 +245,7 @@ const Navbar = class extends React.Component {
                   <img src={github} alt="Github" />
                 </span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
