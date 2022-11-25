@@ -53,11 +53,26 @@ const Navbar = class extends React.Component {
 
               if (window_top > ($(window).height()) / 90.) {
                   $(this).css("background-color", "rgb(227, 0, 15)");
-                  $(".navbar-item").css("color", "white");                  
+                  // $(this).css("background", "linear-gradient(to bottom, rgb(227, 0, 15) 0%, rgba(255, 255, 255, 0) 100%)");
+                  
+                  $(".navbar-item").css("color", "white !important");
+
+                  $("#spd-logo").attr("src", logo);
+                  $("#spd-logo").hover(function() {
+                    $( this ).attr("src", logoBlack);
+                  }, function() {
+                    $( this ).attr("src", logo);
+                  });                  
               } else {
                   $(this).css("background-color", "transparent");
-                  $("#spd-logo").prop.src = { logo };
                   $(".navbar-item").css("color", "black");
+                  
+                  $("#spd-logo").attr("src", logoBlack);
+                  $("#spd-logo").hover(function() {
+                    $( this ).attr("src", logo);
+                  }, function() {
+                    $( this ).attr("src", logoBlack);
+                  });
               }
           })
 
@@ -85,11 +100,10 @@ const Navbar = class extends React.Component {
       //     $(".spd-logo").attr("src", logoWhite);
       // });
     });
-
     $("#spd-logo").hover(function() {
-      $( this ).attr("src", logoBlack);
-    }, function() {
       $( this ).attr("src", logo);
+    }, function() {
+      $( this ).attr("src", logoBlack);
     });
   }
 
@@ -122,7 +136,8 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
         style={{
           position: "sticky",
-          top: "1px",
+          // position: "-webkit-sticky",
+          top: "0",
           margin: "0",
           padding: "0",
           backgroundColor: "transparent",
@@ -157,7 +172,7 @@ const Navbar = class extends React.Component {
               <img
                 id="spd-logo"
                 className="spd-logo-class"
-                src={ logo } 
+                src={ logoBlack } 
                 alt="SPD Logo"
               />
             </a>

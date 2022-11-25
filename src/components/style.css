@@ -113,7 +113,7 @@
     border-radius: 0px;
 
     font-family: 'SPD TheSans Versal', monospace;
-    font-weight: 100;
+    font-weight: 800;
 
     list-style: none;
     transition: ease 0.5s;
@@ -125,19 +125,18 @@
 #cover-img::after {
     display: block;
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 20%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 20%);
     margin-top: -15vh;
     height: 100vh;
     width: 100%; 
     content: '';
 }
 .navbar-item {
-    color: black !important;
-    font-size: 1.5vh;
-    font-weight: 400;
+    color: black;
+    font-size: 2vh;
+    font-weight: 100;
 }
 .navbar-item:hover {
-    text-decoration-color: black;
     color: rgb(227, 0, 15) !important;
     /* font-weight: 100; */
 }
