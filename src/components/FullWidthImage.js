@@ -30,14 +30,10 @@ export default function FullWidthImage(props) {
             style={{
               gridArea: "1/1",
               // You can set a maximum height for the image, if you wish.
-              height: height,
+              // height: height,
               width: "100%",
+              // height: "auto",
             }}
-            // You can optionally force an aspect ratio for the generated image
-            aspectratio={3 / 1}
-            // This is a presentational image, so the alt should be an empty string
-            alt=""
-            formats={["auto", "webp", "avif"]}
           />
         ) : (
           <GatsbyImage
@@ -47,7 +43,14 @@ export default function FullWidthImage(props) {
             style={{
               gridArea: "1/1",
               // You can set a maximum height for the image, if you wish.
-              maxHeight: height,
+              // OLD
+              // maxHeight: height,
+
+              // NEW
+              // position: "absolute",
+              // zIndex: "10",
+              // top: "0",
+              objectPosition: "-100px"
             }}
             layout="fullWidth"
             // You can optionally force an aspect ratio for the generated image
@@ -57,7 +60,7 @@ export default function FullWidthImage(props) {
             formats={["auto", "webp", "avif"]}
           />
         )}
-        {(title || subheading) && (
+        {/* {(title || subheading) && (
           <div
             style={{
               // By using the same grid area for both, they are stacked on top of each other
@@ -67,9 +70,9 @@ export default function FullWidthImage(props) {
               placeItems: "center",
               display: "grid",
             }}
-          >
+          > */}
             {/* Any content here will be centered in the component */}
-            {title && (
+            {/* {title && (
               <h1
                 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
                 style={{
@@ -101,7 +104,7 @@ export default function FullWidthImage(props) {
               </h3>
             )}
           </div>
-        )}
+        )} */}
       </div>
     </React.Fragment>
   );

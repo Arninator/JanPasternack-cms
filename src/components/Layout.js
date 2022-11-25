@@ -51,24 +51,12 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
-      {/* <img 
-        src={ JanCover }
-        objectFit={"cover"}
-        // objectPosition={imgPosition}
+      <div 
+        id="placeholder"
         style={{
-          height: "100%",
-          width: "auto",
-
-          position: "absolute",
-          top: "0"
-        }}
-        // You can optionally force an aspect ratio for the generated image
-        aspectratio={3 / 1}
-        // This is a presentational image, so the alt should be an empty string
-        alt=""
-        // formats={["auto", "webp", "avif"]}
-      /> */}
+          height: "5vh"
+        }}></div>
+      <Navbar />
       <div>{children}</div>
       <Footer />
     </div>

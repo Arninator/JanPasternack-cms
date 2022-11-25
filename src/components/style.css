@@ -120,7 +120,7 @@
 body {
     padding-top: 10vh;
 }
-header {
+.navbar {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
