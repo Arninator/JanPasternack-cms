@@ -52,7 +52,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="content">
 
-                    {/* <PreviewCompatibleImage imageInfo={mainpitch} /> */}
+                    {/* <PreviewCompatibleImage imageInfo={mainpitch.image} /> */}
 
                     <div className="tile">
                       <h1 className="title">{mainpitch.title}</h1>
