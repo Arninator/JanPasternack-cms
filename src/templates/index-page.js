@@ -13,7 +13,6 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
-  image1,
   title,
   heading,
   subheading,
@@ -53,8 +52,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="content">
 
-                    <PreviewCompatibleImage imageInfo={mainpitch.image1} />
-                    
+                    {/* <PreviewCompatibleImage imageInfo={mainpitch} /> */}
 
                     <div className="tile">
                       <h1 className="title">{mainpitch.title}</h1>

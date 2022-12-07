@@ -54,7 +54,12 @@ export const ProductPageTemplate = ({
                     <div className="tile">
                       <div className="tile is-parent is-vertical">
                         <article className="tile is-child">
-                          <PreviewCompatibleImage imageInfo={main.image1} />
+                          <PreviewCompatibleImage 
+                            imageInfo={main.image1}
+                            style={{
+                              borderRadius: "1px solid red"
+                            }}
+                            />
                         </article>
                       </div>
                       <div className="tile is-parent">
