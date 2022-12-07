@@ -50,7 +50,6 @@ export default function FullWidthImage(props) {
               // position: "absolute",
               // zIndex: "10",
               // top: "0",
-              objectPosition: "-100px"
             }}
             layout="fullWidth"
             // You can optionally force an aspect ratio for the generated image
