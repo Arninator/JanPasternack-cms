@@ -13,9 +13,6 @@ mainpitch:
     sustainable farmers and make sure part of the profits are reinvested in
     their communities.
 <<<<<<< HEAD
-  image1:
-    image: /img/tutorials.png
-    alt: askndnsdaokvn
 =======
   image: /img/tutorials.png
   image1:
