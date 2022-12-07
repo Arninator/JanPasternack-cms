@@ -6,8 +6,9 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
+
 import janCover from "../img/janCover.jpg";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -50,6 +51,9 @@ export const IndexPageTemplate = ({
               <div className="column is-12">
                 <div className="content">
                   <div className="content">
+
+                    <PreviewCompatibleImage imageInfo={mainpitch} />
+
                     <div className="tile">
                       <h1 className="title">{mainpitch.title}</h1>
                     </div>
