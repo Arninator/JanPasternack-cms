@@ -56,7 +56,7 @@ export const IndexPageTemplate = ({
                   <div className="content">
 
                     <div>
-                      {/* <FullWidthImage src={ heroImage } /> */}
+                      <FullWidthImage src={ heroImage } />
                       <img 
                         src={ heroImage }
                         
