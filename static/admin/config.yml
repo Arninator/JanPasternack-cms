@@ -56,12 +56,19 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Image, name: image, widget: image },
+                  {
+                    label: HelloImage,
+                    name: helloImage,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: text },
                 ],
             }
-          - { label: PosingImage, name: posingImage, widget: image },
           - { label: Description, name: description, widget: string }
           - {
               label: Intro,
