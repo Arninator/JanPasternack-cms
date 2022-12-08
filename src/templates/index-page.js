@@ -20,10 +20,9 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const heroImage = getImage(mainpitch.helloImage) || mainpitch.helloImage;
-  // const posImage = getImage(posingImage) || posingImage;
+  const heroImage = getImage(image) || image;
 
-  console.log(mainpitch.helloImage);
+  console.log(mainpitch);
 
   return (
     <div>
@@ -56,10 +55,14 @@ export const IndexPageTemplate = ({
                   <div className="content">
 
                     <div>
-                      <FullWidthImage src={ heroImage } />
                       <img 
-                        src={ heroImage }
-                        
+                        src={ mainpitch.helloImage }
+                        style={{
+                          border: "1px solid red",
+                          width: "50vw",
+                          height: "50vh",
+                          background: "red",
+                        }}
                       />
                     </div>
 
