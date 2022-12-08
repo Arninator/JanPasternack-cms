@@ -12,8 +12,9 @@ mainpitch:
     it should do good too. We source all of our beans directly from small scale
     sustainable farmers and make sure part of the profits are reinvested in
     their communities.
-  image: /img/coffee.png
-  alt: Alternativtext
+  image:
+      alt: Alternativtext
+      image: /img/coffee.png
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
   about their java’s origin and support the farmers that grew it. We take coffee
   production, roasting and brewing seriously and we’re glad to pass that

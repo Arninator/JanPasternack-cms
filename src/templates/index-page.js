@@ -8,7 +8,6 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 import janCover from "../img/janCover.jpg";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -20,7 +19,8 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const heroImage = getImage(image) || image;
+  const heroImage = getImage(mainpitch.image) || mainpitch.image;
+  console.log(mainpitch.image);
 
   return (
     <div>
@@ -52,7 +52,9 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="content">
 
-                    {/* <PreviewCompatibleImage imageInfo={mainpitch.image} /> */}
+                    <div>
+                      <img src={ heroImage }></img>
+                    </div>
 
                     <div className="tile">
                       <h1 className="title">{mainpitch.title}</h1>
