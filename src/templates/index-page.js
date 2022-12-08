@@ -53,7 +53,7 @@ export const IndexPageTemplate = ({
                   <div className="content">
 
                     <div>
-                      <img src={ heroImage }></img>
+                      <img src={ getImage(mainpitch.image) }></img>
                     </div>
 
                     <div className="tile">
