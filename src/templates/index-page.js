@@ -9,6 +9,7 @@ import BlogRoll from "../components/BlogRoll";
 
 import janCover from "../img/janCover.jpg";
 import FullWidthImage from "../components/FullWidthImage";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -55,14 +56,27 @@ export const IndexPageTemplate = ({
                   <div className="content">
 
                     <div>
-                      <img 
-                        src={ mainpitch.helloImage }
+                      {/* <GatsbyImage
+                        image={mainpitch.helloImage}
                         style={{
                           border: "1px solid red",
                           width: "50vw",
                           height: "50vh",
                           background: "red",
+                          display: "block"
                         }}
+                        alt="{alt}"
+                      /> */}
+                      <img 
+                        src={ mainpitch.helloImage }
+                        // style={{
+                        //   border: "1px solid red",
+                        //   width: "50vw",
+                        //   height: "50vh",
+                        //   background: "red",
+                        //   display: "block"
+                        // }}
+                        // alt="bla"
                       />
                     </div>
 
@@ -165,6 +179,7 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
+          helloImage
         }
         description
         intro {
