@@ -8,6 +8,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 import janCover from "../img/janCover.jpg";
+import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -18,9 +19,12 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  posingImage
 }) => {
   const heroImage = getImage(mainpitch.image) || mainpitch.image;
-  console.log(mainpitch.image);
+  const posImage = getImage(posingImage) || posingImage;
+
+  console.log(posImage);
 
   return (
     <div>
@@ -53,7 +57,11 @@ export const IndexPageTemplate = ({
                   <div className="content">
 
                     <div>
-                      <img src={ getImage(mainpitch.image) }></img>
+                      {/* <FullWidthImage src={ heroImage } /> */}
+                      <img 
+                        src={ posImage }
+                        
+                      />
                     </div>
 
                     <div className="tile">
