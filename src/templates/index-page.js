@@ -10,6 +10,8 @@ import BlogRoll from "../components/BlogRoll";
 import janCover from "../img/janCover.jpg";
 
 import "../components/style.css";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -56,11 +58,16 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="flex row">
                     <img 
-                      src={ hello }
+                      src={ mainpitch.image }
                       style={{
                         height: "100vh",
                         width: "50vw",
                       }}
+                    />
+                    <FullWidthImage 
+                      img={heroImage}
+                      title={title}
+                      subheading={subheading} 
                     />
                     <div className="flex column">
                       <div className="tile">
