@@ -14,6 +14,7 @@ import "../components/style.css";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
+  hello,
   title,
   heading,
   subheading,
@@ -21,9 +22,9 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const heroImage = getImage(image) || image;
+  const heroImage = getImage(hello) || hello;
 
-  console.log(heroImage)
+  console.log(hello)
 
   return (
     <div>
@@ -55,12 +56,11 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="flex row">
                     <img 
-                      src={ heroImage }
-                      // style={{
-                      //   height: "100vh",
-                      //   width: "50vw",
-                      //   display: "block"
-                      // }}
+                      src={ hello }
+                      style={{
+                        height: "100vh",
+                        width: "50vw",
+                      }}
                     />
                     <div className="flex column">
                       <div className="tile">
@@ -156,6 +156,11 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        hello {
+          childImageSharp {
+            gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
           }
         }
         heading 
