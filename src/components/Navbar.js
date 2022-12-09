@@ -55,7 +55,12 @@ const Navbar = class extends React.Component {
                   $(this).css("background-color", "rgb(227, 0, 15)");
                   // $(this).css("background", "linear-gradient(to bottom, rgb(227, 0, 15) 0%, rgba(255, 255, 255, 0) 100%)");
                   
-                  $(".navbar-item").css("color", "white !important");
+                  $(".navbarItem").css("color", "white");
+                  $(".navbarItem").hover(function () {
+                    $(this).css("color", "black");
+                  }, function () {
+                    $(this).css("color", "white");
+                  });
 
                   $("#spd-logo").attr("src", logo);
                   $("#spd-logo").hover(function() {
@@ -65,7 +70,7 @@ const Navbar = class extends React.Component {
                   });                  
               } else {
                   $(this).css("background-color", "transparent");
-                  $(".navbar-item").css("color", "black");
+                  $(".navbarItem").css("color", "black");
                   
                   $("#spd-logo").attr("src", logoBlack);
                   $("#spd-logo").hover(function() {
@@ -203,45 +208,43 @@ const Navbar = class extends React.Component {
 
                 width: "100%"
               }}>
-              <Link className="navbar-item" to="/about">
+              <Link className="navbarItem flex row center" to="/about">
                 About
               </Link>
-              <Link className="navbar-item" to="/products">
+              <Link className="navbarItem flex row center" to="/products">
                 Products
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className="navbarItem flex row center" to="/blog">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbarItem flex row center" to="/contact">
                 Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
+              <Link className="navbarItem flex row center" to="/contact/examples">
                 Form Examples
               </Link>
               <div
-                className="navbar-item"
+                className="navbarItem flex row"
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
                   justifyContent: "flex-end"
                 }}
               >
                 <a 
-                  className="navbar-item" 
+                  className="navbarItem flex row center" 
                   href="https://www.instagram.com"
                   target="_blank"
                 >
                   <i className="fa fa-instagram"></i>
                 </a>
                 <a 
-                  className="navbar-item" 
+                  className="navbarItem flex row center" 
                   href=""
                   target="_blank"
                 >
                   <i className="fa fa-facebook"></i>
                 </a>
                 <a 
-                  className="navbar-item" 
+                  className="navbarItem flex row center" 
                   href=""
                   target="_blank"
                 >

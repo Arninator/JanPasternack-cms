@@ -133,12 +133,20 @@
 .column {
     flex-direction: column;
 }
-.navbar-item {
-    color: black !important;
+.center {
+    justify-content: center;
+    align-items: center;
+}
+/*
+
+*/
+.navbarItem {
+    color: black;
+    list-style: none;
+
     font-size: 2vh;
     font-weight: 400;
 }
-.navbar-item:hover {
-    color: rgb(227, 0, 15) !important;
-    /* font-weight: 100; */
+.navbarItem:hover {
+    color: rgb(227, 0, 15);
 }

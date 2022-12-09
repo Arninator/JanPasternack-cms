@@ -18,7 +18,6 @@ import { GatsbyImage } from "gatsby-plugin-image";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
-  hello,
   title,
   heading,
   subheading,
@@ -26,9 +25,8 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const heroImage = getImage(mainpitch.image) || mainpitch.image;
-
-  console.log(heroImage)
+  const heroImage = getImage(image) || image;
+  const helloImage = getImage(mainpitch.image) || mainpitch.image;
 
   return (
     <div>
@@ -60,14 +58,9 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="flex row">
                     <GatsbyImage
-                      image={ heroImage }
+                      image={ helloImage }
                       alt="{alt}"
                     />
-                    {/* <FullWidthImage 
-                      img={heroImage}
-                      title={title}
-                      subheading={subheading} 
-                    /> */}
                     <div className="flex column">
                       <div className="tile">
                         <h1 className="title">{mainpitch.title}</h1>
@@ -160,11 +153,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
-        hello {
           childImageSharp {
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
