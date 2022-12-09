@@ -41,6 +41,7 @@ export const IndexPageTemplate = ({
           style= {{
             position: "absolute",
             top: "0px",
+            zIndex: "0"
           }}
         />
       </div>
@@ -69,14 +70,20 @@ export const IndexPageTemplate = ({
                     className="flex row greyBackground fade-in section"
                     style={{
                       background: "rgb(233, 233, 233)",
-                      padding: "5% 10%",
+                      padding: "5% 15%",
+                      border: "1px solid red",
+                      zIndex: "20"
                     }}
                   >
                     <GatsbyImage
                       image={ helloImage }
                       alt="{alt}"
+                      style={{
+                        maxHeight: "50vh"
+                      }}
                     />
                     <div 
+                      id="test"
                       className="flex column"
                       style={{
                         margin: "0 5vw"
