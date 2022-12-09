@@ -118,19 +118,21 @@
     list-style: none;
     transition: ease 0.5s;
 }
-#cover-img {
-    /* width: fit-content;
-    height: fit-content; */
+/* 
+    ´´´´´´´´´´´´´´´´´´´´´´´´´´´
+        ALLGEMEINE_FLEX_KLASSEN
+        -----------------------
+    ```````````````````````````
+ */
+.flex {
+    display: flex;
 }
-/* #cover-img::after {
-    display: block;
-    position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 20%);
-    margin-top: -15vh;
-    height: 100vh;
-    width: 100%; 
-    content: '';
-} */
+.row {
+    flex-direction: row;
+}
+.column {
+    flex-direction: column;
+}
 .navbar-item {
     color: black !important;
     font-size: 2vh;

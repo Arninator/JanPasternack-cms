@@ -8,8 +8,8 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 import janCover from "../img/janCover.jpg";
-import FullWidthImage from "../components/FullWidthImage";
-import { GatsbyImage } from "gatsby-plugin-image";
+
+import "../components/style.css";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
 
-  console.log(mainpitch);
+  console.log(mainpitch.image)
 
   return (
     <div>
@@ -53,38 +53,22 @@ export const IndexPageTemplate = ({
             <div className="columns">
               <div className="column is-12">
                 <div className="content">
-                  <div className="content">
-
-                    <div>
-                      {/* <GatsbyImage
-                        image={mainpitch.helloImage}
-                        style={{
-                          border: "1px solid red",
-                          width: "50vw",
-                          height: "50vh",
-                          background: "red",
-                          display: "block"
-                        }}
-                        alt="{alt}"
-                      /> */}
-                      <img 
-                        src={ mainpitch.helloImage }
-                        // style={{
-                        //   border: "1px solid red",
-                        //   width: "50vw",
-                        //   height: "50vh",
-                        //   background: "red",
-                        //   display: "block"
-                        // }}
-                        // alt="bla"
-                      />
-                    </div>
-
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
+                  <div className="flex row">
+                    <img 
+                      src={ mainpitch.image }
+                      style={{
+                        height: "100vh",
+                        width: "50vw",
+                        display: "block"
+                      }}
+                    />
+                    <div className="flex column">
+                      <div className="tile">
+                        <h1 className="title">{mainpitch.title}</h1>
+                      </div>
+                      <div className="tile">
+                        <h3 className="subtitle">{mainpitch.description}</h3>
+                      </div>
                     </div>
                   </div>
                   <div className="columns">
@@ -174,12 +158,16 @@ export const pageQuery = graphql`
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
-        heading
+        heading 
         subheading
         mainpitch {
           title
           description
-          helloImage
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+            }
+          }
         }
         description
         intro {
