@@ -10,8 +10,10 @@ import BlogRoll from "../components/BlogRoll";
 import janCover from "../img/janCover.jpg";
 
 import "../components/style.css";
+
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import FullWidthImage from "../components/FullWidthImage";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -24,9 +26,9 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const heroImage = getImage(hello) || hello;
+  const heroImage = getImage(mainpitch.image) || mainpitch.image;
 
-  console.log(hello)
+  console.log(heroImage)
 
   return (
     <div>
@@ -57,18 +59,15 @@ export const IndexPageTemplate = ({
               <div className="column is-12">
                 <div className="content">
                   <div className="flex row">
-                    <img 
-                      src={ mainpitch.image }
-                      style={{
-                        height: "100vh",
-                        width: "50vw",
-                      }}
+                    <GatsbyImage
+                      image={ heroImage }
+                      alt="{alt}"
                     />
-                    <FullWidthImage 
+                    {/* <FullWidthImage 
                       img={heroImage}
                       title={title}
                       subheading={subheading} 
-                    />
+                    /> */}
                     <div className="flex column">
                       <div className="tile">
                         <h1 className="title">{mainpitch.title}</h1>
@@ -167,7 +166,7 @@ export const pageQuery = graphql`
         }
         hello {
           childImageSharp {
-            gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         heading 
