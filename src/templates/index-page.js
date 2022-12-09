@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
 
-  console.log(mainpitch.image)
+  console.log(heroImage)
 
   return (
     <div>
@@ -55,12 +55,12 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="flex row">
                     <img 
-                      src={ mainpitch.image }
-                      style={{
-                        height: "100vh",
-                        width: "50vw",
-                        display: "block"
-                      }}
+                      src={ heroImage }
+                      // style={{
+                      //   height: "100vh",
+                      //   width: "50vw",
+                      //   display: "block"
+                      // }}
                     />
                     <div className="flex column">
                       <div className="tile">
