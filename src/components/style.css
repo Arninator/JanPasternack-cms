@@ -101,7 +101,7 @@
 }
 :root {
     --spd-red: rgb(227, 0, 15);
-    --background-color: rgb(240, 240, 240);
+    --background-color: rgb(233, 233, 233);
 
     /* --cover-img: local('imgs\janCover.jpg'); */
 }
@@ -137,9 +137,22 @@
     justify-content: center;
     align-items: center;
 }
-/*
-
-*/
+/* 
+    ´´´´´´´´´´´´´´´´´´´´´´´´´´´
+        ALLGEMEINE_KLASSEN
+        -----------------------
+    ```````````````````````````
+ */
+.greyBackground {
+    background-color: rgb(233, 233, 233);
+    /* width: 100vw; */
+}
+/* 
+    ´´´´´´´´´´´´´´´´´´´´´´´´´´´
+        NAVBAR
+        -----------------------
+    ```````````````````````````
+ */
 .navbarItem {
     color: black;
     list-style: none;

@@ -71,6 +71,11 @@ const Navbar = class extends React.Component {
               } else {
                   $(this).css("background-color", "transparent");
                   $(".navbarItem").css("color", "black");
+                  $(".navbarItem").hover(function () {
+                    $(this).css("color", "rgb(227, 0, 15)");
+                  }, function () {
+                    $(this).css("color", "black");
+                  });
                   
                   $("#spd-logo").attr("src", logoBlack);
                   $("#spd-logo").hover(function() {

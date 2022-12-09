@@ -40,28 +40,48 @@ export const IndexPageTemplate = ({
           src={ janCover }
           style= {{
             position: "absolute",
-            top: "0px"
+            top: "0px",
           }}
         />
       </div>
       
       <section 
-        className="section section--gradient"
+        // className="section section--gradient"
         style={{
-          marginTop: "100vh"
+          width: "100vw",
+          margin: "90vh 0 0 0"
         }}
         >
-        <div className="container">
-          <div className="section">
+        <div 
+          // className="container"
+          style={{
+          }}
+        >
+          <div 
+            // style={{
+            //   background: "rgb(233, 233, 233)"
+            // }}
+          >
             <div className="columns">
               <div className="column is-12">
                 <div className="content">
-                  <div className="flex row">
+                  <div 
+                    className="flex row greyBackground fade-in section"
+                    style={{
+                      background: "rgb(233, 233, 233)",
+                      padding: "5% 10%",
+                    }}
+                  >
                     <GatsbyImage
                       image={ helloImage }
                       alt="{alt}"
                     />
-                    <div className="flex column">
+                    <div 
+                      className="flex column"
+                      style={{
+                        margin: "0 5vw"
+                      }}
+                    >
                       <div className="tile">
                         <h1 className="title">{mainpitch.title}</h1>
                       </div>
