@@ -213,6 +213,9 @@ const Navbar = class extends React.Component {
 
                 width: "100%"
               }}>
+              <Link className="navbarItem flex row center" to="/">
+                Start
+              </Link>
               <Link className="navbarItem flex row center" to="/about">
                 About
               </Link>
