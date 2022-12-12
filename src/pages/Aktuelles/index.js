@@ -1,10 +1,11 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import BlogRoll from "../../components/BlogRoll";
+import AktuellesBlogRoll from "../../components/AktuellesBlogRoll";
 
 export default class BlogIndexPage extends React.Component {
   render() {
+    console.log("aktuellesindex");
     return (
       <Layout>
         <div
@@ -28,7 +29,7 @@ export default class BlogIndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <BlogRoll />
+              <AktuellesBlogRoll />
             </div>
           </div>
         </section>
