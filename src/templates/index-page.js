@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
-import janCover from "../img/janCover.jpg";
+import janCover from "../img/jancover.jpg";
 
 import "../components/style.css";
 
@@ -38,10 +38,10 @@ export const IndexPageTemplate = ({
       <div id="cover-img">
         <img 
           src={ janCover }
+          alt="Cover"
           style= {{
             position: "absolute",
             top: "0px",
-            zIndex: "0"
           }}
         />
       </div>
@@ -69,10 +69,10 @@ export const IndexPageTemplate = ({
                   <div 
                     className="flex row greyBackground fade-in section"
                     style={{
-                      background: "rgb(233, 233, 233)",
+                      // backgroundColor: "rgb(233, 233, 233)",
                       padding: "5% 15%",
-                      border: "1px solid red",
-                      zIndex: "20"
+                      // border: "1px solid red",
+                      // zIndex: "2"
                     }}
                   >
                     <GatsbyImage
