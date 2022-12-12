@@ -158,7 +158,7 @@
     list-style: none;
 
     font-size: 2vh;
-    font-weight: 400;
+    font-weight: 100;
 }
 .navbarItem:hover {
     color: rgb(227, 0, 15);
