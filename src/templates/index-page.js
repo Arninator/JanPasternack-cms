@@ -6,6 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
 
 import janCover from "../img/jan-cover.jpg";
 
@@ -69,11 +70,8 @@ export const IndexPageTemplate = ({
                   <div 
                     className="flex row greyBackground fade-in section"
                     style={{
-                      // backgroundColor: "rgb(233, 233, 233)",
                       padding: "5% 15%",
-                      // border: "1px solid red",
                       position: "relative"
-                      // zIndex: "2"
                     }}
                   >
                     <GatsbyImage
@@ -98,14 +96,14 @@ export const IndexPageTemplate = ({
                       </div>
                     </div>
                   </div>
-                  <div className="columns">
+                  {/* <div className="columns">
                     <div className="column is-12">
                       <h3 className="has-text-weight-semibold is-size-2">
                         {heading}
                       </h3>
                       <p>{description}</p>
                     </div>
-                  </div>
+                  </div> */}
                   {/* <Features gridItems={intro.blurbs} />
                   <div className="columns">
                     <div className="column is-12 has-text-centered">
@@ -114,7 +112,30 @@ export const IndexPageTemplate = ({
                       </Link>
                     </div>
                   </div> */}
-                  <div className="column is-12">
+                  <div 
+                    className="flex row whiteBackground fade-in section column is-12"
+                    style={{
+                      padding: "5% 15%",
+                      position: "relative"
+                    }}
+                  >
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      Aktuelles
+                    </h3>
+                    <AktuellesBlogRoll />
+                    <div className="column is-12 has-text-centered">
+                      <Link className="btn" to="/blog">
+                        Mehr... &rarr;
+                      </Link>
+                    </div>
+                  </div>
+                  <div 
+                    className="flex row greyBackground fade-in section column is-12"
+                    style={{
+                      padding: "5% 15%",
+                      position: "relative"
+                    }}
+                  >
                     <h3 className="has-text-weight-semibold is-size-2">
                       Latest stories
                     </h3>
