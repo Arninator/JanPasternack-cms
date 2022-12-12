@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
-import janCover from "../img/jancover.jpg";
+import janCover from "../img/jan-cover.jpg";
 
 import "../components/style.css";
 

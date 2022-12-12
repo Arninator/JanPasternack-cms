@@ -7,7 +7,7 @@ import "../components/style.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-import JanCover from "../img/janCover.jpg"
+import JanCover from "../img/jan-cover.jpg"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
