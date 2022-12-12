@@ -65,7 +65,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <div
         style={{
-          width: "100vw"
+          // width: "100vw"
         }}
       >
         {children}
