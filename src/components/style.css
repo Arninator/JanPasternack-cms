@@ -147,6 +147,10 @@
     background-color: rgb(233, 233, 233);
     /* width: 100vw; */
 }
+.whiteBackground {
+    background-color: rgb(255, 255, 255);
+    /* width: 100vw; */
+}
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
         NAVBAR
