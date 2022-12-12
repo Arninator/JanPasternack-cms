@@ -3,9 +3,9 @@ import * as React from "react";
 import Layout from "../../components/Layout";
 import AktuellesBlogRoll from "../../components/AktuellesBlogRoll";
 
-export default class BlogIndexPage extends React.Component {
+export default class AktuellesBlogIndexPage extends React.Component {
   render() {
-    console.log("aktuellesindex");
+;
     return (
       <Layout>
         <div

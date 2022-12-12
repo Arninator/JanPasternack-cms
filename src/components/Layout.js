@@ -63,11 +63,7 @@ const TemplateWrapper = ({ children }) => {
           height: "5vh"
         }}></div>
       <Navbar />
-      <div
-        style={{
-          // width: "100vw"
-        }}
-      >
+      <div>
         {children}
       </div>
       <Footer />

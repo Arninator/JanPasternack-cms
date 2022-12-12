@@ -8,7 +8,7 @@ class AktuellesBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    console.log("djb" + posts);
+    console.log(posts);
 
     return (
       <div className="columns is-multiline">
@@ -55,7 +55,7 @@ class AktuellesBlogRollTemplate extends React.Component {
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
-                    Weiterlesen &rarr;
+                    Weiterlesen Aktuell &rarr;
                   </Link>
                 </p>
               </article>
