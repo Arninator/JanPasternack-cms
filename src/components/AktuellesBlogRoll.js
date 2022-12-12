@@ -81,7 +81,7 @@ export default function AktuellesBlogRoll() {
   return (
     <StaticQuery
       query={graphql`
-        query BlogRollQuery {
+        query AktuellesBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
