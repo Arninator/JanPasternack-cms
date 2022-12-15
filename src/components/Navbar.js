@@ -23,6 +23,16 @@ const Navbar = class extends React.Component {
 
   componentDidMount () {
 
+    $("#newsLink").hover( function() {
+      console.log($(this).offset().top);
+      // $(this).addappend("<span>Aktuelles</span>")7
+      $(".newsExtras").css("color", "black")
+    }, function() {
+      // $(this).html('Aktuelles');
+      $(".newsExtras").css("color", "transparent")
+    });
+
+
     // apiCalendar.handleAuthClick();
     fetch("https://www.googleapis.com/calendar/v3/calendars/ar.maxnold@gmail.com/events?key=AIzaSyB7GfNxM4TXXtDue-64TMEzOViC8dTIgmA")
     // fetch("https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyD3HySl2mo7m_5cjUwhltGmDt29yJ4U5uU")
@@ -43,7 +53,7 @@ const Navbar = class extends React.Component {
       )
 
 
-    $(document).ready(function() {
+    $(function() {
       $(window).scroll(function() {
 
           /* sticky menu */
@@ -205,30 +215,51 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div 
-              className="navbar-start has-text-centered"
+              className="navbar-start has-text-centered flex row center"
               style={{
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-around",
 
                 width: "100%"
-              }}>
-              <Link className="navbarItem flex row center" to="/">
+              }}
+            >
+              <Link
+                id="homeLink"
+                className="navbarItem flex column center" 
+                to="/"
+              >
                 Start
               </Link>
-              <Link className="navbarItem flex row center" to="/aktuelles">
+              <a 
+                id="newsLink"
+                className="navbarItem flex column flexStart" 
+                href="/aktuelles"
+                style={{
+                  paddingTop: "2vh"
+                }}
+              >
+                <div style={{display: "block", fontWeight: "100"}}>Aktuelles</div>
+                <div className="newsExtras row flexEnd" style={{color: "transparent", fontWeight: "100"}}>Presse</div>
+                <div className="newsExtras row flexEnd" style={{color: "transparent", fontWeight: "100"}}>Lebenslauf</div>
+              </a>
+              {/* <Link 
+                id="newsLink"
+                className="navbarItem flex row center" 
+                to="/aktuelles"
+              >
                 Aktuelles
-              </Link>
-              <Link className="navbarItem flex row center" to="/products">
+              </Link> */}
+              <Link className="navbarItem flex column center" to="/products">
                 Über
               </Link>
-              <Link className="navbarItem flex row center" to="/blog">
+              <Link className="navbarItem flex column center" to="/blog">
                 Presse
               </Link>
-              <Link className="navbarItem flex row center" to="/contact">
+              <Link className="navbarItem flex column center" to="/contact">
                 Contact
               </Link>
-              <Link className="navbarItem flex row center" to="/contact/examples">
+              <Link className="navbarItem flex column center" to="/contact/examples">
                 Form Examples
               </Link>
               <div
