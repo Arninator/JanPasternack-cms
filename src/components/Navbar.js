@@ -220,7 +220,7 @@ const Navbar = class extends React.Component {
                 Aktuelles
               </Link>
               <Link className="navbarItem flex row center" to="/products">
-                Products
+                Über
               </Link>
               <Link className="navbarItem flex row center" to="/blog">
                 Blog
@@ -234,7 +234,8 @@ const Navbar = class extends React.Component {
               <div
                 className="navbarItem flex row"
                 style={{
-                  justifyContent: "flex-end"
+                  width: "8vw",
+                  justifyContent: "space-between"
                 }}
               >
                 <a 
@@ -243,6 +244,13 @@ const Navbar = class extends React.Component {
                   target="_blank"
                 >
                   <i className="fa fa-instagram"></i>
+                </a>
+                <a 
+                  className="navbarItem flex row center" 
+                  href="https://www.twitter.com"
+                  target="_blank"
+                >
+                  <i className="fa fa-twitter"></i>
                 </a>
                 <a 
                   className="navbarItem flex row center" 

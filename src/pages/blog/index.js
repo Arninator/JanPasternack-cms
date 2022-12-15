@@ -4,6 +4,15 @@ import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
 
 export default class BlogIndexPage extends React.Component {
+  componentDidMount() {
+
+    if (document.location.href.includes("blog")) {
+      for (let i = 0; i < document.getElementsByClassName("is-4").length; i++) {
+        document.getElementsByClassName("is-4")[i].classList.add("is-12");
+      }
+    }
+  }
+
   render() {
     return (
       <Layout>
