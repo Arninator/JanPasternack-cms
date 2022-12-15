@@ -223,7 +223,7 @@ const Navbar = class extends React.Component {
                 Über
               </Link>
               <Link className="navbarItem flex row center" to="/blog">
-                Blog
+                Presse
               </Link>
               <Link className="navbarItem flex row center" to="/contact">
                 Contact
