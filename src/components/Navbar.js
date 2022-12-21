@@ -24,13 +24,17 @@ const Navbar = class extends React.Component {
   componentDidMount () {
 
     $(".navbarItem").hover( function() {
-      $("#dropdown").css("position", "absolute");
-      $("#dropdown").css("top", $(this).offset().top);
-      $("#dropdown").css("left", $(this).offset().left);
-      $("#dropdown").css("style", "block");
+      $("#dropdown").css({
+        "position": "absolute",
+        "display": "block",
+        "top": $(this).offset().top,
+        "left": $(this).offset().left,
+      });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
-      $(this).children(".dropdown").css("style", "none");
+      $("#dropdown").css({
+        "display": "none"
+      });
     });
 
 
@@ -151,7 +155,6 @@ const Navbar = class extends React.Component {
           aria-label="main-navigation"
           style={{
             position: "sticky",
-            // position: "-webkit-sticky",
             top: "0",
             margin: "0",
             padding: "0",
@@ -161,7 +164,8 @@ const Navbar = class extends React.Component {
           <div
             className="flex column center"
             style={{
-              width: "100vw"
+              width: "100vw",
+              marginBottom: "1vh"
             }}
           >
             <div 
@@ -240,7 +244,7 @@ const Navbar = class extends React.Component {
                       Aktuelles
                     </Link>                
                   <Link className="navbarItem flex row center" to="/products">
-                    Über
+                    Übers
                   </Link>
                   <Link className="navbarItem flex row center" to="/blog">
                     Presse
