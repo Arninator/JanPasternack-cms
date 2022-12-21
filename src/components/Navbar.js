@@ -23,14 +23,15 @@ const Navbar = class extends React.Component {
 
   componentDidMount () {
 
-    $("#newsLink").hover( function() {
-      console.log($(this).offset().top);
-      // $(this).addappend("<span>Aktuelles</span>")7
-      $(".newsExtras").css("color", "black")
-    }, function() {
-      // $(this).html('Aktuelles');
-      $(".newsExtras").css("color", "transparent")
-    });
+    // $("#newsLink").hover( function() {
+    //   console.log($(this).offset().top);
+    //   // $(this).addappend("<span>Aktuelles</span>")7
+    //   $(".newsExtras").css("color", "black")
+      
+    // }, function() {
+    //   // $(this).html('Aktuelles');
+    //   $(".newsExtras").css("color", "transparent")
+    // });
 
 
     // apiCalendar.handleAuthClick();
@@ -150,171 +151,166 @@ const Navbar = class extends React.Component {
   render() {
     return (
       //NEW
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-        style={{
-          position: "sticky",
-          // position: "-webkit-sticky",
-          top: "0",
-          margin: "0",
-          padding: "0",
-          backgroundColor: "transparent",
-        }}
-      >
-        <div 
-          // className="container"
+        <nav
+          className="navbar is-transparent"
+          role="navigation"
+          aria-label="main-navigation"
           style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "space-between",
-
-            width: "100vw",
+            position: "sticky",
+            // position: "-webkit-sticky",
+            top: "0",
+            margin: "0",
+            padding: "0",
+            backgroundColor: "transparent",
           }}
-          >
+        >
           <div 
-            className="navbar-brand container"
-          >
-            <a 
-              href="https://www.spd.de/" 
-              className="navbar-item" 
-              title="SPD-Logo"
-              target="_blank"
-              style={{
-                margin: "0 5vw",
-                padding: "2vh 2vw",
-                height: "7vh",
-                backgroundColor: "transparent"
-                // backgroundColor: "rgb(227, 0, 15)"
-              }}
-            >
-              <img
-                id="spd-logo"
-                className="spd-logo-class"
-                src={ logoBlack } 
-                alt="SPD Logo"
-              />
-            </a>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              role="menuitem"
-              tabIndex={0}
-              onKeyPress={() => this.toggleHamburger()}
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div 
-              className="navbar-start has-text-centered flex row center"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-around",
+            // className="container"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "space-between",
 
-                width: "100%"
-              }}
+              width: "100vw",
+            }}
             >
-              <Link
-                id="homeLink"
-                className="navbarItem flex column center" 
-                to="/"
-              >
-                Start
-              </Link>
+            <div 
+              className="navbar-brand container"
+            >
               <a 
-                id="newsLink"
-                className="navbarItem flex column flexStart" 
-                href="/aktuelles"
+                href="https://www.spd.de/" 
+                className="navbar-item" 
+                title="SPD-Logo"
+                target="_blank"
                 style={{
-                  paddingTop: "2vh"
+                  margin: "0 5vw",
+                  padding: "2vh 2vw",
+                  height: "7vh",
+                  backgroundColor: "transparent"
+                  // backgroundColor: "rgb(227, 0, 15)"
                 }}
               >
-                <div style={{display: "block", fontWeight: "100"}}>Aktuelles</div>
-                <div className="newsExtras row flexEnd" style={{color: "transparent", fontWeight: "100"}}>Presse</div>
-                <div className="newsExtras row flexEnd" style={{color: "transparent", fontWeight: "100"}}>Lebenslauf</div>
+                <img
+                  id="spd-logo"
+                  className="spd-logo-class"
+                  src={ logoBlack } 
+                  alt="SPD Logo"
+                />
               </a>
-              {/* <Link 
-                id="newsLink"
-                className="navbarItem flex row center" 
-                to="/aktuelles"
-              >
-                Aktuelles
-              </Link> */}
-              <Link className="navbarItem flex column center" to="/products">
-                Über
-              </Link>
-              <Link className="navbarItem flex column center" to="/blog">
-                Presse
-              </Link>
-              <Link className="navbarItem flex column center" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbarItem flex column center" to="/contact/examples">
-                Form Examples
-              </Link>
+              {/* Hamburger menu */}
               <div
-                className="navbarItem flex row"
-                style={{
-                  width: "8vw",
-                  justifyContent: "space-between"
-                }}
+                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                data-target="navMenu"
+                role="menuitem"
+                tabIndex={0}
+                onKeyPress={() => this.toggleHamburger()}
+                onClick={() => this.toggleHamburger()}
               >
-                <a 
-                  className="navbarItem flex row center" 
-                  href="https://www.instagram.com"
-                  target="_blank"
-                >
-                  <i className="fa fa-instagram"></i>
-                </a>
-                <a 
-                  className="navbarItem flex row center" 
-                  href="https://www.twitter.com"
-                  target="_blank"
-                >
-                  <i className="fa fa-twitter"></i>
-                </a>
-                <a 
-                  className="navbarItem flex row center" 
-                  href=""
-                  target="_blank"
-                >
-                  <i className="fa fa-facebook"></i>
-                </a>
-                <a 
-                  className="navbarItem flex row center" 
-                  href=""
-                  target="_blank"
-                >
-                  <i className="fa fa-linkedin"></i>
-                </a>
+                <span />
+                <span />
+                <span />
               </div>
             </div>
-            {/* <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div> */}
-          </div>
-        </div>
-      </nav>
+            <div
+              id="navMenu"
+              className={`navbar-menu ${this.state.navBarActiveClass}`}
+            >
+              <div 
+                className="navbar-start has-text-centered flex row center"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
 
+                  width: "100%"
+                }}
+              >
+                <Link
+                  id="homeLink"
+                  className="navbarItem flex row center" 
+                  to="/"
+                >
+                  Start
+                </Link>
+                {/* <a 
+                  id="newsLink"
+                  className="navbarItem flex column flexStart" 
+                  href="/aktuelles"
+                  style={{
+                    paddingTop: "2vh"
+                  }}
+                >
+                  <div style={{display: "block", fontWeight: "100"}}>Aktuelles</div>
+                  <div className="newsExtras row flexEnd" style={{color: "transparent", fontWeight: "100"}}>Pressel</div>
+                  <div className="newsExtras row flexEnd" style={{color: "transparent", fontWeight: "100"}}>Lebenslauf</div>
+                </a> */}
+                <Link className="navbarItem flex row center" to="/aktuelles">
+                  Aktuelles
+                </Link>
+                <Link className="navbarItem flex row center" to="/products">
+                  Über
+                </Link>
+                <Link className="navbarItem flex row center" to="/blog">
+                  Presse
+                </Link>
+                <Link className="navbarItem flex row center" to="/contact">
+                  Contact
+                </Link>
+                <Link className="navbarItem flex row center" to="/contact/examples">
+                  Form Examples
+                </Link>
+                <div
+                  className="navbarItem flex row"
+                  style={{
+                    width: "8vw",
+                    justifyContent: "space-between"
+                  }}
+                >
+                  <a 
+                    className="navbarItem flex row center grey" 
+                    href="https://www.instagram.com"
+                    target="_blank"
+                  >
+                    <i className="fa fa-instagram"></i>
+                  </a>
+                  <a 
+                    className="navbarItem flex row center grey" 
+                    href="https://www.twitter.com"
+                    target="_blank"
+                  >
+                    <i className="fa fa-twitter"></i>
+                  </a>
+                  <a 
+                    className="navbarItem flex row center grey" 
+                    href=""
+                    target="_blank"
+                  >
+                    <i className="fa fa-facebook"></i>
+                  </a>
+                  <a 
+                    className="navbarItem flex row center grey" 
+                    href=""
+                    target="_blank"
+                  >
+                    <i className="fa fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+              {/* <div className="navbar-end has-text-centered">
+                <a
+                  className="navbar-item"
+                  href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="icon">
+                    <img src={github} alt="Github" />
+                  </span>
+                </a>
+              </div> */}
+            </div>
+          </div>
+        </nav>
 
       // OLD
       // <nav

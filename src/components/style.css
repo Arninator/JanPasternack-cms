@@ -116,7 +116,7 @@
     font-weight: 800;
 
     list-style: none;
-    transition: ease 0.5s;
+    transition: ease-in-out 0.4s;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
@@ -144,6 +144,9 @@
 .flexEnd {
     justify-content: flex-end;
     align-items: center;
+}
+.grey {
+    color: grey;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´

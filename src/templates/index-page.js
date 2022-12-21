@@ -9,7 +9,7 @@ import BlogRoll from "../components/BlogRoll";
 import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
 
 import janCover from "../img/jan-cover.jpg";
-import janUnterschrift from "../img/Unterschrift.png"
+import janUnterschrift from "../img/Unterschrift.jpg"
 
 import "../components/style.css";
 
@@ -100,12 +100,19 @@ export const IndexPageTemplate = ({
                           }}
                         >{mainpitch.description}</h3>
                       </div>
+                      <GatsbyImage
+                          image={ janUnterschrift }
+                          alt="{alt}"
+                          style={{
+                            // maxHeight: "50vh"
+                          }}
+                        />
                       <div className="tile">
                         <GatsbyImage
                           image={ janUnterschrift }
                           alt="{alt}"
                           style={{
-                            maxHeight: "50vh"
+                            // maxHeight: "50vh"
                           }}
                         />
                       </div>
