@@ -165,7 +165,6 @@ const Navbar = class extends React.Component {
             className="flex column center"
             style={{
               width: "100vw",
-              marginBottom: "1vh"
             }}
           >
             <div 
@@ -312,7 +311,6 @@ const Navbar = class extends React.Component {
             id="dropdown"
             className="flex column center"
             style={{
-                //  display: "none",
                  border: "1px solid red"
             }}
           >
