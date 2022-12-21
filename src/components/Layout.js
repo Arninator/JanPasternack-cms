@@ -60,7 +60,7 @@ const TemplateWrapper = ({ children }) => {
       <div 
         id="placeholder"
         style={{
-          height: "6vh"
+          height: "5vh"
         }}></div>
       <Navbar />
       <div>
