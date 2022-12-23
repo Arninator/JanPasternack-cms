@@ -100,13 +100,13 @@ export const IndexPageTemplate = ({
                           }}
                         >{mainpitch.description}</h3>
                       </div>
-                      <GatsbyImage
+                      {/* <GatsbyImage
                           image={ janUnterschrift }
                           alt="alt"
                           style={{
                             // maxHeight: "50vh"
                           }}
-                        />
+                        /> */}
                     </div>
                   </div>
                   {/* <div className="columns">
