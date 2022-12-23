@@ -248,12 +248,15 @@ const Navbar = class extends React.Component {
                   <Link className="navbarItem flex row center" to="/blog">
                     Presse
                   </Link>
+                  <Link className="navbarItem flex row center" to="/frankfurt">
+                    Frankfurt
+                  </Link>
                   <Link className="navbarItem flex row center" to="/contact">
-                    Contact
+                    Kontakt
                   </Link>
-                  <Link className="navbarItem flex row center" to="/contact/examples">
+                  {/* <Link className="navbarItem flex row center" to="/contact/examples">
                     Form Examples
-                  </Link>
+                  </Link> */}
                   <div
                     className="navbarItem flex row"
                     style={{
@@ -314,9 +317,36 @@ const Navbar = class extends React.Component {
                  border: "1px solid red"
             }}
           >
-            <div>News</div>
-            <div>Presse</div>
-            <div>Lebenslauf</div>
+            <Link className="navbarItem flex row center" to="/aktuelles">
+              Aktuelles
+            </Link>
+            <Link className="navbarItem flex row center" to="/presse">
+              Presse
+            </Link>
+            <Link className="navbarItem flex row center" to="/termine">
+              Termine
+            </Link>
+
+            <Link className="navbarItem flex row center" to="/vorstellung">
+              Vorstellung
+            </Link>
+            <Link className="navbarItem flex row center" to="/politik">
+              Politik
+            </Link>
+            <Link className="navbarItem flex row center" to="/lebenslauf">
+              Lebenslauf
+            </Link>
+
+            <Link className="navbarItem flex row center" to="/wahlkreis">
+              Wahlkreis
+            </Link>
+            <Link className="navbarItem flex row center" to="/ontour">
+              on tour
+            </Link>
+
+            <Link className="navbarItem flex row center" to="/pressebilder">
+              Pressebilder
+            </Link>
           </div>
           
 
