@@ -8,7 +8,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
 
-import janCover from "../img/jan-cover.jpg";
+import jancover from "../img/jan-cover.jpg";
 import janUnterschrift from "../img/Unterschrift.jpg"
 
 import "../components/style.css";
@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
       /> */}
       <div id="cover-img">
         <img 
-          src={ janCover }
+          src={ jancover }
           alt="Cover"
           style= {{
             position: "absolute",
@@ -107,15 +107,6 @@ export const IndexPageTemplate = ({
                             // maxHeight: "50vh"
                           }}
                         />
-                      {/* <div className="tile"> */}
-                        {/* <GatsbyImage
-                          image={ janUnterschrift }
-                          alt="alt"
-                          style={{
-                            // maxHeight: "50vh"
-                          }}
-                        />
-                      </div> */}
                     </div>
                   </div>
                   {/* <div className="columns">
