@@ -84,7 +84,7 @@ export default function OnTourBlogRoll() {
         query OnTourBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
+            filter: { frontmatter: { templateKey: { eq: "ontour-page" } } }
           ) {
             edges {
               node {

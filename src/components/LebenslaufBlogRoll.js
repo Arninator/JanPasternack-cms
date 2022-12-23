@@ -84,7 +84,7 @@ export default function LebenslaufBlogRoll() {
         query LebenslaufBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
+            filter: { frontmatter: { templateKey: { eq: "lebenslauf-page" } } }
           ) {
             edges {
               node {

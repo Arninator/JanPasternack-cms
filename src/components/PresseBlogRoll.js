@@ -84,7 +84,7 @@ export default function PresseBlogRoll() {
         query PresseBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
+            filter: { frontmatter: { templateKey: { eq: "presse-page" } } }
           ) {
             edges {
               node {

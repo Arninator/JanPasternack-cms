@@ -84,7 +84,7 @@ export default function VorstellungBlogRoll() {
         query VorstellungBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
+            filter: { frontmatter: { templateKey: { eq: "vorstellung-page" } } }
           ) {
             edges {
               node {

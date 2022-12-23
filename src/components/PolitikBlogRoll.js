@@ -84,7 +84,7 @@ export default function PolitikBlogRoll() {
         query PolitikBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
+            filter: { frontmatter: { templateKey: { eq: "politik-page" } } }
           ) {
             edges {
               node {

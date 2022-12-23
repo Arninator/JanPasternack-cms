@@ -84,7 +84,7 @@ export default function WahlkreisBlogRoll() {
         query WahlkreisBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
+            filter: { frontmatter: { templateKey: { eq: "wahlkreis-page" } } }
           ) {
             edges {
               node {
