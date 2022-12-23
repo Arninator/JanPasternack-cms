@@ -24,6 +24,7 @@ const Navbar = class extends React.Component {
   componentDidMount () {
 
     $(".navbarItem").hover( function() {
+      console.log($(this).html);
       $("#dropdown").css({
         "position": "absolute",
         "display": "block",
@@ -228,30 +229,30 @@ const Navbar = class extends React.Component {
                     width: "100%"
                   }}
                 >
-                  {/* <Link
+                  <Link
                     id="homeLink"
                     className="navbarItem flex row center" 
                     to="/"
                   >
                     Home
-                  </Link> */}
+                  </Link>
                   <Link
                       id="aktuelles-link"
-                      className="navbarItem flex row center" 
+                      className="navbarItem newsItem flex row center" 
                       to="/aktuelles"
                     >
                       News
                   </Link>                
-                  <Link className="navbarItem flex row center" to="/products">
+                  <Link className="navbarItem überItem flex row center" to="/products">
                     Über
                   </Link>
                   {/* <Link className="navbarItem flex row center" to="/blog">
                     Presse
                   </Link> */}
-                  <Link className="navbarItem flex row center" to="/frankfurt">
+                  <Link className="navbarItem frankfurtItem flex row center" to="/frankfurt">
                     Frankfurt
                   </Link>
-                  <Link className="navbarItem flex row center" to="/contact">
+                  <Link className="navbarItem kontaktItem flex row center" to="/contact">
                     Kontakt
                   </Link>
                   {/* <Link className="navbarItem flex row center" to="/contact/examples">
@@ -345,7 +346,7 @@ const Navbar = class extends React.Component {
               on tour
             </Link>
             {/* KONTAKTK */}
-            <Link className="navbarItem kontanktItem flex row center" to="/kontakt">
+            <Link className="navbarItem kontanktItem flex row center" to="/contakt">
               Kontakt
             </Link>
             <Link className="navbarItem kontanktItem flex row center" to="/pressebilder">
