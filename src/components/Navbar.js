@@ -24,7 +24,6 @@ const Navbar = class extends React.Component {
   componentDidMount () {
 
     $(".newsItem").hover( function() {
-      console.log($(this).get);
       $("#news-dropdown").css({
         "position": "absolute",
         "display": "block",
@@ -271,26 +270,18 @@ const Navbar = class extends React.Component {
                     width: "100%"
                   }}
                 >
-                  <Link
-                    id="homeLink"
-                    className="navbarItem flex row center" 
-                    to="/"
-                  >
+                  <Link className="navbarItem flex row center" to="/">
                     Home
                   </Link>
-                  <Link
-                      id="aktuelles-link"
-                      className="navbarItem newsItem flex row center" 
-                      to="/aktuelles"
-                    >
+                  <Link className="navbarItem newsItem flex row center" to="/news">
                       News
                   </Link>                
                   <Link className="navbarItem überItem flex row center" to="/products">
                     Über
                   </Link>
-                  {/* <Link className="navbarItem flex row center" to="/blog">
+                  <Link className="navbarItem flex row center" to="/blog">
                     Presse
-                  </Link> */}
+                  </Link>
                   <Link className="navbarItem frankfurtItem flex row center" to="/frankfurt">
                     Frankfurt
                   </Link>
