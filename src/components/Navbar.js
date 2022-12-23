@@ -23,12 +23,13 @@ const Navbar = class extends React.Component {
 
   componentDidMount () {
 
-    $(".newsItem").hover( function() {
+    $("#news-link").hover( function() {
+      console.log("width: " + $("#news-dropdown").width())
       $("#news-dropdown").css({
         "position": "absolute",
         "display": "block",
         "top": $(this).offset().top,
-        "left": $(this).offset().left,
+        "left": $(this).offset().left - ($("#news-dropdown").width() / 4),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -36,25 +37,25 @@ const Navbar = class extends React.Component {
         "display": "none"
       });
     });
-    $(".überItem").hover( function() {
-      $("#über-dropdown").css({
+    $("#ueber-link").hover( function() {
+      $("#ueber-dropdown").css({
         "position": "absolute",
         "display": "block",
         "top": $(this).offset().top,
-        "left": $(this).offset().left,
+        "left": $(this).offset().left - ($("#ueber-dropdown").width() / 4),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
-      $("#über-dropdown").css({
+      $("#ueber-dropdown").css({
         "display": "none"
       });
     });
-    $(".frankfurtItem").hover( function() {
+    $("#frankfurt-link").hover( function() {
       $("#frankfurt-dropdown").css({
         "position": "absolute",
         "display": "block",
         "top": $(this).offset().top,
-        "left": $(this).offset().left,
+        "left": $(this).offset().left - ($("#frankfurt-dropdown").width() / 4),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -62,12 +63,12 @@ const Navbar = class extends React.Component {
         "display": "none"
       });
     });
-    $(".kontaktItem").hover( function() {
+    $("#kontakt-link").hover( function() {
       $("#kontakt-dropdown").css({
         "position": "absolute",
         "display": "block",
         "top": $(this).offset().top,
-        "left": $(this).offset().left,
+        "left": $(this).offset().left - ($("#kontakt-dropdown").width() / 4),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -267,53 +268,62 @@ const Navbar = class extends React.Component {
                     width: "100%"
                   }}
                 >
-                  <div>
+                  <div
+                    id="home-link"
+                    className="flex row center"
+                  >
                     <Link className="navbarItem flex row center" to="/">
                       Home
                     </Link>
                   </div>
                   
-                  <div>
+                  <div
+                    id="news-link"
+                    className="flex row center"
+                  >
                     <Link className="navbarItem newsItem flex row center" to="/news">
                       News
                     </Link>
                     <div
                       id="news-dropdown"
-                      className="flex column center"
+                      className="flex row center"
                       style={{
-                        display: "none"
+                        display: "none",
                       }}
                     >
-                      <Link className="navbarItem newsItem column endEnd" to="/aktuelles">
+                      <Link className="navbarItem newsItem column startStart" to="/aktuelles">
                         Aktuelles
                       </Link>
-                      <Link className="navbarItem newsItem column endEnd" to="/presse">
+                      <Link className="navbarItem newsItem column startStart" to="/presse">
                         Presse
                       </Link>
-                      <Link className="navbarItem newsItem column endEnd" to="/termine">
+                      <Link className="navbarItem newsItem column startStart" to="/termine">
                         Termine
                       </Link>
                     </div>
                   </div>
 
-                  <div>
-                    <Link className="navbarItem überItem flex row center" to="/blog">
-                      Über
+                  <div
+                    id="ueber-link"
+                    className="flex row center"
+                  >
+                    <Link className="navbarItem ueberItem flex row center" to="/blog">
+                      UEber
                     </Link>
                     <div
-                      id="über-dropdown"
+                      id="ueber-dropdown"
                       // className="flex column center"
                       style={{
                         display: "none"
                       }}
                     >
-                      <Link className="navbarItem überItem flex row center" to="/vorstellung">
+                      <Link className="navbarItem ueberItem column endEnd" to="/vorstellung">
                         Vorstellung
                       </Link>
-                      <Link className="navbarItem überItem flex row center" to="/politik">
+                      <Link className="navbarItem ueberItem column endEnd" to="/politik">
                         Politik
                       </Link>
-                      <Link className="navbarItem überItem flex row center" to="/lebenslauf">
+                      <Link className="navbarItem ueberItem column endEnd" to="/lebenslauf">
                         Lebenslauf
                       </Link>
                     </div>
@@ -321,8 +331,11 @@ const Navbar = class extends React.Component {
                   {/* <Link className="navbarItem flex row center" to="/blog">
                     Presse
                   </Link> */}
-                  <div>
-                    <Link className="navbarItem frankfurtItem flex row center" to="/frankfurt">
+                  <div
+                    id="frankfurt-link"
+                    className="flex row center"
+                  >
+                    <Link className="navbarItem frankfurtItem column endEnd" to="/frankfurt">
                       Frankfurt
                     </Link>
                     <div
@@ -332,16 +345,19 @@ const Navbar = class extends React.Component {
                         display: "none"
                       }}
                     >
-                      <Link className="navbarItem frankfurtItem flex row center" to="/wahlkreis">
+                      <Link className="navbarItem frankfurtItem column endEnd" to="/wahlkreis">
                         Wahlkreis
                       </Link>
-                      <Link className="navbarItem frankfurtItem flex row center" to="/ontour">
+                      <Link className="navbarItem frankfurtItem column endEnd" to="/ontour">
                         on tour
                       </Link>
                     </div>
                   </div>
                   
-                  <div>
+                  <div
+                    id="kontakt-link"
+                    className="flex row center"
+                  >
                     <Link className="navbarItem kontaktItem flex row center" to="/contact">
                       Kontakt
                     </Link>
@@ -352,10 +368,10 @@ const Navbar = class extends React.Component {
                         display: "none"
                       }}
                     >
-                      <Link className="navbarItem kontanktItem flex row center" to="/contact">
+                      <Link className="navbarItem kontanktItem column endEnd" to="/contact">
                         Kontakt
                       </Link>
-                      <Link className="navbarItem kontanktItem flex row center" to="/pressebilder">
+                      <Link className="navbarItem kontanktItem column endEnd" to="/pressebilder">
                         Pressebilder
                       </Link>
                     </div>
