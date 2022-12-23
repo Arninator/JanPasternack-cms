@@ -9,7 +9,7 @@ import BlogRoll from "../components/BlogRoll";
 import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
 
 import jancover from "../img/jan-cover.jpg";
-import janUnterschrift from "../img/Unterschrift.jpg"
+import janUnterschrift from "../img/unterschrift.jpg"
 
 import "../components/style.css";
 
