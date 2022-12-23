@@ -37,7 +37,6 @@ const Navbar = class extends React.Component {
       });
     });
     $(".überItem").hover( function() {
-      console.log($(this).get);
       $("#über-dropdown").css({
         "position": "absolute",
         "display": "block",
@@ -51,7 +50,6 @@ const Navbar = class extends React.Component {
       });
     });
     $(".frankfurtItem").hover( function() {
-      console.log($(this).get);
       $("#frankfurt-dropdown").css({
         "position": "absolute",
         "display": "block",
@@ -65,7 +63,6 @@ const Navbar = class extends React.Component {
       });
     });
     $(".kontaktItem").hover( function() {
-      console.log($(this).get);
       $("#kontakt-dropdown").css({
         "position": "absolute",
         "display": "block",
@@ -270,24 +267,100 @@ const Navbar = class extends React.Component {
                     width: "100%"
                   }}
                 >
-                  <Link className="navbarItem flex row center" to="/">
-                    Home
-                  </Link>
-                  <Link className="navbarItem newsItem flex row center" to="/news">
+                  <div>
+                    <Link className="navbarItem flex row center" to="/">
+                      Home
+                    </Link>
+                  </div>
+                  
+                  <div>
+                    <Link className="navbarItem newsItem flex row center" to="/news">
                       News
-                  </Link>                
-                  <Link className="navbarItem überItem flex row center" to="/products">
-                    Über
-                  </Link>
-                  <Link className="navbarItem flex row center" to="/blog">
+                    </Link>
+                    <div
+                      id="news-dropdown"
+                      className="flex column center"
+                      style={{
+                        display: "none"
+                      }}
+                    >
+                      <Link className="navbarItem newsItem column endEnd" to="/aktuelles">
+                        Aktuelles
+                      </Link>
+                      <Link className="navbarItem newsItem column endEnd" to="/presse">
+                        Presse
+                      </Link>
+                      <Link className="navbarItem newsItem column endEnd" to="/termine">
+                        Termine
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Link className="navbarItem überItem flex row center" to="/blog">
+                      Über
+                    </Link>
+                    <div
+                      id="über-dropdown"
+                      // className="flex column center"
+                      style={{
+                        display: "none"
+                      }}
+                    >
+                      <Link className="navbarItem überItem flex row center" to="/vorstellung">
+                        Vorstellung
+                      </Link>
+                      <Link className="navbarItem überItem flex row center" to="/politik">
+                        Politik
+                      </Link>
+                      <Link className="navbarItem überItem flex row center" to="/lebenslauf">
+                        Lebenslauf
+                      </Link>
+                    </div>
+                  </div>             
+                  {/* <Link className="navbarItem flex row center" to="/blog">
                     Presse
-                  </Link>
-                  <Link className="navbarItem frankfurtItem flex row center" to="/frankfurt">
-                    Frankfurt
-                  </Link>
-                  <Link className="navbarItem kontaktItem flex row center" to="/contact">
-                    Kontakt
-                  </Link>
+                  </Link> */}
+                  <div>
+                    <Link className="navbarItem frankfurtItem flex row center" to="/frankfurt">
+                      Frankfurt
+                    </Link>
+                    <div
+                      id="frankfurt-dropdown"
+                      className="flex column endEnd"
+                      style={{
+                        display: "none"
+                      }}
+                    >
+                      <Link className="navbarItem frankfurtItem flex row center" to="/wahlkreis">
+                        Wahlkreis
+                      </Link>
+                      <Link className="navbarItem frankfurtItem flex row center" to="/ontour">
+                        on tour
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <Link className="navbarItem kontaktItem flex row center" to="/contact">
+                      Kontakt
+                    </Link>
+                    <div
+                      id="kontakt-dropdown"
+                      className="flex column endEnd"
+                      style={{
+                        display: "none"
+                      }}
+                    >
+                      <Link className="navbarItem kontanktItem flex row center" to="/contact">
+                        Kontakt
+                      </Link>
+                      <Link className="navbarItem kontanktItem flex row center" to="/pressebilder">
+                        Pressebilder
+                      </Link>
+                    </div>
+                  </div>
+                  
                   {/* <Link className="navbarItem flex row center" to="/contact/examples">
                     Form Examples
                   </Link> */}
@@ -341,72 +414,6 @@ const Navbar = class extends React.Component {
                   </a>
                 </div> */}
               </div>
-            </div>
-          </div>
-
-          <div
-            id="dropdown"
-            className="flex column center"
-            style={{
-                 border: "1px solid red"
-            }}
-          >
-            {/* NEWS */}
-            <div
-              id="news-dropdown"
-              className="flex column endEnd"
-            >
-              <Link className="navbarItem newsItem flex row center" to="/aktuelles">
-                Aktuelles
-              </Link>
-              <Link className="navbarItem newsItem flex row center" to="/presse">
-                Presse
-              </Link>
-              <Link className="navbarItem newsItem flex row center" to="/termine">
-                Termine
-              </Link>
-            </div>
-            
-            {/* ÜBER */}
-            <div
-              id="über-dropdown"
-              className="flex column endEnd"
-            >
-              <Link className="navbarItem überItem flex row center" to="/vorstellung">
-                Vorstellung
-              </Link>
-              <Link className="navbarItem überItem flex row center" to="/politik">
-                Politik
-              </Link>
-              <Link className="navbarItem überItem flex row center" to="/lebenslauf">
-                Lebenslauf
-              </Link>
-            </div>
-            
-            {/* FRANKFURT */}
-            <div
-              id="frankfurt-dropdown"
-              className="flex column endEnd"
-            >
-              <Link className="navbarItem frankfurtItem flex row center" to="/wahlkreis">
-                Wahlkreis
-              </Link>
-              <Link className="navbarItem frankfurtItem flex row center" to="/ontour">
-                on tour
-              </Link>
-            </div>
-            
-            {/* KONTAKTK */}
-            <div
-              id="kontakt-dropdown"
-              className="flex column endEnd"
-            >
-              <Link className="navbarItem kontanktItem flex row center" to="/contakt">
-                Kontakt
-              </Link>
-              <Link className="navbarItem kontanktItem flex row center" to="/pressebilder">
-                Pressebilder
-              </Link>
             </div>
           </div>
         </nav>
