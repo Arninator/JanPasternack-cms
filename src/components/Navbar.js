@@ -240,14 +240,14 @@ const Navbar = class extends React.Component {
                       className="navbarItem flex row center" 
                       to="/aktuelles"
                     >
-                      Aktuelles
-                    </Link>                
+                      News
+                  </Link>                
                   <Link className="navbarItem flex row center" to="/products">
-                    Übers
+                    Über
                   </Link>
-                  <Link className="navbarItem flex row center" to="/blog">
+                  {/* <Link className="navbarItem flex row center" to="/blog">
                     Presse
-                  </Link>
+                  </Link> */}
                   <Link className="navbarItem flex row center" to="/frankfurt">
                     Frankfurt
                   </Link>
@@ -317,34 +317,38 @@ const Navbar = class extends React.Component {
                  border: "1px solid red"
             }}
           >
-            <Link className="navbarItem flex row center" to="/aktuelles">
+            {/* NEWS */}
+            <Link className="navbarItem newsItem flex row center" to="/aktuelles">
               Aktuelles
             </Link>
-            <Link className="navbarItem flex row center" to="/presse">
+            <Link className="navbarItem newsItem flex row center" to="/presse">
               Presse
             </Link>
-            <Link className="navbarItem flex row center" to="/termine">
+            <Link className="navbarItem newsItem flex row center" to="/termine">
               Termine
             </Link>
-
-            <Link className="navbarItem flex row center" to="/vorstellung">
+            {/* ÜBER */}
+            <Link className="navbarItem überItem flex row center" to="/vorstellung">
               Vorstellung
             </Link>
-            <Link className="navbarItem flex row center" to="/politik">
+            <Link className="navbarItem überItem flex row center" to="/politik">
               Politik
             </Link>
-            <Link className="navbarItem flex row center" to="/lebenslauf">
+            <Link className="navbarItem überItem flex row center" to="/lebenslauf">
               Lebenslauf
             </Link>
-
-            <Link className="navbarItem flex row center" to="/wahlkreis">
+            {/* FRANKFURT */}
+            <Link className="navbarItem frankfurtItem flex row center" to="/wahlkreis">
               Wahlkreis
             </Link>
-            <Link className="navbarItem flex row center" to="/ontour">
+            <Link className="navbarItem frankfurtItem flex row center" to="/ontour">
               on tour
             </Link>
-
-            <Link className="navbarItem flex row center" to="/pressebilder">
+            {/* KONTAKTK */}
+            <Link className="navbarItem kontanktItem flex row center" to="/kontakt">
+              Kontakt
+            </Link>
+            <Link className="navbarItem kontanktItem flex row center" to="/pressebilder">
               Pressebilder
             </Link>
           </div>
