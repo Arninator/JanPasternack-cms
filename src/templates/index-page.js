@@ -13,8 +13,8 @@ import janUnterschrift from "../img/Unterschrift.jpg"
 
 import "../components/style.css";
 
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import FullWidthImage from "../components/FullWidthImage";
+// import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+// import FullWidthImage from "../components/FullWidthImage";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
