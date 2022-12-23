@@ -102,7 +102,7 @@ export const IndexPageTemplate = ({
                       </div>
                       <GatsbyImage
                           image={ janUnterschrift }
-                          alt="{alt}"
+                          alt="alt"
                           style={{
                             // maxHeight: "50vh"
                           }}
@@ -110,7 +110,7 @@ export const IndexPageTemplate = ({
                       <div className="tile">
                         <GatsbyImage
                           image={ janUnterschrift }
-                          alt="{alt}"
+                          alt="alt"
                           style={{
                             // maxHeight: "50vh"
                           }}
