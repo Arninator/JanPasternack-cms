@@ -208,15 +208,16 @@ const Navbar = class extends React.Component {
             }}
           >
             <div 
-              // className="container"
+              className=""
               style={{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "space-between",
 
                 width: "100vw",
+                maxHeight: "4.8vh"
               }}
-              >
+            >
               <div 
                 className="navbar-brand container"
               >
@@ -228,14 +229,14 @@ const Navbar = class extends React.Component {
                   style={{
                     margin: "0 5vw",
                     padding: "2vh 2vw",
-                    height: "7vh",
+                    // height: "7vh",
                     backgroundColor: "transparent"
                     // backgroundColor: "rgb(227, 0, 15)"
                   }}
                 >
                   <img
                     id="spd-logo"
-                    className="spd-logo-class"
+                    className=""
                     src={ logoBlack } 
                     alt="SPD Logo"
                   />
@@ -265,7 +266,7 @@ const Navbar = class extends React.Component {
                     flexDirection: "row",
                     justifyContent: "space-around",
 
-                    width: "100%"
+                    width: "100%",
                   }}
                 >
                   <div

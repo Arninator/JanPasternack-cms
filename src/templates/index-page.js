@@ -77,7 +77,7 @@ export const IndexPageTemplate = ({
                   >
                     <GatsbyImage
                       image={ helloImage }
-                      alt="{alt}"
+                      alt="alt"
                       style={{
                         maxHeight: "50vh"
                       }}
