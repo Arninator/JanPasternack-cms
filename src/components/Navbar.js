@@ -228,13 +228,13 @@ const Navbar = class extends React.Component {
                     width: "100%"
                   }}
                 >
-                  <Link
+                  {/* <Link
                     id="homeLink"
                     className="navbarItem flex row center" 
                     to="/"
                   >
-                    Start
-                  </Link>
+                    Home
+                  </Link> */}
                   <Link
                       id="aktuelles-link"
                       className="navbarItem flex row center" 
