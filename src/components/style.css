@@ -145,6 +145,10 @@
     justify-content: flex-end;
     align-items: center;
 }
+.endEnd {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
 .grey {
     color: grey;
 }

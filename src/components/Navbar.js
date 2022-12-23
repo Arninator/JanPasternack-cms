@@ -23,9 +23,9 @@ const Navbar = class extends React.Component {
 
   componentDidMount () {
 
-    $(".navbarItem").hover( function() {
-      console.log($(this).html);
-      $("#dropdown").css({
+    $(".newsItem").hover( function() {
+      console.log($(this).get);
+      $("#news-dropdown").css({
         "position": "absolute",
         "display": "block",
         "top": $(this).offset().top,
@@ -33,7 +33,49 @@ const Navbar = class extends React.Component {
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
-      $("#dropdown").css({
+      $("#news-dropdown").css({
+        "display": "none"
+      });
+    });
+    $(".überItem").hover( function() {
+      console.log($(this).get);
+      $("#über-dropdown").css({
+        "position": "absolute",
+        "display": "block",
+        "top": $(this).offset().top,
+        "left": $(this).offset().left,
+      });
+      console.log($(this).offset().top + " " + $(this).offset().left);
+    }, function() {
+      $("#über-dropdown").css({
+        "display": "none"
+      });
+    });
+    $(".frankfurtItem").hover( function() {
+      console.log($(this).get);
+      $("#frankfurt-dropdown").css({
+        "position": "absolute",
+        "display": "block",
+        "top": $(this).offset().top,
+        "left": $(this).offset().left,
+      });
+      console.log($(this).offset().top + " " + $(this).offset().left);
+    }, function() {
+      $("#frankfurt-dropdown").css({
+        "display": "none"
+      });
+    });
+    $(".kontaktItem").hover( function() {
+      console.log($(this).get);
+      $("#kontakt-dropdown").css({
+        "position": "absolute",
+        "display": "block",
+        "top": $(this).offset().top,
+        "left": $(this).offset().left,
+      });
+      console.log($(this).offset().top + " " + $(this).offset().left);
+    }, function() {
+      $("#kontakt-dropdown").css({
         "display": "none"
       });
     });
@@ -319,43 +361,63 @@ const Navbar = class extends React.Component {
             }}
           >
             {/* NEWS */}
-            <Link className="navbarItem newsItem flex row center" to="/aktuelles">
-              Aktuelles
-            </Link>
-            <Link className="navbarItem newsItem flex row center" to="/presse">
-              Presse
-            </Link>
-            <Link className="navbarItem newsItem flex row center" to="/termine">
-              Termine
-            </Link>
+            <div
+              id="news-dropdown"
+              className="flex column endEnd"
+            >
+              <Link className="navbarItem newsItem flex row center" to="/aktuelles">
+                Aktuelles
+              </Link>
+              <Link className="navbarItem newsItem flex row center" to="/presse">
+                Presse
+              </Link>
+              <Link className="navbarItem newsItem flex row center" to="/termine">
+                Termine
+              </Link>
+            </div>
+            
             {/* ÜBER */}
-            <Link className="navbarItem überItem flex row center" to="/vorstellung">
-              Vorstellung
-            </Link>
-            <Link className="navbarItem überItem flex row center" to="/politik">
-              Politik
-            </Link>
-            <Link className="navbarItem überItem flex row center" to="/lebenslauf">
-              Lebenslauf
-            </Link>
+            <div
+              id="über-dropdown"
+              className="flex column endEnd"
+            >
+              <Link className="navbarItem überItem flex row center" to="/vorstellung">
+                Vorstellung
+              </Link>
+              <Link className="navbarItem überItem flex row center" to="/politik">
+                Politik
+              </Link>
+              <Link className="navbarItem überItem flex row center" to="/lebenslauf">
+                Lebenslauf
+              </Link>
+            </div>
+            
             {/* FRANKFURT */}
-            <Link className="navbarItem frankfurtItem flex row center" to="/wahlkreis">
-              Wahlkreis
-            </Link>
-            <Link className="navbarItem frankfurtItem flex row center" to="/ontour">
-              on tour
-            </Link>
+            <div
+              id="frankfurt-dropdown"
+              className="flex column endEnd"
+            >
+              <Link className="navbarItem frankfurtItem flex row center" to="/wahlkreis">
+                Wahlkreis
+              </Link>
+              <Link className="navbarItem frankfurtItem flex row center" to="/ontour">
+                on tour
+              </Link>
+            </div>
+            
             {/* KONTAKTK */}
-            <Link className="navbarItem kontanktItem flex row center" to="/contakt">
-              Kontakt
-            </Link>
-            <Link className="navbarItem kontanktItem flex row center" to="/pressebilder">
-              Pressebilder
-            </Link>
+            <div
+              id="kontakt-dropdown"
+              className="flex column endEnd"
+            >
+              <Link className="navbarItem kontanktItem flex row center" to="/contakt">
+                Kontakt
+              </Link>
+              <Link className="navbarItem kontanktItem flex row center" to="/pressebilder">
+                Pressebilder
+              </Link>
+            </div>
           </div>
-          
-
-          
         </nav>
 
       // OLD
