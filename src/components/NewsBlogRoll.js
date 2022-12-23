@@ -84,7 +84,7 @@ export default function NewsBlogRoll() {
         query NewsBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
+            filter: { frontmatter: { templateKey: { eq: "news-page" } } }
           ) {
             edges {
               node {
