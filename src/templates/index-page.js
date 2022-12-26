@@ -7,6 +7,9 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
+import InstaBlogRoll from "../components/AktuellesBlogRoll";
+
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 
 import jancover from "../img/jan-cover.jpg";
 import janUnterschrift from "../img/Unterschrift.jpg"
@@ -125,6 +128,7 @@ export const IndexPageTemplate = ({
                       </Link>
                     </div>
                   </div> */}
+                  
                   <div 
                     className="flex row whiteBackground fade-in section column is-12"
                     style={{
@@ -137,7 +141,7 @@ export const IndexPageTemplate = ({
                     </h3>
                     <AktuellesBlogRoll />
                     <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/aktuelles">
+                      <Link className="" to="/aktuelles">
                         Mehr... &rarr;
                       </Link>
                     </div>
@@ -158,6 +162,20 @@ export const IndexPageTemplate = ({
                         Read more
                       </Link>
                     </div>
+                  </div>
+
+                  <div
+                    className="flex row whiteBackground fade-in section column is-4"
+                    style={{
+                      margin: "0 15vw"
+                    }}
+                  >
+                    <TwitterTimelineEmbed
+                      sourceType="profile"
+                      screenName="jan_pasternack"
+                      tweetLimit="3"
+                      // options={{}}
+                    />
                   </div>
                 </div>
               </div>
