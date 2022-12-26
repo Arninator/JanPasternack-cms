@@ -393,7 +393,7 @@ const Navbar = class extends React.Component {
                     Form Examples
                   </Link> */}
                   <div
-                    className="navbarItem flex row"
+                    className="navbarItem flex row center"
                     style={{
                       width: "8vw",
                       justifyContent: "space-between"
