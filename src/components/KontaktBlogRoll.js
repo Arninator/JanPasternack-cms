@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class UeberBlogRollTemplate extends React.Component {
+class KontaktBlogRollTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -69,7 +69,7 @@ class UeberBlogRollTemplate extends React.Component {
   }
 }
 
-UeberBlogRoll.propTypes = {
+KontaktBlogRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -78,13 +78,13 @@ UeberBlogRoll.propTypes = {
 }
 
 
-export default function UeberBlogRoll() {
+export default function KontaktBlogRoll() {
 
   // console.log("aktuellesBlogroll")
   return (
     <StaticQuery
       query={graphql`
-        query UeberBlogRollQuery {
+        query KontaktBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
@@ -117,7 +117,7 @@ export default function UeberBlogRoll() {
           }
         }
       `}
-      render={(data, count) => <UeberBlogRollTemplate data={data} count={count} />}
+      render={(data, count) => <KontaktBlogRollTemplate data={data} count={count} />}
     />
   );
 }
