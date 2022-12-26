@@ -10,7 +10,7 @@ import vimeo from "../img/social/vimeo.svg";
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <footer className="footer greyBackground">
         <div className="content has-text-centered">
           {/* <img
             src={logo}
@@ -18,12 +18,12 @@ const Footer = class extends React.Component {
             style={{ width: "14em", height: "10em" }}
           /> */}
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: "100vw" }} className="columns">
-              <div className="column is-4">
+        <div className="content greyBackground">
+          <div className="container greyBackground">
+            <div style={{ maxWidth: "100vw", display: "flex", flexDirection: "row" }} className="flex row space-between">
+              <div className="flex row space-between">
                 <section className="menu">
-                  <ul className="menu-list">
+                  <ul className="menu-list flex row center">
                     <li>
                       <Link to="/" className="navbar-item">
                         Home
@@ -39,11 +39,11 @@ const Footer = class extends React.Component {
                         Products
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="navbar-item" to="/contact/examples">
                         Form Examples
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         className="navbar-item"
@@ -57,7 +57,7 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div className="column is-4">
+              {/* <div className="column is-4">
                 <section>
                   <ul className="menu-list">
                     <li>
@@ -72,7 +72,7 @@ const Footer = class extends React.Component {
                     </li>
                   </ul>
                 </section>
-              </div>
+              </div> */}
               <div className="column is-4 social">
                 <a title="facebook" href="https://facebook.com">
                   <img
