@@ -7,8 +7,6 @@ import "../components/style.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-import JanCover from "../img/jan-cover.jpg"
-
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
@@ -17,7 +15,7 @@ const TemplateWrapper = ({ children }) => {
 
     >
       <Helmet>
-        <html lang="en" />
+        <html lang="de" />
         <title>{title}</title>
         <meta name="description" content={description} />
 
