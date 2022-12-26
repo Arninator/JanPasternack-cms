@@ -1,7 +1,8 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import FrankfurtBlogRoll from "../../components/FrankfurtBlogRoll";
+import WahlkreisBlogRoll from "../../components/FrankfurtBlogRoll";
+import OnTourBlogRoll from "../../components/FrankfurtBlogRoll";
 
 export default class FrankfurtIndexPage extends React.Component {
   componentDidMount() {
@@ -37,7 +38,12 @@ export default class FrankfurtIndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <FrankfurtBlogRoll />
+              <WahlkreisBlogRoll />
+            </div>
+          </div>
+          <div className="container">
+            <div className="content">
+              <OnTourBlogRoll />
             </div>
           </div>
         </section>
