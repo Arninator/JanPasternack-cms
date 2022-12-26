@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import WahlkreisBlogRoll from "../../components/KontaktBlogRoll";
-import OnTourBlogRoll from "../../components/KontaktBlogRoll";
+import PressebilderBlogRoll from "../../components/PressebilderBlogRoll";
 
 export default class KontaktIndexPage extends React.Component {
   componentDidMount() {
@@ -43,7 +43,7 @@ export default class KontaktIndexPage extends React.Component {
           </div>
           <div className="container">
             <div className="content">
-              <OnTourBlogRoll />
+              <PressebilderBlogRoll />
             </div>
           </div>
         </section>

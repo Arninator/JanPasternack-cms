@@ -21,17 +21,17 @@ class PressebilderBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header>
-                  {post.frontmatter.featuredimage ? (
+                  {post.frontmatter.image ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          image: post.frontmatter.image,
+                          alt: `featured image thumbnail for post ${post.frontmatter.alt}`,
                           width:
-                            post.frontmatter.featuredimage.childImageSharp
+                            post.frontmatter.image.childImageSharp
                               .gatsbyImageData.width,
                           height:
-                            post.frontmatter.featuredimage.childImageSharp
+                            post.frontmatter.image.childImageSharp
                               .gatsbyImageData.height,
                         }}
                       />

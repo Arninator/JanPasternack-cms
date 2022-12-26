@@ -14,6 +14,7 @@ export const PressebilderBlogPostTemplate = ({
   tags,
   title,
   helmet,
+  image,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -53,6 +54,7 @@ PressebilderBlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  image: PropTypes.image,
 };
 
 const PressebilderBlogPost = ({ data }) => {
@@ -98,6 +100,11 @@ export const pageQuery = graphql`
         title
         description
         tags
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+          }
+        }
       }
     }
   }

@@ -178,13 +178,26 @@ collections:
           widget: "hidden",
           default: "pressebilder-page",
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: Pressebilder,
+          name: pressebilder,
+          widget: object,
+          fields:
+            [
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text },
+              {
+                label: Fotos,
+                name: fotos,
+                widget: list,
+                fields:
+                  [
+                    { label: Image, name: image, widget: image },
+                    { label: Alternativtext, name: alt, widget: string },
+                  ],
+              },
+            ],
+          }
   - name: "termineBlog"
     label: "Termine"
     folder: "src/pages/termine"

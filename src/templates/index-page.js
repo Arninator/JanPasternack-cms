@@ -46,7 +46,7 @@ export const IndexPageTemplate = ({
           alt="Cover"
           style= {{
             position: "absolute",
-            top: "0vw",
+            top: "6vw",
           }}
         />
       </div>
