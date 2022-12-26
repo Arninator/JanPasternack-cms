@@ -20,7 +20,8 @@ class AktuellesBlogRollTemplate extends React.Component {
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
                 style={{
-                  backgroundColor: "hsl(0, 0%, 93%)"
+                  backgroundColor: "hsl(0, 0%, 93%)",
+                  height: "50vh"
                 }}
               >
                 <header>

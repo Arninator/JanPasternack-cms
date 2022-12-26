@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
+
 import logo from "../img/SPD_Logo_Weiss.png";
 import logoBlack from "../img/SPD_Logo_Schwarz_RGB.png";
+import logoRed from "../img/SPD_Logo_Rot_RGB.png";
+
 import { reduce } from "lodash";
 import "../components/style.css";
 
@@ -141,7 +144,7 @@ const Navbar = class extends React.Component {
                   
                   $("#spd-logo").attr("src", logoBlack);
                   $("#spd-logo").hover(function() {
-                    $( this ).attr("src", logo);
+                    $( this ).attr("src", logoRed);
                   }, function() {
                     $( this ).attr("src", logoBlack);
                   });
