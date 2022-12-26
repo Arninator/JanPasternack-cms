@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
 export const PressebilderBlogPostTemplate = ({
@@ -28,6 +29,7 @@ export const PressebilderBlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <GatsbyImage image={ image }/>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -54,7 +56,6 @@ PressebilderBlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  image: PropTypes.image,
 };
 
 const PressebilderBlogPost = ({ data }) => {
