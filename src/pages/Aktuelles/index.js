@@ -2,8 +2,6 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import AktuellesBlogRoll from "../../components/AktuellesBlogRoll";
-import PresseBlogRoll from "../../components/PresseBlogRoll";
-import TermineBlogRoll from "../../components/TermineBlogRoll";
 
 export default class AktuellesBlogIndexPage extends React.Component {
   render() {
@@ -46,12 +44,6 @@ export default class AktuellesBlogIndexPage extends React.Component {
             </h1>
             <div className="content">
               <AktuellesBlogRoll />
-            </div>
-            <div className="content">
-              <PresseBlogRoll />
-            </div>
-            <div className="content">
-              <TermineBlogRoll />
             </div>
           </div>
         </section>

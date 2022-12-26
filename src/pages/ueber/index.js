@@ -1,11 +1,9 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import AktuellesBlogRoll from "../../components/AktuellesBlogRoll";
-import PresseBlogRoll from "../../components/PresseBlogRoll";
-import TermineBlogRoll from "../../components/TermineBlogRoll";
+import WahlkreisBlogRoll from "../../components/WahlkreisBlogRoll";
 
-export default class NewsIndexPage extends React.Component {
+export default class WahlkreisIndexPage extends React.Component {
   componentDidMount() {
 
     if (document.location.href.includes("blog")) {
@@ -33,26 +31,16 @@ export default class NewsIndexPage extends React.Component {
               padding: "1rem",
             }}
           >
-            News
+            Wahlkreis
           </h1>
         </div>
         <section className="section">
           <div className="container">
-            <h2>Aktuelles</h2>
             <div className="content">
-              <AktuellesBlogRoll />
-            </div>
-            <h2>Presse</h2>
-            <div className="content">
-              <PresseBlogRoll />
-            </div>
-            <h2>Termine</h2>
-            <div className="content">
-              <TermineBlogRoll />
+              <WahlkreisBlogRoll />
             </div>
           </div>
         </section>
-       
       </Layout>
     );
   }

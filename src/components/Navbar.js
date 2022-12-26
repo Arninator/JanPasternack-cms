@@ -30,7 +30,7 @@ const Navbar = class extends React.Component {
         "display": "block",
         "background-color": "white",
         "top": "5vh",
-        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#news-dropdown").width() / 2),
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#news-dropdown").width() / 2.),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -44,7 +44,7 @@ const Navbar = class extends React.Component {
         "display": "block",
         "background-color": "white",
         "top": "5vh",
-        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#ueber-dropdown").width() / 2),
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#ueber-dropdown").width() / 2.),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -58,7 +58,7 @@ const Navbar = class extends React.Component {
         "display": "block",
         "background-color": "white",
         "top": "5vh",
-        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#frankfurt-dropdown").width() / 2),
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#frankfurt-dropdown").width() / 2.),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -72,7 +72,7 @@ const Navbar = class extends React.Component {
         "display": "block",
         "background-color": "white",
         "top": "5vh",
-        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#kontakt-dropdown").width() / 2),
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#kontakt-dropdown").width() / 2.),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -112,6 +112,7 @@ const Navbar = class extends React.Component {
 
               if (window_top > ($(window).height()) / 90.) {
                   $(this).css("background-color", "rgb(227, 0, 15)");
+                  $(".navbarItem").css("background-color", "rgb(227, 0, 15)");
                   // $(this).css("background", "linear-gradient(to bottom, rgb(227, 0, 15) 0%, rgba(255, 255, 255, 0) 100%)");
                   
                   $(".navbarItem").css("color", "white");
@@ -129,6 +130,8 @@ const Navbar = class extends React.Component {
                   });                  
               } else {
                   $(this).css("background-color", "transparent");
+                  $(".navbarItem").css("background-color", "transparent");
+
                   $(".navbarItem").css("color", "black");
                   $(".navbarItem").hover(function () {
                     $(this).css("color", "rgb(227, 0, 15)");
@@ -313,8 +316,8 @@ const Navbar = class extends React.Component {
                     id="ueber-link"
                     className="flex row center"
                   >
-                    <Link className="navbarItem ueberItem flex row center" to="/blog">
-                      UEber
+                    <Link className="navbarItem ueberItem flex row center" to="/ueber">
+                      Über
                     </Link>
                     <div
                       id="ueber-dropdown"
