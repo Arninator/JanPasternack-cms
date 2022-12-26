@@ -28,8 +28,9 @@ const Navbar = class extends React.Component {
       $("#news-dropdown").css({
         "position": "absolute",
         "display": "block",
-        "top": $(this).offset().top,
-        "left": $(this).offset().left - ($("#news-dropdown").width() / 4),
+        "background-color": "white",
+        "top": "5vh",
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#news-dropdown").width() / 2),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -41,8 +42,9 @@ const Navbar = class extends React.Component {
       $("#ueber-dropdown").css({
         "position": "absolute",
         "display": "block",
-        "top": $(this).offset().top,
-        "left": $(this).offset().left - ($("#ueber-dropdown").width() / 4),
+        "background-color": "white",
+        "top": "5vh",
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#ueber-dropdown").width() / 2),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -54,8 +56,9 @@ const Navbar = class extends React.Component {
       $("#frankfurt-dropdown").css({
         "position": "absolute",
         "display": "block",
-        "top": $(this).offset().top,
-        "left": $(this).offset().left - ($("#frankfurt-dropdown").width() / 4),
+        "background-color": "white",
+        "top": "5vh",
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#frankfurt-dropdown").width() / 2),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -67,8 +70,9 @@ const Navbar = class extends React.Component {
       $("#kontakt-dropdown").css({
         "position": "absolute",
         "display": "block",
-        "top": $(this).offset().top,
-        "left": $(this).offset().left - ($("#kontakt-dropdown").width() / 4),
+        "background-color": "white",
+        "top": "5vh",
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#kontakt-dropdown").width() / 2),
       });
       console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
@@ -199,6 +203,7 @@ const Navbar = class extends React.Component {
             margin: "0",
             padding: "0",
             backgroundColor: "transparent",
+            // backgroundColor: "rgb(0, 0, 15, 40%)"
           }}
         >
           <div
@@ -230,7 +235,7 @@ const Navbar = class extends React.Component {
                     margin: "0 5vw",
                     padding: "2vh 2vw",
                     // height: "7vh",
-                    backgroundColor: "transparent"
+                    backgroundColor: "transparent",
                     // backgroundColor: "rgb(227, 0, 15)"
                   }}
                 >
