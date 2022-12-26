@@ -349,7 +349,7 @@ const Navbar = class extends React.Component {
                     </Link>
                     <div
                       id="frankfurt-dropdown"
-                      className="flex column endEnd"
+                      className="flex row center"
                       style={{
                         display: "none"
                       }}
@@ -372,7 +372,7 @@ const Navbar = class extends React.Component {
                     </Link>
                     <div
                       id="kontakt-dropdown"
-                      className="flex column endEnd"
+                      className="flex row center"
                       style={{
                         display: "none"
                       }}
