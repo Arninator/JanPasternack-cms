@@ -153,6 +153,9 @@
     justify-content: flex-end;
     align-items: flex-end;
 }
+.space-between{
+    justify-content: space-between;
+}
 .grey {
     color: grey;
 }
@@ -176,6 +179,9 @@
         -----------------------
     ```````````````````````````
  */
+.navbar-item {
+    color: black;
+}
 .navbarItem {
     color: black;
     list-style: none;
