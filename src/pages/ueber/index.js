@@ -1,9 +1,11 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import WahlkreisBlogRoll from "../../components/WahlkreisBlogRoll";
+import VorstellungBlogRoll from "../../components/UeberBlogRoll";
+import PolitikBlogRoll from "../../components/UeberBlogRoll";
+import LebenslaufBlogRoll from "../../components/UeberBlogRoll";
 
-export default class WahlkreisIndexPage extends React.Component {
+export default class UeberIndexPage extends React.Component {
   componentDidMount() {
 
     if (document.location.href.includes("blog")) {
@@ -31,13 +33,23 @@ export default class WahlkreisIndexPage extends React.Component {
               padding: "1rem",
             }}
           >
-            Wahlkreis
+            Über
           </h1>
         </div>
         <section className="section">
           <div className="container">
             <div className="content">
-              <WahlkreisBlogRoll />
+              <VorstellungBlogRoll />
+            </div>
+          </div>
+          <div className="container">
+            <div className="content">
+              <PolitikBlogRoll />
+            </div>
+          </div>
+          <div className="container">
+            <div className="content">
+              <LebenslaufBlogRoll />
             </div>
           </div>
         </section>
