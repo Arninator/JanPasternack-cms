@@ -32,6 +32,7 @@ export const IndexPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
   const helloImage = getImage(mainpitch.image) || mainpitch.image;
+  const signatureImage = getImage(mainpitch.signature) || mainpitch.signature;
 
   return (
     <div>
@@ -107,13 +108,13 @@ export const IndexPageTemplate = ({
                           }}
                         >{mainpitch.description}</h3>
                       </div>
-                      {/* <GatsbyImage
-                          image={ janUnterschrift }
+                      <GatsbyImage
+                          image={ signatureImage }
                           alt="alt"
                           style={{
                             // maxHeight: "50vh"
                           }}
-                        /> */}
+                        />
                     </div>
                   </div>
                   {/* <div className="columns">
@@ -247,6 +248,11 @@ export const pageQuery = graphql`
           title
           description
           image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+            }
+          }
+          signature {
             childImageSharp {
               gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
             }
