@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({
           style={{
             backgroundImage: "url('/img/jan-cover.jpg')",
             backgroundPosition: "0% 50%",
-            height: "75vh",
+            height: "80vh",
           }}
         >
       </div>
@@ -83,13 +83,13 @@ export const IndexPageTemplate = ({
                       position: "relative"
                     }}
                   >
-                    <GatsbyImage
+                    {/* <GatsbyImage
                       image={ helloImage }
                       alt="alt"
                       style={{
                         maxHeight: "50vh"
                       }}
-                    />
+                    /> */}
                     <div 
                       id="test"
                       className="flex column"
