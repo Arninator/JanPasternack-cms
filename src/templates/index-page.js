@@ -76,7 +76,7 @@ export const IndexPageTemplate = ({
               <div className="column is-12">
                 <div className="content">
                   <div 
-                    className="tile flex row greyBackground fade-in section"
+                    className="tile flex row whiteBackground fade-in section"
                     style={{
                       padding: "5% 15%",
                       position: "relative"
@@ -134,7 +134,7 @@ export const IndexPageTemplate = ({
                   </div> */}
                   
                   <div 
-                    className="flex row whiteBackground fade-in section column is-12"
+                    className="flex row greyBackground fade-in section column is-12"
                     style={{
                       padding: "5% 15%",
                       position: "relative"
@@ -151,7 +151,7 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="flex row greyBackground fade-in section column is-12"
+                    className="flex row whiteBackground fade-in section column is-12"
                     style={{
                       padding: "5% 15%",
                       position: "relative"
@@ -169,9 +169,9 @@ export const IndexPageTemplate = ({
                   </div>
 
                   <div
-                    className="flex row whiteBackground fade-in section column is-4"
+                    className="flex row greyBackground fade-in section column is-12"
                     style={{
-                      margin: "0 15vw"
+                      margin: "0 0vw"
                     }}
                   >
                     <TwitterTimelineEmbed
