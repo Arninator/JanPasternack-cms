@@ -35,12 +35,16 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      {/* <FullWidthImage 
-        img={heroImage}
-        title={title}
-        subheading={subheading} 
-      /> */}
-      <div id="cover-img">
+      <div
+          className="full-width-image-container margin-top-0"
+          style={{
+            backgroundImage: "url('/img/jan-cover.jpg')",
+            backgroundPosition: "0% 50%",
+            height: "75vh",
+          }}
+        >
+      </div>
+      {/* <div id="cover-img">
         <img 
           src={ jancover }
           alt="Cover"
@@ -49,13 +53,13 @@ export const IndexPageTemplate = ({
             top: "6vw",
           }}
         />
-      </div>
+      </div> */}
       
       <section 
         // className="section section--gradient"
         style={{
           width: "100vw",
-          margin: "90vh 0 0 0"
+          margin: "0 0 0 0"
         }}
         >
         <div 
