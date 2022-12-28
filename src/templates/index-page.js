@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
       <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: "url('/img/jan-cover.jpg')",
+            backgroundImage: 'url("/img/jan-cover.jpg")',
             backgroundPosition: "0% 50%",
             height: "80vh",
           }}

@@ -183,7 +183,7 @@ collections:
           name: pressebilder,
           widget: object,
           fields:
-            [
+            {
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
               {
@@ -196,7 +196,7 @@ collections:
                     { label: Alternativtext, name: alt, widget: string },
                   ],
               },
-            ],
+            },
           }
   - name: "termineBlog"
     label: "Termine"

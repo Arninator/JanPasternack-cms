@@ -16,8 +16,11 @@ export const PressebilderBlogPostTemplate = ({
   title,
   helmet,
   image,
+  fotos,
 }) => {
   const PostContent = contentComponent || Content;
+  // // const fotoArray = fotos;
+  console.log(fotos);
 
   return (
     <section className="section">
@@ -29,7 +32,7 @@ export const PressebilderBlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            <GatsbyImage image={ image }/>
+            {/* <GatsbyImage image={  }/> */}
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -56,6 +59,7 @@ PressebilderBlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  fotos: PropTypes.array,
 };
 
 const PressebilderBlogPost = ({ data }) => {
@@ -105,6 +109,14 @@ export const pageQuery = graphql`
           childImageSharp {
             gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
           }
+        }
+        fotos {
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+            }
+          }
+          alt
         }
       }
     }

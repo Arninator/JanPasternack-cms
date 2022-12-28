@@ -210,6 +210,7 @@ const Navbar = class extends React.Component {
             padding: "0",
             backgroundColor: "transparent",
             // backgroundColor: "rgb(0, 0, 15, 40%)"
+            // borderBottom: "1px solid red"
           }}
         >
           <div
