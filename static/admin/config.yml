@@ -169,7 +169,7 @@ collections:
   - name: "pressebilderBlog"
     label: "Pressebilder"
     folder: "src/pages/pressebilder"
-    create: true
+    create: false
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
