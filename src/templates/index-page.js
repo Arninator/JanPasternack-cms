@@ -33,6 +33,7 @@ export const IndexPageTemplate = ({
   const heroImage = getImage(image) || image;
   const helloImage = getImage(mainpitch.image) || mainpitch.image;
   const signatureImage = getImage(mainpitch.signature) || mainpitch.signature;
+  console.log("index-blurbs: " + intro.blurbs);
 
   return (
     <div>
@@ -108,6 +109,7 @@ export const IndexPageTemplate = ({
                           }}
                         >{mainpitch.description}</h3>
                       </div>
+                      {console.log(signatureImage)}
                       <GatsbyImage
                           image={ signatureImage }
                           alt="alt"

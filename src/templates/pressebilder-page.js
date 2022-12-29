@@ -4,8 +4,9 @@ import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
+import Features from "../components/Features";
 import Content, { HTMLContent } from "../components/Content";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
 export const PressebilderBlogPostTemplate = ({
@@ -19,7 +20,10 @@ export const PressebilderBlogPostTemplate = ({
   intro,
 }) => {
   const PostContent = contentComponent || Content;
-  console.log(intro);
+  const presseImages = [];
+  for ( let i = 0; i < intro.blurbs.length; i++) presseImages.push(getImage(intro.blurbs[i].image) || intro.blurbs[i].image);
+  // for (let i = 0; i < intro.blurbs.length; i++) presseImages.ad
+  console.log("Array: " + presseImages);
 
   return (
     <section className="section">
@@ -31,7 +35,26 @@ export const PressebilderBlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            <GatsbyImage image={ image }/>
+            {/* <Features gridItems={intro.blurbs} /> */}
+            {/* <GatsbyImage 
+              image= { presseImages[0] }
+              alt= "{ presseImages[0] }"
+              style={{
+              // height: "50vh",
+              border: "1px solid red"
+              }}
+            /> */}
+            {console.log("mapping: " + presseImages[0])}
+            {presseImages.map((foto, index) => (
+              <GatsbyImage 
+                image= { foto }
+                alt= { intro.blurbs[index].alt }
+                style={{
+                // height: "50vh",
+                border: "1px solid red"
+                }}
+              />
+            ))}
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -83,6 +106,7 @@ const PressebilderBlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        intro={post.frontmatter.intro}
       />
     </Layout>
   );
@@ -90,7 +114,9 @@ const PressebilderBlogPost = ({ data }) => {
 
 PressebilderBlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
   }),
 };
 
@@ -102,15 +128,6 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        description
-        tags
-        image {
-          childImageSharp {
-            gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-          }
-        }
         intro {
           blurbs {
             image {
