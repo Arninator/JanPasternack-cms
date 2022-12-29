@@ -172,9 +172,9 @@ export const IndexPageTemplate = ({
                   </div>
 
                   <div
-                    className="flex row greyBackground fade-in section column is-12"
+                    className="flex row greyBackground fade-in section column is-4"
                     style={{
-                      margin: "0 0vw"
+                      margin: "0 15vw"
                     }}
                   >
                     <TwitterTimelineEmbed
