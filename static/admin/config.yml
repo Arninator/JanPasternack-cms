@@ -178,6 +178,7 @@ collections:
           widget: "hidden",
           default: "pressebilder-page",
         }
+      - { label: "Title", name: "title", widget: "string" }
       - {
           label: Intro,
           name: intro,
@@ -193,7 +194,7 @@ collections:
                 fields:
                   [
                     { label: Image, name: image, widget: image },
-                    { label: Text, name: text, widget: text },
+                    { label: Alternativtext, name: alt, widget: string },
                   ],
               },
             ],

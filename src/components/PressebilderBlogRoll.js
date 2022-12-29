@@ -21,7 +21,23 @@ class PressebilderBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header>
-                  {post.frontmatter.image ? (
+                  <div 
+                    className="featured-thumbnail flex row center"
+                    
+                  >
+                    {post.frontmatter.intro.blurbs.map( fotoObject => {
+                    return(
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: fotoObject.image,
+                          alt: `featured image thumbnail for post ${post.frontmatter.alt}`,
+                          width: "75vw",
+                          // height: fotoObject.height,
+                        }}
+                      />)})
+                    }
+                  </div>
+                  {/* {post.frontmatter.image ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -36,8 +52,8 @@ class PressebilderBlogRollTemplate extends React.Component {
                         }}
                       />
                     </div>
-                  ) : null}
-                  <p className="post-meta">
+                  ) : null} */}
+                  {/* <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
@@ -48,7 +64,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                     <span className="subtitle is-size-5 is-block">
                       {post.frontmatter.date}
                     </span>
-                  </p>
+                  </p> */}
                 </header>
                 <p>
                   {post.excerpt}
@@ -106,6 +122,18 @@ export default function PressebilderBlogRoll() {
                         layout: CONSTRAINED
                       )
 
+                    }
+                  }
+                  intro {
+                    heading
+                    description
+                    blurbs {
+                      image {
+                        childImageSharp {
+                          gatsbyImageData(width: 249 quality: 64, layout: CONSTRAINED)
+                        }
+                      }
+                      alt
                     }
                   }
                 }

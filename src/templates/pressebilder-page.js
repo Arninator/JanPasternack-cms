@@ -44,14 +44,20 @@ export const PressebilderBlogPostTemplate = ({
               border: "1px solid red"
               }}
             /> */}
-            {console.log("mapping: " + presseImages[0])}
+            {/* {console.log("mapping: " + presseImages[0])} */}
             {presseImages.map((foto, index) => (
               <GatsbyImage 
                 image= { foto }
                 alt= { intro.blurbs[index].alt }
+                
                 style={{
                 // height: "50vh",
-                border: "1px solid red"
+                // border: "1px solid red"
+                // width: "100%",
+                // height: "75vh",
+                width: "100%",
+                aspectRatio: "4/3",
+                margin: "3%",
                 }}
               />
             ))}
@@ -128,17 +134,18 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
+        title
         intro {
+          heading
+          description
           blurbs {
             image {
               childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
               }
             }
-            text
+            alt
           }
-          heading
-          description
         }
       }
     }
