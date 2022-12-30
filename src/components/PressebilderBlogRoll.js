@@ -30,6 +30,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                     className="flex row space-between"
                     style={{
                       width: "100%",
+                      flexWrap: "wrap"
                     }}
                   >
                     {post.frontmatter.intro.blurbs.map( fotoObject => {
@@ -38,7 +39,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                         imageInfo={{
                           image: fotoObject.image,
                           alt: `featured image thumbnail for post ${post.frontmatter.alt}`,
-                          width: "75vw",
+                          // width: "75vw",
                           // height: fotoObject.height,
                         }}
                       />)})

@@ -56,7 +56,7 @@ export const PressebilderBlogPostTemplate = ({
                 // width: "100%",
                 // height: "75vh",
                 width: "100%",
-                aspectRatio: "4/3",
+                // height: "content",
                 margin: "3%",
                 }}
               />
