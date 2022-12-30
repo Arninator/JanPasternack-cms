@@ -195,9 +195,9 @@ export const IndexPageTemplate = ({
                     />
                     
                   </div>
-                  <TwitterTweetEmbed 
+                  {/* <TwitterTweetEmbed 
                     tweetId={'1606218300500779009'}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
