@@ -157,9 +157,6 @@
 .space-between{
     justify-content: space-between;
 }
-.border {
-    border: 1px solid red;
-}
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
         ALLGEMEINE_KLASSEN
@@ -168,11 +165,25 @@
  */
 .greyBackground {
     background-color: rgb(233, 233, 233);
-    /* width: 100vw; */
 }
 .whiteBackground {
     background-color: rgb(255, 255, 255);
-    /* width: 100vw; */
+}
+.border {
+    border: 1px solid red;
+}
+.plain-button {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    padding: 1.5vh 1.5vw;
+
+    color: var(--spd-red) !important;
+    text-decoration: double !important;
+}
+.plain-button:hover {
+    color: black !important;
+    border-color: darkgray;
 }
 .blog-title {
     color: black;
