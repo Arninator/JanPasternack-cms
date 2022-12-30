@@ -33,7 +33,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                       flexWrap: "wrap"
                     }}
                   >
-                    {post.frontmatter.intro.blurbs.map( fotoObject => {
+                    {post.frontmatter.intro.fotos.map( fotoObject => {
                     return(
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -42,7 +42,8 @@ class PressebilderBlogRollTemplate extends React.Component {
                           // width: "75vw",
                           // height: fotoObject.height,
                         }}
-                      />)})
+                      />
+                      )})
                     }
                   </div>
                   {/* {post.frontmatter.image ? (
@@ -141,10 +142,10 @@ export default function PressebilderBlogRoll() {
                   intro {
                     heading
                     description
-                    blurbs {
+                    fotos {
                       image {
                         childImageSharp {
-                          gatsbyImageData(width: 249 quality: 64, layout: CONSTRAINED)
+                          gatsbyImageData(quality: 64, layout: CONSTRAINED)
                         }
                       }
                       alt
