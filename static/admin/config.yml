@@ -188,7 +188,7 @@ collections:
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
               {
-                label: Blurbs,
+                label: Fotos,
                 name: blurbs,
                 widget: list,
                 fields:
