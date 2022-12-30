@@ -182,7 +182,7 @@
     text-decoration: double !important;
 }
 .plain-button:hover {
-    color: black !important;
+    /* color: black !important; */
     border-color: darkgray;
 }
 .blog-title {

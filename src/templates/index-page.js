@@ -158,7 +158,7 @@ export const IndexPageTemplate = ({
                     </h3>
                     <AktuellesBlogRoll />
                     <div className="column is-12 has-text-centered">
-                      <Link className="" to="/aktuelles">
+                      <Link className="plain-button" to="/aktuelles">
                         Mehr... &rarr;
                       </Link>
                     </div>
@@ -174,7 +174,7 @@ export const IndexPageTemplate = ({
                       BLOG
                     </h3>
                     <BlogRoll />
-                    <div className="column is-12 has-text-centered">
+                    <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
                       <Link className="plain-button" to="/blog">
                         Read more &rarr;
                       </Link>
@@ -193,7 +193,11 @@ export const IndexPageTemplate = ({
                       tweetLimit="3"
                       // options={{}}
                     />
+                    
                   </div>
+                  <TwitterTweetEmbed 
+                    tweetId={'1606218300500779009'}
+                  />
                 </div>
               </div>
             </div>
