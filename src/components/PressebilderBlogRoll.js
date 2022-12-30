@@ -38,7 +38,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: fotoObject.image,
-                          alt: `featured image thumbnail for post ${post.frontmatter.alt}`,
+                          alt: fotoObject.alt,
                           // width: "75vw",
                           // height: fotoObject.height,
                         }}

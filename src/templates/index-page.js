@@ -38,13 +38,31 @@ export const IndexPageTemplate = ({
   return (
     <div>
       <div
-          className="full-width-image-container margin-top-0"
+        className="full-width-image-container margin-top-0 flex column flexEnd"
+        style={{
+          backgroundImage: 'url("/img/jan-cover.jpg")',
+          backgroundPosition: "0% 50%",
+          height: "80vh",
+        }}
+      >
+        {/* <h1 
+          className="jan-header flex endEnd"
           style={{
-            backgroundImage: 'url("/img/jan-cover.jpg")',
-            backgroundPosition: "0% 50%",
-            height: "80vh",
+            fontSize: "4vh",
+            fontWeight: "400",
+            color: "black",
+
           }}
-        >
+        >Jan Pasternack</h1>
+        <h3 
+          className="jan-subheader flex endEnd"
+          style={{
+            fontSize: "3vh",
+            fontWeight: "400",
+            color: "black",
+
+          }}
+        >Wahlkreis 35 (Frankfurt II)</h3> */}
       </div>
       {/* <div id="cover-img">
         <img 
@@ -64,16 +82,8 @@ export const IndexPageTemplate = ({
           margin: "0 0 0 0"
         }}
         >
-        <div 
-          // className="container"
-          style={{
-          }}
-        >
-          <div 
-            // style={{
-            //   background: "rgb(233, 233, 233)"
-            // }}
-          >
+        <div>
+          <div>
             <div className="columns">
               <div className="column is-12">
                 <div className="content">

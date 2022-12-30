@@ -157,8 +157,8 @@
 .space-between{
     justify-content: space-between;
 }
-.grey {
-    color: grey;
+.border {
+    border: 1px solid red;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
@@ -173,6 +173,11 @@
 .whiteBackground {
     background-color: rgb(255, 255, 255);
     /* width: 100vw; */
+}
+.blog-title {
+    /* color: black !important; */
+    text-decoration: none;
+    font-size: 2.8vh;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
