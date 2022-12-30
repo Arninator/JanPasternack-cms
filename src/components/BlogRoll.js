@@ -41,7 +41,7 @@ class BlogRollTemplate extends React.Component {
                         />
                       </div>
                     ) : null}
-                    <p className="post-meta">
+                    <p className="post-meta blog-title">
                       {post.frontmatter.title}
                       <span></span>
                       <span className="subtitle is-size-5 is-block">
