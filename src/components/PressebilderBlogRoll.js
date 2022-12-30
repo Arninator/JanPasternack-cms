@@ -142,7 +142,7 @@ export default function PressebilderBlogRoll() {
                   intro {
                     heading
                     description
-                    fotos {
+                    blurbs {
                       image {
                         childImageSharp {
                           gatsbyImageData(quality: 64, layout: CONSTRAINED)
