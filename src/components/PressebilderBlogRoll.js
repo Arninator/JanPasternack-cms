@@ -14,16 +14,23 @@ class PressebilderBlogRollTemplate extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="is-parent column is-12" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <header>
+                <header
+                  style={{
+                    width: "100%",
+                    // border: "1px solid red"
+                  }}
+                >
                   <div 
-                    className="featured-thumbnail flex row center"
-                    
+                    className="flex row space-between"
+                    style={{
+                      width: "100%",
+                    }}
                   >
                     {post.frontmatter.intro.blurbs.map( fotoObject => {
                     return(
@@ -66,12 +73,18 @@ class PressebilderBlogRollTemplate extends React.Component {
                     </span>
                   </p> */}
                 </header>
-                <p>
+                <p style={{ width: "100%" }}>
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Weiterlesen Aktuell &rarr;
+                  <Link 
+                    className="button column is-4" 
+                    to={post.fields.slug}
+                    style={{
+                      margin: "auto"
+                    }}
+                  >
+                    See More &rarr;
                   </Link>
                 </p>
               </article>
