@@ -158,7 +158,7 @@ export const IndexPageTemplate = ({
                     </h3>
                     <AktuellesBlogRoll />
                     <div className="column is-12 has-text-centered">
-                      <Link className="plain-button" to="/aktuelles">
+                      <Link className="plain-button" to="/Aktuelles">
                         Mehr... &rarr;
                       </Link>
                     </div>
