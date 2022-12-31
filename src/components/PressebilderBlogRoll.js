@@ -33,16 +33,23 @@ class PressebilderBlogRollTemplate extends React.Component {
                       flexWrap: "wrap"
                     }}
                   >
-                    {post.frontmatter.intro.fotos.map( fotoObject => {
+                    {post.frontmatter.intro.blurbs.map( fotoObject => {
                     return(
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: fotoObject.image,
-                          alt: fotoObject.alt,
-                          // width: "75vw",
-                          // height: fotoObject.height,
+                      <div
+                        style={{
+                          width: fotoObject.height < fotoObject.width ? "20%": "20%",
+                          margin: "2vh",
                         }}
-                      />
+                      >
+                        <PreviewCompatibleImage
+                          imageInfo={{
+                            image: fotoObject.image,
+                            alt: fotoObject.alt,
+                            // width: fotoObject.image.width,
+                            // height: fotoObject.height,
+                          }}
+                        />
+                      </div>
                       )})
                     }
                   </div>
