@@ -14,13 +14,10 @@ mainpitch:
     über mich persönlich.
 
 
-
     Mein größtes Anliegen ist es, mit Ihnen ins Gespräch zu kommen und im Gespräch zu bleiben. Bitte nutzen Sie das Kontaktformular oder die weiteren Kontaktmöglichkeiten für Ihre Fragen, Anregungen oder Kritik. Jedes Feedback hilft mir, mich noch gezielter für Ihre Interessen einzusetzen. Unter Termine erfahren Sie, wo Sie mich auch ohne vorherige Absprache antreffen und persönlich kennen lernen können. Ich freue mich darauf.
 
 
-
     Herzliche Grüße
-
 
 
     Ihr\
