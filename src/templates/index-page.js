@@ -111,7 +111,10 @@ export const IndexPageTemplate = ({
                       <div className="tile">
                         <h1 className="title">{mainpitch.title}</h1>
                       </div>
-                      <div className="tile">
+                      <div 
+                        className="tile"
+                        // dangerouslySetInnerHTML= {{__html: mainpitch.description}}
+                        >
                         <h3 
                           className="subtitle"
                           style={{
@@ -158,7 +161,7 @@ export const IndexPageTemplate = ({
                     </h3>
                     <AktuellesBlogRoll />
                     <div className="column is-12 has-text-centered">
-                      <Link className="plain-button" to="/Aktuelles">
+                      <Link className="plain-button" to="/aktuelles">
                         Mehr... &rarr;
                       </Link>
                     </div>
