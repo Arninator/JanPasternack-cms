@@ -299,7 +299,7 @@ collections:
               fields:
                 [
                   { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: markdown },
+                  { label: Description, name: description, widget: text },
                   { label: Image, name: image, widget: image },
                   { label: Signature, name: signature, widget: image },
                 ],
