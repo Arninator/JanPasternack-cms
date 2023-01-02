@@ -41,15 +41,13 @@ mainpitch:
     Mein größtes Anliegen ist es, mit Ihnen ins Gespräch zu kommen und im Gespräch zu bleiben. Bitte nutzen Sie das Kontaktformular oder die weiteren Kontaktmöglichkeiten für Ihre Fragen, Anregungen oder Kritik. Jedes Feedback hilft mir, mich noch gezielter für Ihre Interessen einzusetzen. Unter Termine erfahren Sie, wo Sie mich auch ohne vorherige Absprache antreffen und persönlich kennen lernen können. Ich freue mich darauf.
 
 
-
-
     Herzliche Grüße
 
 
     Ihr
 
 
-    Jan Pasternack
+    *Jan Pasternack*
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
   about their java’s origin and support the farmers that grew it. We take coffee
   production, roasting and brewing seriously and we’re glad to pass that
