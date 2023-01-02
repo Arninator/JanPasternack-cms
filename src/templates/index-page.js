@@ -115,14 +115,16 @@ export const IndexPageTemplate = ({
                         className="tile"
                         // dangerouslySetInnerHTML= {{__html: mainpitch.description}}
                         >
-                        <h3 
+                        <div 
                           className="subtitle"
                           style={{
                             fontWeight: "400"
                           }}
-                        >{mainpitch.description}</h3>
+                          dangerouslySetInnerHTML={{
+                            __html: mainpitch.description,
+                          }}
+                        ></div>
                       </div>
-                      {console.log(signatureImage)}
                       <GatsbyImage
                           image={ signatureImage }
                           alt="alt"
