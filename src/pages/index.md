@@ -6,7 +6,7 @@ title: Great coffee with a conscience
 image: /img/jan-cover.jpg
 mainpitch:
   title: Liebe Frankfurterinnen und Frankfurter,
-  description: >
+  body: |-
     ich freue mich sehr, Sie hier auf meiner Website begrüßen zu dürfen. Mein Name ist Jan Pasternack und ich bin Ihr Kandidat für den Hessischen Landtag im Wahlkreis 35 (Frankfurt II). Auf meiner Internetseite finden Sie Informationen rund um meine politischen Schwerpunkte, meine Aktivitäten und über mich persönlich.
     
     Mein größtes Anliegen ist es, mit Ihnen ins Gespräch zu kommen und im Gespräch zu bleiben. Bitte nutzen Sie das Kontaktformular oder die weiteren Kontaktmöglichkeiten für Ihre Fragen, Anregungen oder Kritik. Jedes Feedback hilft mir, mich noch gezielter für Ihre Interessen einzusetzen. Unter Termine erfahren Sie, wo Sie mich auch ohne vorherige Absprache antreffen und persönlich kennen lernen können. Ich freue mich darauf.
@@ -17,17 +17,6 @@ mainpitch:
     Jan Pasternack
   image: /img/jan sitzt.jpg
   signature: /img/Unterschrift.jpg
-  description2: svadad
-  body: |-
-    Test
-
-
-
-    test
-
-
-
-    DoppelTest
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
   about their java’s origin and support the farmers that grew it. We take coffee
   production, roasting and brewing seriously and we’re glad to pass that
