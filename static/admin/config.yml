@@ -98,8 +98,8 @@ collections:
                 fields:
                   [
                     { label: Title, name: title, widget: string },
-                    { label: Start Date, name: start-date, widget: datetime },
-                    { label: End Date, name: end-date, widget: datetime },
+                    { label: Start Date, name: start-date, widget: datetime, time_format: false },
+                    { label: End Date, name: end-date, widget: datetime, time_format: false },
                     { label: Body, name: body, widget: markdown },
                   ],
               },
