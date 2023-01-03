@@ -14,8 +14,10 @@ export const LebenslaufBlogPostTemplate = ({
   tags,
   title,
   helmet,
+  intro
 }) => {
   const PostContent = contentComponent || Content;
+  console.log("CONTNT: " + intro.blurbs[0].body);
 
   return (
     <section className="section">
@@ -53,6 +55,9 @@ LebenslaufBlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
 };
 
 const LebenslaufBlogPost = ({ data }) => {
@@ -75,6 +80,7 @@ const LebenslaufBlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        intro={post.frontmatter.intro}
       />
     </Layout>
   );
@@ -98,6 +104,11 @@ export const pageQuery = graphql`
         title
         description
         tags
+        intro {
+          blurbs {
+            body
+          }
+        }
       }
     }
   }
