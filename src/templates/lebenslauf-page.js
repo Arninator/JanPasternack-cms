@@ -14,7 +14,7 @@ export const LebenslaufBlogPostTemplate = ({
   tags,
   title,
   helmet,
-  intro
+  intro,
 }) => {
   const PostContent = contentComponent || Content;
   console.log("CONTNT: " + intro.blurbs[0].body);
@@ -29,11 +29,11 @@ export const LebenslaufBlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            <PostContent content={content} />
+            <PostContent content={intro.blurbs[0].body} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
+                <h4 className="border">Tags</h4>
+                <ul className="taglist border">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
                       <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
