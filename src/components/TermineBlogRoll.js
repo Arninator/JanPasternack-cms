@@ -13,7 +13,7 @@ class TermineBlogRollTemplate extends React.Component {
     return (
       <div className="columns is-multiline">
         {posts &&
-          posts.map(({ node: post }) => (
+          posts.map(({ node: post }, index) => index < 3 ? (
             <div className="is-parent column is-4" key={post.id}>
               <Link
                 className=""
@@ -75,7 +75,7 @@ class TermineBlogRollTemplate extends React.Component {
                 </article>
               </Link>
             </div>
-          ))}
+          ) : "" )}
       </div>
     )
   }
