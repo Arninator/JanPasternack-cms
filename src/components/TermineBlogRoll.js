@@ -3,7 +3,19 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
+let maxIndex = 3;
+
 class TermineBlogRollTemplate extends React.Component {
+
+  componentWillMount() {
+    if (document.location.href.includes("termine")) {
+      maxIndex = Infinity;
+    }
+  }
+  componentDidMount() {
+
+  }
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -13,7 +25,7 @@ class TermineBlogRollTemplate extends React.Component {
     return (
       <div className="columns is-multiline">
         {posts &&
-          posts.map(({ node: post }, index) => index < 3 ? (
+          posts.map(({ node: post }, index) => index < maxIndex ? (
             <div className="is-parent column is-4" key={post.id}>
               <Link
                 className=""
