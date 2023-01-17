@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
+import { indexOf, kebabCase, lastIndexOf } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
@@ -14,8 +14,11 @@ export const TermineBlogPostTemplate = ({
   tags,
   title,
   helmet,
+  location
 }) => {
   const PostContent = contentComponent || Content;
+
+  console.log("Loc: " + location);
 
   return (
     <section className="section">
@@ -24,10 +27,16 @@ export const TermineBlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
+              {title} Title
             </h1>
-            <p>{description}</p>
+            <p>{description} Description</p>
             <PostContent content={content} />
+            <a 
+              href={`https://www.google.de/maps/@${location.substring(location.lastIndexOf(',') + 1, location.lastIndexOf(']'))},${location.substring(location.lastIndexOf('[') + 1, location.lastIndexOf(','))},18z`}
+              target="_blank"
+            >
+              {location.substring(location.lastIndexOf("[") + 1, location.lastIndexOf(",")) + "," + location.substring(location.lastIndexOf(",") + 1, location.lastIndexOf("]"))}
+            </a>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -75,6 +84,7 @@ const TermineBlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        location={post.frontmatter.location}
       />
     </Layout>
   );
@@ -98,6 +108,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        location
       }
     }
   }

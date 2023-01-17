@@ -24,8 +24,6 @@ class TermineBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    // console.log(posts);
-
     return (
       <div className="columns is-multiline">
         {posts &&
@@ -75,6 +73,9 @@ class TermineBlogRollTemplate extends React.Component {
                   <p className="flex column center">
                     {post.excerpt}
                     <br />
+                    <a href="">
+                      {post.frontmatter.location}
+                    </a>
                     <br />
                     <div
                       className="flex row center"
@@ -128,6 +129,7 @@ export default function TermineBlogRoll() {
                   title
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
+                  location
                   featuredpost
                   featuredimage {
                     childImageSharp {
