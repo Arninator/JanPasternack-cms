@@ -38,7 +38,7 @@ export default class TermineIndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <TermineBlogRoll />
+              <TermineBlogRoll/>
             </div>
           </div>
         </section>
