@@ -13,7 +13,11 @@ class TermineBlogRollTemplate extends React.Component {
     }
   }
   componentDidMount() {
-
+    if (document.location.href.includes("termine")) {
+      for (let i = 0; i < document.getElementsByClassName("is-4").length; i++) {
+        document.getElementsByClassName("is-4")[i].classList.add("is-6");
+      }
+    }
   }
 
   render() {
