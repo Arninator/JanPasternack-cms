@@ -6,6 +6,4 @@ featuredimage: /img/IMG-20220505-WA0001.jpg
 ---
 Nazis aufs Maul
 
-
-
-Da und Dort
+[Da und Dort](https://duckduckgo.com/?q=bockenheimer+warte&t=ffab&ia=web&iaxm=maps&iai=10328770694044128329)
