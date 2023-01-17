@@ -8,4 +8,4 @@ locationlink: https://www.google.de/maps/place/REWE/@50.1157067,8.6599508,19.83z
 ---
 Nazis aufs Maul
 
-[Da und Dort](https://duckduckgo.com/?q=bockenheimer+warte&t=ffab&ia=web&iaxm=maps&iai=10328770694044128329)
+[u](https://duckduckgo.com/?q=bockenheimer+warte&t=ffab&ia=web&iaxm=maps&iai=10328770694044128329)nd damit basta!
