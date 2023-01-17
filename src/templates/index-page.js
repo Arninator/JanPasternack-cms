@@ -89,16 +89,12 @@ export const IndexPageTemplate = ({
               <div className="column is-12">
                 <div 
                   className="content"
-                  style={{
-                    width: "100%"
-                  }}
                 >
                   <div 
                     className="tile flex row whiteBackground fade-in section"
                     style={{
                       padding: "5% 15%",
                       position: "relative",
-                      width: "100%"
                     }}
                   >
                     {/* <GatsbyImage
