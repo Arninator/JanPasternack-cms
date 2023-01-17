@@ -7,7 +7,8 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
-import InstaBlogRoll from "../components/AktuellesBlogRoll";
+import InstaBlogRoll from "../components/InstaBlogRoll";
+import TermineBlogRoll from "../components/TermineBlogRoll";
 
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 
@@ -185,7 +186,23 @@ export const IndexPageTemplate = ({
                       </Link>
                     </div>
                   </div>
-
+                  <div 
+                    className="flex row whiteBackground fade-in section column is-12"
+                    style={{
+                      padding: "5% 15%",
+                      position: "relative"
+                    }}
+                  >
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      Nächste Termine
+                    </h3>
+                    <TermineBlogRoll />
+                    <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
+                      <Link className="plain-button" to="/blog">
+                        weitere &rarr;
+                      </Link>
+                    </div>
+                  </div>
                   <div
                     className="flex row greyBackground fade-in section column is-4"
                     style={{
