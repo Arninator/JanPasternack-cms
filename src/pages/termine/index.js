@@ -4,14 +4,14 @@ import Layout from "../../components/Layout";
 import TermineBlogRoll from "../../components/TermineBlogRoll";
 
 export default class TermineIndexPage extends React.Component {
-  componentDidMount() {
+  // componentDidMount() {
 
-    if (document.location.href.includes("blog")) {
-      for (let i = 0; i < document.getElementsByClassName("is-4").length; i++) {
-        document.getElementsByClassName("is-4")[i].classList.add("is-12");
-      }
-    }
-  }
+  //   if (document.location.href.includes("termine")) {
+  //     for (let i = 0; i < document.getElementsByClassName("is-4").length; i++) {
+  //       document.getElementsByClassName("is-4")[i].classList.add("is-6");
+  //     }
+  //   }
+  // }
 
   render() {
     return (
@@ -38,7 +38,7 @@ export default class TermineIndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <TermineBlogRoll/>
+              <TermineBlogRoll />
             </div>
           </div>
         </section>
