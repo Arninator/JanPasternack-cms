@@ -52,7 +52,7 @@ class TermineBlogRollTemplate extends React.Component {
                         <PreviewCompatibleImage
                           imageInfo={{
                             image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                            alt: `featured image thumbnail for event ${post.frontmatter.title}`,
                           }}
                         />
                       </div>
@@ -73,7 +73,7 @@ class TermineBlogRollTemplate extends React.Component {
                   <p className="flex column center">
                     {post.excerpt}
                     <br />
-                    <a href="">
+                    <a href={post.frontmatter.location}>
                       {post.frontmatter.location}
                     </a>
                     <br />

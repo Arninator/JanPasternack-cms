@@ -5,6 +5,9 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
+import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const TermineBlogPostTemplate = ({
@@ -14,11 +17,11 @@ export const TermineBlogPostTemplate = ({
   tags,
   title,
   helmet,
-  location
+  location,
+  featuredimage
 }) => {
   const PostContent = contentComponent || Content;
-
-  console.log("Loc: " + location);
+  const featImg = getImage(featuredimage) || featuredimage;
 
   return (
     <section className="section">
@@ -27,13 +30,27 @@ export const TermineBlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title} Title
+              {title}
             </h1>
-            <p>{description} Description</p>
+            {/* <p>{description}</p> */}
             <PostContent content={content} />
+            <br />
+            <FullWidthImage 
+              img={ featImg } 
+              alt=""
+              style={{
+
+              }}
+            />
+            <br />
             <a 
+              className="hover"
               href={location}
               target="_blank"
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
             >
               {location}
             </a>
@@ -62,6 +79,7 @@ TermineBlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
 
 const TermineBlogPost = ({ data }) => {
@@ -85,6 +103,7 @@ const TermineBlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         location={post.frontmatter.location}
+        featuredimage={post.frontmatter.featuredimage}
       />
     </Layout>
   );
@@ -109,6 +128,11 @@ export const pageQuery = graphql`
         description
         tags
         location
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData( width: 240, quality: 100, layout: FULL_WIDTH )
+          }
+        }
       }
     }
   }
