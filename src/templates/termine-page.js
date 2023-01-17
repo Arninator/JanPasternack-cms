@@ -32,10 +32,10 @@ export const TermineBlogPostTemplate = ({
             <p>{description} Description</p>
             <PostContent content={content} />
             <a 
-              href={`https://www.google.de/maps/@${location.substring(location.lastIndexOf(',') + 1, location.lastIndexOf(']'))},${location.substring(location.lastIndexOf('[') + 1, location.lastIndexOf(','))},18z`}
+              href={location}
               target="_blank"
             >
-              {location.substring(location.lastIndexOf("[") + 1, location.lastIndexOf(",")) + "," + location.substring(location.lastIndexOf(",") + 1, location.lastIndexOf("]"))}
+              {location}
             </a>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
