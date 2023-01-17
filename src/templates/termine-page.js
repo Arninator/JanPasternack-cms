@@ -17,7 +17,8 @@ export const TermineBlogPostTemplate = ({
   tags,
   title,
   helmet,
-  location,
+  locationname,
+  locationlink,
   featuredimage
 }) => {
   const PostContent = contentComponent || Content;
@@ -35,24 +36,28 @@ export const TermineBlogPostTemplate = ({
             {/* <p>{description}</p> */}
             <PostContent content={content} />
             <br />
-            <FullWidthImage 
-              img={ featImg } 
-              alt=""
+            <GatsbyImage
+              image={ featImg }
+              alt="alt"
               style={{
-
+                width: "100%",
+                // height: "100%"
               }}
             />
             <br />
+            <br />
+            <br />
+
             <a 
               className="hover"
-              href={location}
+              href={ locationlink }
               target="_blank"
               style={{
                 textDecoration: "none",
                 color: "black",
               }}
             >
-              {location}
+              { locationname }
             </a>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -79,6 +84,8 @@ TermineBlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  locationname: PropTypes.string,
+  locationlink: PropTypes.string,
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
 
@@ -102,7 +109,8 @@ const TermineBlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        location={post.frontmatter.location}
+        locationname={post.frontmatter.locationname}
+        locationlink={post.frontmatter.locationlink}
         featuredimage={post.frontmatter.featuredimage}
       />
     </Layout>
@@ -127,10 +135,11 @@ export const pageQuery = graphql`
         title
         description
         tags
-        location
+        locationname
+        locationlink
         featuredimage {
           childImageSharp {
-            gatsbyImageData( width: 240, quality: 100, layout: FULL_WIDTH )
+            gatsbyImageData( quality: 100, layout: CONSTRAINED )
           }
         }
       }

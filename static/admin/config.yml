@@ -241,7 +241,8 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Description", name: "body", widget: "markdown" }
       # - { label: "Tags", name: "tags", widget: "list" }
-      - {label: "Location Link", name: "location", widget: "string" }
+      - {label: "Location Name", name: "locationname", widget: "string" }
+      - {label: "Location Link", name: "locationlink", widget: "string" }
   - name: "vorstellungBlog"
     label: "Vorstellung"
     folder: "src/pages/vorstellung"

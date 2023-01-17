@@ -73,8 +73,8 @@ class TermineBlogRollTemplate extends React.Component {
                   <p className="flex column center">
                     {post.excerpt}
                     <br />
-                    <a href={post.frontmatter.location}>
-                      {post.frontmatter.location}
+                    <a href={post.frontmatter.locationlink}>
+                      {post.frontmatter.locationname}
                     </a>
                     <br />
                     <div
@@ -129,7 +129,8 @@ export default function TermineBlogRoll() {
                   title
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
-                  location
+                  locationlink
+                  locationname
                   featuredpost
                   featuredimage {
                     childImageSharp {
