@@ -23,6 +23,8 @@ export const TermineBlogPostTemplate = ({
   const PostContent = contentComponent || Content;
   const featImg = getImage(featuredimage) || featuredimage;
 
+  console.log("loc: " + location)
+
   return (
     <section className="section">
       {helmet || ""}
@@ -132,7 +134,10 @@ export const pageQuery = graphql`
         title
         description
         tags
-        location
+        location {
+          name
+          link
+        }
         featuredimage {
           childImageSharp {
             gatsbyImageData( quality: 100, layout: CONSTRAINED )
