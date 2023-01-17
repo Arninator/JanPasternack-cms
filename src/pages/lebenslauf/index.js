@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import LebenslaufBlogRoll from "../../components/LebenslaufBlogRoll";
 
 export default class LebenslaufIndexPage extends React.Component {
+  
   componentDidMount() {
 
     if (document.location.href.includes("blog")) {

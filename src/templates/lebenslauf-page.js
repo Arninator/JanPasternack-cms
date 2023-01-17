@@ -17,7 +17,7 @@ export const LebenslaufBlogPostTemplate = ({
   intro,
 }) => {
   const PostContent = contentComponent || Content;
-  console.log("CONTNT: " + intro.blurbs[0].body);
+  console.log("CONTNT: " + contentComponent);
 
   return (
     <section className="section">
@@ -29,7 +29,12 @@ export const LebenslaufBlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            <PostContent content={intro.blurbs[0].body} />
+            <PostContent content={ intro.blurbs[0].body } />
+            <div
+              className="border"
+              dangerouslySetInnerHTML={{ __html: intro.blurbs[0].body }} 
+            >
+            </div>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4 className="border">Tags</h4>
@@ -65,9 +70,12 @@ const LebenslaufBlogPost = ({ data }) => {
 
   return (
     <Layout>
+      {console.log("lyaout: " + post.frontmatter.intro.blurbs[0].body)}
       <LebenslaufBlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
+        // content={post.html}
+        content={post.frontmatter.intro.blurbs[0].body.html}
+        // contentComponent={HTMLContent}
+        contentComponent={post.frontmatter.intro.blurbs[0].body.html}
         description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
