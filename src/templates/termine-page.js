@@ -17,8 +17,7 @@ export const TermineBlogPostTemplate = ({
   tags,
   title,
   helmet,
-  locationname,
-  locationlink,
+  location,
   featuredimage
 }) => {
   const PostContent = contentComponent || Content;
@@ -50,14 +49,14 @@ export const TermineBlogPostTemplate = ({
 
             <a 
               className="hover"
-              href={ locationlink }
+              href={ location.link }
               target="_blank"
               style={{
                 textDecoration: "none",
                 color: "black",
               }}
             >
-              { locationname }
+              { location.name }
             </a>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -84,8 +83,7 @@ TermineBlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  locationname: PropTypes.string,
-  locationlink: PropTypes.string,
+  location: PropTypes.object,
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
 
@@ -109,8 +107,7 @@ const TermineBlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        locationname={post.frontmatter.locationname}
-        locationlink={post.frontmatter.locationlink}
+        location={post.frontmatter.location}
         featuredimage={post.frontmatter.featuredimage}
       />
     </Layout>
@@ -135,8 +132,7 @@ export const pageQuery = graphql`
         title
         description
         tags
-        locationname
-        locationlink
+        location
         featuredimage {
           childImageSharp {
             gatsbyImageData( quality: 100, layout: CONSTRAINED )
