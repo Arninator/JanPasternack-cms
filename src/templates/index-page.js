@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({
   const heroImage = getImage(image) || image;
   const helloImage = getImage(mainpitch.image) || mainpitch.image;
   const signatureImage = getImage(mainpitch.signature) || mainpitch.signature;
-  console.log("index-blurbs: " + intro.blurbs);
+  // console.log("index-blurbs: " + intro.blurbs);
 
   return (
     <div>
