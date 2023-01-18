@@ -31,35 +31,55 @@ export const TermineBlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            {/* <p>{description}</p> */}
-            <PostContent content={content} />
-            <br />
-            <GatsbyImage
-              image={ featImg }
-              alt="alt"
-              style={{
-                width: "100%",
-                // height: "100%"
-              }}
-            />
-            <br />
-            <br />
-            <br />
-
-            <a 
-              className="hover"
-              href={ location.link }
-              target="_blank"
-              style={{
-                textDecoration: "none",
-                color: "black",
-              }}
-            >
-              { location.name }
-            </a>
+            <div className="flex row space-between">
+              <div 
+                className="flex column space-between"
+                style={{
+                  height: "80vh"
+                }}
+              >
+                <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+                  {title}
+                </h1>
+                {/* <p>{description}</p> */}
+                <PostContent content={content} />
+                <br />
+                <a 
+                  className="hover"
+                  href={ location.link }
+                  target="_blank"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  Ort: { location.name }
+                </a>
+              </div>
+              <div 
+                style={{
+                  maxWidth: "20vw",
+                  // maxHeight: "25vh",
+                  // width: "match"
+                }}
+              >
+                <GatsbyImage
+                  image={ featImg }
+                  alt="alt"
+                  style={{
+                    // maxHeight: "20vh",
+                    // width: "auto",
+                    // width: "100%",
+                    // height: "25%"
+                  }}
+                />
+              </div>
+              <br />
+              <br />
+              <br />
+              
+            </div>
+            
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
