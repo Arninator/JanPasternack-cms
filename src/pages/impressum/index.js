@@ -1,9 +1,9 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import AktuellesBlogRoll from "../../components/AktuellesBlogRoll";
+// import ImpressumBlogRoll from "../../components/ImpressumBlogRoll";
 
-export default class AktuellesBlogIndexPage extends React.Component {
+export default class ImpressumBlogIndexPage extends React.Component {
   render() {
 ;
     return (
@@ -11,7 +11,7 @@ export default class AktuellesBlogIndexPage extends React.Component {
         <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: `url('/img/aktuelles-cover.jpg')`,
+            // backgroundImage: `url('/img/aktuelles-cover.jpg')`,
             backgroundPosition: "0% 33%"
           }}
         >
@@ -28,10 +28,10 @@ export default class AktuellesBlogIndexPage extends React.Component {
                 marginBottom: "8vh"
               }}
             >
-              Aktuelles
+              Impressum!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             </h1>
             <div className="content">
-              <AktuellesBlogRoll />
+              {/* <ImpressumBlogRoll /> */}
             </div>
           </div>
         </section>

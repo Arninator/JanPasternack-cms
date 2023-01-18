@@ -1,11 +1,10 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import DatenschutzBlogRoll from "../../components/DatenschutzBlogRoll";
+// import DatenschutzBlogRoll from "../../components/DatenschutzBlogRoll";
 
 export default class DatenschutzBlogIndexPage extends React.Component {
   render() {
-;
     return (
       <Layout>
         <div
@@ -28,10 +27,10 @@ export default class DatenschutzBlogIndexPage extends React.Component {
                 marginBottom: "8vh"
               }}
             >
-              Datenschutz
+              Datenschizzle
             </h1>
             <div className="content">
-              <DatenschutzBlogRoll />
+              {/* <DatenschutzBlogRoll /> */}
             </div>
           </div>
         </section>
