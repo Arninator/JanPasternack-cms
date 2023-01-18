@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
+import "../components/style.css";
+
 let maxIndex = 3;
 
 class TermineBlogRollTemplate extends React.Component {
@@ -15,7 +17,7 @@ class TermineBlogRollTemplate extends React.Component {
   componentDidMount() {
     if (document.location.href.includes("termine")) {
       for (let i = 0; i < document.getElementsByClassName("is-4").length; i++) {
-        document.getElementsByClassName("is-4")[i].classList.add("is-6");
+        document.getElementsByClassName("is-4")[i].classList.add("is-12");
       }
     }
   }
@@ -131,6 +133,7 @@ export default function TermineBlogRoll() {
                 frontmatter {
                   title
                   templateKey
+                  eventlink
                   date(formatString: "MMMM DD, YYYY")
                   location {
                     name
