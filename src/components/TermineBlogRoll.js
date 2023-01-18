@@ -79,9 +79,9 @@ class TermineBlogRollTemplate extends React.Component {
                     { post.excerpt }
                     <br />
                     <br />
-                    <span href={post.frontmatter.location.link}>
+                    {/* <span href={post.frontmatter.location.link}>
                       {post.frontmatter.location.name}
-                    </span>
+                    </span> */}
                     <br />
                   </p>
                   <span
