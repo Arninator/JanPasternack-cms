@@ -396,11 +396,11 @@ const Navbar = class extends React.Component {
                   <div
                     className="navbarItem flex row center"
                     style={{
-                      width: "8vw",
+                      // width: "8vw",
                       justifyContent: "space-between"
                     }}
                   >
-                    <a 
+                    {/* <a 
                       className="navbarItem flex row center grey" 
                       href="https://www.instagram.com"
                       target="_blank"
@@ -427,7 +427,7 @@ const Navbar = class extends React.Component {
                       target="_blank"
                     >
                       <i className="fa fa-linkedin"></i>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
                 {/* <div className="navbar-end has-text-centered">
