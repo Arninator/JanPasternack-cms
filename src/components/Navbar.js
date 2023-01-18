@@ -27,7 +27,7 @@ const Navbar = class extends React.Component {
   componentDidMount () {
 
     $("#news-link").hover( function() {
-      console.log("width: " + $("#news-dropdown").width())
+      // console.log("width: " + $("#news-dropdown").width())
       $("#news-dropdown").css({
         "position": "absolute",
         "display": "block",
@@ -35,7 +35,7 @@ const Navbar = class extends React.Component {
         "top": "5vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#news-dropdown").width() / 2.),
       });
-      console.log($(this).offset().top + " " + $(this).offset().left);
+      // console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
       $("#news-dropdown").css({
         "display": "none"
@@ -49,7 +49,7 @@ const Navbar = class extends React.Component {
         "top": "5vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#ueber-dropdown").width() / 2.),
       });
-      console.log($(this).offset().top + " " + $(this).offset().left);
+      // console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
       $("#ueber-dropdown").css({
         "display": "none"
@@ -63,7 +63,7 @@ const Navbar = class extends React.Component {
         "top": "5vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#frankfurt-dropdown").width() / 2.),
       });
-      console.log($(this).offset().top + " " + $(this).offset().left);
+      // console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
       $("#frankfurt-dropdown").css({
         "display": "none"
@@ -77,7 +77,7 @@ const Navbar = class extends React.Component {
         "top": "5vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#kontakt-dropdown").width() / 2.),
       });
-      console.log($(this).offset().top + " " + $(this).offset().left);
+      // console.log($(this).offset().top + " " + $(this).offset().left);
     }, function() {
       $("#kontakt-dropdown").css({
         "display": "none"

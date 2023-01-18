@@ -30,8 +30,8 @@ class TermineBlogRollTemplate extends React.Component {
         {posts &&
           posts.map(({ node: post }, index) => index < maxIndex ? (
             <div className="is-parent column is-4" key={post.id}>
-              {console.log(new Date(Date.now()).toDateString())}
-              {console.log(post.frontmatter.date)}
+              {/* {console.log(new Date(Date.now()).toDateString())}
+              {console.log(post.frontmatter.date)} */}
               <Link
                 className=""
                 to={post.fields.slug}
