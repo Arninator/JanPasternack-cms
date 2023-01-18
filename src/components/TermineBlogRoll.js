@@ -10,9 +10,9 @@ let maxIndex = 3;
 class TermineBlogRollTemplate extends React.Component {
 
   componentWillMount() {
-    if (document.location.href.includes("termine")) {
-      maxIndex = Infinity;
-    }
+    // if (document.location.href.includes("termine")) {
+    //   maxIndex = Infinity;
+    // }
   }
   componentDidMount() {
     if (document.location.href.includes("termine")) {
