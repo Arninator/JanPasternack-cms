@@ -7,13 +7,14 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { getImage } from "gatsby-plugin-image";
-import FullWidthImage from "../components/FullWidthImage";
+
+import "../components/style.css";
 
 // eslint-disable-next-line
 export const TermineBlogPostTemplate = ({
   content,
   contentComponent,
-  description,
+  eventlink,
   tags,
   title,
   helmet,
@@ -23,55 +24,53 @@ export const TermineBlogPostTemplate = ({
   const PostContent = contentComponent || Content;
   const featImg = getImage(featuredimage) || featuredimage;
 
-  console.log("loc: " + location)
-
   return (
-    <section className="section">
+    <section 
+      className="section flex row center greyBackground"
+      style={{
+        height: "80vh",
+      }}
+    >
       {helmet || ""}
-      <div className="container content">
+      <div 
+        className="container content whiteBackground"
+        style={{
+          padding: "5vw",
+          border: "1px solid lightgrey",
+        }}
+      >
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div className="flex row space-between">
+            <div className="flex row space-between ">
               <div 
-                className="flex column space-between"
+                className="flex column endEnd"
                 style={{
-                  height: "80vh"
+                  height: "100%",
                 }}
               >
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
                 </h1>
-                {/* <p>{description}</p> */}
+                <p>Link:&nbsp;<a className="link" href={ eventlink ? eventlink : ""} target="_blank">{ eventlink ? eventlink : ""}</a></p>
                 <PostContent content={content} />
                 <br />
+                Ort:&nbsp;
                 <a 
-                  className="hover"
+                  className="link"
                   href={ location.link }
                   target="_blank"
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                  }}
                 >
-                  Ort: { location.name }
+                  { location.name }
                 </a>
               </div>
               <div 
                 style={{
                   maxWidth: "20vw",
-                  // maxHeight: "25vh",
-                  // width: "match"
                 }}
               >
                 <GatsbyImage
                   image={ featImg }
                   alt="alt"
-                  style={{
-                    // maxHeight: "20vh",
-                    // width: "auto",
-                    // width: "100%",
-                    // height: "25%"
-                  }}
                 />
               </div>
               <br />
@@ -102,7 +101,7 @@ export const TermineBlogPostTemplate = ({
 TermineBlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
+  eventlink: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
   location: PropTypes.object,
@@ -117,7 +116,6 @@ const TermineBlogPost = ({ data }) => {
       <TermineBlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate={`Termine | ` + post.frontmatter.date}>
             <title>{`${post.frontmatter.date}`}</title>
@@ -131,6 +129,7 @@ const TermineBlogPost = ({ data }) => {
         title={post.frontmatter.title}
         location={post.frontmatter.location}
         featuredimage={post.frontmatter.featuredimage}
+        eventlink={post.frontmatter.eventlink}
       />
     </Layout>
   );
@@ -152,7 +151,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
+        eventlink
         tags
         location {
           name
