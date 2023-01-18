@@ -29,7 +29,7 @@ export const TermineBlogPostTemplate = ({
     <section 
       className="section flex row center greyBackground"
       style={{
-        height: "80vh",
+        height: "90vh",
       }}
     >
       {helmet || ""}
@@ -74,11 +74,7 @@ export const TermineBlogPostTemplate = ({
                   image={ featImg }
                   alt="alt"
                 />
-              </div>
-              <br />
-              <br />
-              <br />
-              
+              </div>              
             </div>
             
             {tags && tags.length ? (
