@@ -5,6 +5,7 @@ title: Demonstartion gegen Nazis
 date: 2023-02-23T15:53:14.484Z
 =======
 date: 2023-02-22T23:00:00.000Z
+eventlink: www.diesdasananas.de
 >>>>>>> 63a1d407e0381b795ddcf61dae1f2eeec5ca1b57
 featuredimage: /img/IMG-20220505-WA0001.jpg
 location:
