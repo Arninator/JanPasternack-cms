@@ -71,13 +71,15 @@ class TermineBlogRollTemplate extends React.Component {
                       </p>
                   </header>
                   <p className="flex column center">
-                    {post.excerpt}
+                    { post.excerpt }
                     <br />
-                    <a href={post.frontmatter.location.link}>
+                    <br />
+                    <span href={post.frontmatter.location.link}>
                       {post.frontmatter.location.name}
-                    </a>
+                    </span>
                     <br />
-                    <div
+                  </p>
+                  <span
                       className="flex row center"
                       style={{
                         width: "100%"
@@ -86,9 +88,7 @@ class TermineBlogRollTemplate extends React.Component {
                       <Link className="button" to={post.fields.slug}>
                         Show &rarr;
                       </Link>
-                    </div>
-                    
-                  </p>
+                    </span>
                 </article>
               </Link>
             </div>
