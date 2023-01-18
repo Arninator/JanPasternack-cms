@@ -2,6 +2,7 @@
 templateKey: termine-page
 title: Demonstartion gegen Nazis
 date: 2023-02-22T23:00:00.000Z
+eventlink: www.diesdasananas.de
 featuredimage: /img/IMG-20220505-WA0001.jpg
 location:
   name: REWE Arndtstraße 22, 60325 Frankfurt am Main
