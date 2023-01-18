@@ -49,11 +49,11 @@ export const TermineBlogPostTemplate = ({
                   height: "100%",
                 }}
               >
+                <h3>{date}</h3>
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
                 </h1>
-                <h3>{date}</h3>
-                <p>Link:&nbsp;<a className="link" href={ eventlink ? eventlink : ""} target="_blank">{ eventlink ? eventlink : ""}</a></p>
+                <p>{eventlink ? "Link: " : ""}<a className="link" href={ eventlink ? eventlink : ""} target="_blank">{ eventlink ? eventlink : ""}</a></p>
                 <PostContent content={content} />
                 <br />
                 Ort:&nbsp;
