@@ -109,7 +109,6 @@ export default function AktuellesBlogRoll() {
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                 }
