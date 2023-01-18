@@ -1,7 +1,11 @@
 ---
 templateKey: termine-page
 title: Demonstartion gegen Nazis
+<<<<<<< HEAD
 date: 2023-02-23T15:53:14.484Z
+=======
+date: 2023-02-22T23:00:00.000Z
+>>>>>>> 63a1d407e0381b795ddcf61dae1f2eeec5ca1b57
 featuredimage: /img/IMG-20220505-WA0001.jpg
 location:
   name: REWE Arndtstraße 22, 60325 Frankfurt am Main
