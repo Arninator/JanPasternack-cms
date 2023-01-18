@@ -115,7 +115,7 @@ const Navbar = class extends React.Component {
 
               if (window_top > ($(window).height()) / 90.) {
                   $(this).css("background-color", "rgb(227, 0, 15)");
-                  $(".navbarItem").css("background-color", "rgb(227, 0, 15)");
+                  // $(".navbarItem").css("background-color", "rgb(227, 0, 15)");
                   // $(this).css("background", "linear-gradient(to bottom, rgb(227, 0, 15) 0%, rgba(255, 255, 255, 0) 100%)");
                   
                   $(".navbarItem").css("color", "white");
@@ -133,7 +133,7 @@ const Navbar = class extends React.Component {
                   });                  
               } else {
                   $(this).css("background-color", "transparent");
-                  $(".navbarItem").css("background-color", "transparent");
+                  // $(".navbarItem").css("background-color", "transparent");
 
                   $(".navbarItem").css("color", "black");
                   $(".navbarItem").hover(function () {
