@@ -1,52 +1,44 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
-import logo from "../img/logo.svg";
-import facebook from "../img/social/facebook.svg";
-import instagram from "../img/social/instagram.svg";
-import twitter from "../img/social/twitter.svg";
-import vimeo from "../img/social/vimeo.svg";
-
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer greyBackground">
-        <div className="content has-text-centered">
-          {/* <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: "14em", height: "10em" }}
-          /> */}
-        </div>
-        <div className="content greyBackground">
-          <div className="container greyBackground">
-            <div style={{ maxWidth: "100vw", display: "flex", flexDirection: "row" }} className="flex row space-between">
-              <div className="flex row space-between">
-                <section className="menu">
-                  <ul className="menu-list flex row center">
+      <footer className="greyBackground flex row center">
+        <div className="content flex row center">
+          <div className="container flex row center">
+            <div className="flex row center" style={{ margin: "2vh"}}>
+              <div className="flex row center">
+                <section className="flex row center">
+                  <ul className="flex row center" style={{ margin: "0", padding: "0", width: "100%"}}>
                     <li>
-                      <Link to="/" className="navbar-item">
-                        Home
+                      <Link className="footer-item" to="/">
+                        <i className="fa fa-home"></i>
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/about">
-                        About
+                      <Link className="footer-item" to="/impressum">
+                        Impressum
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
+                      <Link className="footer-item" to="/datenschutz">
+                        Datenschutz
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="footer-item" to="/contact">
+                        Kontakt
                       </Link>
                     </li>
                     {/* <li>
-                      <Link className="navbar-item" to="/contact/examples">
+                      <Link className="footer-item" to="/contact/examples">
                         Form Examples
                       </Link>
                     </li> */}
                     <li>
                       <a
-                        className="navbar-item"
+                        className="footer-item"
                         href="/admin/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -57,31 +49,15 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              {/* <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div> */}
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
+              <div className="flex row center">
+                {/* <a className="footer-item" title="facebook" href="https://facebook.com">
                   <img
                     src={facebook}
                     alt="Facebook"
                     style={{ width: "1em", height: "1em" }}
                   />
                 </a>
-                <a title="twitter" href="https://twitter.com">
+                <a className="footer-item" title="twitter" href="https://twitter.com">
                   <img
                     className="fas fa-lg"
                     src={twitter}
@@ -89,7 +65,7 @@ const Footer = class extends React.Component {
                     style={{ width: "1em", height: "1em" }}
                   />
                 </a>
-                <a title="instagram" href="https://instagram.com">
+                <a className="footer-item" title="instagram" href="https://instagram.com">
                   <img
                     src={instagram}
                     alt="Instagram"
@@ -102,6 +78,34 @@ const Footer = class extends React.Component {
                     alt="Vimeo"
                     style={{ width: "1em", height: "1em" }}
                   />
+                </a> */}
+                <a 
+                  className="footer-item greyBackground" 
+                  href="https://www.instagram.com"
+                  target="_blank"
+                >
+                  <i className="fa fa-instagram greyBackground"></i>
+                  </a>
+                <a 
+                  className="footer-item" 
+                  href="https://www.twitter.com"
+                  target="_blank"
+                >
+                  <i className="fa fa-twitter"></i>
+                </a>
+                <a 
+                  className="footer-item" 
+                  href=""
+                  target="_blank"
+                >
+                  <i className="fa fa-facebook"></i>
+                </a>
+                <a 
+                  className="footer-item" 
+                  href=""
+                  target="_blank"
+                >
+                  <i className="fa fa-linkedin"></i>
                 </a>
               </div>
             </div>
