@@ -14,6 +14,7 @@ import "../components/style.css";
 export const TermineBlogPostTemplate = ({
   content,
   contentComponent,
+  date,
   eventlink,
   tags,
   title,
@@ -51,6 +52,7 @@ export const TermineBlogPostTemplate = ({
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
                 </h1>
+                <h3>{date}</h3>
                 <p>Link:&nbsp;<a className="link" href={ eventlink ? eventlink : ""} target="_blank">{ eventlink ? eventlink : ""}</a></p>
                 <PostContent content={content} />
                 <br />
@@ -101,6 +103,7 @@ export const TermineBlogPostTemplate = ({
 TermineBlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
+  date: PropTypes.string,
   eventlink: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -125,6 +128,7 @@ const TermineBlogPost = ({ data }) => {
             />
           </Helmet>
         }
+        date={post.frontmatter.date}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         location={post.frontmatter.location}
