@@ -233,6 +233,6 @@
     transform: scale(1.3);
     transition: ease-in;
  }
- li {
+ /* li {
     border: 1px solid red;
- }
+ } */
