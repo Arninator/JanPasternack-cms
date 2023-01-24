@@ -4,15 +4,6 @@ import Layout from "../../components/Layout";
 import LebenslaufBlogRoll from "../../components/LebenslaufBlogRoll";
 
 export default class LebenslaufIndexPage extends React.Component {
-  
-  componentDidMount() {
-
-    if (document.location.href.includes("blog")) {
-      for (let i = 0; i < document.getElementsByClassName("is-4").length; i++) {
-        document.getElementsByClassName("is-4")[i].classList.add("is-12");
-      }
-    }
-  }
 
   render() {
     return (

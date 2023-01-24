@@ -8,7 +8,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    // console.log(posts);
+    console.log(posts);
 
     return (
       <div className="columns is-multiline">
@@ -21,7 +21,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header>
-                  {/* {post.frontmatter.featuredimage ? (
+                  {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -36,7 +36,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                         }}
                       />
                     </div>
-                  ) : null} */}
+                  ) : null}
                   <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
