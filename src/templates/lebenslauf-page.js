@@ -55,7 +55,7 @@ export const LebenslaufBlogPostTemplate = ({
 };
 
 LebenslaufBlogPostTemplate.propTypes = {
-  content: PropTypes.string,
+  content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   // description: PropTypes.string,
   title: PropTypes.string,

@@ -84,8 +84,8 @@ collections:
           default: "lebenslauf-page",
         }
       - { label: Title, name: title, widget: string }
-      - { label: Start Date, name: startdate, widget: datetime, time_format: false }
-      - { label: End Date, name: enddate, widget: datetime, time_format: false }
+      - { label: Start Date, name: startdate, widget: datetime }
+      - { label: End Date, name: enddate, widget: datetime }
       - { label: Description, name: body, widget: markdown }
       # - {
       #     label: Intro,
