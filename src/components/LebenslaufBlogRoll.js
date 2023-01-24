@@ -21,7 +21,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header>
-                  {post.frontmatter.featuredimage ? (
+                  {/* {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -36,7 +36,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                         }}
                       />
                     </div>
-                  ) : null}
+                  ) : null} */}
                   <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
@@ -46,7 +46,8 @@ class LebenslaufBlogRollTemplate extends React.Component {
                     </Link>
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
+                      {/* {post.frontmatter.date} */}
+                      Hä
                     </span>
                   </p>
                 </header>
@@ -95,19 +96,8 @@ export default function LebenslaufBlogRoll() {
                 }
                 frontmatter {
                   title
-                  templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
-                  featuredimage {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 120
-                        quality: 100
-                        layout: CONSTRAINED
-                      )
-
-                    }
-                  }
+                  start-date(formatString: "MMMM DD, YYYY")
+                  end-date(formatString: "MMMM DD, YYYY")
                 }
               }
             }

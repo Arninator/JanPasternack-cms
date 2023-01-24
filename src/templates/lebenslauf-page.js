@@ -10,14 +10,14 @@ import Content, { HTMLContent } from "../components/Content";
 export const LebenslaufBlogPostTemplate = ({
   content,
   contentComponent,
-  description,
-  tags,
   title,
+  startdate,
+  enddate,
   helmet,
-  intro,
 }) => {
   const PostContent = contentComponent || Content;
-  console.log("CONTNT: " + contentComponent);
+
+  console.log(content);
 
   return (
     <section className="section">
@@ -29,13 +29,13 @@ export const LebenslaufBlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            <PostContent content={ intro.blurbs[0].body } />
-            <div
+            <PostContent content={ content } />
+            {/* <div
               className="border"
               dangerouslySetInnerHTML={{ __html: intro.blurbs[0].body }} 
             >
-            </div>
-            {tags && tags.length ? (
+            </div> */}
+            {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4 className="border">Tags</h4>
                 <ul className="taglist border">
@@ -46,7 +46,7 @@ export const LebenslaufBlogPostTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
         </div>
       </div>
@@ -55,14 +55,16 @@ export const LebenslaufBlogPostTemplate = ({
 };
 
 LebenslaufBlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
+  content: PropTypes.string,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
+  // description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  // intro: PropTypes.shape({
+  //   blurbs: PropTypes.array,
+  // }),
+  startdate: PropTypes.string,
+  enddate: PropTypes.string,
 };
 
 const LebenslaufBlogPost = ({ data }) => {
@@ -70,25 +72,27 @@ const LebenslaufBlogPost = ({ data }) => {
 
   return (
     <Layout>
-      {console.log("lyaout: " + post.frontmatter.intro.blurbs[0].body)}
       <LebenslaufBlogPostTemplate
-        // content={post.html}
-        content={post.frontmatter.intro.blurbs[0].body.html}
-        // contentComponent={HTMLContent}
-        contentComponent={post.frontmatter.intro.blurbs[0].body.html}
-        description={post.frontmatter.description}
+        content={post.html}
+        // content={post.frontmatter.intro.blurbs[0].body.html}
+        contentComponent={HTMLContent}
+        // contentComponent={post.frontmatter.intro.blurbs[0].body.html}
+        // description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              // content={`${post.frontmatter.description}`}
+              content=''
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
+        // tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        intro={post.frontmatter.intro}
+        startdate={post.frontmatter.startdate}
+        enddate={post.frontmatter.enddate}
+        // intro={post.frontmatter.intro}
       />
     </Layout>
   );
@@ -98,6 +102,7 @@ LebenslaufBlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
+  // data: PropTypes.object.isRequired,
 };
 
 export default LebenslaufBlogPost;
@@ -108,15 +113,9 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
-        description
-        tags
-        intro {
-          blurbs {
-            body
-          }
-        }
+        startdate(formatString: "MMMM DD, YYYY")
+        enddate(formatString: "MMMM DD, YYYY")
       }
     }
   }
