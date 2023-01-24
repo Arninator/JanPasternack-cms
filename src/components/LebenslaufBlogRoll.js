@@ -59,6 +59,7 @@ export default function LebenslaufBlogRoll() {
                   title
                   startdate(formatString: "DD MMMM YYYY")
                   enddate(formatString: "DD MMMM YYYY")
+                  or:
                 }
               }
             }
