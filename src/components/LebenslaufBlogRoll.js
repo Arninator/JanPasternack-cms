@@ -57,8 +57,8 @@ export default function LebenslaufBlogRoll() {
                 }
                 frontmatter {
                   title
-                  startdate(formatString: "DD MMMM YYYY")
-                  enddate(formatString: "DD MMMM YYYY")
+                  startdate(formatString: "DD.MM.YYYY")
+                  enddate(formatString: "DD.MM.YYYY")
                 }
               }
             }

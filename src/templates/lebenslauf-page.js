@@ -114,8 +114,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        startdate(formatString: "DD MM YYYY")
-        enddate(formatString: "DD MM YYYY")
+        startdate(formatString: "DD.MM.YYYY")
+        enddate(formatString: "DD.MM.YYYY")
       }
     }
   }
