@@ -1,7 +1,7 @@
 ---
 templateKey: lebenslauf-page
 title: Grundschule
-startdate: 2023-01-25T14:37:30.686Z
-enddate: ""
+startdate: 2023-01-25
+enddate: 0000-01-25
 ---
 Grundschule

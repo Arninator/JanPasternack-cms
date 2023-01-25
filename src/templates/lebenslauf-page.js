@@ -91,7 +91,7 @@ const LebenslaufBlogPost = ({ data }) => {
         // tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         startdate={post.frontmatter.startdate}
-        enddate={post.frontmatter.enddate}
+        enddate={post.frontmatter.enddate ? post.frontmatter.enddate : ""}
         // intro={post.frontmatter.intro}
       />
     </Layout>
@@ -114,8 +114,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        startdate(formatString: "MMMM DD, YYYY")
-        enddate(formatString: "MMMM DD, YYYY")
+        startdate(formatString: "DD MM YYYY")
+        enddate(formatString: "DD MM YYYY")
       }
     }
   }

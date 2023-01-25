@@ -17,7 +17,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
             <div className="is-parent column is-12" key={post.id}>
               <article>
                 <div className='flex row space-between'>
-                  <h3>{ post.frontmatter.startdate } { post.frontmatter.enddate ? "- " + post.frontmatter.enddate : ""}</h3>
+                  <h3>{ post.frontmatter.startdate }</h3>
                   <p>{ post.excerpt }</p>
                 </div>
               </article>

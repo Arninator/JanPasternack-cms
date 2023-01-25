@@ -85,7 +85,7 @@ collections:
         }
       - { label: Title, name: title, widget: string }
       - { label: Start Date, name: startdate, widget: datetime }
-      - { label: End Date, name: enddate, widget: datetime, required: false }
+      - { label: End Date, name: enddate, widget: datetime, required: false, default: "00.00.0000", time_format: false, date_format: "DD.MM.YYYY" }
       - { label: Description, name: body, widget: markdown }
   - name: "newsBlog"
     label: "News"
