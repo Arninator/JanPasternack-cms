@@ -27,7 +27,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                       margin: "10px"
                     }}
                   >
-                    { (post.frontmatter.startdate) + (post.frontmatter.enddate != "00-00-0000" ? " - " + post.frontmatter.enddate : "")}
+                    { (post.frontmatter.startdate) + (post.frontmatter.enddate != "00.00.0000" ? " - " + post.frontmatter.enddate : "")}
                   </h3>
                   <div 
                     className="flex column center"
@@ -36,7 +36,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                     }}
                   >
                     <h1 className=''>{ post.frontmatter.title }</h1>
-                    <p className=''>{ post.excerpt }</p>
+                    <div className=''>{ post.excerpt }</div>
                   </div>
                   
                 </div>
