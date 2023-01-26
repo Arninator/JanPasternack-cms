@@ -150,6 +150,10 @@
     justify-content: flex-end;
     align-items: center;
 }
+.centerEnd {
+    justify-content: center;
+    align-items: flex-end;
+}
 .endEnd {
     justify-content: flex-end;
     align-items: flex-end;
@@ -163,6 +167,9 @@
         -----------------------
     ```````````````````````````
  */
+ .full-width {
+    width: 100%;
+ }
 .greyBackground {
     background-color: rgb(233, 233, 233);
 }
