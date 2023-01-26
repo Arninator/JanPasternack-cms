@@ -1,8 +1,8 @@
 ---
 templateKey: lebenslauf-page
 title: Gymnasium
-startdate: 25-01-2023
-enddate: 00-00-0000
+startdate: 01.08.1997
+enddate: 30.06.2006
 ---
 Gymnasium Große Stadtschule
 
