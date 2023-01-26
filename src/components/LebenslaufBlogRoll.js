@@ -16,9 +16,21 @@ class LebenslaufBlogRollTemplate extends React.Component {
           posts.map(({ node: post }) => (
             <div className="is-parent column is-12" key={post.id}>
               <article>
-                <div className='flex row space-between'>
-                  <h3>{ post.frontmatter.startdate }</h3>
-                  <p>{ post.excerpt }</p>
+                <div 
+                  className='flex row space-between full-width border'
+                  
+                >
+                  <h3>{ (post.frontmatter.startdate) + (post.frontmatter.enddate != "00-00-0000" ? " - " + post.frontmatter.enddate : "")}</h3>
+                  <div 
+                    className="flex column center border"
+                    style={{
+                      marginLeft: "20%"
+                    }}
+                  >
+                    <h1 className='border'>{ post.frontmatter.title }</h1>
+                    <p className='border'>{ post.excerpt }</p>
+                  </div>
+                  
                 </div>
               </article>
             </div>
@@ -57,8 +69,8 @@ export default function LebenslaufBlogRoll() {
                 }
                 frontmatter {
                   title
-                  startdate(formatString: "DD.MM.YYYY")
-                  enddate(formatString: "DD.MM.YYYY")
+                  startdate
+                  enddate
                 }
               }
             }
