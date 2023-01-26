@@ -17,18 +17,26 @@ class LebenslaufBlogRollTemplate extends React.Component {
             <div className="is-parent column is-12" key={post.id}>
               <article>
                 <div 
-                  className='flex row space-between full-width border'
-                  
+                  className='flex row space-between full-width'
                 >
-                  <h3>{ (post.frontmatter.startdate) + (post.frontmatter.enddate != "00-00-0000" ? " - " + post.frontmatter.enddate : "")}</h3>
-                  <div 
-                    className="flex column center border"
-                    style={{
-                      marginLeft: "20%"
+                  <h3
+                    // className='border'
+                    style= {{
+                      width: "25%",
+                      maxWidth: "25%",
+                      margin: "10px"
                     }}
                   >
-                    <h1 className='border'>{ post.frontmatter.title }</h1>
-                    <p className='border'>{ post.excerpt }</p>
+                    { (post.frontmatter.startdate) + (post.frontmatter.enddate != "00-00-0000" ? " - " + post.frontmatter.enddate : "")}
+                  </h3>
+                  <div 
+                    className="flex column center"
+                    style={{
+                      // marginLeft: "20%"
+                    }}
+                  >
+                    <h1 className=''>{ post.frontmatter.title }</h1>
+                    <p className=''>{ post.excerpt }</p>
                   </div>
                   
                 </div>
@@ -57,7 +65,7 @@ export default function LebenslaufBlogRoll() {
       query={graphql`
         query LebenslaufBlogRollQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
+            sort: { order: ASC, fields: [frontmatter___startdate] }
             filter: { frontmatter: { templateKey: { eq: "lebenslauf-page" } } }
           ) {
             edges {
