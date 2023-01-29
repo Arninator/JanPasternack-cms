@@ -29,7 +29,8 @@ class LebenslaufBlogRollTemplate extends React.Component {
                     style= {{
                       width: "25%",
                       maxWidth: "25%",
-                      margin: "10px"
+                      margin: "10px",
+                      marginTop: "2vh"
                     }}
                   >
                     { (post.frontmatter.startdate) + (post.frontmatter.enddate != "00.00.0000" ? " - " + post.frontmatter.enddate : "")}
