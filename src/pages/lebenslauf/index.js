@@ -12,20 +12,27 @@ export default class LebenslaufIndexPage extends React.Component {
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/20220504pj201.jpg')`,
-            backgroundPosition: "0% 15%"
+            backgroundPosition: "0% 15%",
+            padding: "0vh 15vw"
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-1 column is-7"
+          <div 
+            className="full-width"
             style={{
-              // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-              // backgroundColor: "#f40",
-              color: "black",
-              padding: "1rem",
             }}
           >
-            Lebenslauf
-          </h1>
+            <h1
+              className="has-text-weight-bold is-size-1"
+              style={{
+                // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
+                // backgroundColor: "#f40",
+                color: "black",
+                padding: "1rem",
+              }}
+            >
+              Lebenslauf
+            </h1>
+          </div>
         </div>
         <section className="section">
           <div className="container">
