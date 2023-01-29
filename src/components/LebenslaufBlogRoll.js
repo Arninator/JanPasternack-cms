@@ -8,6 +8,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
+
     // Sort it, baby!
     posts.sort(function(a, b) {
       return (
@@ -33,7 +34,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                       marginTop: "2vh"
                     }}
                   >
-                    { (post.frontmatter.startdate) + (post.frontmatter.enddate != "00.00.0000" ? " - " + post.frontmatter.enddate : "")}
+                    {(post.frontmatter.startdate) + (post.frontmatter.enddate != "00.00.0000" ? " - " + post.frontmatter.enddate : "")}
                   </h3>
                   <div 
                     className="flex column center"
@@ -42,9 +43,8 @@ class LebenslaufBlogRollTemplate extends React.Component {
                     }}
                   >
                     <h1 className=''>{ post.frontmatter.title }</h1>
-                    <div className=''>{ post.excerpt }</div>
+                    <div className='' dangerouslySetInnerHTML={{ __html: post.html }}></div>
                   </div>
-                  
                 </div>
               </article>
             </div>
@@ -77,6 +77,7 @@ export default function LebenslaufBlogRoll() {
             edges {
               node {
                 excerpt(pruneLength: 400)
+                html
                 id
                 fields {
                   slug
