@@ -8,7 +8,12 @@ class LebenslaufBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    console.log(posts);
+    // Sort it, baby!
+    posts.sort(function(a, b) {
+      return (
+        b.node.frontmatter.startdate.substring(6) - a.node.frontmatter.startdate.substring(6)
+      )
+    }); 
 
     return (
       <div>
