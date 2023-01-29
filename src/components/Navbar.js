@@ -85,24 +85,24 @@ const Navbar = class extends React.Component {
     });
 
 
-    // apiCalendar.handleAuthClick();
-    fetch("https://www.googleapis.com/calendar/v3/calendars/ar.maxnold@gmail.com/events?key=AIzaSyB7GfNxM4TXXtDue-64TMEzOViC8dTIgmA")
-    // fetch("https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyD3HySl2mo7m_5cjUwhltGmDt29yJ4U5uU")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            termine: result.items
-          });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
+    // // apiCalendar.handleAuthClick();
+    // fetch("https://www.googleapis.com/calendar/v3/calendars/ar.maxnold@gmail.com/events?key=AIzaSyB7GfNxM4TXXtDue-64TMEzOViC8dTIgmA")
+    // // fetch("https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyD3HySl2mo7m_5cjUwhltGmDt29yJ4U5uU")
+    //   .then(res => res.json())
+    //   .then(
+    //     (result) => {
+    //       this.setState({
+    //         isLoaded: true,
+    //         termine: result.items
+    //       });
+    //     },
+    //     (error) => {
+    //       this.setState({
+    //         isLoaded: true,
+    //         error
+    //       });
+    //     }
+    //   )
 
 
     $(function() {
@@ -253,20 +253,23 @@ const Navbar = class extends React.Component {
                     alt="SPD Logo"
                   />
                 </a>
-                {/* Hamburger menu */}
-                <div
-                  className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-                  data-target="navMenu"
-                  role="menuitem"
-                  tabIndex={0}
-                  onKeyPress={() => this.toggleHamburger()}
-                  onClick={() => this.toggleHamburger()}
-                >
-                  <span />
-                  <span />
-                  <span />
-                </div>
               </div>
+
+              {/* Hamburger menu */}
+              <div
+                className="burger-menu flex column center"
+                // className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                // data-target="navMenu"
+                // role="menuitem"
+                // tabIndex={0}
+                // onKeyPress={() => this.toggleHamburger()}
+                // onClick={() => this.toggleHamburger()}
+              >
+                <div className="burger-bar"></div>
+                <div className="burger-bar"></div>
+                <div className="burger-bar"></div>
+              </div>
+              
               <div
                 id="navMenu"
                 className={`navbar-menu ${this.state.navBarActiveClass}`}
@@ -429,7 +432,9 @@ const Navbar = class extends React.Component {
                       <i className="fa fa-linkedin"></i>
                     </a> */}
                   </div>
+                  
                 </div>
+                
                 {/* <div className="navbar-end has-text-centered">
                   <a
                     className="navbar-item"
