@@ -176,25 +176,25 @@ const Navbar = class extends React.Component {
     });
   }
 
-  toggleHamburger() {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active",
-            })
-          : this.setState({
-              navBarActiveClass: "",
-            });
-      }
-    );
-  }
+  // toggleHamburger() {
+  //   // toggle the active boolean in the state
+  //   this.setState(
+  //     {
+  //       active: !this.state.active,
+  //     },
+  //     // after state has been updated,
+  //     () => {
+  //       // set the class in state for the navbar accordingly
+  //       this.state.active
+  //         ? this.setState({
+  //             navBarActiveClass: "is-active",
+  //           })
+  //         : this.setState({
+  //             navBarActiveClass: "",
+  //           });
+  //     }
+  //   );
+  // }
 
   render() {
     return (
@@ -214,13 +214,13 @@ const Navbar = class extends React.Component {
           }}
         >
           <div
-            className="flex column center"
+            className="flex column center border"
             style={{
               width: "100vw",
             }}
           >
             <div 
-              className=""
+              className="border"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -231,7 +231,7 @@ const Navbar = class extends React.Component {
               }}
             >
               <div 
-                className="navbar-brand container"
+                className="navbar-brand container border"
               >
                 <a 
                   href="https://www.spd.de/" 
@@ -273,7 +273,12 @@ const Navbar = class extends React.Component {
 
               <div
                 id="navMenu"
-                className={`navbar-menu ${this.state.navBarActiveClass}`}
+                className="border"
+                // className={`navbar-menu ${this.state.navBarActiveClass}`}
+                style={{
+                  width: "50%",
+                  marginRight: "2vw"
+                }}
               >
                 <div 
                   className="navbar-start has-text-centered flex row center"
@@ -393,61 +398,7 @@ const Navbar = class extends React.Component {
                       </Link>
                     </div>
                   </div>
-                  
-                  {/* <Link className="navbarItem flex row center" to="/contact/examples">
-                    Form Examples
-                  </Link> */}
-                  <div
-                    className="navbarItem flex row center"
-                    style={{
-                      // width: "8vw",
-                      justifyContent: "space-between"
-                    }}
-                  >
-                    {/* <a 
-                      className="navbarItem flex row center grey" 
-                      href="https://www.instagram.com"
-                      target="_blank"
-                    >
-                      <i className="fa fa-instagram"></i>
-                    </a>
-                    <a 
-                      className="navbarItem flex row center grey" 
-                      href="https://www.twitter.com"
-                      target="_blank"
-                    >
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                    <a 
-                      className="navbarItem flex row center grey" 
-                      href=""
-                      target="_blank"
-                    >
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                    <a 
-                      className="navbarItem flex row center grey" 
-                      href=""
-                      target="_blank"
-                    >
-                      <i className="fa fa-linkedin"></i>
-                    </a> */}
-                  </div>
-                  
                 </div>
-                
-                {/* <div className="navbar-end has-text-centered">
-                  <a
-                    className="navbar-item"
-                    href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="icon">
-                      <img src={github} alt="Github" />
-                    </span>
-                  </a>
-                </div> */}
               </div>
             </div>
           </div>
