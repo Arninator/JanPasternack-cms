@@ -257,7 +257,8 @@ const Navbar = class extends React.Component {
 
               {/* Hamburger menu */}
               <div
-                className="burger-menu flex column center"
+                id="burger-menu"
+                className="flex column center"
                 // className={`navbar-burger burger ${this.state.navBarActiveClass}`}
                 // data-target="navMenu"
                 // role="menuitem"
@@ -269,7 +270,7 @@ const Navbar = class extends React.Component {
                 <div className="burger-bar"></div>
                 <div className="burger-bar"></div>
               </div>
-              
+
               <div
                 id="navMenu"
                 className={`navbar-menu ${this.state.navBarActiveClass}`}

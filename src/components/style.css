@@ -225,7 +225,8 @@
     transition: ease-in;
     /* text-shadow: 0px 15px lightgrey; */
 }
-.burger-menu {
+#burger-menu {
+    width: 5vh;
     max-width: 5vh;
     padding: 0;
     margin-right: 10vw;
@@ -267,15 +268,14 @@
  @media only screen and (min-width: 992px){
     
 }
-@media only screen and (min-width: 320px) and (max-width: 479px){
-    .footer-item:hover {
-        color: cyan;
-    }
-
-}
-@media only screen and (min-width: 480px) and (max-width: 767px){
-    
-}
 @media only screen and (min-width: 768px) and (max-width: 991px){
     
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+}
+@media only screen and (min-width: 320px) and (max-width: 479px){
+    #burger-menu {
+        display: block;
+    }
 }
