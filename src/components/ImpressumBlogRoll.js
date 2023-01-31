@@ -11,25 +11,26 @@ class ImpressumBlogRollTemplate extends React.Component {
     // console.log(posts);
 
     return (
-      <div className="columns is-multiline">
+      <div className="flex column center">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-4" key={post.id}>
+            <div className="is-parent is-12" key={post.id}>
               <article>
                 <div 
-                  className='flex row space-between full-width'
+                  className=''
                 >
-                  <h2
+                  <h1
                     // className='border'
                     style= {{
                       width: "25%",
                       maxWidth: "25%",
-                      margin: "10px",
+                      // margin: "10px",
                       marginTop: "2vh"
                     }}
                   >
                     { post.frontmatter.title }
-                  </h2>
+                  </h1>
+                  <br/>
                   <div className='' dangerouslySetInnerHTML={{ __html: post.html }}></div>
                   <br/>
                   <br/>
@@ -77,7 +78,7 @@ export default function ImpressumBlogRoll() {
                 frontmatter {
                   title
                   templateKey
-                  date(formatString: "MMMM DD, YYYY")
+                  date(formatString: "DD.MM.YYYY")
                   featuredpost
                   featuredimage {
                     childImageSharp {
