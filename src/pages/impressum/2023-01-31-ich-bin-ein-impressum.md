@@ -1,6 +1,6 @@
 ---
 templateKey: impressum-page
-title: Ich bin ein Impressum
+title: Ich bin ein Impressum!
 date: 2023-01-31T16:12:29.899Z
 ---
 Ich bin ein Impressumtext!
