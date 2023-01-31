@@ -295,6 +295,21 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Zuletzt aktualisiert:", name: "date", widget: "datetime" }
+  - name: "datenschutzBlog"
+    label: "Datenschutz"
+    folder: "src/pages/datenschutz"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "datenschutz-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Zuletzt aktualisiert:", name: "date", widget: "datetime" }
   - name: "pages"
     label: "Pages"
     files:
