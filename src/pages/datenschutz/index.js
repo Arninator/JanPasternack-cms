@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-// import DatenschutzBlogRoll from "../../components/DatenschutzBlogRoll";
+import DatenschutzBlogRoll from "../../components/DatenschutzBlogRoll";
 
 export default class DatenschutzBlogIndexPage extends React.Component {
   render() {
