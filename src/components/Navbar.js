@@ -214,13 +214,13 @@ const Navbar = class extends React.Component {
           }}
         >
           <div
-            className="flex column center border"
+            className="flex column center"
             style={{
               width: "100vw",
             }}
           >
             <div 
-              className="border"
+              // className="border"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -231,7 +231,7 @@ const Navbar = class extends React.Component {
               }}
             >
               <div 
-                className="navbar-brand container border"
+                className="navbar-brand container"
               >
                 <a 
                   href="https://www.spd.de/" 
@@ -273,7 +273,7 @@ const Navbar = class extends React.Component {
 
               <div
                 id="navMenu"
-                className="border"
+                // className="border"
                 // className={`navbar-menu ${this.state.navBarActiveClass}`}
                 style={{
                   width: "50%",
