@@ -283,7 +283,7 @@ collections:
   - name: "impressumBlog"
     label: "Impressum"
     folder: "src/pages/impressum"
-    create: true
+    create: false
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
