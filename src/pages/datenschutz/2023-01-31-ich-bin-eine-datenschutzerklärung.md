@@ -1,7 +1,7 @@
 ---
 templateKey: datenschutz-page
 title: Ich bin eine Datenschutzerklärung!
-date: 2023-01-31T16:42:34.570Z
+date: 2023-02-01T14:46:35.990Z
 ---
 Ich bin ein Datenschutztext!
 
