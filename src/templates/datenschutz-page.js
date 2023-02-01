@@ -28,18 +28,6 @@ export const DatenschutzBlogPostTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </div>
         </div>
       </div>
@@ -63,13 +51,13 @@ const DatenschutzBlogPost = ({ data }) => {
       <DatenschutzBlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        // description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              // content={`${post.frontmatter.description}`}
             />
           </Helmet>
         }
