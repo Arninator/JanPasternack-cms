@@ -39,11 +39,12 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1>Kontakt</h1>
               <form
                 name="contact"
                 method="post"
                 action="/contact/thanks/"
+                // action="mailto:sechzehngeteiltdurchneun@gmx.de"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
@@ -68,6 +69,7 @@ export default class Index extends React.Component {
                       onChange={this.handleChange}
                       id={"name"}
                       required={true}
+                      placeholder="Name, du Otto!"
                     />
                   </div>
                 </div>
