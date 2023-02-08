@@ -11,7 +11,7 @@ class PresseBlogRollTemplate extends React.Component {
     // console.log(posts);
 
     return (
-      <div className="columns is-multiline full-height">
+      <div className="columns is-multiline">
         {posts.length > 0 ?
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
