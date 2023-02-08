@@ -12,8 +12,7 @@ class AktuellesBlogRollTemplate extends React.Component {
 
     return (
       <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
+        {posts.length > 0 ? posts.map(({ node: post }) => (
             <div className="is-parent column is-4" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
@@ -64,7 +63,16 @@ class AktuellesBlogRollTemplate extends React.Component {
                 </p>
               </article>
             </div>
-          ))}
+          )) : 
+          <div 
+            className="is-parent column is-4"
+            style={{
+              margin: "1vw",
+              color: "darkolivegreen"
+            }}
+          >
+            Aktuell gibt es leider keine Neuigkeiten...
+          </div>}
       </div>
     )
   }
