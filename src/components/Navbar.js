@@ -32,7 +32,7 @@ const Navbar = class extends React.Component {
         "position": "absolute",
         "display": "block",
         "background-color": "white",
-        "top": "5vh",
+        "top": "6vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#news-dropdown").width() / 2.),
       });
       // console.log($(this).offset().top + " " + $(this).offset().left);
@@ -46,7 +46,7 @@ const Navbar = class extends React.Component {
         "position": "absolute",
         "display": "block",
         "background-color": "white",
-        "top": "5vh",
+        "top": "6vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#ueber-dropdown").width() / 2.),
       });
       // console.log($(this).offset().top + " " + $(this).offset().left);
@@ -60,7 +60,7 @@ const Navbar = class extends React.Component {
         "position": "absolute",
         "display": "block",
         "background-color": "white",
-        "top": "5vh",
+        "top": "6vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#frankfurt-dropdown").width() / 2.),
       });
       // console.log($(this).offset().top + " " + $(this).offset().left);
@@ -74,7 +74,7 @@ const Navbar = class extends React.Component {
         "position": "absolute",
         "display": "block",
         "background-color": "white",
-        "top": "5vh",
+        "top": "6vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#kontakt-dropdown").width() / 2.),
       });
       // console.log($(this).offset().top + " " + $(this).offset().left);
@@ -83,27 +83,6 @@ const Navbar = class extends React.Component {
         "display": "none"
       });
     });
-
-
-    // // apiCalendar.handleAuthClick();
-    // fetch("https://www.googleapis.com/calendar/v3/calendars/ar.maxnold@gmail.com/events?key=AIzaSyB7GfNxM4TXXtDue-64TMEzOViC8dTIgmA")
-    // // fetch("https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyD3HySl2mo7m_5cjUwhltGmDt29yJ4U5uU")
-    //   .then(res => res.json())
-    //   .then(
-    //     (result) => {
-    //       this.setState({
-    //         isLoaded: true,
-    //         termine: result.items
-    //       });
-    //     },
-    //     (error) => {
-    //       this.setState({
-    //         isLoaded: true,
-    //         error
-    //       });
-    //     }
-    //   )
-
 
     $(function() {
       $(window).scroll(function() {
