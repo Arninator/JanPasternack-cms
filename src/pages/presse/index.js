@@ -24,20 +24,20 @@ export default class PresseIndexPage extends React.Component {
             height: "45vh"
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-              backgroundColor: "transparent",
-              color: "white",
-              padding: "1rem",
-            }}
-          >
-            Presse
-          </h1>
+          
         </div>
         <section className="section">
           <div className="container">
+            <h1
+              className="has-text-weight-bold is-size-1"
+              style={{
+                // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
+                // color: "white",
+                padding: "1rem",
+              }}
+            >
+              Pressemitteilungen
+            </h1>
             <div className="content">
               <PresseBlogRoll />
             </div>
