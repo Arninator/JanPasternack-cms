@@ -30,7 +30,7 @@ export default class Index extends React.Component {
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
-      .catch((error) => alert(error));
+      .catch((error) => alert(error));      
   };
 
   render() {
