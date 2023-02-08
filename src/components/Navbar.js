@@ -296,7 +296,7 @@ const Navbar = class extends React.Component {
                         Aktuelles
                       </Link>
                       <Link className="navbarItem newsItem column startStart" to="/presse">
-                        Presse
+                        Pressemitteilungen
                       </Link>
                       <Link className="navbarItem newsItem column startStart" to="/termine">
                         Termine
