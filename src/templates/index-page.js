@@ -214,7 +214,7 @@ export const IndexPageTemplate = ({
                     <TwitterTimelineEmbed
                       sourceType="profile"
                       screenName="jan_pasternack"
-                      tweetLimit="3"
+                      tweetLimit="4"
                       // options={{}}
                     />
                     
