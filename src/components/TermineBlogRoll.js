@@ -5,35 +5,62 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 import "../components/style.css";
 
-let maxIndex = 3;
-
 class TermineBlogRollTemplate extends React.Component {
 
-  componentWillMount() {
-    // if (document.location.href.includes("termine")) {
-    //   maxIndex = Infinity;
-    // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      buttonOption: false,
+      index: 1
+    };
   }
-  componentDidMount() {
+
+  componentWillMount() {
     if (document.location.href.includes("termine")) {
-      for (let i = 0; i < document.getElementsByClassName("is-4").length; i++) {
-        document.getElementsByClassName("is-4")[i].classList.add("is-12");
-      }
+      this.setState({
+        buttonOption: true,
+      });
     }
   }
 
+  componentDidMount() {
+
+  }
+
+  prevClick() {
+    this.setState({
+      index: this.state.index--
+    })
+  }
+
+  nextClick() {
+    this.setState({
+      index: this.state.index++
+    })
+  }
+ 
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-
     return (
       <div className="columns is-multiline">
+        {this.state.buttonOption && 
+          <div className='flex center' style={{height: "inherit"}}>
+            <button 
+              className='flex center invisible-button'
+              onClick={() => this.prevClick}
+              style={{height: "10%", width: "2vw"}}
+            >
+              &#9665;
+            </button>
+          </div>
+        }
         {posts &&
-          posts.map(({ node: post }, index) => index < maxIndex ? (
-            <div className="is-parent column is-4" key={post.id}>
-              {/* {console.log(new Date(Date.now()).toDateString())}
-              {console.log(post.frontmatter.date)} */}
+          posts.map(({ node: post }, index) => index <= this.state.index + 1 && index >= this.state.index - 1 ? (
+            <div className="is-parent column is-3" key={post.id}>
+              {/* {console.log(new Date(Date.now()).toDateString())} */}
+              {/* {console.log(post.id)} */}
               <Link
                 className=""
                 to={post.fields.slug}
@@ -46,7 +73,7 @@ class TermineBlogRollTemplate extends React.Component {
                     backgroundColor: "hsl(0, 0%, 93%)"
                   }}
                 >
-                  <header className="flex column center">
+                  <header className="flex-column center">
                     {post.frontmatter.featuredimage ? (
                       <div 
                         className="flex row center"
@@ -98,6 +125,17 @@ class TermineBlogRollTemplate extends React.Component {
               </Link>
             </div>
           ) : "" )}
+        {this.state.buttonOption && 
+          <div className='flex center' style={{height: "inherit"}}>
+            <button 
+              className='flex center invisible-button'
+              onClick={() => this.nextClick}
+              style={{height: "10%", width: "2vw"}}
+            >
+              &#9655;
+            </button>
+          </div>
+        }
       </div>
     )
   }
