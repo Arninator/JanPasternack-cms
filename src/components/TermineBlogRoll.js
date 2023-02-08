@@ -6,12 +6,12 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 import "../components/style.css";
 
 class TermineBlogRollTemplate extends React.Component {
-
+  
   constructor(props) {
     super(props);
     this.state = {
       buttonOption: false,
-      index: 1
+      index: 1,
     };
   }
 
@@ -23,33 +23,39 @@ class TermineBlogRollTemplate extends React.Component {
     }
   }
 
-  componentDidMount() {
+  // componentDidMount() {
 
-  }
+  // }
 
   prevClick() {
+    // console.log("Before: " + this.state.index);
     this.setState({
-      index: this.state.index--
+      index: this.state.index > 1 ? this.state.index - 1 : 1,
     })
+    // console.log("After: " + this.state.index);
   }
 
   nextClick() {
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark;
+    // console.log("Before: " + this.state.index);
     this.setState({
-      index: this.state.index++
+      index: (this.state.index < (posts.length - 2)) ? this.state.index + 1 : (posts.length - 2),
     })
+    // console.log("After: " + this.state.index + " actIndex: " + actIndex + " length: " + posts.length);
   }
  
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-multiline">
+      <div className="columns is-multiline border">
         {this.state.buttonOption && 
           <div className='flex center' style={{height: "inherit"}}>
             <button 
               className='flex center invisible-button'
-              onClick={() => this.prevClick}
+              onClick={() => this.prevClick()}
               style={{height: "10%", width: "2vw"}}
             >
               &#9665;
@@ -57,10 +63,10 @@ class TermineBlogRollTemplate extends React.Component {
           </div>
         }
         {posts &&
-          posts.map(({ node: post }, index) => index <= this.state.index + 1 && index >= this.state.index - 1 ? (
-            <div className="is-parent column is-3" key={post.id}>
+          posts.map(({ node: post }, index) => ((index <= (this.state.index + 1)) && (index >= (this.state.index - 1))) ? (
+            <div className="is-parent column is-4" key={post.id}>
               {/* {console.log(new Date(Date.now()).toDateString())} */}
-              {/* {console.log(post.id)} */}
+              {/* {console.log("index: " + index + " stateIndex: " + this.state.index)} */}
               <Link
                 className=""
                 to={post.fields.slug}
@@ -129,7 +135,7 @@ class TermineBlogRollTemplate extends React.Component {
           <div className='flex center' style={{height: "inherit"}}>
             <button 
               className='flex center invisible-button'
-              onClick={() => this.nextClick}
+              onClick={() => this.nextClick()}
               style={{height: "10%", width: "2vw"}}
             >
               &#9655;
@@ -192,7 +198,7 @@ export default function TermineBlogRoll() {
           }
         }
       `}
-      render={(data, count) => <TermineBlogRollTemplate data={data} count={count} />}
+      render={(data, count) => <TermineBlogRollTemplate data={data} count={count}/>}
     />
   );
 }
