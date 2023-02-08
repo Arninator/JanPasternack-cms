@@ -11,8 +11,8 @@ class PresseBlogRollTemplate extends React.Component {
     // console.log(posts);
 
     return (
-      <div className="columns is-multiline">
-        {posts &&
+      <div className="columns is-multiline full-height">
+        {posts.length > 0 ?
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
@@ -60,7 +60,16 @@ class PresseBlogRollTemplate extends React.Component {
                 </p>
               </article>
             </div>
-          ))}
+          )) : 
+          <div 
+            className="is-parent column is-4"
+            style={{
+              margin: "1vw",
+              color: "darkolivegreen"
+            }}
+          >
+            Derzeit gibt es keine aktuellen Pressemitteilungen...
+          </div>}
       </div>
     )
   }
