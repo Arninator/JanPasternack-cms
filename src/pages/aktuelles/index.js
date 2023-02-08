@@ -23,7 +23,7 @@ export default class AktuellesBlogIndexPage extends React.Component {
               style={{
                 // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
                 // backgroundColor: "transparent",
-                color: "black",
+                // color: "black",
                 padding: "1rem",
                 marginBottom: "0vh"
               }}
