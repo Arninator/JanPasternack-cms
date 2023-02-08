@@ -167,9 +167,12 @@
         -----------------------
     ```````````````````````````
  */
- .full-width {
+.full-width {
     width: 100%;
  }
+.full-height {
+    min-height: 100%;
+}
 .greyBackground {
     background-color: rgb(233, 233, 233);
 }
