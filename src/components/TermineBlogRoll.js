@@ -50,9 +50,9 @@ class TermineBlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-multiline border">
+      <div className="columns is-multiline">
         {this.state.buttonOption && 
-          <div className='flex center' style={{height: "inherit"}}>
+          <div className='flex center' style={{ height: "inherit" }}>
             <button 
               className='flex center invisible-button'
               onClick={() => this.prevClick()}
@@ -64,7 +64,7 @@ class TermineBlogRollTemplate extends React.Component {
         }
         {posts &&
           posts.map(({ node: post }, index) => ((index <= (this.state.index + 1)) && (index >= (this.state.index - 1))) ? (
-            <div className="is-parent column is-4" key={post.id}>
+            <div className="is-parent column is-3" key={post.id}>
               {/* {console.log(new Date(Date.now()).toDateString())} */}
               {/* {console.log("index: " + index + " stateIndex: " + this.state.index)} */}
               <Link
