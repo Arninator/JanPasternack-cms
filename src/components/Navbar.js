@@ -31,7 +31,6 @@ const Navbar = class extends React.Component {
       $("#news-dropdown").css({
         "position": "absolute",
         "display": "block",
-        "background-color": "white",
         "top": "6vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#news-dropdown").width() / 2.),
       });
@@ -45,7 +44,6 @@ const Navbar = class extends React.Component {
       $("#ueber-dropdown").css({
         "position": "absolute",
         "display": "block",
-        "background-color": "white",
         "top": "6vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#ueber-dropdown").width() / 2.),
       });
@@ -59,7 +57,6 @@ const Navbar = class extends React.Component {
       $("#frankfurt-dropdown").css({
         "position": "absolute",
         "display": "block",
-        "background-color": "white",
         "top": "6vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#frankfurt-dropdown").width() / 2.),
       });
@@ -73,7 +70,6 @@ const Navbar = class extends React.Component {
       $("#kontakt-dropdown").css({
         "position": "absolute",
         "display": "block",
-        "background-color": "white",
         "top": "6vh",
         "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#kontakt-dropdown").width() / 2.),
       });
@@ -94,7 +90,8 @@ const Navbar = class extends React.Component {
 
               if (window_top > ($(window).height()) / 90.) {
                   $(this).css("background-color", "rgb(227, 0, 15)");
-                  $(".navbarItem").css("background-color", "rgb(227, 0, 15)");
+                  // $(".navbarItem").css("background-color", "transparent");
+                  $(".dropdown").css("background-color", "rgb(227, 0, 15)");
                   // $(this).css("background", "linear-gradient(to bottom, rgb(227, 0, 15) 0%, rgba(255, 255, 255, 0) 100%)");
                   
                   $(".navbarItem").css("color", "white");
@@ -113,6 +110,7 @@ const Navbar = class extends React.Component {
               } else {
                   $(this).css("background-color", "transparent");
                   $(".navbarItem").css("background-color", "transparent");
+                  $(".dropdown").css("background-color", "white");
 
                   $(".navbarItem").css("color", "black");
                   $(".navbarItem").hover(function () {
@@ -265,7 +263,6 @@ const Navbar = class extends React.Component {
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "space-around",
-
                     width: "100%",
                   }}
                 >
@@ -287,7 +284,7 @@ const Navbar = class extends React.Component {
                     </Link>
                     <div
                       id="news-dropdown"
-                      className="flex row center"
+                      className="flex row center dropdown"
                       style={{
                         display: "none",
                       }}
@@ -313,7 +310,7 @@ const Navbar = class extends React.Component {
                     </Link>
                     <div
                       id="ueber-dropdown"
-                      // className="flex column center"
+                      className="dropdown"
                       style={{
                         display: "none"
                       }}
@@ -341,7 +338,7 @@ const Navbar = class extends React.Component {
                     </Link>
                     <div
                       id="frankfurt-dropdown"
-                      className="flex row center"
+                      className="flex row center dropdown"
                       style={{
                         display: "none"
                       }}
@@ -364,7 +361,7 @@ const Navbar = class extends React.Component {
                     </Link>
                     <div
                       id="kontakt-dropdown"
-                      className="flex row center"
+                      className="flex row center dropdown"
                       style={{
                         display: "none"
                       }}
