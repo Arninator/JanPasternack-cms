@@ -28,7 +28,7 @@ export const WahlkreisBlogPostTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
+            {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -39,7 +39,7 @@ export const WahlkreisBlogPostTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
         </div>
       </div>
