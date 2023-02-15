@@ -347,7 +347,7 @@ const Navbar = class extends React.Component {
                         Wahlkreis
                       </Link>
                       <Link className="navbarItem frankfurtItem column endEnd" to="/ontour">
-                        on tour
+                        Jan unterwegs
                       </Link>
                     </div>
                   </div>
