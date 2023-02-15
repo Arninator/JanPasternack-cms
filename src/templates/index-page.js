@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({
       <div
         className="full-width-image-container margin-top-0 flex column flexEnd"
         style={{
-          backgroundImage: 'url("/img/jan-cover.jpg")',
+          backgroundImage: 'url("../img/jan-cover.jpg")',
           backgroundPosition: "0% 50%",
           height: "80vh",
         }}
@@ -137,22 +137,6 @@ export const IndexPageTemplate = ({
                         />
                     </div>
                   </div>
-                  {/* <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div> */}
-                  {/* <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div> */}
                   
                   <div 
                     className="flex row greyBackground fade-in section column is-12"
