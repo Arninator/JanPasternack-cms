@@ -11,53 +11,15 @@ class OnTourBlogRollTemplate extends React.Component {
     // console.log(posts);
 
     return (
-      <div className="columns is-multiline">
+      <div className="">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          width:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.width,
-                          height:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.height,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Weiterlesen Aktuell &rarr;
-                  </Link>
-                </p>
+            <div className="is-parent" key={post.id}>
+              <article>
+                <h1>
+                    { post.frontmatter.title }
+                </h1>
+                <div className='' dangerouslySetInnerHTML={{ __html: post.html }}></div>
               </article>
             </div>
           ))}
@@ -89,6 +51,7 @@ export default function OnTourBlogRoll() {
             edges {
               node {
                 excerpt(pruneLength: 400)
+                html
                 id
                 fields {
                   slug
