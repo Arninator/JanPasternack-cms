@@ -118,6 +118,7 @@ collections:
           widget: "hidden",
           default: "ontour-page",
         }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "politikBlog"
     label: "Politik"
