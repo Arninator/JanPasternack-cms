@@ -109,7 +109,7 @@ collections:
   - name: "onTourBlog"
     label: "Jan unterwegs"
     folder: "src/pages/ontour"
-    create: true
+    create: false
     slug: "{{slug}}"
     fields:
       - {
