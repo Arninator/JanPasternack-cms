@@ -50,7 +50,7 @@ class TermineBlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-multiline">
+      <div className="flex-row is-multiline">
         {this.state.buttonOption && 
           <div className='flex center' style={{ height: "inherit" }}>
             <button 
@@ -76,7 +76,7 @@ class TermineBlogRollTemplate extends React.Component {
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
                   style={{
-                    backgroundColor: "hsl(0, 0%, 93%)"
+                    backgroundColor: "hsl(0, 0%, 93%)",
                   }}
                 >
                   <header className="flex-column center">
