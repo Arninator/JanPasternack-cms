@@ -11,7 +11,6 @@ export const WahlkreisBlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
   title,
   helmet,
 }) => {
@@ -97,7 +96,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
       }
     }
   }
