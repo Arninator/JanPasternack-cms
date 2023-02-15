@@ -42,7 +42,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                       // marginLeft: "20%"
                     }}
                   >
-                    <h1 className=''>{ post.frontmatter.title }</h1>
+                    <h1>{ post.frontmatter.title }</h1>
                     <div className='' dangerouslySetInnerHTML={{ __html: post.html }}></div>
                   </div>
                 </div>
