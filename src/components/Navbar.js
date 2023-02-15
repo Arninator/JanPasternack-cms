@@ -109,7 +109,7 @@ const Navbar = class extends React.Component {
                   });                  
               } else {
                   $(this).css("background-color", "transparent");
-                  $(".navbarItem").css("background-color", "transparent");
+                  // $(".navbarItem").css("background-color", "transparent");
                   $(".dropdown").css("background-color", "white");
 
                   $(".navbarItem").css("color", "black");
