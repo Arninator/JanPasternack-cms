@@ -32,7 +32,7 @@ export default class OnTourIndexPage extends React.Component {
               padding: "1rem",
             }}
           >
-            OnTour
+            Jan unterwegs
           </h1>
         </div>
         <section className="section">
