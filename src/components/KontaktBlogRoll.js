@@ -87,7 +87,7 @@ export default function KontaktBlogRoll() {
         query KontaktBlogRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "aktuelles-page" } } }
+            filter: { frontmatter: { templateKey: { eq: "kontakt-page" } } }
           ) {
             edges {
               node {
