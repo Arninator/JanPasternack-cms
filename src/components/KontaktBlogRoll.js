@@ -54,13 +54,22 @@ class KontaktBlogRollTemplate extends React.Component {
                   </p>
                 </header>
                 <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Weiterlesen Aktuell &rarr;
-                  </Link>
+                  {post.html}
                 </p>
+                <a 
+                  className="" 
+                  href=""
+                  target="_blank"
+                >
+                  <i className="fa fa-facebook"></i>
+                </a>
+                <a 
+                  className="" 
+                  href=""
+                  target="_blank"
+                >
+                  <i className="fa fa-instagram"></i>
+                </a>
               </article>
             </div>
           ))}
@@ -92,6 +101,7 @@ export default function KontaktBlogRoll() {
             edges {
               node {
                 excerpt(pruneLength: 400)
+                html
                 id
                 fields {
                   slug
