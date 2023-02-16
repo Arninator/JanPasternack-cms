@@ -313,7 +313,7 @@ const Navbar = class extends React.Component {
                       }}
                     >
                       <Link className="navbarItem ueberItem flex column" to="/vorstellung">
-                        Warum kandidiere ich
+                        Warum ich kandidiere
                         {/* <span className="flex column flexStart" style={{margin: "0px"}}>Warum ich für den</span>
                         <span className="flex column flexStart" style={{margin: "0px"}}>Hessischen Landtag</span>
                         <span className="flex column flexStart" style={{margin: "0px"}}>kandidiere</span> */}
@@ -366,7 +366,7 @@ const Navbar = class extends React.Component {
                         display: "none"
                       }}
                     >
-                      <Link className="navbarItem kontanktItem column endEnd" to="/contact">
+                      <Link className="navbarItem kontanktItem column endEnd" to="/kontakt">
                         Kontakt
                       </Link>
                       <Link className="navbarItem kontanktItem column endEnd" to="/pressebilder">
