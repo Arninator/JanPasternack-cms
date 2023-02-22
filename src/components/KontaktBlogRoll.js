@@ -22,7 +22,7 @@ class KontaktBlogRollTemplate extends React.Component {
                   backgroundColor: "hsl(0, 0%, 93%)"
                 }}
               >
-                            {console.log(post.frontmatter.socialmedia)}
+                {/* {console.log(post.frontmatter.socialmedia)} */}
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
