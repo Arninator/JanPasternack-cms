@@ -16,7 +16,7 @@ class TermineBlogRollTemplate extends React.Component {
   }
 
   componentWillMount() {
-    if (document && document.location.href.includes("termine")) {
+    if (this.document.location.href.includes("termine")) {
       this.setState({
         buttonOption: true,
       });
