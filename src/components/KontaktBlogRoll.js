@@ -56,20 +56,15 @@ class KontaktBlogRollTemplate extends React.Component {
                 <p>
                   {post.html}
                 </p>
-                <a 
-                  className="" 
-                  href=""
-                  target="_blank"
-                >
-                  <i className="fa fa-facebook"></i>
-                </a>
-                <a 
-                  className="" 
-                  href=""
-                  target="_blank"
-                >
-                  <i className="fa fa-instagram"></i>
-                </a>
+                {post.frontmatter.socialmedia.map(media => (
+                  <a 
+                    className="" 
+                    href={ media.link }
+                    target="_blank"
+                  >
+                    <i className={`fa fa-${media.name.toLowerCase()}`}></i>
+                  </a>
+                ))}
               </article>
             </div>
           ))}
