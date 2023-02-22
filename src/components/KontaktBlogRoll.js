@@ -10,61 +10,26 @@ class KontaktBlogRollTemplate extends React.Component {
 
 
     return (
-      <div className="columns is-multiline">
+      <div className="">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-4" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-                style={{
-                  backgroundColor: "hsl(0, 0%, 93%)"
-                }}
-              >
+            <div className="" key={post.id}>
+              <article>
                 {/* {console.log(post.frontmatter.socialmedia)} */}
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          width:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.width,
-                          height:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.height,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
+                <div dangerouslySetInnerHTML={{__html: post.html}}></div>
+                <div
+                  className="flex-column"
+                >
+                  {post.frontmatter.socialmedia.map(media => (
+                    <a 
+                      className="" 
+                      href={ media.link }
+                      target="_blank"
                     >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.html}
-                </p>
-                {post.frontmatter.socialmedia.map(media => (
-                  <a 
-                    className="" 
-                    href={ media.link }
-                    target="_blank"
-                  >
-                    <i className={`fa fa-${media.name.toLowerCase()}`}></i>
-                  </a>
-                ))}
+                      <i className={`fa fa-${media.name.toLowerCase()}`}></i>
+                    </a>
+                  ))}
+                </div>
               </article>
             </div>
           ))}
