@@ -8,7 +8,6 @@ class KontaktBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    // console.log(posts);
 
     return (
       <div className="columns is-multiline">
@@ -23,6 +22,7 @@ class KontaktBlogRollTemplate extends React.Component {
                   backgroundColor: "hsl(0, 0%, 93%)"
                 }}
               >
+                            {console.log(post.frontmatter.socialmedia)}
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
@@ -120,6 +120,10 @@ export default function KontaktBlogRoll() {
                       )
 
                     }
+                  }
+                  socialmedia {
+                    name
+                    link
                   }
                 }
               }
