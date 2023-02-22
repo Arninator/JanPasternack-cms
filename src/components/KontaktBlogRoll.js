@@ -18,16 +18,28 @@ class KontaktBlogRollTemplate extends React.Component {
                 {/* {console.log(post.frontmatter.socialmedia)} */}
                 <div dangerouslySetInnerHTML={{__html: post.html}}></div>
                 <div
-                  className="flex-column"
+                  className="flex-row"
+                  style={{
+                    marginTop: "2vh"
+                  }}
                 >
                   {post.frontmatter.socialmedia.map(media => (
-                    <a 
-                      className="" 
-                      href={ media.link }
-                      target="_blank"
+                    <div
+                      className='flex-row'
                     >
-                      <i className={`fa fa-${media.name.toLowerCase()}`}></i>
-                    </a>
+                      {/* <p>Besuche mich auf { media.name }:&nbsp;</p> */}
+                      <a 
+                        className="footer-item" 
+                        href={ media.link }
+                        target="_blank"
+                        style={{
+                          margin: "0 2vw",
+                          fontSize: "5vh",
+                        }}
+                      >
+                        <i className={`fa fa-${media.name.toLowerCase()}`}></i>
+                      </a>
+                    </div>
                   ))}
                 </div>
               </article>
