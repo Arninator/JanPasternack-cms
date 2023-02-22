@@ -16,7 +16,7 @@ class TermineBlogRollTemplate extends React.Component {
   }
 
   componentWillMount() {
-    if (this.document.href.includes("termine")) {
+    if (window.location.href.includes("termine")) {
       this.setState({
         buttonOption: true,
       });
@@ -28,21 +28,17 @@ class TermineBlogRollTemplate extends React.Component {
   // }
 
   prevClick() {
-    // console.log("Before: " + this.state.index);
     this.setState({
       index: this.state.index > 1 ? this.state.index - 1 : 1,
     })
-    // console.log("After: " + this.state.index);
   }
 
   nextClick() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark;
-    // console.log("Before: " + this.state.index);
     this.setState({
       index: (this.state.index < (posts.length - 2)) ? this.state.index + 1 : (posts.length - 2),
     })
-    // console.log("After: " + this.state.index + " actIndex: " + actIndex + " length: " + posts.length);
   }
  
   render() {
