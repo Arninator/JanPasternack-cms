@@ -4,11 +4,11 @@ import Layout from "../../components/Layout";
 import KontaktBlogRoll from "../../components/KontaktBlogRoll";
 
 export default class KontaktIndexPage extends React.Component {
-  componentDidMount() {
 
-    if (document.location.href.includes("blog")) {
-      for (let i = 0; i < document.getElementsByClassName("is-4").length; i++) {
-        document.getElementsByClassName("is-4")[i].classList.add("is-12");
+  componentDidMount() {
+    if (this.document.location.href.includes("blog")) {
+      for (let i = 0; i < this.document.getElementsByClassName("is-4").length; i++) {
+        this.document.getElementsByClassName("is-4")[i].classList.add("is-12");
       }
     }
   }
