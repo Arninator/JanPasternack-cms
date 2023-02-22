@@ -1,18 +1,15 @@
 ---
 templateKey: kontakt-page
+socialmedia:
+  - name: Instagram
+    link: https://www.instagram.com/jan.pasternack/
+  - name: Facebook
+    link: https://www.facebook.com/jan.pasternack
 ---
-<!--StartFragment-->
-
-Rich Text
-
-Markdown
-
 Jan Pasternack
 
-Wahlkreis 2 Frankfurt Des Das
+Wahlkreis 2 Frankfurt Dies Das
 
-Ferdinandstarsse 24
+Ferdinandstraße 24
 
 18057 Rostock
-
-<!--EndFragment-->
