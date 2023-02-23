@@ -165,7 +165,7 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       BLOG
                     </h3>
-                    <BlogRoll />
+                    {/* <BlogRoll /> */}
                     <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
                       <Link className="plain-button" to="/blog">
                         Read more &rarr;
@@ -190,9 +190,11 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div
-                    className="flex row center whiteBackground fade-in section column is-9"
+                    className="whiteBackground fade-in column is-3"
                     style={{
-                      margin: "0 12vw"
+                      margin: "3vh 33vw",
+                      // width: "50vw",
+                      // padding: "0vh 25vw"
                     }}
                   >
                     <TwitterTimelineEmbed
