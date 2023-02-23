@@ -5,7 +5,7 @@ import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
+import PresseBlogRoll from "../components/PresseBlogRoll";
 import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
 import InstaBlogRoll from "../components/InstaBlogRoll";
 import TermineBlogRoll from "../components/TermineBlogRoll";
@@ -163,9 +163,9 @@ export const IndexPageTemplate = ({
                     }}
                   >
                     <h3 className="has-text-weight-semibold is-size-2">
-                      BLOG
+                      Presse
                     </h3>
-                    {/* <BlogRoll /> */}
+                    <PresseBlogRoll /> 
                     <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
                       <Link className="plain-button" to="/blog">
                         Read more &rarr;
@@ -190,12 +190,7 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div
-                    className="whiteBackground fade-in column is-3"
-                    style={{
-                      margin: "3vh 33vw",
-                      // width: "50vw",
-                      // padding: "0vh 25vw"
-                    }}
+                    className="whiteBackground fade-in column is-3 twitter-div"
                   >
                     <TwitterTimelineEmbed
                       sourceType="profile"
