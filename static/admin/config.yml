@@ -17,7 +17,7 @@ collections:
     label: "Kontakt"
     folder: "src/pages/kontakt"
     create: false
-    slug: "contact"
+    slug: "{{slug}}"
     fields:
       - {
           label: "Template Key",
@@ -25,7 +25,7 @@ collections:
           widget: "hidden",
           default: "kontakt-page",
         }
-      # - { label: "Title", name: "title", widget: "string" }
+      # - { label: "Title", name: "title", widget: "string", default: "Kontakt" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { 
           label: "Social Media", 
