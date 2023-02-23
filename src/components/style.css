@@ -219,6 +219,9 @@
 .link:hover {
     color: var(--spd-red);
 }
+.twitter-div {
+    margin: 3vh 33vw;
+}
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
         NAVBAR
@@ -292,9 +295,15 @@
     #navMenu {
         width: 66% !important;
     }
+    .twitter-div {
+        margin: 3vh 10vw;
+    }
 }
 @media only screen and (min-width: 320px) and (max-width: 479px){
     #burger-menu {
         display: block;
+    }
+    .twitter-div {
+        margin: 3vh 10vw;
     }
 }
