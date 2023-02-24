@@ -54,6 +54,8 @@ const TemplateWrapper = ({ children }) => {
 
         {/* Font Awesome */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        {/* INSTAGRAM */}
+        {/* <script async src="//www.instagram.com/embed.js"></script> */}
       </Helmet>
       <div 
         id="placeholder"
