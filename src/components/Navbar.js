@@ -356,7 +356,7 @@ const Navbar = class extends React.Component {
                     id="kontakt-link"
                     className="flex row center"
                   >
-                    <Link className="navbarItem kontaktItem flex row center" to="/contact">
+                    <Link className="navbarItem kontaktItem flex row center" to="/kontakt">
                       Kontakt
                     </Link>
                     <div
