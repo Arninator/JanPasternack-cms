@@ -11,6 +11,7 @@ import InstaBlogRoll from "../components/InstaBlogRoll";
 import TermineBlogRoll from "../components/TermineBlogRoll";
 
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import InstagramEmbed from 'react-instagram-embed';
 
 import jancover from "../img/jan-cover.jpg";
 import janUnterschrift from "../img/Unterschrift.jpg"
@@ -198,8 +199,25 @@ export const IndexPageTemplate = ({
                       tweetLimit="4"
                       // options={{}}
                     />
-                    
                   </div>
+                  {/* <div
+                    className="greyBackground fade-in column is-3 twitter-div"
+                  >
+                    <InstagramEmbed
+                      url='https://www.instagram.com/jan.pasternack/'
+                      clientAccessToken='123|456'
+                      maxWidth={320}
+                      hideCaption={false}
+                      containerTagName='div'
+                      protocol=''
+                      injectScript
+                      onLoading={() => {}}
+                      onSuccess={() => {}}
+                      onAfterRender={() => {}}
+                      onFailure={() => {}}
+                    />
+                    
+                  </div> */}
                   {/* <TwitterTweetEmbed 
                     tweetId={'1606218300500779009'}
                   /> */}
