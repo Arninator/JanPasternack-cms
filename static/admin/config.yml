@@ -80,7 +80,7 @@ collections:
     label: "Lebenslauf"
     folder: "src/pages/lebenslauf"
     create: true
-    slug: "{{entries.title}}"
+    slug: "Lebenslauf"
     fields:
       - {
           label: "Template Key",
