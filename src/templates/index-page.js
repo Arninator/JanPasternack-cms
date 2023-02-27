@@ -47,36 +47,7 @@ export const IndexPageTemplate = ({
           height: "80vh",
         }}
       >
-        {/* <h1 
-          className="jan-header flex endEnd"
-          style={{
-            fontSize: "4vh",
-            fontWeight: "400",
-            color: "black",
-
-          }}
-        >Jan Pasternack</h1>
-        <h3 
-          className="jan-subheader flex endEnd"
-          style={{
-            fontSize: "3vh",
-            fontWeight: "400",
-            color: "black",
-
-          }}
-        >Wahlkreis 35 (Frankfurt II)</h3> */}
-      </div>
-      {/* <div id="cover-img">
-        <img 
-          src={ jancover }
-          alt="Cover"
-          style= {{
-            position: "absolute",
-            top: "6vw",
-          }}
-        />
-      </div> */}
-      
+      </div>      
       <section 
         // className="section section--gradient"
         style={{
