@@ -6,6 +6,7 @@ import remark from 'remark'
 import remarkHTML from 'remark-html'
 
 class LebenslaufBlogRollTemplate extends React.Component {
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -17,7 +18,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
         b.startdate.substring(6) - a.startdate.substring(6)
       )
     });
-    console.log(posts[0].node.frontmatter.entries);
+    // console.log(data);
 
     return (
       <div>
@@ -58,6 +59,11 @@ class LebenslaufBlogRollTemplate extends React.Component {
   }
 }
 
+const toHTML = value => remark()
+                            .use(remarkHTML)
+                            .processSync(value)
+                            .toString()
+
 LebenslaufBlogRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -66,13 +72,7 @@ LebenslaufBlogRoll.propTypes = {
   }),
 }
 
-const toHTML = value => remark()
-                            .use(remarkHTML)
-                            .processSync(value)
-                            .toString()
-
 export default function LebenslaufBlogRoll() {
-
   return (
     <StaticQuery
       query={graphql`
@@ -101,7 +101,7 @@ export default function LebenslaufBlogRoll() {
           }
         }
       `}
-      render={(data, count) => <LebenslaufBlogRollTemplate data={data} count={count} />}
+      render={(data, count) => <LebenslaufBlogRollTemplate data={data} count={count}/>}
     />
   );
 }
