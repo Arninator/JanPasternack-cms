@@ -8,11 +8,11 @@ class VorstellungBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    // console.log(posts);
+    console.log(posts.length);
 
     return (
       <div className="columns is-multiline">
-        {posts &&
+        {posts.length > 0 ? 
           posts.map(({ node: post }) => (
             <div className="is-parent column is-12" key={post.id}>
               <article
@@ -25,7 +25,16 @@ class VorstellungBlogRollTemplate extends React.Component {
                 </p>
               </article>
             </div>
-          ))}
+          )) : 
+          <div 
+            className="is-parent column is-4"
+            style={{
+              margin: "1vw",
+              color: "darkolivegreen"
+            }}
+          >
+            Aktuell gibt es leider keine Neuigkeiten...
+          </div>}
       </div>
     )
   }
