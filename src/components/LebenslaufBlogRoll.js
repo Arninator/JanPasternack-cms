@@ -29,7 +29,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                 <div 
                   className='flex row space-between full-width'
                 >
-                  <h3
+                  <h2
                     // className='border'
                     style= {{
                       width: "25%",
@@ -39,7 +39,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                     }}
                   >
                     {(entry.startdate) + (entry.enddate != "00.00.0000" ? " - " + entry.enddate : "")}
-                  </h3>
+                  </h2>
                   <div 
                     className="flex column center"
                     style={{
