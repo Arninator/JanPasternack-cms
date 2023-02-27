@@ -5,7 +5,7 @@ entries:
     startdate: 24.04.1987
     title: Geburt
     body: |-
-      Geboren im SoundsoKrankenhaus Rostock.
+      Geboren im Soundso-Krankenhaus Rostock.
 
       Es war eine Steißgeburt.
 ---
