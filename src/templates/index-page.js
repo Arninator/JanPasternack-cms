@@ -98,13 +98,6 @@ export const IndexPageTemplate = ({
                       position: "relative",
                     }}
                   >
-                    {/* <GatsbyImage
-                      image={ helloImage }
-                      alt="alt"
-                      style={{
-                        maxHeight: "50vh"
-                      }}
-                    /> */}
                     <div 
                       id="test"
                       className="flex column"
@@ -200,27 +193,6 @@ export const IndexPageTemplate = ({
                       // options={{}}
                     />
                   </div>
-                  {/* <div
-                    className="greyBackground fade-in column is-3 twitter-div"
-                  >
-                    <InstagramEmbed
-                      url='https://www.instagram.com/jan.pasternack/'
-                      clientAccessToken='123|456'
-                      maxWidth={320}
-                      hideCaption={false}
-                      containerTagName='div'
-                      protocol=''
-                      injectScript
-                      onLoading={() => {}}
-                      onSuccess={() => {}}
-                      onAfterRender={() => {}}
-                      onFailure={() => {}}
-                    />
-                    
-                  </div> */}
-                  {/* <TwitterTweetEmbed 
-                    tweetId={'1606218300500779009'}
-                  /> */}
                 </div>
               </div>
             </div>
