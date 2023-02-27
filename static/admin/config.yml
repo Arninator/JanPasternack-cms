@@ -57,25 +57,25 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-  - name: "frankfurtBlog"
-    label: "Frankfurt"
-    folder: "src/pages/frankfurt"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "frankfurt-page",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+  # - name: "frankfurtBlog"
+  #   label: "Frankfurt"
+  #   folder: "src/pages/frankfurt"
+  #   create: true
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   fields:
+  #     - {
+  #         label: "Template Key",
+  #         name: "templateKey",
+  #         widget: "hidden",
+  #         default: "frankfurt-page",
+  #       }
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Publish Date", name: "date", widget: "datetime" }
+  #     - { label: "Description", name: "description", widget: "text" }
+  #     - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+  #     - { label: "Featured Image", name: "featuredimage", widget: image }
+  #     - { label: "Body", name: "body", widget: "markdown" }
+  #     - { label: "Tags", name: "tags", widget: "list" }
   - name: "lebenslaufBlog"
     label: "Lebenslauf"
     folder: "src/pages/lebenslauf"
