@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import WahlkreisBlogRoll from "../../components/FrankfurtBlogRoll";
-import OnTourBlogRoll from "../../components/FrankfurtBlogRoll";
+import WahlkreisBlogRoll from "../../components/WahlkreisBlogRoll";
+import OnTourBlogRoll from "../../components/OnTourBlogRoll";
 
 export default class FrankfurtIndexPage extends React.Component {
   componentDidMount() {
