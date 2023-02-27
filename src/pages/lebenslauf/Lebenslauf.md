@@ -46,7 +46,7 @@ entries:
 
       was soll da noch kommen
   - enddate: 00.00.0000
-    startdate: 27.02.2023
+    startdate: 27.02.2000
     title: Zwischenschritt
     body: Hier passierte etwas.
 ---
