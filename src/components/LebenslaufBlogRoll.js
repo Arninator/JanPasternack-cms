@@ -10,17 +10,19 @@ class LebenslaufBlogRollTemplate extends React.Component {
 
 
     // Sort it, baby!
-    posts.sort(function(a, b) {
+    posts[0].node.frontmatter.entries.sort(function(a, b) {
       return (
-        b.node.frontmatter.startdate.substring(6) - a.node.frontmatter.startdate.substring(6)
+        b.startdate.substring(6) - a.startdate.substring(6)
       )
-    }); 
+    });
+    console.log(posts[0].node.frontmatter.entries);
 
     return (
       <div>
+        <div className='' dangerouslySetInnerHTML={{ __html: posts[0].node.html }}></div>
         {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
+          posts[0].node.frontmatter.entries.map(( entry ) => (
+            <div className="is-parent column is-12" key={entry.id}>
               <article>
                 <div 
                   className='flex row space-between full-width'
@@ -34,7 +36,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                       marginTop: "2vh"
                     }}
                   >
-                    {(post.frontmatter.startdate) + (post.frontmatter.enddate != "00.00.0000" ? " - " + post.frontmatter.enddate : "")}
+                    {(entry.startdate) + (entry.enddate != "00.00.0000" ? " - " + entry.enddate : "")}
                   </h3>
                   <div 
                     className="flex column center"
@@ -42,8 +44,8 @@ class LebenslaufBlogRollTemplate extends React.Component {
                       // marginLeft: "20%"
                     }}
                   >
-                    <h1>{ post.frontmatter.title }</h1>
-                    <div className='' dangerouslySetInnerHTML={{ __html: post.html }}></div>
+                    <h1>{ entry.title }</h1>
+                    <div className='' dangerouslySetInnerHTML={{ __html: entry.body }}></div>
                   </div>
                 </div>
               </article>
@@ -65,13 +67,11 @@ LebenslaufBlogRoll.propTypes = {
 
 export default function LebenslaufBlogRoll() {
 
-  // console.log("aktuellesBlogroll")
   return (
     <StaticQuery
       query={graphql`
         query LebenslaufBlogRollQuery {
           allMarkdownRemark(
-            sort: { order: ASC, fields: [frontmatter___startdate] }
             filter: { frontmatter: { templateKey: { eq: "lebenslauf-page" } } }
           ) {
             edges {
@@ -83,9 +83,12 @@ export default function LebenslaufBlogRoll() {
                   slug
                 }
                 frontmatter {
-                  title
-                  startdate
-                  enddate
+                  entries {
+                    title
+                    startdate
+                    enddate
+                    body
+                  }
                 }
               }
             }
