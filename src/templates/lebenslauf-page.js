@@ -10,14 +10,12 @@ import Content, { HTMLContent } from "../components/Content";
 export const LebenslaufBlogPostTemplate = ({
   content,
   contentComponent,
-  title,
-  startdate,
-  enddate,
+  entries,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
 
-  console.log(content);
+  // console.log(content);
 
   return (
     <section className="section">
@@ -26,27 +24,10 @@ export const LebenslaufBlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
+              {/* {title} */}
+              TITLE
             </h1>
-            {/* <p>{description}</p> */}
             <PostContent content={ content } />
-            {/* <div
-              className="border"
-              dangerouslySetInnerHTML={{ __html: intro.blurbs[0].body }} 
-            >
-            </div> */}
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4 className="border">Tags</h4>
-                <ul className="taglist border">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
           </div>
         </div>
       </div>
@@ -63,8 +44,9 @@ LebenslaufBlogPostTemplate.propTypes = {
   // intro: PropTypes.shape({
   //   blurbs: PropTypes.array,
   // }),
-  startdate: PropTypes.string,
-  enddate: PropTypes.string,
+  // startdate: PropTypes.string,
+  // enddate: PropTypes.string,
+  entries: PropTypes.object,
 };
 
 const LebenslaufBlogPost = ({ data }) => {
@@ -90,8 +72,8 @@ const LebenslaufBlogPost = ({ data }) => {
         }
         // tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        startdate={post.frontmatter.startdate}
-        enddate={post.frontmatter.enddate ? post.frontmatter.enddate : ""}
+        // startdate={post.frontmatter.startdate}
+        // enddate={post.frontmatter.enddate ? post.frontmatter.enddate : ""}
         // intro={post.frontmatter.intro}
       />
     </Layout>
@@ -113,9 +95,11 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        title
-        startdate
-        enddate
+        entries {
+          title
+          startdate
+          enddate
+        }
       }
     }
   }
