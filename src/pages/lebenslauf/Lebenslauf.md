@@ -1,5 +1,6 @@
 ---
 templateKey: lebenslauf-page
+title: Lebenslauf
 entries:
   - enddate: 00.00.0000
     startdate: 24.04.1987
