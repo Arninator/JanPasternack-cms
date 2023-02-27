@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import VorstellungBlogRoll from "../../components/VorstellungBlogRoll";
 import PolitikBlogRoll from "../../components/PolitikBlogRoll";
 import LebenslaufBlogRoll from "../../components/LebenslaufBlogRoll";
+import LebenslaufBlogRollExcerpt from "../../components/LebenslaufBlogRollExcerpt";
 
 export default class UeberIndexPage extends React.Component {
   componentDidMount() {
@@ -43,14 +44,9 @@ export default class UeberIndexPage extends React.Component {
               <VorstellungBlogRoll />
             </div>
           </div>
-          <div className="container">
-            <div className="content">
-              <PolitikBlogRoll />
-            </div>
-          </div>
           <div className="container border">
             <div className="content">
-              <LebenslaufBlogRoll />
+              <LebenslaufBlogRollExcerpt/>
             </div>
           </div>
         </section>
