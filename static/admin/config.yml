@@ -88,6 +88,7 @@ collections:
           widget: "hidden",
           default: "lebenslauf-page",
         }
+      # - { label: "Title", name: "title", widget: "string", default: "Kontakt" }
       - { label: "General", name: "body", widget: "markdown" }
       - { 
           label: "Entries", 
