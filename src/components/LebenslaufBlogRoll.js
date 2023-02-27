@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+
+import remark from 'remark'
+import remarkHTML from 'remark-html'
 
 class LebenslaufBlogRollTemplate extends React.Component {
   render() {
@@ -45,7 +47,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                     }}
                   >
                     <h1>{ entry.title }</h1>
-                    <div className='' dangerouslySetInnerHTML={{ __html: entry.body }}></div>
+                    <div className='' dangerouslySetInnerHTML={{ __html: toHTML(entry.body) }}></div>
                   </div>
                 </div>
               </article>
@@ -64,6 +66,10 @@ LebenslaufBlogRoll.propTypes = {
   }),
 }
 
+const toHTML = value => remark()
+                            .use(remarkHTML)
+                            .processSync(value)
+                            .toString()
 
 export default function LebenslaufBlogRoll() {
 
