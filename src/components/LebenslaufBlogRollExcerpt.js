@@ -12,7 +12,11 @@ class LebenslaufBlogRollExcerptTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div>
+      <div
+        style={{
+          margin: "5% 0",
+        }}
+      >
         <div className='' dangerouslySetInnerHTML={{ __html: posts[0].node.excerpt }}></div>
       </div>
     )
@@ -37,7 +41,7 @@ export default function LebenslaufBlogRollExcerpt() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 600)
+                excerpt(pruneLength: 800)
               }
             }
           }
