@@ -50,21 +50,25 @@ export const IndexPageTemplate = ({
       >
       </div>      
       <section 
-        // className="section section--gradient"
+        className=""
         style={{
           width: "100vw",
           margin: "0 0 0 0"
         }}
         >
-        <div>
-          <div>
+        <div
+          className=""
+        >
+          <div
+            className=""
+          >
             <div className="columns">
               <div className="column is-12">
                 <div 
                   className="content"
                 >
-                  <div 
-                    className="tile flex row whiteBackground fade-in section"
+                  <div
+                    className="tile flex row whiteBackground fade-in section content-part"
                     style={{
                       padding: "5% 15%",
                       position: "relative",
