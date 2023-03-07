@@ -274,7 +274,7 @@ const Navbar = class extends React.Component {
                   display: "none"
                 }}
               >
-                <Link className="navbarItem burgerItem flex-row endEnd border" to="/">Home</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/">Home</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/news">News</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/ueber">Über&nbsp;mich</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/frankfurt">Frankfurt</Link>
