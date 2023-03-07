@@ -311,6 +311,9 @@
     }
 }
 @media only screen and (min-width: 0px) and (max-width: 479px){
+    #cover {
+        background-position: "50% 50%";
+    }
     #burger-menu {
         display: block;
     }
