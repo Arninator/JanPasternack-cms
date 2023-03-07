@@ -40,6 +40,7 @@ export const IndexPageTemplate = ({
   return (
     <div>
       <div
+        id="cover"
         className="full-width-image-container margin-top-0 flex column flexEnd"
         style={{
           backgroundImage: 'url("../img/jan-cover.jpg")',
