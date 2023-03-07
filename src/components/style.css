@@ -173,6 +173,9 @@
     background-position: 0% 50%;
     height: 80vh;
 }
+.content-part {
+    padding: 5% 15%;
+}
 .full-width {
     width: 100%;
 }
@@ -312,6 +315,9 @@
     #navMenu {
         width: 66% !important;
     }
+    .tile {
+        padding: 5% 2% !important;
+    }
     .twitter-div {
         margin: 3vh 10vw;
     }
@@ -327,6 +333,9 @@
     }
     #navMenu {
         display: none;
+    }
+    .tile {
+        padding: 5% 2% !important;
     }
     .twitter-div {
         margin: 3vh 10vw;
