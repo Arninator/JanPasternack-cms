@@ -169,6 +169,10 @@
         -----------------------
     ```````````````````````````
  */
+#cover {
+    background-position: 0% 50%;
+    height: 80vh;
+}
 .full-width {
     width: 100%;
 }
@@ -314,7 +318,9 @@
 }
 @media only screen and (min-width: 0px) and (max-width: 479px){
     #cover {
-        background-position: "50% 50%";
+        width: calc(100% + 30%);
+        left: 0;
+        height: 80vh;
     }
     #burger-menu {
         display: block;
