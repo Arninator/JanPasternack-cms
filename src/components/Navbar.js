@@ -16,6 +16,7 @@ import "../components/style.css";
 import $ from "jquery";
 
 const Navbar = class extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -93,6 +94,7 @@ const Navbar = class extends React.Component {
                   $(".dropdown").css("background-color", "rgb(227, 0, 15)");
                   
                   $(".navbarItem").css("color", "white");
+                  $(".burger-bar").css("border", "1px solid white");
                   $(".navbarItem").hover(function () {
                     $(this).css("color", "black");
                   }, function () {
@@ -110,6 +112,7 @@ const Navbar = class extends React.Component {
                   $(".dropdown").css("background-color", "white");
 
                   $(".navbarItem").css("color", "black");
+                  $(".burger-bar").css("border", "1px solid black");
                   $(".navbarItem").hover(function () {
                     $(this).css("color", "rgb(227, 0, 15)");
                   }, function () {
@@ -233,7 +236,10 @@ const Navbar = class extends React.Component {
               {/* Hamburger menu */}
               <div
                 id="burger-menu"
-                className="flex column center"
+                className=""
+                style={{
+                  alignSelf: "flex-end"
+                }}
                 // className={`navbar-burger burger ${this.state.navBarActiveClass}`}
                 // data-target="navMenu"
                 // role="menuitem"
