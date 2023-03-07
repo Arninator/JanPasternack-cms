@@ -95,6 +95,8 @@ const Navbar = class extends React.Component {
                   
                   $(".navbarItem").css("color", "white");
                   $(".burger-bar").css("border", "1px solid white");
+                  $("#open-burger").css("background-color", "rgb(227, 0, 15)")
+
                   $(".navbarItem").hover(function () {
                     $(this).css("color", "black");
                   }, function () {
@@ -113,6 +115,8 @@ const Navbar = class extends React.Component {
 
                   $(".navbarItem").css("color", "black");
                   $(".burger-bar").css("border", "1px solid black");
+                  $("#open-burger").css("background-color", "white")
+
                   $(".navbarItem").hover(function () {
                     $(this).css("color", "rgb(227, 0, 15)");
                   }, function () {
@@ -154,25 +158,36 @@ const Navbar = class extends React.Component {
     });
   }
 
-  // toggleHamburger() {
-  //   // toggle the active boolean in the state
-  //   this.setState(
-  //     {
-  //       active: !this.state.active,
-  //     },
-  //     // after state has been updated,
-  //     () => {
-  //       // set the class in state for the navbar accordingly
-  //       this.state.active
-  //         ? this.setState({
-  //             navBarActiveClass: "is-active",
-  //           })
-  //         : this.setState({
-  //             navBarActiveClass: "",
-  //           });
-  //     }
-  //   );
-  // }
+  toggleHamburger() {
+
+    let x = $("body").width() - $("#open-burger").width() - ($("body").width() / 10.);
+
+    $("#open-burger")
+      .css("display", "block")
+      .css("position", "absolute")
+      .css("top", "7vh")
+      .css("left", `${ x }px`)
+      .css("background-color", "white")
+
+    // OLD
+    // // toggle the active boolean in the state
+    // this.setState(
+    //   {
+    //     active: !this.state.active,
+    //   },
+    //   // after state has been updated,
+    //   () => {
+    //     // set the class in state for the navbar accordingly
+    //     this.state.active
+    //       ? this.setState({
+    //           navBarActiveClass: "is-active",
+    //         })
+    //       : this.setState({
+    //           navBarActiveClass: "",
+    //         });
+    //   }
+    // );
+  }
 
   render() {
     return (
@@ -244,12 +259,26 @@ const Navbar = class extends React.Component {
                 // data-target="navMenu"
                 // role="menuitem"
                 // tabIndex={0}
-                // onKeyPress={() => this.toggleHamburger()}
-                // onClick={() => this.toggleHamburger()}
+                onKeyPress={() => this.toggleHamburger()}
+                onClick={() => this.toggleHamburger()}
               >
                 <div className="burger-bar"></div>
                 <div className="burger-bar"></div>
                 <div className="burger-bar"></div>
+              </div>
+
+              <div
+                id="open-burger"
+                className="flex-column endEnd"
+                style={{
+                  display: "none"
+                }}
+              >
+                <Link className="navbarItem burgerItem flex-row endEnd border" to="/">Home</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/news">News</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/ueber">Über&nbsp;mich</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/frankfurt">Frankfurt</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/kontakt">Kontakt</Link>
               </div>
 
               <div
