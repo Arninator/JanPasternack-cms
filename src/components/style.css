@@ -318,8 +318,8 @@
 }
 @media only screen and (min-width: 0px) and (max-width: 479px){
     #cover {
-        width: calc(100% + 30%);
-        left: 0;
+        width: calc(200%);
+        left: -20%;
         height: 80vh;
     }
     #burger-menu {
