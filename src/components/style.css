@@ -253,6 +253,8 @@
     max-width: 3vh;
     padding: 0;
     margin-right: 10vw;
+
+    display: none;
 }
 #burger-menu:hover {
     cursor: pointer;
@@ -268,7 +270,7 @@
 }
 
 #open-burger {
-    padding: 3vw;
+    padding: 3vw 5vw;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
