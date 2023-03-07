@@ -246,8 +246,8 @@
     background-color: white;
 }
 #burger-menu {
-    width: 5vh;
-    max-width: 5vh;
+    width: 3vh;
+    max-width: 3vh;
     padding: 0;
     margin-right: 10vw;
 
@@ -302,6 +302,9 @@
 @media only screen and (min-width: 320px) and (max-width: 479px){
     #burger-menu {
         display: block;
+    }
+    #navMenu {
+        display: none;
     }
     .twitter-div {
         margin: 3vh 10vw;
