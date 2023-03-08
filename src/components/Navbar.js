@@ -152,7 +152,7 @@ const Navbar = class extends React.Component {
     });
 
     $("#spd-logo").hover(function() {
-      $( this ).attr("src", logo);
+      $( this ).attr("src", logoRed);
     }, function() {
       $( this ).attr("src", logoBlack);
     });
