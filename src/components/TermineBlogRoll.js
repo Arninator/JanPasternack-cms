@@ -54,7 +54,8 @@ class TermineBlogRollTemplate extends React.Component {
               onClick={() => this.prevClick()}
               style={{height: "10%", width: "2vw"}}
             >
-              &#9665;
+              {/* &#9665; */}
+              &larr;
             </button>
           </div>
         }
@@ -134,7 +135,8 @@ class TermineBlogRollTemplate extends React.Component {
               onClick={() => this.nextClick()}
               style={{height: "10%", width: "2vw"}}
             >
-              &#9655;
+              {/* &#9655; */}
+              &rarr;
             </button>
           </div>
         }
