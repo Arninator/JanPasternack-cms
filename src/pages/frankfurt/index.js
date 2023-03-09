@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 
 import Layout from "../../components/Layout";
 import WahlkreisBlogRoll from "../../components/WahlkreisBlogRoll";
@@ -41,10 +42,25 @@ export default class FrankfurtIndexPage extends React.Component {
             <div className="content">
               <WahlkreisBlogRoll />
             </div>
+            <div className="column is-12 has-text-centered">
+              <Link className="plain-button" to="/wahlkreis">
+                Weiterlesen&nbsp;&rarr;
+              </Link>
+            </div>
           </div>
+        </section>
+        <section className="section greyBackground">
           <div className="container">
             <div className="content">
-              <OnTourBlogRoll />
+              <h2 className="has-text-weight-semibold is-size-2">
+                Lebenslauf
+              </h2>
+              <OnTourBlogRoll/>
+            </div>
+            <div className="column is-12 has-text-centered">
+              <Link className="plain-button" to="/ontour">
+                Weiterlesen&nbsp;&rarr;
+              </Link>
             </div>
           </div>
         </section>
