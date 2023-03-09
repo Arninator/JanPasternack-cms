@@ -196,6 +196,8 @@
     color: black;
     background-color: transparent;
     text-decoration: none;
+    font-size: larger;
+    cursor: pointer;
 }
 .invisible-button:hover {
     color: var(--spd-red);
