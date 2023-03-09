@@ -37,23 +37,30 @@ export default class NewsIndexPage extends React.Component {
             News
           </h1>
         </div>
-        <section className="section">
+        <section className="section whiteBackground">
           <div className="container">
-            <h2>Aktuelles</h2>
+            <h2 className="has-text-weight-semibold is-size-2">Aktuelles</h2>
             <div className="content">
               <AktuellesBlogRoll />
             </div>
-            <h2>Presse</h2>
+          </div>
+        </section>
+        <section className="section greyBackground">
+          <div className="container">
+          <h2 className="has-text-weight-semibold is-size-2">Presse</h2>
             <div className="content">
               <PresseBlogRoll />
             </div>
-            <h2>Termine</h2>
+          </div>
+        </section>
+        <section className="section whiteBackground">
+          <div className="container">
+          <h2 className="has-text-weight-semibold is-size-2">Termine</h2>
             <div className="content">
               <TermineBlogRoll />
             </div>
           </div>
         </section>
-       
       </Layout>
     );
   }
