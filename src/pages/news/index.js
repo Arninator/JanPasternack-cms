@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 
 import Layout from "../../components/Layout";
 import AktuellesBlogRoll from "../../components/AktuellesBlogRoll";
@@ -43,6 +44,11 @@ export default class NewsIndexPage extends React.Component {
             <div className="content">
               <AktuellesBlogRoll />
             </div>
+            <div className="column is-12 has-text-centered">
+              <Link className="plain-button" to="/aktuelles">
+                Mehr... &rarr;
+              </Link>
+            </div>
           </div>
         </section>
         <section className="section greyBackground">
@@ -51,6 +57,11 @@ export default class NewsIndexPage extends React.Component {
             <div className="content">
               <PresseBlogRoll />
             </div>
+            <div className="column is-12 has-text-centered">
+              <Link className="plain-button" to="/presse">
+                Mehr... &rarr;
+              </Link>
+            </div>
           </div>
         </section>
         <section className="section whiteBackground">
@@ -58,6 +69,11 @@ export default class NewsIndexPage extends React.Component {
           <h2 className="has-text-weight-semibold is-size-2">Termine</h2>
             <div className="content">
               <TermineBlogRoll />
+            </div>
+            <div className="column is-12 has-text-centered">
+              <Link className="plain-button" to="/termine">
+                Alle ansehen &rarr;
+              </Link>
             </div>
           </div>
         </section>
