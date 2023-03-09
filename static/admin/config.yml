@@ -254,7 +254,7 @@ collections:
   - name: "wahlkreisBlog"
     label: "Wahlkreis"
     folder: "src/pages/wahlkreis"
-    create: true
+    create: false
     slug: "{{slug}}"
     fields:
       - {
