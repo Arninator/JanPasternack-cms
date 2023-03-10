@@ -7,7 +7,7 @@ const Footer = class extends React.Component {
       <footer className="greyBackground flex row center">
         <div className="content flex row center">
           <div className="container flex row center">
-            <div className="flex row center" style={{ margin: "2vh"}}>
+            <div id="footer-section" className="flex row center" style={{ margin: "2vh"}}>
               <div className="flex row center">
                 <section className="flex row center">
                   <ul className="flex row center" style={{ margin: "0", padding: "0", width: "100%"}}>
@@ -50,35 +50,6 @@ const Footer = class extends React.Component {
                 </section>
               </div>
               <div className="flex row center">
-                {/* <a className="footer-item" title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a>
-                <a className="footer-item" title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a>
-                <a className="footer-item" title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a> */}
                 <a 
                   className="footer-item greyBackground" 
                   href="https://www.instagram.com"
