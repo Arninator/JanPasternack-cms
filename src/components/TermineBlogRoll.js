@@ -12,6 +12,7 @@ class TermineBlogRollTemplate extends React.Component {
     this.state = {
       buttonOption: false,
       index: 1,
+      selection: 3,
     };
   }
 
@@ -20,6 +21,16 @@ class TermineBlogRollTemplate extends React.Component {
       this.setState({
         buttonOption: true,
       });
+    }
+
+    if (typeof window !== "undefined") {
+      if ( window.innerWidth < 992) {
+        this.setState({
+          selection: 2,
+        });
+      } else if ( window.innerWidth < 992 ) {
+
+      }
     }
   }
 
