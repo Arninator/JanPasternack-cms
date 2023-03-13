@@ -49,5 +49,9 @@ entries:
     startdate: 27.02.2000
     title: Zwischenschritt
     body: Hier passierte etwas.
+  - enddate: 00.00.0000
+    startdate: 13.03.2023
+    title: Arbeit
+    body: Hier habe ich manchmal gearbeitet.
 ---
 Geboren wurde ich am 24. April 1987 in Neubrandenburg und aufgewachsen bin ich in der Hansestadt Rostock. Politisiert im Kampf gegen Rechtsextremismus bin ich 2004 den Jusos und schließlich der SPD beigetreten. Nach meinem Studium der Politikwissenschaften an der Goethe Universität in Frankfurt am Main folgten längere Auslandsaufenthalte in Russland, u. a. als Sprachassistent des Goethe Instituts in Jekaterinburg. Anschließend war ich beruflich stets an der Schnittstelle zwischen Politik und Verwaltung tätig, u. a. als Wissenschaftlicher Mitarbeiter im Hessischen Landtag und als Grundsatzreferent im Dezernat für Integration und Bildung der Stadt Frankfurt am Main. Derzeit leite ich den Fachbereich Sozialer Zusammenhalt an der Volkshochschule Frankfurt. Ich bin Mitglied im Landesvorstand der SPD Hessen sowie im Unterbezirksvorstand der SPD Frankfurt. Privat bin ich verheiratet und habe eine Tochter. Sofern ich neben all diesen Verpflichtungen noch etwas Zeit für meine Hobbys finde, gehe ich am liebsten eine Runde joggen im Niddapark.
