@@ -8,6 +8,8 @@ import Features from "../components/Features";
 import Content, { HTMLContent } from "../components/Content";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
+import $ from "jquery";
+
 // eslint-disable-next-line
 export const PressebilderBlogPostTemplate = ({
   content,
@@ -46,23 +48,56 @@ export const PressebilderBlogPostTemplate = ({
             /> */}
             {/* {console.log("mapping: " + presseImages[0])} */}
             {presseImages.map((foto, index) => (
-              <GatsbyImage 
-                image= { foto }
-                alt= { intro.blurbs[index].alt }
-                
+              <div
+                className="border"
                 style={{
-                // height: "50vh",
-                // border: "1px solid red"
-                // width: "100%",
-                // height: "75vh",
-                width: "100%",
-                // height: "content",
-                margin: "3%",
+                  backgroundImage: `url(${foto.images.fallback.src})`,
+                  backgroundPosition: "cover",
+                  width: "",
+                  // height: "100%",
+                  // margin: "3%",
                 }}
-              />
+
+                onMouseEnter={() => console.log(foto.images.fallback.src)}
+                // onMouseEnter={() => $("#image-" + index).addClass("border")}
+                onMouseLeave={() => $("#image-" + index).removeClass("border")}
+              >
+                {/* <GatsbyImage 
+                  id={`image-${index}`}
+                  className="downloadable"
+                  image= { foto }
+                  alt= { intro.blurbs[index].alt }
+                  
+                  style={{
+                  // height: "50vh",
+                  // border: "1px solid red"
+                  // width: "100%",
+                  // height: "75vh",
+                  width: "100%",
+                  // height: "content",
+                  margin: "3%",
+                  }}
+
+                  onMouseEnter={() => $("#image-" + index).addClass("border")}
+                  onMouseLeave={() => $("#image-" + index).removeClass("border")}
+                /> */}
+                <div
+                  style={{
+                    position: "absolute",
+                    // alignSelf: "center"
+                  }}>
+                  <a 
+                    className="footer-item" 
+                    href=""
+                    target="_blank"
+                  >
+                    <i className="fa fa-download"></i>
+                  </a>
+                </div>
+              </div>
             ))}
             <PostContent content={content} />
-            {tags && tags.length ? (
+            {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -73,7 +108,7 @@ export const PressebilderBlogPostTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
         </div>
       </div>
