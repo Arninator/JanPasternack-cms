@@ -48,67 +48,75 @@ export const PressebilderBlogPostTemplate = ({
             /> */}
             {/* {console.log("mapping: " + presseImages[0])} */}
             {presseImages.map((foto, index) => (
-              <div
+              <div 
                 className="border"
                 style={{
-                  backgroundImage: `url(${foto.images.fallback.src})`,
-                  backgroundPosition: "cover",
-                  width: "",
-                  // height: "100%",
-                  // margin: "3%",
+                  height: "auto",
+                  width: "auto",
+                  border: "1px solid green"
                 }}
-
-                onMouseEnter={() => console.log(foto.images.fallback.src)}
-                // onMouseEnter={() => $("#image-" + index).addClass("border")}
-                onMouseLeave={() => $("#image-" + index).removeClass("border")}
               >
-                {/* <GatsbyImage 
+                <GatsbyImage 
                   id={`image-${index}`}
-                  className="downloadable"
+                  className=""
                   image= { foto }
                   alt= { intro.blurbs[index].alt }
                   
                   style={{
-                  // height: "50vh",
-                  // border: "1px solid red"
-                  // width: "100%",
-                  // height: "75vh",
+                  // border: "1px solid red",
                   width: "100%",
-                  // height: "content",
-                  margin: "3%",
+                  height: "auto",
+                  // height: "fit-content",
+                  // margin: "3%",
                   }}
 
-                  onMouseEnter={() => $("#image-" + index).addClass("border")}
-                  onMouseLeave={() => $("#image-" + index).removeClass("border")}
-                /> */}
+                  onMouseEnter={() => {
+                    // $("#hover-div-" + index).css("display", "block");
+                    $("#image-" + index).addClass("after")        
+                    console.log();
+                  }}
+                  onMouseLeave={() => {
+                    // $("#hover-div-" + index).css("display", "none");
+                    $("#image-" + index).removeClass("after")                    
+                  }}
+                />
                 <div
+                  id={ `hover-div-${index}` }
+                  className="border"
                   style={{
                     position: "absolute",
-                    // alignSelf: "center"
+                    display: "inline-block",
+                    // top: "0",
+                    // left: "0%",
+                    // width: "100%",
+                    // height: "auto",
+                    // padding: "auto",
+                    // backgroundImage: { foto },
+                    backgroundColor: "rgb(50,50,50,0.3)",
+                    
+                    // zIndex: "100",
+                    display: "none",
                   }}>
-                  <a 
-                    className="footer-item" 
-                    href=""
-                    target="_blank"
-                  >
-                    <i className="fa fa-download"></i>
-                  </a>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                      }}
+                    >
+                      <a 
+                        className="footer-item border" 
+                        href=""
+                        target="_blank"
+                      >
+                        <i className="fa fa-linkedin"></i>
+                      </a>
+                    </div>
                 </div>
               </div>
+              
             ))}
             <PostContent content={content} />
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
           </div>
         </div>
       </div>
