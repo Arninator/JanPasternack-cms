@@ -31,11 +31,6 @@ const Footer = class extends React.Component {
                         Kontakt
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link className="footer-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li> */}
                     <li>
                       <a
                         className="footer-item"
