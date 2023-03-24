@@ -68,7 +68,7 @@ export const IndexPageTemplate = ({
                   className="content"
                 >
                   <div
-                    className="tile flex row whiteBackground fade-in section content-part"
+                    className="tile flex row whiteBackground fade-in section"
                     style={{
                       padding: "5% 15%",
                       position: "relative",
