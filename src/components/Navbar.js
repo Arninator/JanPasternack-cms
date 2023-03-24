@@ -140,7 +140,7 @@ const Navbar = class extends React.Component {
               var window_top = $(window).scrollTop();
               var window_bottom = $(window).scrollTop() + $(window).height();
 
-              /* if its half seen, fade it in */
+              /* if half of the screen is the object, fade it in */
               if (object_top < (window_bottom - ($(window).height() / 2.) / 2.)){
               // if (window_bottom - object_top > ($(this).outerHeight() / 2.)){
                   $(this).css("opacity", "1");
