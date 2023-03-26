@@ -231,18 +231,15 @@
 .twitter-div {
     margin: 3vh 33vw;
 }
-.after::after{
-    content: '';
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    z-index: 100;
-    
-    background-image: linear-gradient(rgba(255, 0, 0, 0.226), rgba(255, 255, 255, 0.315));
-    background-size: cover;
-    background-repeat: no-repeat;
+.download-button {
+    color: transparent;
+}
+.download-button:hover {
+    background-color: rgba(135, 206, 250, 0.2);
+    color: var(--spd-red);
+}
+.download-button i {
+    font-size: 10vh;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
