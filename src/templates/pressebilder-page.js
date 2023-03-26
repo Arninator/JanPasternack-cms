@@ -27,94 +27,63 @@ export const PressebilderBlogPostTemplate = ({
   // for (let i = 0; i < intro.blurbs.length; i++) presseImages.ad
   console.log("Array: " + presseImages);
 
+  let currHeight = 0;
+
   return (
     <section className="section">
       {helmet || ""}
       <div className="container content">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="column is-12">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
             <p>{description}</p>
-            {/* <Features gridItems={intro.blurbs} /> */}
-            {/* <GatsbyImage 
-              image= { presseImages[0] }
-              alt= "{ presseImages[0] }"
-              style={{
-              // height: "50vh",
-              border: "1px solid red"
-              }}
-            /> */}
-            {/* {console.log("mapping: " + presseImages[0])} */}
             {presseImages.map((foto, index) => (
-              <div 
-                className="border"
-                style={{
-                  height: "auto",
-                  width: "auto",
-                  border: "1px solid green"
-                }}
-              >
-                <GatsbyImage 
+                <div
+                  id={ `container-${index}` }
+                  className="flex-row after border"
+                  style={{
+                    backgroundImage: `url(${foto.images.fallback.src})`,
+                    width: `auto`,
+                    height: `${foto.height * 100}vh`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <a 
+                    className="download-button flex-row center border" 
+                    href=""
+                    target="_blank"
+                    style={{
+                      // alignSelf: "center",
+                      // justifySelf: "center"
+                      width: "100%",
+                      zIndex: ""
+                    }}
+                  >
+                    <i className="fa fa-download"></i>
+                  </a>
+                </div>
+                /* <GatsbyImage 
                   id={`image-${index}`}
-                  className=""
+                  className="after"
                   image= { foto }
                   alt= { intro.blurbs[index].alt }
                   
                   style={{
-                  // border: "1px solid red",
                   width: "100%",
                   height: "auto",
-                  // height: "fit-content",
-                  // margin: "3%",
                   }}
 
                   onMouseEnter={() => {
-                    // $("#hover-div-" + index).css("display", "block");
-                    $("#image-" + index).addClass("after")        
-                    console.log();
+                    currHeight = $("#image-" + index).offset().top + $("#image-" + index).height();
+                    console.log("after " + currHeight);
                   }}
                   onMouseLeave={() => {
-                    // $("#hover-div-" + index).css("display", "none");
                     $("#image-" + index).removeClass("after")                    
                   }}
-                />
-                <div
-                  id={ `hover-div-${index}` }
-                  className="border"
-                  style={{
-                    position: "absolute",
-                    display: "inline-block",
-                    // top: "0",
-                    // left: "0%",
-                    // width: "100%",
-                    // height: "auto",
-                    // padding: "auto",
-                    // backgroundImage: { foto },
-                    backgroundColor: "rgb(50,50,50,0.3)",
-                    
-                    // zIndex: "100",
-                    display: "none",
-                  }}>
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "50%",
-                        left: "50%",
-                      }}
-                    >
-                      <a 
-                        className="footer-item border" 
-                        href=""
-                        target="_blank"
-                      >
-                        <i className="fa fa-linkedin"></i>
-                      </a>
-                    </div>
-                </div>
-              </div>
-              
+                /> */             
             ))}
             <PostContent content={content} />
           </div>
