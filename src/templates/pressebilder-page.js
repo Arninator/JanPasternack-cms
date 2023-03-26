@@ -33,36 +33,44 @@ export const PressebilderBlogPostTemplate = ({
     <section className="section">
       {helmet || ""}
       <div className="container content">
-        <div className="columns">
-          <div className="column is-12">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
+        <div className="column is-12">
+          <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            {title}
+          </h1>
+          <div 
+            className="flex-row border"
+            style={{
+              flexWrap: "wrap"
+            }}>
+            
             <p>{description}</p>
             {presseImages.map((foto, index) => (
                 <div
                   id={ `container-${index}` }
-                  className="flex-row after border"
+                  className="flex-row center"
                   style={{
                     backgroundImage: `url(${foto.images.fallback.src})`,
-                    width: `auto`,
-                    height: `${foto.height * 100}vh`,
+                    width: `45%`,
+                    height: `${foto.height * 45}vh`,
+                    // maxHeight: `${foto.height * 100}vh`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
+                    margin: "2vw 1.5vw"
                   }}
                 >
                   <a 
-                    className="download-button flex-row center border" 
-                    href=""
-                    target="_blank"
+                    className="download-button flex-row center" 
+                    href={ foto.images.fallback.src }
+                    download
                     style={{
-                      // alignSelf: "center",
-                      // justifySelf: "center"
                       width: "100%",
-                      zIndex: ""
+                      height: "100%",
+                      fontSize: "4vh",
+                      fontWeight: "100"
                     }}
                   >
                     <i className="fa fa-download"></i>
+                    {/* &nbsp;&nbsp;&rarr;&nbsp;download */}
                   </a>
                 </div>
                 /* <GatsbyImage 
