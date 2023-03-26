@@ -38,60 +38,88 @@ export const PressebilderBlogPostTemplate = ({
             {title}
           </h1>
           <div 
-            className="flex-row"
+            className="flex-row greyBackground"
             style={{
               flexWrap: "wrap"
             }}>
-            
-            <p>{description}</p>
             {presseImages.map((foto, index) => (
-                <div
-                  id={ `container-${index}` }
-                  className="flex-row center"
+              foto.height < foto.width ?
+              <div
+                id={ `container-${index}` }
+                className="flex-row center"
+                style={{
+                  backgroundImage: `url(${foto.images.fallback.src})`,
+                  width: `45vw`,
+                  height: `${foto.height * 45}vw`,
+                  // maxHeight: `${foto.height * 100}vh`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                  margin: "3vw auto",
+                }}
+              >
+                <a 
+                  className="download-button flex-row center" 
+                  href={ foto.images.fallback.src }
+                  download
                   style={{
-                    backgroundImage: `url(${foto.images.fallback.src})`,
-                    width: `45%`,
-                    height: `${foto.height * 45}vh`,
-                    // maxHeight: `${foto.height * 100}vh`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    margin: "2vw 1.5vw"
+                    width: "100%",
+                    height: "100%",
+                    fontSize: "4vh",
+                    fontWeight: "100"
                   }}
                 >
-                  <a 
-                    className="download-button flex-row center" 
-                    href={ foto.images.fallback.src }
-                    download
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      fontSize: "4vh",
-                      fontWeight: "100"
-                    }}
-                  >
-                    <i className="fa fa-download"></i>
-                    {/* &nbsp;&nbsp;&rarr;&nbsp;download */}
-                  </a>
-                </div>
-                /* <GatsbyImage 
-                  id={`image-${index}`}
-                  className="after"
-                  image= { foto }
-                  alt= { intro.blurbs[index].alt }
-                  
+                  <i className="fa fa-download"></i>
+                  {/* &nbsp;&nbsp;&rarr;&nbsp;download */}
+                </a>
+              </div> 
+              :
+              <div
+                id={ `container-${index}` }
+                className="flex-row center"
+                style={{
+                  backgroundImage: `url(${foto.images.fallback.src})`,
+                  width: `22vw`,
+                  height: `${foto.height * 22}vw`,
+                  // maxHeight: `${foto.height * 100}vh`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                  margin: "4vw auto",
+                }}
+              >
+                <a 
+                  className="download-button flex-row center" 
+                  href={ foto.images.fallback.src }
+                  download
                   style={{
-                  width: "100%",
-                  height: "auto",
+                    width: "100%",
+                    height: "100%",
+                    fontSize: "4vh",
+                    fontWeight: "100"
                   }}
+                >
+                  <i className="fa fa-download"></i>
+                  {/* &nbsp;&nbsp;&rarr;&nbsp;download */}
+                </a>
+              </div> 
+              // /* <GatsbyImage 
+              //     id={`image-${index}`}
+              //     className="after"
+              //     image= { foto }
+              //     alt= { intro.blurbs[index].alt }
+                  
+              //     style={{
+              //     width: "100%",
+              //     height: "auto",
+              //     }}
 
-                  onMouseEnter={() => {
-                    currHeight = $("#image-" + index).offset().top + $("#image-" + index).height();
-                    console.log("after " + currHeight);
-                  }}
-                  onMouseLeave={() => {
-                    $("#image-" + index).removeClass("after")                    
-                  }}
-                /> */             
+              //     onMouseEnter={() => {
+              //       currHeight = $("#image-" + index).offset().top + $("#image-" + index).height();
+              //       console.log("after " + currHeight);
+              //     }}
+              //     onMouseLeave={() => {
+              //       $("#image-" + index).removeClass("after")                    
+              //     }}
+              //   /> */             
             ))}
             <PostContent content={content} />
           </div>
