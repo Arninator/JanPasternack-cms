@@ -235,11 +235,11 @@
     color: transparent;
 }
 .download-button:hover {
-    background-color: rgba(135, 206, 250, 0.2);
+    background-color: rgba(211, 211, 211, 0.33);
     color: var(--spd-red);
 }
 .download-button i {
-    font-size: 10vh;
+    font-size: 8vh;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
