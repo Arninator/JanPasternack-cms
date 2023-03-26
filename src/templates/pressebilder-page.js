@@ -38,7 +38,7 @@ export const PressebilderBlogPostTemplate = ({
             {title}
           </h1>
           <div 
-            className="flex-row border"
+            className="flex-row"
             style={{
               flexWrap: "wrap"
             }}>
