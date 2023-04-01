@@ -229,7 +229,7 @@
     color: var(--spd-red);
 }
 .twitter-div {
-    margin: 3vh 33vw;
+    /* margin: 3vh 33vw;s */
 }
 .download-button {
     color: transparent;
