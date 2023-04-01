@@ -241,6 +241,11 @@
 .download-button i {
     font-size: 8vh;
 }
+.red-header {
+    background-color: var(--spd-red);
+    color: white;
+    padding: 1rem;
+}
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
         NAVBAR
