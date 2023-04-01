@@ -25,12 +25,10 @@ export default class WahlkreisIndexPage extends React.Component {
           }}
         >
           <h1
-            className="has-text-weight-bold is-size-1 column is-7"
+            className="has-text-weight-bold is-size-1 red-header"
             style={{
-              // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-              backgroundColor: "transparent",
-              color: "white",
-              padding: "1rem",
+              marginRight: "33%",
+              marginBottom: "10%",
             }}
           >
             Wahlkreis

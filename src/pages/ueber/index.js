@@ -27,23 +27,20 @@ export default class UeberIndexPage extends React.Component {
             backgroundPosition: "0 25%",
           }}
         >
+          <h1
+            className="has-text-weight-bold is-size-1 red-header"
+            style={{
+              marginLeft: "33%",
+            }}
+          >
+            Über mich
+          </h1>
         </div>
         <section className="section whiteBackground fade-in">
           <div className="container">
-            <div className="content">
-              <h1
-                className="has-text-weight-bold is-size-1"
-                style={{
-                  // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-                  // backgroundColor: "#f40",
-                  // color: "white",
-                  padding: "1rem",
-                  // margin: "auto 2% auto 20%"
-                }}
-              >
-                Über mich
-              </h1>
-            </div>
+            {/* <div className="content">
+              
+            </div> */}
           </div>
         </section>
         <section className="section greyBackground fade-in">

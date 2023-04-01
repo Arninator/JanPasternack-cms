@@ -21,21 +21,20 @@ export default class KontaktIndexPage extends React.Component {
           style={{
             backgroundImage: `url('/img/20220504pj209.jpg')`,
             backgroundPosition: "0% 100%",
+            maxHeight: "25vw",
           }}
         >
-          
+          <h1
+            className="has-text-weight-bold is-size-1 red-header"
+            style={{
+            }}
+          >
+            Kontakt
+          </h1>
         </div>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1
-                className="has-text-weight-bold is-size-1 column is-9"
-                style={{
-                  color: "rgb(227, 0, 15)",
-                }}
-              >
-                Kontakt
-              </h1>
               <KontaktBlogRoll />
             </div>
           </div>
