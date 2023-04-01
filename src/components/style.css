@@ -2,49 +2,49 @@
     font-family: 'SPD TheSans';
     font-style: normal;
     font-weight: 300;
-    src: local('../img/font/SPD_TheSans_TT3_.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_TT3_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans';
     font-style: italic;
     font-weight: 300;
-    src: local('../img/font/SPD_TheSans_TT3i.ttf') format("ttruetypetf");
+    src: url('../img/font/SPD_TheSans_TT3i.ttf') format("ttruetypetf");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans';
     font-style: normal;
     font-weight: 500;
-    src: local('../img/font/SPD_TheSans_TT5_.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_TT5_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans';
     font-style: italic;
     font-weight: 500;
-    src: local('../img/font/SPD_TheSans_TT5i.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_TT5i.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans';
     font-style: normal;
     font-weight: 700;
-    src: local('../img/font/SPD_TheSans_TT7_.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_TT7_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans';
     font-style: italic;
     font-weight: 700;
-    src: local('../img/font/SPD_TheSans_TT7i.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_TT7i.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans';
     font-style: normal;
     font-weight: 800;
-    src: local('../img/font/SPD_TheSans_TT8_.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_TT8_.ttf') format("truetype");
     font-display: swap;
 }
 
@@ -54,49 +54,49 @@
     font-family: 'SPD TheSans Versal';
     font-style: normal;
     font-weight: 300;
-    src: local('../img/font/SPD_TheSans_V_TT3_.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_V_TT3_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans Versal';
     font-style: italic;
     font-weight: 300;
-    src: local('../img/font/SPD_TheSans_V_TT3i.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_V_TT3i.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans Versal';
     font-style: normal;
     font-weight: 500;
-    src: local('../img/font/SPD_TheSans_V_TT5_.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_V_TT5_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans Versal';
     font-style: italic;
     font-weight: 500;
-    src: local('../img/font/SPD_TheSans_V_TT5i.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_V_TT5i.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans Versal';
     font-style: normal;
     font-weight: 700;
-    src: local('../img/font/SPD_TheSans_V_TT7_.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_V_TT7_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans Versal';
     font-style: italic;
     font-weight: 700;
-    src: local('../img/font/SPD_TheSans_V_TT7i.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_V_TT7i.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'SPD TheSans Versal';
     font-style: normal;
     font-weight: 800;
-    src: local('../img/font/SPD_TheSans_V_TT8_.ttf') format("truetype");
+    src: url('../img/font/SPD_TheSans_V_TT8_.ttf') format("truetype");
     font-display: swap;
 }
 :root {
