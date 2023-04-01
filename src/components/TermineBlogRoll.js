@@ -132,7 +132,7 @@ class TermineBlogRollTemplate extends React.Component {
                       }}
                     >
                       <Link className="button" to={post.fields.slug}>
-                        Show &rarr;
+                        Zeigen &rarr;
                       </Link>
                     </span>
                 </article>

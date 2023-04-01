@@ -93,7 +93,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                       margin: "auto"
                     }}
                   >
-                    See More &rarr;
+                    Alle anzeigen &rarr;
                   </Link>
                 </p>
               </article>
