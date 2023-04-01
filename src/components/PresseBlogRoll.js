@@ -55,14 +55,14 @@ class PresseBlogRollTemplate extends React.Component {
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
-                    Weiterlesen Aktuell &rarr;
+                    Weiterlesen &rarr;
                   </Link>
                 </p>
               </article>
             </div>
           )) : 
           <div 
-            className="is-parent column is-4"
+            className="is-parent column is-12"
             style={{
               margin: "1vw",
               color: "darkolivegreen"
