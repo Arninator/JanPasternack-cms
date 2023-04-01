@@ -126,7 +126,7 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="flex-column whiteBackground fade-in section border"
+                    className="flex-column whiteBackground fade-in section"
                     style={{
                       padding: "5% 15%",
                       position: "relative",
@@ -166,7 +166,6 @@ export const IndexPageTemplate = ({
                         // options={{}}
                       />
                       </div>
-                      
                     </div>
                   </div>
                   <div 
