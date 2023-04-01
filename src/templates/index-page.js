@@ -109,7 +109,7 @@ export const IndexPageTemplate = ({
                   </div>
                   
                   <div 
-                    className="flex row greyBackground fade-in section column is-12"
+                    className="flex-row greyBackground fade-in section column is-12"
                     style={{
                       padding: "5% 15%",
                       position: "relative"
@@ -121,25 +121,52 @@ export const IndexPageTemplate = ({
                     <AktuellesBlogRoll />
                     <div className="column is-12 has-text-centered">
                       <Link className="plain-button" to="/aktuelles">
-                        Mehr... &rarr;
+                        Mehr &rarr;
                       </Link>
                     </div>
                   </div>
                   <div 
-                    className="flex row whiteBackground fade-in section column is-12"
+                    className="flex-column whiteBackground fade-in section border"
                     style={{
                       padding: "5% 15%",
-                      position: "relative"
+                      position: "relative",
+                      // width: "100%",s
+
                     }}
                   >
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Presse
+                        Presse
                     </h3>
-                    <PresseBlogRoll /> 
-                    <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
-                      <Link className="plain-button" to="/blog">
-                        Read more &rarr;
-                      </Link>
+                    <div
+                      className="flex-row space-between"
+                    >
+                      <div
+                        className="flex-column"
+                        style={{
+                          width: "40%",
+                        }}
+                      >
+                        <PresseBlogRoll /> 
+                        <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
+                          <Link className="plain-button" to="/blog">
+                            Mehr &rarr;
+                          </Link>
+                        </div>
+                      </div>
+                      <div
+                        className="twitter-div"
+                        style={{
+                          width: "40%",
+                        }}
+                      >
+                        <TwitterTimelineEmbed
+                        sourceType="profile"
+                        screenName="jan_pasternack"
+                        tweetLimit="4"
+                        // options={{}}
+                      />
+                      </div>
+                      
                     </div>
                   </div>
                   <div 
@@ -150,16 +177,16 @@ export const IndexPageTemplate = ({
                     }}
                   >
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Upcoming...
+                      Termine
                     </h3>
                     <TermineBlogRoll />
                     <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
                       <Link className="plain-button" to="/termine">
-                        Show All &rarr;
+                        Alle &rarr;
                       </Link>
                     </div>
                   </div>
-                  <div
+                  {/* <div
                     className="whiteBackground fade-in column is-3 twitter-div"
                   >
                     <TwitterTimelineEmbed
@@ -168,7 +195,7 @@ export const IndexPageTemplate = ({
                       tweetLimit="4"
                       // options={{}}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
