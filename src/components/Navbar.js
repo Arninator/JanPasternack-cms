@@ -229,7 +229,7 @@ const Navbar = class extends React.Component {
               >
                 <a 
                   href="https://www.spd.de/" 
-                  className="navbar-item border" 
+                  className="navbar-item" 
                   title="SPD-Logo"
                   target="_blank"
                   style={{
@@ -252,7 +252,7 @@ const Navbar = class extends React.Component {
               {/* Hamburger menu */}
               <div
                 id="burger-menu"
-                className="border"
+                className=""
                 style={{
                   minHeight: "30px"
                   
