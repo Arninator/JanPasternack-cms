@@ -220,7 +220,8 @@ const Navbar = class extends React.Component {
                 alignItems: "space-between",
 
                 width: "100vw",
-                maxHeight: "4.8vh"
+                maxHeight: "4.8vh",
+                minHeight: "40px"
               }}
             >
               <div 
@@ -228,7 +229,7 @@ const Navbar = class extends React.Component {
               >
                 <a 
                   href="https://www.spd.de/" 
-                  className="navbar-item" 
+                  className="navbar-item border" 
                   title="SPD-Logo"
                   target="_blank"
                   style={{
@@ -251,9 +252,10 @@ const Navbar = class extends React.Component {
               {/* Hamburger menu */}
               <div
                 id="burger-menu"
-                className=""
+                className="border"
                 style={{
-                  alignSelf: "flex-end"
+                  minHeight: "30px"
+                  
                 }}
                 // className={`navbar-burger burger ${this.state.navBarActiveClass}`}
                 // data-target="navMenu"
