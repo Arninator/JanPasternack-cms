@@ -228,8 +228,13 @@
 .link:hover {
     color: var(--spd-red);
 }
+#presse-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .twitter-div {
-    /* margin: 3vh 33vw;s */
+
 }
 .download-button {
     color: transparent;
@@ -324,10 +329,12 @@
 @media only screen and (min-width: 992px){
     
 }
-@media only screen and (min-width: 768px) and (max-width: 991px){
-    
+@media only screen and (min-width: 0px) and (max-width: 991px){
+    #presse-container {
+        flex-direction: column;
+    }
 }
-@media only screen and (min-width: 480px) and (max-width: 767px){
+@media only screen and (min-width: 0px) and (max-width: 767px){
     #navMenu {
         width: 66% !important;
     }
@@ -353,16 +360,6 @@
     }
     #navMenu {
         display: none;
-    }
-    .tile {
-        padding: 5% 2% !important;
-    }
-    .twitter-div {
-        margin: 3vh 10vw;
-    }
-    #footer-section {
-        display: flex;
-        flex-direction: column;
     }
     #footer-section .footer-item{
         margin: 0vh 1.5vw !important;
