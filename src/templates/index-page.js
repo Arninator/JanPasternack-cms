@@ -138,13 +138,13 @@ export const IndexPageTemplate = ({
                         Presse
                     </h3>
                     <div
-                      className="flex-row space-between"
+                      id="presse-container"
                     >
                       <div
                         className="flex-column"
-                        style={{
-                          width: "40%",
-                        }}
+                        // style={{
+                        //   width: "40%",
+                        // }}
                       >
                         <PresseBlogRoll /> 
                         <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
@@ -155,9 +155,9 @@ export const IndexPageTemplate = ({
                       </div>
                       <div
                         className="twitter-div"
-                        style={{
-                          width: "40%",
-                        }}
+                        // style={{
+                        //   width: "40%",
+                        // }}
                       >
                         <TwitterTimelineEmbed
                         sourceType="profile"
