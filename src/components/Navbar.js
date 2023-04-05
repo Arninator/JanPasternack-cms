@@ -305,7 +305,7 @@ const Navbar = class extends React.Component {
                     id="home-link"
                     className="flex row center"
                   >
-                    <Link className="navbarItem flex row center" to="/">
+                    <Link className="navbarItem column" to="/">
                       Home
                     </Link>
                   </div>
@@ -314,7 +314,7 @@ const Navbar = class extends React.Component {
                     id="news-link"
                     className="flex row center"
                   >
-                    <Link className="navbarItem newsItem flex row center" to="/news">
+                    <Link className="navbarItem newsItem column" to="/news">
                       News
                     </Link>
                     <div
@@ -340,7 +340,7 @@ const Navbar = class extends React.Component {
                     id="ueber-link"
                     className="flex row center"
                   >
-                    <Link className="navbarItem ueberItem flex row center" to="/ueber">
+                    <Link className="navbarItem ueberItem column" to="/ueber">
                       Über mich
                     </Link>
                     <div
@@ -359,7 +359,7 @@ const Navbar = class extends React.Component {
                       {/* <Link className="navbarItem ueberItem column endEnd" to="/politik">
                         Politik
                       </Link> */}
-                      <Link className="navbarItem ueberItem column endEnd" to="/lebenslauf">
+                      <Link className="navbarItem ueberItem column" to="/lebenslauf">
                         Lebenslauf
                       </Link>
                     </div>
@@ -389,12 +389,11 @@ const Navbar = class extends React.Component {
                       </Link>
                     </div>
                   </div>
-                  
                   <div
                     id="kontakt-link"
                     className="flex row center"
                   >
-                    <Link className="navbarItem kontaktItem flex row center" to="/kontakt">
+                    <Link className="navbarItem kontaktItem column" to="/kontakt">
                       Kontakt
                     </Link>
                     <div
