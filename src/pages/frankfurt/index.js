@@ -49,9 +49,9 @@ export default class FrankfurtIndexPage extends React.Component {
         <section className="section greyBackground">
           <div className="container">
             <div className="content">
-              <h2 className="has-text-weight-semibold is-size-2">
+              {/* <h2 className="has-text-weight-semibold is-size-2">
                 Jan unterwegs
-              </h2>
+              </h2> */}
               <OnTourBlogRoll/>
             </div>
             <div className="column is-12 has-text-centered">
