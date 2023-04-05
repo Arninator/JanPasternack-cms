@@ -50,7 +50,7 @@ export default class FrankfurtIndexPage extends React.Component {
           <div className="container">
             <div className="content">
               <h2 className="has-text-weight-semibold is-size-2">
-                Lebenslauf
+                Jan unterwegs
               </h2>
               <OnTourBlogRoll/>
             </div>
