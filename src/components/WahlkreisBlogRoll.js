@@ -19,7 +19,7 @@ class WahlkreisBlogRollTemplate extends React.Component {
 
                 <h1>{ post.frontmatter.title }</h1>
 
-                <div dangerouslySetInnerHTML={{__html: post.html}} style={{fontWeight: "100"}}></div>
+                <div className="" dangerouslySetInnerHTML={{__html: post.html}} style={{fontFamily: "SPD TheSans", fontWeight: "100"}}></div>
                 
               </article>
             </div>
