@@ -24,12 +24,18 @@ class TermineBlogRollTemplate extends React.Component {
     }
 
     if (typeof window !== "undefined") {
-      if ( window.innerWidth < 992) {
+      if ( window.innerWidth > 992) {
+        this.setState({
+          selection: 3,
+        });
+      } else if ( window.innerWidth > 700 ) {
         this.setState({
           selection: 2,
         });
-      } else if ( window.innerWidth < 992 ) {
-
+      } else {
+        this.setState({
+          selection: 1,
+        });
       }
     }
   }
@@ -71,10 +77,10 @@ class TermineBlogRollTemplate extends React.Component {
           </div>
         }
         {posts &&
-          posts.map(({ node: post }, index) => ((index <= (this.state.index + 1)) && (index >= (this.state.index - 1))) ? (
+          posts.map(({ node: post }, index) => ((index <= (this.state.index + 1)) && (index >= (this.state.index + 1 - (this.state.selection - 1)))) ? (
             <div className="is-parent column is-4" key={post.id}>
               {/* {console.log(new Date(Date.now()).toDateString())} */}
-              {/* {console.log("index: " + index + " stateIndex: " + this.state.index)} */}
+              {console.log("selection: " + this.state.selection)}
               <Link
                 className=""
                 to={post.fields.slug}
