@@ -344,6 +344,9 @@
     .twitter-div {
         margin: 3vh 10vw;
     }
+    .red-header {
+        margin: auto !important;
+    }
     #footer-section {
         display: flex;
         flex-direction: column;
