@@ -15,14 +15,14 @@ class LebenslaufBlogRollTemplate extends React.Component {
     // Sort it, baby!
     posts[0].node.frontmatter.entries.sort(function(a, b) {
       return (
-        b.startdate.substring(6) - a.startdate.substring(6)
+        (b.startdate.substring(6) + b.startdate.substring(3,5) + b.startdate.substring(0,2)) - (a.startdate.substring(6) + a.startdate.substring(3,5) + a.startdate.substring(0,2))
       )
     });
     // console.log(data);
 
     return (
       <div>
-        <div className='' dangerouslySetInnerHTML={{ __html: posts[0].node.html }}></div>
+        <div className='' dangerouslySetInnerHTML={{ __html: posts[0].node.html }} style={{fontWeight: "100"}}></div>
         {posts &&
           posts[0].node.frontmatter.entries.map(( entry ) => (
             <div className="is-parent column is-12" key={entry.id}>
@@ -48,7 +48,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                     }}
                   >
                     <h1>{ entry.title }</h1>
-                    <div className='' dangerouslySetInnerHTML={{ __html: toHTML(entry.body) }}></div>
+                    <div className='' dangerouslySetInnerHTML={{ __html: toHTML(entry.body) }} style={{fontWeight: "400"}}></div>
                   </div>
                 </div>
               </article>
