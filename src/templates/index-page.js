@@ -155,9 +155,6 @@ export const IndexPageTemplate = ({
                       </div>
                       <div
                         className="twitter-div"
-                        // style={{
-                        //   width: "40%",
-                        // }}
                       >
                         <TwitterTimelineEmbed
                         sourceType="profile"

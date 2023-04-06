@@ -234,7 +234,7 @@
     justify-content: space-between;
 }
 .twitter-div {
-
+    width: 40%;
 }
 .download-button {
     color: transparent;
@@ -333,6 +333,10 @@
     #presse-container {
         flex-direction: column;
     }
+    .twitter-div {
+        width: 100%;
+        margin-top: 3vh;
+    }
 }
 @media only screen and (min-width: 0px) and (max-width: 767px){
     #navMenu {
@@ -341,9 +345,9 @@
     .tile {
         padding: 5% 2% !important;
     }
-    .twitter-div {
+    /* .twitter-div {
         margin: 3vh 10vw;
-    }
+    } */
     .red-header {
         margin: auto !important;
     }
