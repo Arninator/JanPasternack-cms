@@ -6,14 +6,13 @@ import "./all.sass";
 import "../components/style.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import $ from "jquery";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
   return (
-    <div
-
-    >
+    <div>
       <Helmet>
         <html lang="de" />
         <title>{title}</title>
@@ -61,17 +60,24 @@ const TemplateWrapper = ({ children }) => {
         id="placeholder"
         style={{
           height: "5vh"
-        }}>
+        }}
+        onClick={ () =>  $("#open-burger").css("display", "none") }
+      >
       </div>
       <Navbar />
       <div
         style={{
           minHeight: "95vh"
         }}
+        onClick={ () =>  $("#open-burger").css("display", "none") }
       >
         {children}
       </div>
-      <Footer />
+      <div
+        onClick={ () =>  $("#open-burger").css("display", "none") }
+      >
+        <Footer />
+      </div>
     </div>
   );
 };
