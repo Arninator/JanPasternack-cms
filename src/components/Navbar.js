@@ -23,6 +23,7 @@ const Navbar = class extends React.Component {
       active: false,
       navBarActiveClass: "",
     };
+    this.toggleHamburger = this.toggleHamburger.bind(this);
   }
 
   componentDidMount () {
@@ -82,54 +83,55 @@ const Navbar = class extends React.Component {
     });
 
     $(function() {
+      // $(window).scroll(this.toggleHamburger)
       $(window).scroll(function() {
 
-          /* sticky menu */
-          $(".navbar").each(function() {
-              var menu_top = $(this).offset().top;
-              var window_top = $(window).scrollTop();
+        /* sticky menu */
+        $(".navbar").each(function() {
+            var menu_top = $(this).offset().top;
+            var window_top = $(window).scrollTop();
 
-              if (window_top > ($(window).height()) / 90.) {
-                  $(this).css("background-color", "rgb(227, 0, 15)");
-                  $(".dropdown").css("background-color", "rgb(227, 0, 15)");
+            if (window_top > ($(window).height()) / 90.) {
+              $(this).css("background-color", "rgb(227, 0, 15)");
+              $(".dropdown").css("background-color", "rgb(227, 0, 15)");
                   
-                  $(".navbarItem").css("color", "white");
-                  $(".burger-bar").css("border", "1px solid white");
-                  $("#open-burger").css("background-color", "rgb(227, 0, 15)")
+              $(".navbarItem").css("color", "white");
+              $(".burger-bar").css("border", "1px solid white");
+              $("#open-burger").css("background-color", "rgb(227, 0, 15)")
 
-                  $(".navbarItem").hover(function () {
-                    $(this).css("color", "black");
-                  }, function () {
-                    $(this).css("color", "white");
-                  });
+              $(".navbarItem").hover(function () {
+                $(this).css("color", "black");
+              }, function () {
+                $(this).css("color", "white");
+              });
 
-                  $("#spd-logo").attr("src", logo);
-                  $("#spd-logo").hover(function() {
-                    $( this ).attr("src", logoBlack);
-                  }, function() {
-                    $( this ).attr("src", logo);
-                  });                  
-              } else {
-                  $(this).css("background-color", "transparent");
-                  $(".dropdown").css("background-color", "white");
+              $("#spd-logo").attr("src", logo);
+              $("#spd-logo").hover(function() {
+                $( this ).attr("src", logoBlack);
+              }, function() {
+                $( this ).attr("src", logo);
+              });                  
+            } else {
+              $(this).css("background-color", "transparent");
+              $(".dropdown").css("background-color", "white");
 
-                  $(".navbarItem").css("color", "black");
-                  $(".burger-bar").css("border", "1px solid black");
-                  $("#open-burger").css("background-color", "white")
+              $(".navbarItem").css("color", "black");
+              $(".burger-bar").css("border", "1px solid black");
+              $("#open-burger").css("background-color", "white")
 
-                  $(".navbarItem").hover(function () {
-                    $(this).css("color", "rgb(227, 0, 15)");
-                  }, function () {
-                    $(this).css("color", "black");
-                  });
+              $(".navbarItem").hover(function () {
+                $(this).css("color", "rgb(227, 0, 15)");
+              }, function () {
+                $(this).css("color", "black");
+              });
                   
-                  $("#spd-logo").attr("src", logoBlack);
-                  $("#spd-logo").hover(function() {
-                    $( this ).attr("src", logoRed);
-                  }, function() {
-                    $( this ).attr("src", logoBlack);
-                  });
-              }
+              $("#spd-logo").attr("src", logoBlack);
+              $("#spd-logo").hover(function() {
+                $( this ).attr("src", logoRed);
+              }, function() {
+                $( this ).attr("src", logoBlack);
+              });
+            }
           })
 
           /* position of fade in and out objects */
@@ -269,8 +271,8 @@ const Navbar = class extends React.Component {
                 // data-target="navMenu"
                 // role="menuitem"
                 // tabIndex={0}
-                onKeyPress={() => this.toggleHamburger()}
-                onClick={() => this.toggleHamburger()}
+                onKeyPress={this.toggleHamburger}
+                onClick={this.toggleHamburger}
               >
                 <div className="burger-bar"></div>
                 <div className="burger-bar"></div>
