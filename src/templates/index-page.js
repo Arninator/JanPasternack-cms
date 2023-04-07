@@ -75,23 +75,24 @@ export const IndexPageTemplate = ({
                     }}
                   >
                     <div 
-                      id="test"
+                      id=""
                       className="flex column"
                       style={{
-                        margin: "0 5vw"
+                        // margin: "0 5vw"
                       }}
                     >
                       <div className="tile">
                         <h1 className="title">{mainpitch.title}</h1>
                       </div>
                       <div 
-                        className="tile"
+                        className=""
                         // dangerouslySetInnerHTML= {{__html: mainpitch.description}}
                         >
                         <div 
-                          className="subtitle"
+                          className=""
                           style={{
-                            fontWeight: "400"
+                            fontWeight: "400",
+                            textAlign: "justify"
                           }}
                           dangerouslySetInnerHTML={{
                             __html: mainpitch.description,
@@ -182,16 +183,6 @@ export const IndexPageTemplate = ({
                       </Link>
                     </div>
                   </div>
-                  {/* <div
-                    className="whiteBackground fade-in column is-3 twitter-div"
-                  >
-                    <TwitterTimelineEmbed
-                      sourceType="profile"
-                      screenName="jan_pasternack"
-                      tweetLimit="4"
-                      // options={{}}
-                    />
-                  </div> */}
                 </div>
               </div>
             </div>
