@@ -68,31 +68,23 @@ export const IndexPageTemplate = ({
                   className="content"
                 >
                   <div
-                    className="tile flex row whiteBackground fade-in section"
-                    style={{
-                      padding: "5% 15%",
-                      position: "relative",
-                    }}
+                    className="fragment tile flex row whiteBackground fade-in"
                   >
                     <div 
                       id=""
                       className="flex column"
-                      style={{
-                        // margin: "0 5vw"
-                      }}
                     >
                       <div className="tile">
                         <h1 className="title">{mainpitch.title}</h1>
                       </div>
                       <div 
                         className=""
-                        // dangerouslySetInnerHTML= {{__html: mainpitch.description}}
-                        >
+                      >
                         <div 
                           className=""
                           style={{
                             fontWeight: "400",
-                            textAlign: "justify"
+                            textAlign: "justify",
                           }}
                           dangerouslySetInnerHTML={{
                             __html: mainpitch.description,
@@ -110,11 +102,7 @@ export const IndexPageTemplate = ({
                   </div>
                   
                   <div 
-                    className="flex-row greyBackground fade-in section column is-12"
-                    style={{
-                      padding: "5% 15%",
-                      position: "relative"
-                    }}
+                    className="fragment flex-row greyBackground fade-in section column is-12"
                   >
                     <h3 className="has-text-weight-semibold is-size-2">
                       Aktuelles
@@ -127,13 +115,7 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="flex-column whiteBackground fade-in section"
-                    style={{
-                      padding: "5% 15%",
-                      position: "relative",
-                      // width: "100%",s
-
-                    }}
+                    className="fragment flex-column whiteBackground fade-in"
                   >
                     <h3 className="has-text-weight-semibold is-size-2">
                         Presse
@@ -143,9 +125,6 @@ export const IndexPageTemplate = ({
                     >
                       <div
                         className="flex-column"
-                        // style={{
-                        //   width: "40%",
-                        // }}
                       >
                         <PresseBlogRoll /> 
                         <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
@@ -167,14 +146,10 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="flex row greyBackground fade-in section column is-12"
-                    style={{
-                      padding: "5% 15%",
-                      position: "relative"
-                    }}
+                    className="fragment flex-column greyBackground fade-in"
                   >
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Termine
+                      Nächste Termine
                     </h3>
                     <TermineBlogRoll />
                     <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
