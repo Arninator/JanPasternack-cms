@@ -160,14 +160,22 @@ const Navbar = class extends React.Component {
 
   toggleHamburger() {
 
-    let x = $("body").width() - $("#open-burger").width() - ($("body").width() / 10.);
+    if (this.state.active) {
+      let x = $("body").width() - $("#open-burger").width() - ($("body").width() / 10.);
 
-    $("#open-burger")
-      .css("display", "block")
-      .css("position", "absolute")
-      .css("top", "7vh")
-      .css("left", `${ x }px`)
-      .css("background-color", "white")
+      $("#open-burger")
+        .css("display", "block")
+        .css("position", "absolute")
+        .css("top", "7vh")
+        .css("left", `${ x }px`)
+        .css("background-color", "white")
+    } else {
+      $("#open-burger").css("display", "none")
+    }
+
+    this.setState({
+      active: !this.state.active,
+    })
 
     // OLD
     // // toggle the active boolean in the state
@@ -271,7 +279,7 @@ const Navbar = class extends React.Component {
 
               <div
                 id="open-burger"
-                className="flex-column endEnd"
+                className="flex-column endEnd navbar"
                 style={{
                   display: "none"
                 }}
