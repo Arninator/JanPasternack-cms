@@ -102,11 +102,14 @@ export const IndexPageTemplate = ({
                   </div>
                   
                   <div 
-                    className="fragment flex-row greyBackground fade-in section column is-12"
+                    className="fragment tile flex-column greyBackground fade-in"
                   >
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Aktuelles
-                    </h3>
+                    <div className="tile">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        Aktuelles
+                      </h3>
+                    </div>
+                    
                     <AktuellesBlogRoll />
                     <div className="column is-12 has-text-centered">
                       <Link className="plain-button" to="/aktuelles">
@@ -115,11 +118,13 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="fragment flex-column whiteBackground fade-in"
+                    className="fragment tile flex-column whiteBackground fade-in"
                   >
-                    <h3 className="has-text-weight-semibold is-size-2">
+                    <div className="tile">
+                      <h3 className="has-text-weight-semibold is-size-2">
                         Presse
-                    </h3>
+                      </h3>
+                    </div>
                     <div
                       id="presse-container"
                     >
@@ -146,11 +151,13 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="fragment flex-column greyBackground fade-in"
+                    className="fragment tile flex-column greyBackground fade-in"
                   >
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Nächste Termine
-                    </h3>
+                    <div className="tile">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        Nächste Termine
+                      </h3>
+                    </div>
                     <TermineBlogRoll />
                     <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
                       <Link className="plain-button" to="/termine">
