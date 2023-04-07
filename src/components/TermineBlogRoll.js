@@ -65,7 +65,7 @@ class TermineBlogRollTemplate extends React.Component {
     return (
       <div className="flex-row is-multiline">
         {this.state.buttonOption && 
-          <div className='flex center' style={{ height: "inherit" }}>
+          <div className='flex-column flex-center' style={{ height: "inherit" }}>
             <button 
               className='flex center invisible-button'
               onClick={() => this.prevClick()}
@@ -122,7 +122,7 @@ class TermineBlogRollTemplate extends React.Component {
                           </span>
                       </p>
                   </header>
-                  <p className="flex column center">
+                  <p className="flex-column center">
                     { post.excerpt }
                     <br />
                     <br />
@@ -132,21 +132,21 @@ class TermineBlogRollTemplate extends React.Component {
                     <br />
                   </p>
                   <span
-                      className="flex row center"
-                      style={{
-                        width: "100%"
-                      }}
-                    >
-                      <Link className="button" to={post.fields.slug}>
-                        Zeigen &rarr;
-                      </Link>
-                    </span>
+                    className="flex-row flex-center"
+                    style={{
+                      width: "100%"
+                    }}
+                  >
+                    <Link className="button" to={post.fields.slug}>
+                      Zeigen &rarr;
+                    </Link>
+                  </span>
                 </article>
               </Link>
             </div>
           ) : "" )}
         {this.state.buttonOption && 
-          <div className='flex center' style={{height: "inherit"}}>
+          <div className='flex-column flex-center' style={{height: "inherit"}}>
             <button 
               className='flex center invisible-button'
               onClick={() => this.nextClick()}
