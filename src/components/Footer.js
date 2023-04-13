@@ -4,44 +4,32 @@ import { Link } from "gatsby";
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="greyBackground flex row center">
-        <div className="content flex row center">
-          <div className="container flex row center">
-            <div id="footer-section" className="flex row center" style={{ margin: "2vh"}}>
-              <div className="flex row center">
-                <section className="flex row center">
-                  <ul className="flex row center" style={{ margin: "0", padding: "0", width: "100%"}}>
-                    <li>
-                      <Link className="footer-item" to="/">
-                        <i className="fa fa-home"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="footer-item" to="/impressum">
-                        Impressum
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="footer-item" to="/datenschutz">
-                        Datenschutz
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="footer-item" to="/kontakt">
-                        Kontakt
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="footer-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
+      <footer className="greyBackground">
+        <div className="content">
+          <div className="container">
+            <div id="footer-section" className="flex-row flex-center" style={{ padding: "1vh" }}>
+              <div className="">
+                <section className="flex-row flex-center">
+                  <Link className="footer-item" to="/">
+                    <i className="fa fa-home"></i>
+                  </Link>
+                  <Link className="footer-item" to="/impressum">
+                    Impressum
+                  </Link>
+                  <Link className="footer-item" to="/datenschutz">
+                    Datenschutz
+                  </Link>
+                  <Link className="footer-item" to="/kontakt">
+                    Kontakt
+                  </Link>
+                  <a
+                    className="footer-item"
+                    href="/admin/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Admin
+                  </a>
                 </section>
               </div>
               <div className="flex row center">
