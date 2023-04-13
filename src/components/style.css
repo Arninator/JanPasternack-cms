@@ -213,6 +213,7 @@
     padding: 1.5vh 1.5vw;
 
     color: var(--spd-red) !important;
+    font-weight: 600;
     text-decoration: double !important;
 }
 .plain-button:hover {
@@ -257,6 +258,9 @@
 }
 .fragment {
     padding: 5% 15%;
+}
+.finerInnerHTML > p, a{
+    font-weight: 400;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
@@ -306,9 +310,6 @@
 
 #open-burger {
     padding: 3vw 5vw;
-}
-.finerInnerHTML > p, a{
-    font-weight: 400;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
