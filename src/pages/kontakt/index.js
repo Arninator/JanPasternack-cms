@@ -21,7 +21,6 @@ export default class KontaktIndexPage extends React.Component {
           style={{
             backgroundImage: `url('/img/20220504pj209.jpg')`,
             backgroundPosition: "0% 100%",
-            maxHeight: "25vw",
           }}
         >
           <h1
