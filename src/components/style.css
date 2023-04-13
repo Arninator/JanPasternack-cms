@@ -262,6 +262,12 @@
 .finerInnerHTML > p, a{
     font-weight: 400;
 }
+#lebenslauf-timer {
+    width: 25%;
+    max-width: 25%;
+    margin: 10px;
+    margin-top: 2vh;
+}
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
         NAVBAR
@@ -356,6 +362,13 @@
     }
 }
 @media only screen and (min-width: 0px) and (max-width: 767px){
+    #lebenslauf-list {
+        flex-direction: column;
+    }
+    #lebenslauf-timer {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
     #kontakt-cover {
         width: 250%;
         max-height: 35vh;

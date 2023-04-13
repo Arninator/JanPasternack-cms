@@ -27,22 +27,17 @@ class LebenslaufBlogRollTemplate extends React.Component {
           posts[0].node.frontmatter.entries.map(( entry ) => (
             <div className="is-parent column is-12" key={entry.id}>
               <article>
-                <div 
-                  className='flex row space-between full-width'
+                <div
+                  id="lebenslauf-list"
+                  className='flex-row full-width'
                 >
                   <h2
-                    // className='border'
-                    style= {{
-                      width: "25%",
-                      maxWidth: "25%",
-                      margin: "10px",
-                      marginTop: "2vh"
-                    }}
+                    id="lebenslauf-timer"
                   >
                     {(entry.startdate) + (entry.enddate != "00.00.0000" ? " - " + entry.enddate : "")}
                   </h2>
                   <div 
-                    className="flex column center"
+                    className="column flex-center"
                     style={{
                       // marginLeft: "20%"
                     }}
