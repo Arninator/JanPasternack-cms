@@ -17,7 +17,7 @@ class LebenslaufBlogRollExcerptTemplate extends React.Component {
           margin: "5% 0",
         }}
       >
-        <div className='' dangerouslySetInnerHTML={{ __html: posts[0].node.excerpt }} style={{fontWeight: "400"}}></div>
+        <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: posts[0].node.excerpt }}></div>
       </div>
     )
   }
