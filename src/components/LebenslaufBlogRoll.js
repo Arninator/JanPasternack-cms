@@ -22,7 +22,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
 
     return (
       <div>
-        <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: posts[0].node.html }} style={{fontWeight: "100"}}></div>
+        <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: posts[0].node.html }}></div>
         {posts &&
           posts[0].node.frontmatter.entries.map(( entry ) => (
             <div className="is-parent column is-12" key={entry.id}>
