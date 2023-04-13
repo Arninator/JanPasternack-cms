@@ -46,7 +46,7 @@ export const PressebilderBlogPostTemplate = ({
               foto.height < foto.width ?
               <div
                 id={ `container-${index}` }
-                className="flex-row center"
+                className="flex-row flex-center"
                 style={{
                   backgroundImage: `url(${foto.images.fallback.src})`,
                   width: `45vw`,
@@ -58,7 +58,7 @@ export const PressebilderBlogPostTemplate = ({
                 }}
               >
                 <a 
-                  className="download-button flex-row center" 
+                  className="download-button flex-row flex-center" 
                   href={ foto.images.fallback.src }
                   download
                   style={{
@@ -75,11 +75,11 @@ export const PressebilderBlogPostTemplate = ({
               :
               <div
                 id={ `container-${index}` }
-                className="flex-row center"
+                className="flex-row flex-center"
                 style={{
                   backgroundImage: `url(${foto.images.fallback.src})`,
-                  width: `22vw`,
-                  height: `${foto.height * 22}vw`,
+                  width: `24vw`,
+                  height: `${foto.height * 24}vw`,
                   // maxHeight: `${foto.height * 100}vh`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
@@ -87,7 +87,7 @@ export const PressebilderBlogPostTemplate = ({
                 }}
               >
                 <a 
-                  className="download-button flex-row center" 
+                  className="download-button flex-row flex-center" 
                   href={ foto.images.fallback.src }
                   download
                   style={{
