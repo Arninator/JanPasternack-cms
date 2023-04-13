@@ -19,7 +19,7 @@ class OnTourBlogRollTemplate extends React.Component {
                 <h1>
                     { post.frontmatter.title }
                 </h1>
-                <div className='' dangerouslySetInnerHTML={{ __html: post.html }}></div>
+                <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: post.html }}></div>
               </article>
             </div>
           ))}

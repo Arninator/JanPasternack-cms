@@ -19,7 +19,7 @@ class WahlkreisBlogRollTemplate extends React.Component {
 
                 <h1>{ post.frontmatter.title }</h1>
 
-                <div className="" dangerouslySetInnerHTML={{__html: post.html}} ></div>
+                <div className="finerInnerHTML" dangerouslySetInnerHTML={{__html: post.html}} style={{ fontWeight: "100" }}></div>
                 
               </article>
             </div>
