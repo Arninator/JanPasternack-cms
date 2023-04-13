@@ -11,7 +11,7 @@ class WahlkreisBlogRollTemplate extends React.Component {
     // console.log(posts);
 
     return (
-      <div className="columns is-multiline">
+      <div className="">
         {posts &&
           posts.map(({ node: post }) => (
             <div className="" key={post.id}>
@@ -19,7 +19,7 @@ class WahlkreisBlogRollTemplate extends React.Component {
 
                 <h1>{ post.frontmatter.title }</h1>
 
-                <div className="" dangerouslySetInnerHTML={{__html: post.html}} style={{fontFamily: "SPD TheSans", fontWeight: "100"}}></div>
+                <div className="" dangerouslySetInnerHTML={{__html: post.html}} ></div>
                 
               </article>
             </div>
