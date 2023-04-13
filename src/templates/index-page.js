@@ -133,7 +133,7 @@ export const IndexPageTemplate = ({
                       >
                         <PresseBlogRoll /> 
                         <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
-                          <Link className="plain-button" to="/blog">
+                          <Link className="plain-button" to="/presse">
                             Mehr &rarr;
                           </Link>
                         </div>
