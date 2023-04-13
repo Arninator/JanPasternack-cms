@@ -307,6 +307,9 @@
 #open-burger {
     padding: 3vw 5vw;
 }
+.finerInnerHTML > p, a{
+    font-weight: 400;
+}
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
         FOOTER
