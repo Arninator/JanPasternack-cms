@@ -162,7 +162,7 @@ const Navbar = class extends React.Component {
 
   toggleHamburger() {
 
-    if (this.state.active) {
+    if (!this.state.active) {
       let x = $("body").width() - $("#open-burger").width() - ($("body").width() / 10.);
 
       $("#open-burger")
