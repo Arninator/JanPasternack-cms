@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const heroImage = getImage(image) || image;
+  // const heroImage = getImage(image) || image;
   const helloImage = getImage(mainpitch.image) || mainpitch.image;
   const signatureImage = getImage(mainpitch.signature) || mainpitch.signature;
   // console.log("index-blurbs: " + intro.blurbs);
@@ -176,15 +176,15 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
+  // image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  // title: PropTypes.string,
+  // heading: PropTypes.string,
+  // subheading: PropTypes.string,
   mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  // description: PropTypes.string,
+  // intro: PropTypes.shape({
+  //   blurbs: PropTypes.array,
+  // }),
 };
 
 const IndexPage = ({ data }) => {
@@ -193,13 +193,13 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
+        // image={frontmatter.image}
+        // title={frontmatter.title}
+        // heading={frontmatter.heading}
+        // subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        // description={frontmatter.description}
+        // intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -219,14 +219,6 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
-        heading 
-        subheading
         mainpitch {
           title
           description
@@ -240,19 +232,6 @@ export const pageQuery = graphql`
               gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
             }
           }
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
         }
       }
     }
