@@ -7,7 +7,7 @@ const Footer = class extends React.Component {
       <footer className="greyBackground">
         <div className="content">
           <div className="container">
-            <div id="footer-section" className="flex-row flex-center" style={{ padding: "1vh" }}>
+            <div id="footer-section" className="flex-row flex-center" style={{ padding: "1vh", borderTop: "1px solid black" }}>
               <div className="">
                 <section className="flex-row flex-center">
                   <Link className="footer-item" to="/">
