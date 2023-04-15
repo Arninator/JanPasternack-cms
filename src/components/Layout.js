@@ -15,8 +15,8 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <Helmet>
         <html lang="de" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{ title }</title>
+        <meta name="description" content={ description } />
 
         <link
           rel="apple-touch-icon"
@@ -71,7 +71,7 @@ const TemplateWrapper = ({ children }) => {
         }}
         onClick={ () =>  $("#open-burger").css("display", "none") }
       >
-        {children}
+        { children }
       </div>
       <div
         onClick={ () =>  $("#open-burger").css("display", "none") }
