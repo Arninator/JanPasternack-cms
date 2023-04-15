@@ -72,7 +72,7 @@ export const PressebilderBlogPostTemplate = ({
                   <i className="fa fa-download"></i>
                 </a>
                 { console.log( foto.copyright ) }
-                <div className="copyright">{ intro.blurbs[index].copyright }</div>
+                <div className="copyright">{ intro.blurbs[index] }</div>
               </div>
               :
               <div
