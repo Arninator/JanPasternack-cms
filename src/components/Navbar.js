@@ -286,13 +286,8 @@ const Navbar = class extends React.Component {
                 id="burger-menu"
                 className=""
                 style={{
-                  minHeight: "30px"
-                  
+                  minHeight: "30px",
                 }}
-                // className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-                // data-target="navMenu"
-                // role="menuitem"
-                // tabIndex={0}
                 onKeyPress={this.toggleHamburger}
                 onClick={this.toggleHamburger}
               >
