@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import $ from "jquery";
 
 class PresseBlogRollTemplate extends React.Component {
   render() {
@@ -70,6 +71,17 @@ class PresseBlogRollTemplate extends React.Component {
           >
             Derzeit gibt es keine aktuellen Pressemitteilungen...
           </div>}
+
+          {/* <iframe 
+            src="https://www.faz.net/-gzh-b7eeg" 
+            srcolling="no"
+            seamless="no"
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          ></iframe> */}
+
       </div>
     )
   }
