@@ -82,13 +82,55 @@ const Navbar = class extends React.Component {
       });
     });
 
+    /* change color, when reload and scrolled down */
+    if ( document.documentElement.scrollTop > 0 ) {
+
+      $(".navbar").css("background-color", "rgb(227, 0, 15)");
+      $(".dropdown").css("background-color", "rgb(227, 0, 15)");
+          
+      $(".navbarItem").css("color", "white");
+      $(".burger-bar").css("border", "1px solid white");
+      $("#open-burger").css("background-color", "rgb(227, 0, 15)")
+
+      $(".navbarItem").hover(function () {
+        $(this).css("color", "black");
+      }, function () {
+        $(this).css("color", "white");
+      });
+
+      $("#spd-logo").attr("src", logo);
+      $("#spd-logo").hover(function() {
+        $( this ).attr("src", logoBlack);
+      }, function() {
+        $( this ).attr("src", logo);
+      });                  
+    } else {
+      $(this).css("background-color", "transparent");
+      $(".dropdown").css("background-color", "white");
+
+      $(".navbarItem").css("color", "black");
+      $(".burger-bar").css("border", "1px solid black");
+      $("#open-burger").css("background-color", "white")
+
+      $(".navbarItem").hover(function () {
+        $(this).css("color", "rgb(227, 0, 15)");
+      }, function () {
+        $(this).css("color", "black");
+      });
+          
+      $("#spd-logo").attr("src", logoBlack);
+      $("#spd-logo").hover(function() {
+        $( this ).attr("src", logoRed);
+      }, function() {
+        $( this ).attr("src", logoBlack);
+      });
+    }
+
     $(function() {
-      // $(window).scroll(this.toggleHamburger)
       $(window).scroll(function() {
 
         /* sticky menu */
         $(".navbar").each(function() {
-            var menu_top = $(this).offset().top;
             var window_top = $(window).scrollTop();
 
             if (window_top > ($(window).height()) / 90.) {
@@ -170,7 +212,7 @@ const Navbar = class extends React.Component {
         .css("position", "absolute")
         .css("top", "7vh")
         .css("left", `${ x }px`)
-        .css("background-color", "white")
+        .css("background-color", document.documentElement.scrollTop > 0 ? "rgb(227, 0, 15)" : "white" )
     } else {
       $("#open-burger").css("display", "none")
     }
@@ -212,8 +254,7 @@ const Navbar = class extends React.Component {
             margin: "0",
             padding: "0",
             backgroundColor: "transparent",
-            // backgroundColor: "rgb(0, 0, 15, 40%)"
-            // borderBottom: "1px solid red"
+            // borderBottom: "1px solid black"
           }}
         >
           <div
