@@ -47,7 +47,7 @@ class PresseBlogRollTemplate extends React.Component {
                     </Link>
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
+                      {/* {post.frontmatter.date} */}
                     </span>
                   </p>
                 </header>
@@ -116,8 +116,7 @@ export default function PresseBlogRoll() {
                 }
                 frontmatter {
                   title
-                  templateKey
-                  date(formatString: "MMMM DD, YYYY")
+                  subtitle
                   featuredpost
                   featuredimage {
                     childImageSharp {
@@ -129,6 +128,7 @@ export default function PresseBlogRoll() {
 
                     }
                   }
+                  link
                 }
               }
             }
