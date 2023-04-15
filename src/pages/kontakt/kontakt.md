@@ -7,10 +7,14 @@ socialmedia:
   - link: https://www.instagram.com/jan.pasternack/
     name: Instagram
 ---
-Jan Pasternack
+**Jan Pasternack**
 
-Wahlkreis 2 Frankfurt Dies Das
+Kandidat für den Hessischen Landtag
 
-Ferdinandstraße 24
+Wahlkreis 35 (Frankfurt II)
 
-18057 Rostock
+SPD-Unterbezirk Frankfurt am Main\
+Fischerfeldstr. 7-11\
+60311 Frankfurt am Main\
+\
+E-Mail: [kontakt@janpasternack.de](mailto:vorname.name@spd.de)
