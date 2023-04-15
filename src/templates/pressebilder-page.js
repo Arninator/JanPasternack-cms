@@ -41,7 +41,8 @@ export const PressebilderBlogPostTemplate = ({
             className="flex-row greyBackground"
             style={{
               flexWrap: "wrap"
-            }}>
+            }}
+          >
             {presseImages.map((foto, index) => (
               foto.height < foto.width ?
               <div
@@ -69,9 +70,10 @@ export const PressebilderBlogPostTemplate = ({
                   }}
                 >
                   <i className="fa fa-download"></i>
-                  {/* &nbsp;&nbsp;&rarr;&nbsp;download */}
                 </a>
-              </div> 
+                { console.log( foto.copyright ) }
+                <div className="copyright">{ intro.blurbs[index].copyright }</div>
+              </div>
               :
               <div
                 id={ `container-${index}` }
@@ -193,6 +195,7 @@ export const pageQuery = graphql`
               }
             }
             alt
+            copyright
           }
         }
       }
