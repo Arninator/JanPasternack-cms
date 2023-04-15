@@ -164,6 +164,7 @@ collections:
                   [
                     { label: Image, name: image, widget: image },
                     { label: Alternativtext, name: alt, widget: string },
+                    { label: Copyright, name: copyright, widget: string },
                   ],
               },
             ],
