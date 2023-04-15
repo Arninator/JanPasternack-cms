@@ -287,6 +287,7 @@ const Navbar = class extends React.Component {
                 className=""
                 style={{
                   minHeight: "30px",
+                  alignSelf: "flex-end",
                 }}
                 onKeyPress={this.toggleHamburger}
                 onClick={this.toggleHamburger}
