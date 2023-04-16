@@ -70,7 +70,7 @@ class PresseBlogRollTemplate extends React.Component {
                   <p 
                     className="post-meta blog-title"
                   >
-                    <span className="is-size-5 is-block" style={{ margin: "2vh 0vh", fontWeight: "400"}}>
+                    <span className="is-size-5 is-block" style={{ margin: "2vh 0vh", fontWeight: "400" }}>
                       { post.frontmatter.subtitle }
                     </span>
                   </p>
