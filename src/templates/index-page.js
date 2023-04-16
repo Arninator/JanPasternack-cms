@@ -130,7 +130,7 @@ export const IndexPageTemplate = ({
                     >
                       <div
                         id="presse-blog-roll-container"
-                        className="flex-column border"
+                        className="flex-column"
                       >
                         <PresseBlogRoll /> 
                         <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
