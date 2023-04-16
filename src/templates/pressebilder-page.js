@@ -24,8 +24,7 @@ export const PressebilderBlogPostTemplate = ({
   const PostContent = contentComponent || Content;
   const presseImages = [];
   for ( let i = 0; i < intro.blurbs.length; i++) presseImages.push(getImage(intro.blurbs[i].image) || intro.blurbs[i].image);
-  // for (let i = 0; i < intro.blurbs.length; i++) presseImages.ad
-  console.log("Array: " + presseImages);
+  console.log("image: " + intro.blurbs[0].image.childImageSharp.gatsbyImageData.images.fallback.src);
 
   let currHeight = 0;
 
@@ -43,15 +42,16 @@ export const PressebilderBlogPostTemplate = ({
               flexWrap: "wrap"
             }}
           >
-            {presseImages.map((foto, index) => (
+            {intro.blurbs.map((foto, index) => (
+
               foto.height < foto.width ?
               <div
                 id={ `container-${index}` }
                 className="flex-row flex-center"
                 style={{
-                  backgroundImage: `url(${foto.images.fallback.src})`,
+                  backgroundImage: `url(${ foto.image.childImageSharp.gatsbyImageData.images.fallback.src})`,
                   width: `45vw`,
-                  height: `${foto.height * 45}vw`,
+                  height: `${foto.image.childImageSharp.gatsbyImageData.height * 45}vw`,
                   // maxHeight: `${foto.height * 100}vh`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
@@ -60,7 +60,7 @@ export const PressebilderBlogPostTemplate = ({
               >
                 <a 
                   className="download-button flex-row flex-center" 
-                  href={ foto.images.fallback.src }
+                  href={ foto.image.childImageSharp.gatsbyImageData.images.fallback.src }
                   download
                   style={{
                     width: "100%",
@@ -71,7 +71,7 @@ export const PressebilderBlogPostTemplate = ({
                 >
                   <i className="fa fa-download"></i>
                 </a>
-                { console.log( foto.copyright ) }
+                { console.log( "copyright: " + foto.copyright ) }
                 <div className="copyright">{ intro.blurbs[index] }</div>
               </div>
               :
@@ -79,9 +79,9 @@ export const PressebilderBlogPostTemplate = ({
                 id={ `container-${index}` }
                 className="flex-row flex-center"
                 style={{
-                  backgroundImage: `url(${foto.images.fallback.src})`,
+                  backgroundImage: `url(${ foto.image.childImageSharp.gatsbyImageData.images.fallback.src})`,
                   width: `24vw`,
-                  height: `${foto.height * 24}vw`,
+                  height: `${foto.image.childImageSharp.gatsbyImageData.height * 24}vw`,
                   // maxHeight: `${foto.height * 100}vh`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
@@ -90,7 +90,7 @@ export const PressebilderBlogPostTemplate = ({
               >
                 <a 
                   className="download-button flex-row flex-center" 
-                  href={ foto.images.fallback.src }
+                  href={ foto.image.childImageSharp.gatsbyImageData.images.fallback.src }
                   download
                   style={{
                     width: "100%",
