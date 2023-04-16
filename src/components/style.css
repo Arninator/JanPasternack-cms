@@ -271,6 +271,13 @@
     margin: 10px;
     margin-top: 2vh;
 }
+.kachel {
+    background-color: var(--background-color);
+    box-shadow: none;
+    border: 1px solid black;
+    border-radius: 0%;
+    box-shadow: 1px 1px var(--spd-red);
+}
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
         NAVBAR
