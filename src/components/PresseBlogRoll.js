@@ -51,7 +51,12 @@ class PresseBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header className="flex-column flex-center">
-                  {/* { console.log("featIMG: " + Object.keys(post.frontmatter.featuredimage.childImageSharp)) } */}
+                  <p 
+                    className="post-meta blog-title"
+                    style={{ fontWeight: "600"}}
+                  >
+                    { post.frontmatter.title }
+                  </p>
                   {post.frontmatter.featuredimage ? (
                     <div style={{ margin: "0 0 2vh 0" }}>
                       <PreviewCompatibleImage
@@ -64,9 +69,7 @@ class PresseBlogRollTemplate extends React.Component {
                   ) : null}
                   <p 
                     className="post-meta blog-title"
-                    style={{ fontWeight: "600"}}
                   >
-                      { post.frontmatter.title }
                     <span className="is-size-5 is-block" style={{ margin: "2vh 0vh", fontWeight: "400"}}>
                       { post.frontmatter.subtitle }
                     </span>
