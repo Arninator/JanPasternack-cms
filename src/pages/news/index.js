@@ -64,7 +64,7 @@ export default class NewsIndexPage extends React.Component {
         <section className="section whiteBackground">
           <div className="container">
           <h2 className="has-text-weight-semibold is-size-2">Termine</h2>
-            <div className="content">
+            <div className="content" style={{ padding: "2vh" }}>
               <TermineBlogRoll />
             </div>
             <div className="column is-12 has-text-centered">
