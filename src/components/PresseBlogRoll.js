@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { GatsbyImage } from "gatsby-plugin-image";
 import $ from "jquery";
 
 class PresseBlogRollTemplate extends React.Component {
@@ -50,41 +51,32 @@ class PresseBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header className="flex-column flex-center">
-                  { console.log("featIMG: " + post.frontmatter.featuredimage) }
+                  { console.log("featIMG: " + Object.keys(post.frontmatter.featuredimage.childImageSharp)) }
                   {post.frontmatter.featuredimage ? (
-                    <div style={{ width: "100%" }}>
+                    <div style={{ margin: "0 0 2vh 0" }}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          width: "200vw"
-                          //   post.frontmatter.featuredimage.childImageSharp
-                          //     .gatsbyImageData.width,
-                          // height:
-                          //   post.frontmatter.featuredimage.childImageSharp
-                          //     .gatsbyImageData.height,
                         }}
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta blog-title">
-                    {/* <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    > */}
-                      {post.frontmatter.title}
-                    {/* </Link> */}
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {/* {post.frontmatter.date} */}
+                  <p 
+                    className="post-meta blog-title"
+                    style={{ fontWeight: "600"}}
+                  >
+                      { post.frontmatter.title }
+                    <span className="is-size-5 is-block" style={{ margin: "2vh 0vh", fontWeight: "400"}}>
+                      { post.frontmatter.subtitle }
                     </span>
                   </p>
                 </header>
-                <p>
+                <p style={{ fontWeight: "400"}} >
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
+                  <Link className="button" to={post.fields.slug} style={{ alignSelf: "center"}}>
                     Weiterlesen &rarr;
                   </Link>
                 </p>
@@ -127,7 +119,7 @@ export default function PresseBlogRoll() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 400)
+                excerpt(pruneLength: 200)
                 id
                 fields {
                   slug
@@ -135,11 +127,10 @@ export default function PresseBlogRoll() {
                 frontmatter {
                   title
                   subtitle
+                  date
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 120
-                        quality: 100
                         layout: CONSTRAINED
                       )
                     }
