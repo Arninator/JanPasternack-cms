@@ -53,7 +53,10 @@ class PresseBlogRollTemplate extends React.Component {
                 <header className="flex-column flex-center">
                   <p 
                     className="post-meta blog-title"
-                    style={{ fontWeight: "600"}}
+                    style={{ 
+                      fontWeight: "600",
+                      // fontSize: "3vh"
+                    }}
                   >
                     { post.frontmatter.title }
                   </p>
