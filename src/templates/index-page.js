@@ -119,6 +119,9 @@ export const IndexPageTemplate = ({
                   </div>
                   <div 
                     className="fragment tile flex-column whiteBackground fade-in"
+                    style={{
+                      borderTop: "1px solid linearGradient(50, red, green)",
+                    }}
                   >
                     <div className="tile">
                       <h3 className="has-text-weight-semibold is-size-2">
