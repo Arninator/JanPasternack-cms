@@ -86,7 +86,7 @@ class TermineBlogRollTemplate extends React.Component {
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
                 >
-                  <header className="flex-column flex-center border">
+                  <header className="flex-column flex-center">
                     {post.frontmatter.featuredimage ? (
                       <div 
                         className="flex-row flex-center"
