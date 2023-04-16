@@ -120,7 +120,7 @@ export const IndexPageTemplate = ({
                   <div 
                     className="fragment tile flex-column whiteBackground fade-in"
                     style={{
-                      borderTop: "1px solid linearGradient(50, red, green)",
+                      // borderTop: "1px solid black",
                     }}
                   >
                     <div className="tile">
