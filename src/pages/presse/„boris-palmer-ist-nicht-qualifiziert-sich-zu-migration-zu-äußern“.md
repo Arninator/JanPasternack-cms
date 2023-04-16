@@ -1,6 +1,6 @@
 ---
 templateKey: presse-page
-featuredimage: https://media0.faz.net/ppmedia/aktuell/337685496/1.8821060/format_top1_breit/fuer-manche-ein-schwarzer.jpg
+featuredimage: /img/fuer-manche-ein-schwarzer.jpg
 featuredpost: true
 date: 2023-04-14T09:02:00.000Z
 title: "SPD-Landtagskandidat Jan Pasternack kritisiert geplante Veranstaltung
