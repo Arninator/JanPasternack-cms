@@ -5,17 +5,45 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 import $ from "jquery";
 
 class PresseBlogRollTemplate extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      columns: 12,
+    };
+  }
+
+  componentWillMount() {
+
+    if (typeof window !== "undefined" && (window.location.href.includes("presse") || window.location.href.includes("news"))) {
+      if ( window.innerWidth > 992) {
+        this.setState({
+          columns: 4,
+        });
+      } else if ( window.innerWidth > 700 ) {
+        this.setState({
+          columns: 8,
+        });
+      } else {
+        this.setState({
+          columns: 12,
+        });
+      }
+    }
+  }
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
 
     return (
       <div className="columns is-multiline">
         {posts.length > 0 ?
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
-
+            <div 
+              className={`is-parent column is-${ this.state.columns }`} 
+              key={post.id}
+            >
               <article
                 className={`blog-list-item tile is-child box notification kachel ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -24,17 +52,17 @@ class PresseBlogRollTemplate extends React.Component {
                 <header>
                   { console.log("featIMG: " + post.frontmatter.featuredimage) }
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className="flex-row flex-center">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          width:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.width,
-                          height:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.height,
+                          // width: "100%"
+                          //   post.frontmatter.featuredimage.childImageSharp
+                          //     .gatsbyImageData.width,
+                          // height:
+                          //   post.frontmatter.featuredimage.childImageSharp
+                          //     .gatsbyImageData.height,
                         }}
                       />
                     </div>
