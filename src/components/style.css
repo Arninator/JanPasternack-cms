@@ -238,6 +238,9 @@
     flex-direction: row;
     justify-content: space-between;
 }
+#presse-blog-roll-container {
+    width: 50%;
+}
 .twitter-div {
     width: 40%;
 }
@@ -355,6 +358,9 @@
     }
     #presse-container {
         flex-direction: column;
+    }
+    #presse-blog-roll-container {
+        width: 100%;
     }
     .twitter-div {
         width: 100%;
