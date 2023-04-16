@@ -3,7 +3,7 @@ templateKey: presse-page
 featuredimage: /img/fuer-manche-ein-schwarzer.jpg
 featuredpost: true
 date: 2023-04-14T09:02:00.000Z
-title: Boris Palmer ist nicht qualifiziert, sich zu Migration zu äußern
+title: '"Boris Palmer ist nicht qualifiziert, sich zu Migration zu äußern"'
 subtitle: "Boris Palmer, Ahmad Mansour und Ruud Koopmans sollen an der
   Goethe-Universität Frankfurt über Migrationspolitik sprechen. Einem
   SPD-Landtagskandidaten missfällt das. Ihm stehen die Redner der Tagung zu weit
