@@ -134,7 +134,6 @@ export const PressebilderBlogPostTemplate = ({
 PressebilderBlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
   intro: PropTypes.shape({
@@ -150,17 +149,15 @@ const PressebilderBlogPost = ({ data }) => {
       <PressebilderBlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={``}
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         intro={post.frontmatter.intro}
       />
