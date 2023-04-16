@@ -87,6 +87,7 @@ const Navbar = class extends React.Component {
 
       $(".navbar").css("background-color", "rgb(227, 0, 15)");
       $(".dropdown").css("background-color", "rgb(227, 0, 15)");
+      $(".dropdown").css("border-top", "1px solid black");
           
       $(".navbarItem").css("color", "white");
       $(".burger-bar").css("border", "1px solid white");
@@ -136,6 +137,7 @@ const Navbar = class extends React.Component {
             if (window_top > ($(window).height()) / 90.) {
               $(this).css("background-color", "rgb(227, 0, 15)");
               $(".dropdown").css("background-color", "rgb(227, 0, 15)");
+              $(".dropdown").css("border-top", "1px solid black");
                   
               $(".navbarItem").css("color", "white");
               $(".burger-bar").css("border", "1px solid white");
@@ -156,6 +158,7 @@ const Navbar = class extends React.Component {
             } else {
               $(this).css("background-color", "transparent");
               $(".dropdown").css("background-color", "white");
+              $(".dropdown").css("border-top", "1px solid rgb(227, 0, 15)");
 
               $(".navbarItem").css("color", "black");
               $(".burger-bar").css("border", "1px solid black");
