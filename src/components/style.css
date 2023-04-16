@@ -273,10 +273,10 @@
 }
 .kachel {
     background-color: var(--background-color);
-    box-shadow: none;
-    border: 1px solid black;
+    box-shadow: none !important;
+    /* border: 1px solid black; */
     border-radius: 0%;
-    box-shadow: 1px 1px 1px var(--spd-red);
+    /* box-shadow: 1px 1px 1px var(--spd-red); */
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
@@ -303,6 +303,9 @@
 }
 .dropdown {
     background-color: white;
+    /* border-bottom: 1px solid var(--spd-red);
+    border-right: 1px solid var(--spd-red); */
+    border-top: 1px solid var(--spd-red);
 }
 #burger-menu {
     width: 25px;
