@@ -22,11 +22,6 @@ export const PressebilderBlogPostTemplate = ({
   intro,
 }) => {
   const PostContent = contentComponent || Content;
-  const presseImages = [];
-  for ( let i = 0; i < intro.blurbs.length; i++) presseImages.push(getImage(intro.blurbs[i].image) || intro.blurbs[i].image);
-  console.log("image: " + intro.blurbs[0].image.childImageSharp.gatsbyImageData.images.fallback.src);
-
-  let currHeight = 0;
 
   return (
     <section className="section">
