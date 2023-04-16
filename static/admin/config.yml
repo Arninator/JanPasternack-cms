@@ -194,7 +194,7 @@ collections:
             ],
         }
   - name: "vorstellungBlog"
-    label: "Vorstellung"
+    label: "Warum ich kandidiere"
     folder: "src/pages/vorstellung"
     create: true
     slug: "{{slug}}"
