@@ -276,7 +276,7 @@
     box-shadow: none;
     border: 1px solid black;
     border-radius: 0%;
-    box-shadow: 1px 1px var(--spd-red);
+    box-shadow: 1px 1px 1px var(--spd-red);
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
