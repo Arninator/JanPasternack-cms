@@ -9,19 +9,20 @@ class PresseBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    // console.log(posts);
 
     return (
       <div className="columns is-multiline">
         {posts.length > 0 ?
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="is-parent column is-12" key={post.id}>
+
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`blog-list-item tile is-child box notification kachel ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
                 <header>
+                  { console.log("featIMG: " + post.frontmatter.featuredimage) }
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
@@ -71,17 +72,6 @@ class PresseBlogRollTemplate extends React.Component {
           >
             Derzeit gibt es keine aktuellen Pressemitteilungen...
           </div>}
-
-          {/* <iframe 
-            src="https://www.faz.net/-gzh-b7eeg" 
-            srcolling="no"
-            seamless="no"
-            style={{
-              width: "100%",
-              height: "100%",
-            }}
-          ></iframe> */}
-
       </div>
     )
   }
@@ -117,7 +107,6 @@ export default function PresseBlogRoll() {
                 frontmatter {
                   title
                   subtitle
-                  featuredpost
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
@@ -125,7 +114,6 @@ export default function PresseBlogRoll() {
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                   link

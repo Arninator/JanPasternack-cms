@@ -86,17 +86,14 @@ class TermineBlogRollTemplate extends React.Component {
                 to={post.fields.slug}
               >
                 <article
-                  className={`blog-list-item tile is-child box notification ${
+                  className={`blog-list-item tile is-child box notification kachel ${
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
-                  style={{
-                    backgroundColor: "hsl(0, 0%, 93%)",
-                  }}
                 >
-                  <header className="flex-column center">
+                  <header className="flex-column flex-center">
                     {post.frontmatter.featuredimage ? (
                       <div 
-                        className="flex row center"
+                        className="flex-row flex-center"
                         style={{
                           marginBottom: "1vh",
                         }}
