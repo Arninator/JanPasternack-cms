@@ -1,15 +1,15 @@
 ---
 templateKey: presse-page
-date: 2023-04-14T09:02:00.000Z
+featuredimage: https://media0.faz.net/ppmedia/aktuell/337685496/1.8821060/format_top1_breit/fuer-manche-ein-schwarzer.jpg
 featuredpost: true
-featuredimage: /img/newspaper-g946beeca8_1280.png
+date: 2023-04-14T09:02:00.000Z
+title: "SPD-Landtagskandidat Jan Pasternack kritisiert geplante Veranstaltung
+  des FFGI und fordert Ministerpräsident Boris Rhein auf, die Schirmherrschaft
+  zu widerrufen "
 subtitle: "Boris Palmer, Ahmad Mansour und Ruud Koopmans sollen an der
   Goethe-Universität Frankfurt über Migrationspolitik sprechen. Einem
   SPD-Landtagskandidaten missfällt das. Ihm stehen die Redner der Tagung zu weit
   rechts. Das Netzwerk Wissenschaftsfreiheit wirft ihm Einschüchterung vor. "
-title: "SPD-Landtagskandidat Jan Pasternack kritisiert geplante Veranstaltung
-  des FFGI und fordert Ministerpräsident Boris Rhein auf, die Schirmherrschaft
-  zu widerrufen "
 link: https://www.faz.net/-gzh-b7eeg
 description: Pressemitteilung
 ---
