@@ -51,7 +51,7 @@ class PresseBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header className="flex-column flex-center">
-                  { console.log("featIMG: " + Object.keys(post.frontmatter.featuredimage.childImageSharp)) }
+                  {/* { console.log("featIMG: " + Object.keys(post.frontmatter.featuredimage.childImageSharp)) } */}
                   {post.frontmatter.featuredimage ? (
                     <div style={{ margin: "0 0 2vh 0" }}>
                       <PreviewCompatibleImage
@@ -73,13 +73,15 @@ class PresseBlogRollTemplate extends React.Component {
                   </p>
                 </header>
                 <p style={{ fontWeight: "400"}} >
-                  {post.excerpt}
+                  { post.excerpt }
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug} style={{ alignSelf: "center"}}>
+                </p>
+                <div className="flex-row flex-center">
+                  <Link className="button" to={ post.fields.slug }>
                     Weiterlesen &rarr;
                   </Link>
-                </p>
+                </div>
               </article>
             </div>
           )) : 
