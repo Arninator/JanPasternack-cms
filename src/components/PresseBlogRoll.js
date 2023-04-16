@@ -49,15 +49,15 @@ class PresseBlogRollTemplate extends React.Component {
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <header>
+                <header className="flex-column flex-center">
                   { console.log("featIMG: " + post.frontmatter.featuredimage) }
                   {post.frontmatter.featuredimage ? (
-                    <div className="flex-row flex-center">
+                    <div style={{ width: "100%" }}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          // width: "100%"
+                          width: "200vw"
                           //   post.frontmatter.featuredimage.childImageSharp
                           //     .gatsbyImageData.width,
                           // height:
@@ -67,13 +67,13 @@ class PresseBlogRollTemplate extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
-                    <Link
+                  <p className="post-meta blog-title">
+                    {/* <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
-                    >
+                    > */}
                       {post.frontmatter.title}
-                    </Link>
+                    {/* </Link> */}
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
                       {/* {post.frontmatter.date} */}

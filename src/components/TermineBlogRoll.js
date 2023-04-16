@@ -40,10 +40,6 @@ class TermineBlogRollTemplate extends React.Component {
     }
   }
 
-  // componentDidMount() {
-
-  // }
-
   prevClick() {
     this.setState({
       index: this.state.index > 1 ? this.state.index - 1 : 1,
@@ -90,7 +86,7 @@ class TermineBlogRollTemplate extends React.Component {
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
                 >
-                  <header className="flex-column flex-center">
+                  <header className="flex-column flex-center border">
                     {post.frontmatter.featuredimage ? (
                       <div 
                         className="flex-row flex-center"
