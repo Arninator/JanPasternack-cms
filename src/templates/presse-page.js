@@ -5,17 +5,23 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
 export const PresseBlogPostTemplate = ({
   content,
   contentComponent,
-  description,
-  tags,
   title,
+  subtitle,
+  date,
+  link,
+  featuredImage,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
+  console.log("featuredImage; " + featuredImage)
+  const image = getImage(featuredImage);
 
   return (
     <section className="section">
@@ -24,22 +30,21 @@ export const PresseBlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
+              { title }
             </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
+            <h3>
+              { subtitle }
+            </h3>
+            <GatsbyImage
+              image={ image }
+              alt="alt2"
+              style={{
+                width: "100%",
+                margin: "2vh 0"
+              }}
+            />
+            <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: content }}></div>
+            {/* <PostContent content={content} /> */}
           </div>
         </div>
       </div>
@@ -50,8 +55,10 @@ export const PresseBlogPostTemplate = ({
 PresseBlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
+  subtitle: PropTypes.string,
+  featuredImage: PropTypes.object,
+  link: PropTypes.string,
   helmet: PropTypes.object,
 };
 
@@ -63,18 +70,19 @@ const PresseBlogPost = ({ data }) => {
       <PresseBlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={``}
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        subtitle={post.frontmatter.subtitle}
+        featuredImage={post.frontmatter.featuredimage}
+        link={post.frontmatter.link}
       />
     </Layout>
   );
@@ -94,10 +102,17 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
-        description
-        tags
+        subtitle
+        date
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData(
+              layout: CONSTRAINED
+            )
+          }
+        }
+        link
       }
     }
   }
