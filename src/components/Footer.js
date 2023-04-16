@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="greyBackground">
+      <footer className="whiteBackground">
         <div className="content">
           <div className="container">
             <div id="footer-section" className="flex-row flex-center" style={{ padding: "1vh", borderTop: "1px solid black" }}>
