@@ -38,7 +38,7 @@ export default class NewsIndexPage extends React.Component {
         <section className="section whiteBackground">
           <div className="container">
             <h2 className="has-text-weight-semibold is-size-2">Aktuelles</h2>
-            <div className="content">
+            <div className="content" style={{ padding: "2vh" }}>
               <AktuellesBlogRoll />
             </div>
             <div className="column is-12 has-text-centered">
@@ -50,8 +50,8 @@ export default class NewsIndexPage extends React.Component {
         </section>
         <section className="section greyBackground">
           <div className="container">
-          <h2 className="has-text-weight-semibold is-size-2">Presse</h2>
-            <div className="content">
+            <h2 className="has-text-weight-semibold is-size-2 ">Presse</h2>
+            <div className="content" style={{ padding: "2vh" }}>
               <PresseBlogRoll />
             </div>
             <div className="column is-12 has-text-centered">
