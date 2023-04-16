@@ -186,7 +186,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         intro {
-          heading
           description
           blurbs {
             image {

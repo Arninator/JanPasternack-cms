@@ -147,7 +147,6 @@ export default function PressebilderBlogRoll() {
                     }
                   }
                   intro {
-                    heading
                     description
                     blurbs {
                       image {
