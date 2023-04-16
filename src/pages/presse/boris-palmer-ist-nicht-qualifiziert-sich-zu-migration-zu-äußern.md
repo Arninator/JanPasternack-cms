@@ -21,8 +21,6 @@ Pasternack stört sich auch daran, dass zu der Konferenz hauptsächlich Wissensc
 
 Anstatt zur Versachlichung beizutragen und kontroverse Positionen wenigstens gleichberechtigt abzubilden, sei das Frankfurter Forschungszentrum Globaler Islam, das die Konferenz veranstalte, immer wieder durch „populistische Themenschwerpunkte und politisch einseitige Podiumsbesetzungen“ aufgefallen, findet Pasternack. Wissenschafts­ministerin [Angela Dorn](https://www.faz.net/aktuell/rhein-main/thema/angela-dorn "Angela Dorn") (Die Grünen) müsse prüfen, ob die öffentlich finanzierte Einrichtung noch ihrem Forschungsauftrag gerecht werde.
 
-[3rd party ad content](https://f96f6e87acfeddb22c98561445c71da4.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html)
-
 Das Netzwerk Wissenschaftsfreiheit bezeichnete Pasternacks Äußerungen als „Einschüchterungsversuch“, der das Ziel habe, die Wissenschaftsfreiheit einzuschränken. Es obliege nicht der Politik, die wissenschaftliche Qualität von Universitätsveranstaltungen zu beurteilen und Konsequenzen zu fordern. Die hessische Parteiführung der SPD müsse sich von Pasternacks Forderungen distanzieren, und das hessische Wissenschaftsministerium müsse sie zurückweisen. Verschickt wurde die Stellungnahme des Netzwerks von der Migrationsforscherin Sandra Kostner, die an der Pädagogischen Hochschule Schwäbisch Gmünd tätig ist. Sie steht auch auf der Referentenliste der Frankfurter Konferenz.
 
 ### Streit um Polizeigewerkschafter und Kopftuch-Konferenz
