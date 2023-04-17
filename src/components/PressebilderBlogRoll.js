@@ -131,7 +131,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                     </span>
                   </p> */}
                 </header>
-                <p style={{ width: "100%" }}>
+                {/* <p style={{ width: "100%" }}>
                   {post.excerpt}
                   <br />
                   <br />
@@ -144,7 +144,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                   >
                     Alle anzeigen &rarr;
                   </Link>
-                </p>
+                </p> */}
               </article>
             </div>
           ))}
