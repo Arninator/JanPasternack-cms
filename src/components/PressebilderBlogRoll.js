@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import $ from "jquery";
 
 class PressebilderBlogRollTemplate extends React.Component {
   render() {
@@ -21,35 +22,57 @@ class PressebilderBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header
+                  id="testdiv"
                   style={{
                     width: "100%",
                     // border: "1px solid red"
                   }}
                 >
                   <div 
-                    className="flex row space-between"
+                    id='tet-div'
+                    className="flex-row space-between"
                     style={{
                       width: "100%",
                       flexWrap: "wrap"
                     }}
                   >
-                    {post.frontmatter.intro.blurbs.map( fotoObject => {
-                    return(
-                      <div
-                        style={{
-                          width: fotoObject.height < fotoObject.width ? "20%": "20%",
-                          margin: "2vh",
-                        }}
-                      >
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: fotoObject.image,
-                            alt: fotoObject.alt,
-                            // width: fotoObject.image.width,
-                            // height: fotoObject.height,
+                    {post.frontmatter.intro.blurbs.map( (foto, index) => {
+                      
+                      return(
+                        <div
+                          style={{
+                            width: "30%",
                           }}
-                        />
-                      </div>
+                        >
+                          <div
+                            id={ `container-${index}` }
+                            className="flex-row flex-center"
+                            style={{
+                              backgroundImage: `url(${ foto.image.childImageSharp.gatsbyImageData.images.fallback.src})`,
+                              width: `100%`,
+                              height: `40vh`,
+                              // maxHeight: `${foto.height * 100}vh`,
+                              backgroundRepeat: "no-repeat",
+                              backgroundSize: "cover",
+                              margin: "3vw auto",
+                            }}
+                          >
+                            <a 
+                              className="download-button flex-row flex-center" 
+                              href={ foto.image.childImageSharp.gatsbyImageData.images.fallback.src }
+                              download
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                fontSize: "4vh",
+                                fontWeight: "100"
+                              }}
+                            >
+                              <i className="fa fa-download"></i>
+                            </a>
+                          </div>
+                          <div className="copyright">&#169;{ post.frontmatter.intro.blurbs[index].copyright }</div>
+                        </div>
                       )})
                     }
                   </div>
@@ -155,6 +178,7 @@ export default function PressebilderBlogRoll() {
                         }
                       }
                       alt
+                      copyright
                     }
                   }
                 }

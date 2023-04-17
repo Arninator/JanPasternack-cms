@@ -244,10 +244,10 @@
 .twitter-div {
     width: 40%;
 }
-.download-button {
+.download-button i{
     color: transparent;
 }
-.download-button:hover {
+.download-button i:hover {
     background-color: rgba(211, 211, 211, 0.33);
     color: var(--spd-red);
 }
@@ -293,7 +293,7 @@
     /* padding-top: 5vh; */
 }
 .navbarItem:hover {
-    color: rgb(227, 0, 15);
+    color: var(--spd-red);
     transform: scale(1.1);
     transition: ease-in;
     /* text-shadow: 0px 15px lightgrey; */
