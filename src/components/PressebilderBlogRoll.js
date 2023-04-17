@@ -5,6 +5,33 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 import $ from "jquery";
 
 class PressebilderBlogRollTemplate extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      columns: 12,
+    };
+  }
+
+  componentWillMount() {
+
+    if (typeof window !== "undefined") {
+      if ( window.innerWidth > 992) {
+        this.setState({
+          columns: 4,
+        });
+      } else if ( window.innerWidth > 700 ) {
+        this.setState({
+          columns: 8,
+        });
+      } else {
+        this.setState({
+          columns: 12,
+        });
+      }
+    }
+  }
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -40,9 +67,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                       
                       return(
                         <div
-                          style={{
-                            width: "30%",
-                          }}
+                          className={`column is-${ this.state.columns }`}
                         >
                           <div
                             id={ `container-${index}` }
@@ -65,10 +90,11 @@ class PressebilderBlogRollTemplate extends React.Component {
                                 width: "100%",
                                 height: "100%",
                                 fontSize: "4vh",
-                                fontWeight: "100"
+                                fontWeight: "100",
+                                textDecoration: "none"
                               }}
                             >
-                              <i className="fa fa-download"></i>
+                              <i className="fa fa-download" style={{width: "100%", height: "100%", alignSelf: "center"}}></i>
                             </a>
                           </div>
                           <div className="copyright">&#169;{ post.frontmatter.intro.blurbs[index].copyright }</div>
