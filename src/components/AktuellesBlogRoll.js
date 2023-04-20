@@ -4,6 +4,33 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class AktuellesBlogRollTemplate extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      columns: 12,
+    };
+  }
+
+  componentWillMount() {
+
+    if (typeof window !== "undefined" && (window.location.href.includes("aktuelles") || window.location.href.includes("news"))) {
+      if ( window.innerWidth > 992) {
+        this.setState({
+          columns: 4,
+        });
+      } else if ( window.innerWidth > 700 ) {
+        this.setState({
+          columns: 8,
+        });
+      } else {
+        this.setState({
+          columns: 12,
+        });
+      }
+    }
+  }
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -12,55 +39,52 @@ class AktuellesBlogRollTemplate extends React.Component {
 
     return (
       <div className="columns is-multiline">
-        {posts.length > 0 ? posts.map(({ node: post }) => (
-            <div className="is-parent column is-4" key={post.id}>
+        {posts.length > 0 ?
+          posts.map(({ node: post }) => (
+            <div 
+              className={`is-parent column is-${ this.state.columns }`} 
+              key={post.id}
+            >
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`blog-list-item tile is-child notification kachel ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
-                style={{
-                  backgroundColor: "hsl(0, 0%, 93%)",
-                  height: "50vh"
-                }}
               >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                <div style={{ fontWeight: "400" }}>{ post.frontmatter.info }<br /><br /><br /></div>
+                <header className="flex-column flex-center">
+                  <p 
+                    className="post-meta blog-title"
+                    style={{ 
+                      fontWeight: "600",
+                      fontSize: "2.5vh"
+                    }}
+                  >
+                    { post.frontmatter.title }
+                  </p>
+                  { post.frontmatter.featuredimage ? (
+                    <div style={{ margin: "0 0 2vh 0" }}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          width:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.width,
-                          height:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.height,
                         }}
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
+                  <p style={{ margin: "0vh", fontWeight: "400" }}>
+                    { post.frontmatter.subtitle }
                   </p>
                 </header>
-                <p>
-                  {post.excerpt}
+                <p style={{ fontWeight: "100"}} >
+                  { post.excerpt }
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Weiterlesen Aktuell &rarr;
-                  </Link>
                 </p>
+                <div className="flex-row flex-center">
+                  <Link className="button" to={ post.fields.slug }>
+                    Weiterlesen &rarr;
+                  </Link>
+                </div>
               </article>
             </div>
           )) : 
@@ -100,25 +124,24 @@ export default function AktuellesBlogRoll() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 400)
+                excerpt(pruneLength: 100)
                 id
                 fields {
                   slug
                 }
                 frontmatter {
+                  info
                   title
-                  templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
+                  subtitle
+                  date
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 120
-                        quality: 100
                         layout: CONSTRAINED
                       )
                     }
                   }
+                  link
                 }
               }
             }
