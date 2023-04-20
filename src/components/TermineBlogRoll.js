@@ -75,8 +75,7 @@ class TermineBlogRollTemplate extends React.Component {
         {posts &&
           posts.map(({ node: post }, index) => ((index <= (this.state.index + 1)) && (index >= (this.state.index + 1 - (this.state.selection - 1)))) ? (
             <div className="is-parent column is-4" key={post.id}>
-              {/* {console.log(new Date(Date.now()).toDateString())} */}
-              {console.log("selection: " + this.state.selection)}
+              {/* {console.log("selection: " + this.state.selection)} */}
               <Link
                 className=""
                 to={post.fields.slug}
@@ -85,6 +84,9 @@ class TermineBlogRollTemplate extends React.Component {
                   className={`blog-list-item tile is-child notification kachel ${
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
+                  style={{
+                    aspectRatio: "1 / 1"
+                  }}
                 >
                   <header className="flex-column flex-center">
                     {post.frontmatter.featuredimage ? (
