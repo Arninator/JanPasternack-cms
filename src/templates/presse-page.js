@@ -21,7 +21,6 @@ export const PresseBlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  console.log("featuredImage; " + featuredImage)
   const image = getImage(featuredImage);
 
   return (
