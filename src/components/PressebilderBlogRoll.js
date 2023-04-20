@@ -91,7 +91,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                                 textDecoration: "none"
                               }}
                             >
-                              <i className="fa fa-download flex-row flex-center download-button" style={{width: "100%", height: "100%", fontSize: "10vw",}}></i>
+                              <i className="fa fa-download flex-row flex-center download-button" style={{width: "100%", height: "100%", fontSize: "10vh",}}></i>
                             </a>
                           </div>
                           <div className="copyright">&#169;{ post.frontmatter.intro.blurbs[index].copyright }</div>
