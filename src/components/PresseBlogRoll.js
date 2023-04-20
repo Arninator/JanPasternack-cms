@@ -50,7 +50,7 @@ class PresseBlogRollTemplate extends React.Component {
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <div style={{ fontWeight: "400" }}>{ post.frontmatter.info }<br /><br /></div>
+                <div style={{ fontWeight: "400" }}>{ post.frontmatter.info }<br /><br /><br /></div>
                 <header className="flex-column flex-center">
                   <p 
                     className="post-meta blog-title"
