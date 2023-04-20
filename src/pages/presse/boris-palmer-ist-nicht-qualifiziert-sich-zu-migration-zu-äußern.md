@@ -1,6 +1,6 @@
 ---
 templateKey: presse-page
-info: Artikel vom ---- aus der ----.
+info: Artikel vom 14.04.2023 aus der Frankfurter Allgemeinen Zeitung.
 featuredimage: /img/fuer-manche-ein-schwarzer.jpg
 featuredpost: true
 date: 2023-04-14T09:02:00.000Z
