@@ -1,11 +1,11 @@
 ---
 templateKey: aktuelles-page
-info: " "
+info: ""
 title: Neues hessisches „Versammlungsfreiheitgesetz“ schränkt
   Versammlungsfreiheit in Hessen ein
-subtitle: " "
+subtitle: ""
 featuredimage: /img/microsoftteams-image.jpg
-link: " "
+link: ""
 ---
 Gestern hat der hessische Landtag trotz heftiger Kritik mit den Stimmen von CDU und Grünen ein neues Landesgesetz zur Regelung von Versammlungen und Demonstra­tionen in Hessen verabschiedet. Nach Meinung des Frankfurter Bundes­tagsabge­ord­ne­ten **Armand Zorn** (SPD) und des SPD-Landtagskandidaten für den Wahlkreis 35 (Frankfurt am Main II) **Jan Pasternack** schränkt dieses Gesetz aber die Versamm­lungs­freiheit mehr ein als dass es sie ermöglicht.
 
