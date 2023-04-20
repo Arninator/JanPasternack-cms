@@ -12,6 +12,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 export const PresseBlogPostTemplate = ({
   content,
   contentComponent,
+  info,
   title,
   subtitle,
   date,
@@ -29,6 +30,7 @@ export const PresseBlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <p style={{ fontWeight: "400", fontSize: "larger" }}>{ info }</p>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               { title }
             </h1>
@@ -45,6 +47,8 @@ export const PresseBlogPostTemplate = ({
             />
             <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: content }}></div>
             {/* <PostContent content={content} /> */}
+            <br /><br />
+            <div>Lesen Sie den Artikel auf <a href={ link } target="_blank">{ link }</a></div>
           </div>
         </div>
       </div>
@@ -55,6 +59,7 @@ export const PresseBlogPostTemplate = ({
 PresseBlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
+  info: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   featuredImage: PropTypes.object,
@@ -79,6 +84,7 @@ const PresseBlogPost = ({ data }) => {
             />
           </Helmet>
         }
+        info={post.frontmatter.info}
         title={post.frontmatter.title}
         subtitle={post.frontmatter.subtitle}
         featuredImage={post.frontmatter.featuredimage}
@@ -102,6 +108,7 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
+        info
         title
         subtitle
         date
