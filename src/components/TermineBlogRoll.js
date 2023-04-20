@@ -82,7 +82,7 @@ class TermineBlogRollTemplate extends React.Component {
                 to={post.fields.slug}
               >
                 <article
-                  className={`blog-list-item tile is-child box notification kachel ${
+                  className={`blog-list-item tile is-child notification kachel ${
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
                 >
