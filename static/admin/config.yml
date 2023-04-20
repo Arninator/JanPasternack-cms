@@ -50,12 +50,12 @@ collections:
           widget: "hidden",
           default: "aktuelles-page",
         }
-      - { label: "Info", name: "info", widget: "string" }
+      - { label: "Info", name: "info", widget: "string", required: false }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "text" }
+      - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Link", name: "link", widget: "string", required: false }
   - name: "lebenslaufBlog"
     label: "Lebenslauf"
     folder: "src/pages/lebenslauf"
