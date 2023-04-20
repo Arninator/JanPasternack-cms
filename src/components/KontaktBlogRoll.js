@@ -14,16 +14,18 @@ class KontaktBlogRollTemplate extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <div className="" key={post.id}>
-              <article>
+              <article
+                className="flex-row space-between full-width"
+              >
                 {/* {console.log(post.frontmatter.socialmedia)} */}
-                <div dangerouslySetInnerHTML={{__html: post.html}}></div>
+                <div className="finerInnerHTML" dangerouslySetInnerHTML={{__html: post.html}}></div>
                 <div
                   className="flex-row"
                   style={{
                     marginTop: "2vh"
                   }}
                 >
-                  {post.frontmatter.socialmedia.map(media => (
+                  { post.frontmatter.socialmedia.map(media => (
                     <div
                       className='flex-row'
                     >
@@ -45,6 +47,15 @@ class KontaktBlogRollTemplate extends React.Component {
               </article>
             </div>
           ))}
+          <Link 
+            className="button column is-4 plain-button" 
+            to="/pressebilder"
+            style={{
+              margin: "5vh auto"
+            }}
+          >
+            Pressebilder &rarr;
+          </Link>
       </div>
     )
   }
