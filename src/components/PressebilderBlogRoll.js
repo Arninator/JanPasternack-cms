@@ -49,17 +49,15 @@ class PressebilderBlogRollTemplate extends React.Component {
                 }`}
               >
                 <header
-                  id="testdiv"
                   style={{
                     width: "100%",
                     // border: "1px solid red"
                   }}
                 >
                   <div 
-                    id='tet-div'
-                    className="flex-row space-between"
+                    className="flex-row space-between columns column is-12"
                     style={{
-                      width: "100%",
+                      // width: "100%",
                       flexWrap: "wrap"
                     }}
                   >
@@ -75,26 +73,25 @@ class PressebilderBlogRollTemplate extends React.Component {
                             style={{
                               backgroundImage: `url(${ foto.image.childImageSharp.gatsbyImageData.images.fallback.src})`,
                               width: `100%`,
-                              height: `40vh`,
+                              aspectRatio: "1 / 1",
+                              // height: `40vh`,
                               // maxHeight: `${foto.height * 100}vh`,
                               backgroundRepeat: "no-repeat",
                               backgroundSize: "cover",
-                              margin: "3vw auto",
+                              margin: "3vw auto 1vh auto",
                             }}
                           >
                             <a 
-                              className="download-button flex-row flex-center" 
+                              className="flex-row flex-center" 
                               href={ foto.image.childImageSharp.gatsbyImageData.images.fallback.src }
                               download
                               style={{
                                 width: "100%",
                                 height: "100%",
-                                fontSize: "4vh",
-                                fontWeight: "100",
                                 textDecoration: "none"
                               }}
                             >
-                              <i className="fa fa-download" style={{width: "100%", height: "100%", alignSelf: "center"}}></i>
+                              <i className="fa fa-download flex-row flex-center download-button" style={{width: "100%", height: "100%", fontSize: "10vw",}}></i>
                             </a>
                           </div>
                           <div className="copyright">&#169;{ post.frontmatter.intro.blurbs[index].copyright }</div>
