@@ -7,7 +7,7 @@ socialmedia:
   - link: https://www.instagram.com/jan.pasternack/
     name: Instagram
 ---
-**Jan Pasternack**
+### Jan Pasternack
 
 Kandidat für den Hessischen Landtag
 
