@@ -244,10 +244,10 @@
 .twitter-div {
     width: 40%;
 }
-.download-button i{
+.download-button{
     color: transparent;
 }
-.download-button i:hover {
+.download-button:hover {
     background-color: rgba(211, 211, 211, 0.33);
     color: var(--spd-red);
 }
@@ -277,6 +277,9 @@
     /* border: 1px solid black; */
     border-radius: 0% !important;
     /* box-shadow: 1px 1px 1px var(--spd-red); */
+}
+.copyright {
+    font-weight: 100;
 }
 /* 
     ´´´´´´´´´´´´´´´´´´´´´´´´´´´
