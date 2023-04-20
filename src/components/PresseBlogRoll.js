@@ -50,17 +50,18 @@ class PresseBlogRollTemplate extends React.Component {
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
+                <div style={{ fontWeight: "400" }}>{ post.frontmatter.info }<br /><br /></div>
                 <header className="flex-column flex-center">
                   <p 
                     className="post-meta blog-title"
                     style={{ 
                       fontWeight: "600",
-                      // fontSize: "3vh"
+                      fontSize: "2.5vh"
                     }}
                   >
                     { post.frontmatter.title }
                   </p>
-                  {post.frontmatter.featuredimage ? (
+                  { post.frontmatter.featuredimage ? (
                     <div style={{ margin: "0 0 2vh 0" }}>
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -70,15 +71,11 @@ class PresseBlogRollTemplate extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p 
-                    className="post-meta blog-title"
-                  >
-                    <span className="is-size-5 is-block" style={{ margin: "2vh 0vh", fontWeight: "400" }}>
-                      { post.frontmatter.subtitle }
-                    </span>
+                  <p style={{ margin: "0vh", fontWeight: "400" }}>
+                    { post.frontmatter.subtitle }
                   </p>
                 </header>
-                <p style={{ fontWeight: "400"}} >
+                <p style={{ fontWeight: "100"}} >
                   { post.excerpt }
                   <br />
                   <br />
@@ -127,12 +124,13 @@ export default function PresseBlogRoll() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 200)
+                excerpt(pruneLength: 100)
                 id
                 fields {
                   slug
                 }
                 frontmatter {
+                  info
                   title
                   subtitle
                   date
