@@ -1,6 +1,6 @@
 ---
 templateKey: presse-page
-info: Dieser Artikel erschien am ---- in der ----.
+info: Artikel vom ---- aus der ----.
 featuredimage: /img/fuer-manche-ein-schwarzer.jpg
 featuredpost: true
 date: 2023-04-14T09:02:00.000Z
