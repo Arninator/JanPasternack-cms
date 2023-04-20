@@ -128,6 +128,7 @@ collections:
           widget: "hidden",
           default: "presse-page",
         }
+      - { label: "Info", name: "info", widget: "string", default: "Dieser Artikel erschien am ---- in der ----."}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "text" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
