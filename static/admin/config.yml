@@ -50,13 +50,12 @@ collections:
           widget: "hidden",
           default: "aktuelles-page",
         }
+      - { label: "Info", name: "info", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Subtitle", name: "subtitle", widget: "text" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Link", name: "link", widget: "string" }
   - name: "lebenslaufBlog"
     label: "Lebenslauf"
     folder: "src/pages/lebenslauf"
@@ -128,7 +127,7 @@ collections:
           widget: "hidden",
           default: "presse-page",
         }
-      - { label: "Info", name: "info", widget: "string", default: "Dieser Artikel erschien am ---- in der ----."}
+      - { label: "Info", name: "info", widget: "string", default: "Artikel vom ---- aus der ----."}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "text" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
