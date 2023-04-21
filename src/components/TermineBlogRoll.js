@@ -74,7 +74,7 @@ class TermineBlogRollTemplate extends React.Component {
         }
         {posts &&
           posts.map(({ node: post }, index) => ((index <= (this.state.index + 1)) && (index >= (this.state.index + 1 - (this.state.selection - 1)))) ? (
-            <div className="is-parent column is-4" key={post.id}>
+            <div className="is-parent column is-4" key={post.id} >
               {/* {console.log("selection: " + this.state.selection)} */}
               <Link
                 className=""
@@ -85,7 +85,7 @@ class TermineBlogRollTemplate extends React.Component {
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
                   style={{
-                    aspectRatio: "1 / 1"
+                    // aspectRatio: "1 / 1"
                   }}
                 >
                   <header className="flex-column flex-center">
