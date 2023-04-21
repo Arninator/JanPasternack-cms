@@ -14,7 +14,7 @@ class AktuellesBlogRollTemplate extends React.Component {
 
   componentWillMount() {
 
-    if (typeof window !== "undefined" && (window.location.href.includes("aktuelles") || window.location.href.includes("news"))) {
+    if (typeof window !== "undefined") {
       if ( window.innerWidth > 992) {
         this.setState({
           columns: 4,
