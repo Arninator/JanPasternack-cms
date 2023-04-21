@@ -265,6 +265,9 @@
 .finerInnerHTML > p, a{
     font-weight: 400;
 }
+.largerInnerHTML > p {
+    font-size: larger;
+}
 #lebenslauf-timer {
     width: 25%;
     max-width: 25%;
@@ -404,6 +407,9 @@
     }
     #footer-section {
         display: flex;
+        flex-direction: column;
+    }
+    #kontakt-article {
         flex-direction: column;
     }
 }
