@@ -15,10 +15,11 @@ class KontaktBlogRollTemplate extends React.Component {
           posts.map(({ node: post }) => (
             <div className="" key={post.id}>
               <article
+                id="kontakt-article"
                 className="flex-row space-between full-width"
               >
                 {/* {console.log(post.frontmatter.socialmedia)} */}
-                <div className="finerInnerHTML" dangerouslySetInnerHTML={{__html: post.html}}></div>
+                <div className="finerInnerHTML largerInnerHTML" dangerouslySetInnerHTML={{__html: post.html}}></div>
                 <div
                   className="flex-row"
                   style={{
