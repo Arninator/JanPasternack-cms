@@ -16,7 +16,7 @@ class OnTourBlogRollTemplate extends React.Component {
           posts.map(({ node: post }) => (
             <div className="is-parent" key={post.id}>
               <article>
-                <h1>
+                <h1 className="flex-row flex-center">
                     { post.frontmatter.title }
                 </h1>
                 <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: post.html }}></div>

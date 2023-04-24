@@ -17,7 +17,7 @@ class WahlkreisBlogRollTemplate extends React.Component {
             <div className="" key={post.id}>
               <article>
 
-                <h1>{ post.frontmatter.title }</h1>
+                <h1 className="flex-row flex-center">{ post.frontmatter.title }</h1>
 
                 <div className="finerInnerHTML" dangerouslySetInnerHTML={{__html: post.html}}></div>
                 

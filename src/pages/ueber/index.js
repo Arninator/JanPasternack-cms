@@ -46,7 +46,7 @@ export default class UeberIndexPage extends React.Component {
         <section className="section greyBackground fade-in">
           <div className="container">
             <div className="content">
-              <h2 className="has-text-weight-semibold is-size-2">
+              <h2 className="has-text-weight-semibold is-size-2 flex-row flex-center">
                 Warum ich für den Hessischen Landtag kandidiere
               </h2>
               <VorstellungBlogRoll />
@@ -61,7 +61,7 @@ export default class UeberIndexPage extends React.Component {
         <section className="section whiteBackground fade-in">
           <div className="container">
             <div className="content">
-              <h2 className="has-text-weight-semibold is-size-2">
+              <h2 className="has-text-weight-semibold is-size-2 flex-row flex-center">
                 Lebenslauf
               </h2>
               <LebenslaufBlogRollExcerpt/>
