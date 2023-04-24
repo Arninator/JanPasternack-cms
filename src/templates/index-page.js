@@ -106,7 +106,7 @@ export const IndexPageTemplate = ({
                   >
                     <div className="tile flex-row flex-center fade-in">
                       <h3 className="has-text-weight-semibold is-size-1">
-                        <span style={{ borderBottom: "1px solid rgb(227, 0, 15)" }}>Aktuelles</span>
+                        <span>Aktuelles</span>
                         <br />
                         <br />
                       </h3>
@@ -127,7 +127,7 @@ export const IndexPageTemplate = ({
                   >
                     <div className="tile flex-row flex-center fade-in">
                       <h3 className="has-text-weight-semibold is-size-1">
-                        <span style={{ borderBottom: "1px solid rgb(227, 0, 15)" }}>Presse</span>
+                        <span>Presse</span>
                         <br />
                         <br />
                       </h3>
@@ -163,7 +163,7 @@ export const IndexPageTemplate = ({
                   >
                     <div className="tile flex-row flex-center fade-in">
                       <h3 className="has-text-weight-semibold is-size-1">
-                        <span style={{ borderBottom: "1px solid rgb(227, 0, 15)" }}>Nächste Termine</span>
+                        <span>Nächste Termine</span>
                         <br />
                       </h3>
                     </div>
