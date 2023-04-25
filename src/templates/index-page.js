@@ -104,7 +104,7 @@ export const IndexPageTemplate = ({
                   <div 
                     className="fragment tile flex-column greyBackground fade-in"
                   >
-                    <div className="tile flex-row flex-center fade-in">
+                    <div className="tile flex-row flex-center">
                       <h3 className="has-text-weight-semibold is-size-1">
                         <span>Aktuelles</span>
                         <br />
@@ -125,7 +125,7 @@ export const IndexPageTemplate = ({
                       // borderTop: "1px solid black",
                     }}
                   >
-                    <div className="tile flex-row flex-center fade-in">
+                    <div className="tile flex-row flex-center">
                       <h3 className="has-text-weight-semibold is-size-1">
                         <span>Presse</span>
                         <br />
@@ -161,7 +161,7 @@ export const IndexPageTemplate = ({
                   <div 
                     className="fragment tile flex-column greyBackground fade-in"
                   >
-                    <div className="tile flex-row flex-center fade-in">
+                    <div className="tile flex-row flex-center">
                       <h3 className="has-text-weight-semibold is-size-1">
                         <span>Nächste Termine</span>
                         <br />
