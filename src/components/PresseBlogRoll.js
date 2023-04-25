@@ -56,7 +56,7 @@ class PresseBlogRollTemplate extends React.Component {
                     className="post-meta blog-title"
                     style={{ 
                       fontWeight: "600",
-                      fontSize: "2.5vh"
+                      fontSize: "24px"
                     }}
                   >
                     { post.frontmatter.title }
