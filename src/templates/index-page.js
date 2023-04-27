@@ -68,8 +68,16 @@ export const IndexPageTemplate = ({
                   className="content"
                 >
                   <div
-                    className="fragment tile flex row whiteBackground fade-in"
+                    className="fragment tile flex-row whiteBackground fade-in"
                   >
+                    <GatsbyImage
+                      image={ helloImage }
+                      alt="alt"
+                      style={{
+                        // maxHeight: "50vh"
+                        marginRight: "2vw",
+                      }}
+                    />
                     <div 
                       id=""
                       className="flex column"
@@ -92,12 +100,12 @@ export const IndexPageTemplate = ({
                         ></div>
                       </div>
                       <GatsbyImage
-                          image={ signatureImage }
-                          alt="alt"
-                          style={{
-                            // maxHeight: "50vh"
-                          }}
-                        />
+                        image={ signatureImage }
+                        alt="alt"
+                        style={{
+                          // maxHeight: "50vh"
+                        }}
+                      />
                     </div>
                   </div>
                   
