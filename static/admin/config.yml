@@ -69,19 +69,19 @@ collections:
           default: "lebenslauf-page",
         }
       - { label: "General", name: "body", widget: "markdown" }
-      - { 
-          label: "Entries", 
-          name: "entries", 
-          widget: "list", 
-          summary: '{{fields.title}}',
-          fields:
-            [
-              { label: Title, name: title, widget: string },
-              { label: Start Date, name: startdate, widget: datetime, format: "DD.MM.YYYY", time_format: false },
-              { label: End Date, name: enddate, widget: datetime, required: false, format: "DD.MM.YYYY", default: "00.00.0000", time_format: false },
-              { label: Description, name: body, widget: markdown },
-            ]
-        }
+      # - { 
+      #     label: Entries, 
+      #     name: entries, 
+      #     widget: list, 
+      #     summary: '{{fields.title}}',
+      #     fields:
+      #       [
+      #         { label: Title, name: title, widget: string },
+      #         { label: Start Date, name: startdate, widget: datetime, format: "DD.MM.YYYY", time_format: false },
+      #         { label: End Date, name: enddate, widget: datetime, required: false, format: "DD.MM.YYYY", default: "00.00.0000", time_format: false },
+      #         { label: Description, name: description, widget: string },
+      #       ]
+      #   }
   - name: "onTourBlog"
     label: "Jan unterwegs"
     folder: "src/pages/ontour"
