@@ -71,7 +71,7 @@ const LebenslaufBlogPost = ({ data }) => {
           </Helmet>
         }
         // tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        // title={post.frontmatter.title}
         // startdate={post.frontmatter.startdate}
         // enddate={post.frontmatter.enddate ? post.frontmatter.enddate : ""}
         // intro={post.frontmatter.intro}
