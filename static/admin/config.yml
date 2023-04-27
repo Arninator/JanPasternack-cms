@@ -251,36 +251,35 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Zuletzt aktualisiert:", name: "date", widget: "datetime" }
-  # - name: "pages"
-  #   label: "Pages"
-  #   files:
-  #     - file: "src/pages/index.md"
-  #       label: "Landing Page"
-  #       name: "index"
-  #       fields:
-  #         - {
-  #             label: "Template Key",
-  #             name: "templateKey",
-  #             widget: "hidden",
-  #             default: "index-page",
-  #           }
-  #         - { label: Title, name: title, widget: string }
-  #         - { label: Image, name: image, widget: image }
-  #         # - { label: Heading, name: heading, widget: string }
-  #         # - { label: Subheading, name: subheading, widget: string }
-  #         - {
-  #             label: Mainpitch,
-  #             name: mainpitch,
-  #             widget: object,
-  #             fields:
-  #               [
-  #                 { label: Title, name: title, widget: string },
-  #                 { label: Description, name: description, widget: text },
-  #                 { label: Image, name: image, widget: image },
-  #                 { label: Signature, name: signature, widget: image },
-  #                 # { label: Description2, name: body, widget: markdown },
-  #               ],
-  #           }
+  - name: "pages"
+    label: "Startseite"
+    files:
+      - file: "src/pages/index.md"
+        label: "Empfang"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Image, name: image, widget: image }
+          # - { label: Heading, name: heading, widget: string }
+          # - { label: Subheading, name: subheading, widget: string }
+          - {
+              label: Mainpitch,
+              name: mainpitch,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                  { label: Image, name: image, widget: image },
+                  { label: Signature, name: signature, widget: image },
+                ],
+            }
   #         - { label: Description, name: description, widget: string }
   #         - {
   #             label: Intro,
