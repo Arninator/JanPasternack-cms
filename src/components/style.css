@@ -178,6 +178,10 @@
     background-position: 0% 100%;
     max-height: 21vw;
 }
+#frankfurt-cover {
+    background-position: 0 40%;
+    max-height: 21vw;
+}
 .content-part {
     padding: 5% 15%;
 }
@@ -369,9 +373,17 @@
 }
 @media only screen and (min-width: 0px) and (max-width: 991px){
     #kontakt-cover {
-        width: 150%;
+        background-position: 50% 100%;
+        background-size: 150%;
         max-height: 35vh;
-        left: 25%;
+    }
+    #frankfurt-cover {
+        background-position: 50% 40%;
+        /* background-size: 100%; */
+        max-height: 35vh;
+    }
+    #frankfurt-cover > h1 {
+        margin: auto;
     }
     #presse-container {
         flex-direction: column;
@@ -393,9 +405,14 @@
         max-width: 100% !important;
     }
     #kontakt-cover {
-        width: 250%;
+        background-position: 50% 100%;
+        background-size: 250%;
         max-height: 35vh;
-        left: -25%;
+    }
+    #frankfurt-cover {
+        background-position: 10% 40%;
+        background-size: 150%;
+        max-height: 35vh;
     }
     #navMenu {
         width: 66% !important;
@@ -421,9 +438,14 @@
         height: 80vh;
     }
     #kontakt-cover {
-        width: 350%;
+        background-position: 50% 100%;
+        background-size: 350%;
         max-height: 35vh;
-        left: -75%;
+    }
+    #frankfurt-cover {
+        background-position: 0% 40%;
+        background-size: 200%;
+        max-height: 35vh;
     }
     #burger-menu {
         display: block;
