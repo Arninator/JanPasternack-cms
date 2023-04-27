@@ -276,7 +276,7 @@
     margin-top: 2vh;
 }
 .kachel {
-    background-color: var(--background-color);
+    background-color: rgb(235, 235, 235) !important;
     /* box-shadow: none !important; */
     /* border: 1px solid black; */
     border-radius: 0% !important;
