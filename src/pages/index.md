@@ -4,8 +4,8 @@ title: Begrüßungstext
 image: /img/jan-cover.jpg
 mainpitch:
   title: Liebe Frankfurterinnen und Frankfurter,
-  image: /img/pasternack_jan_us_70x20mm_1000dpi_sw.jpg
-  signature: /img/pasternack_jan_us_70x20mm_1000dpi_sw.tif
+  image: /img/pasternack_jan_spd_hessen_2023_gs_105_150srgb-2-.jpg
+  signature: /img/pasternack_jan_us_70x20mm_1000dpi_sw.jpg
   description: >
     ich freue mich sehr, Sie hier auf meiner Website begrüßen zu dürfen. Mein
     Name ist Jan Pasternack und ich bin Ihr Kandidat für den Hessischen Landtag
