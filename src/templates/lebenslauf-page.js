@@ -62,7 +62,7 @@ const LebenslaufBlogPost = ({ data }) => {
         // description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{`Lebenslauf`}</title>
             <meta
               name="description"
               // content={`${post.frontmatter.description}`}
