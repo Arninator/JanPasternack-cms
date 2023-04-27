@@ -70,14 +70,21 @@ export const IndexPageTemplate = ({
                   <div
                     className="fragment tile flex-row whiteBackground fade-in"
                   >
-                    <GatsbyImage
-                      image={ helloImage }
-                      alt="alt"
+                    <div
+                      className="flex-row flex-center"
                       style={{
-                        // maxHeight: "50vh"
+                        alignSelf: "flex-start",
                         marginRight: "2vw",
                       }}
-                    />
+                    >
+                      <GatsbyImage
+                        image={ helloImage }
+                        alt="alt"
+                        style={{
+                          alignSelf: "flex-start",
+                        }}
+                      />
+                    </div>
                     <div 
                       id=""
                       className="flex column"
