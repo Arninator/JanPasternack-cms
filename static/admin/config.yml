@@ -269,7 +269,7 @@ collections:
           # - { label: Heading, name: heading, widget: string }
           # - { label: Subheading, name: subheading, widget: string }
           - {
-              label: Mainpitch,
+              label: Inhalt,
               name: mainpitch,
               widget: object,
               fields:
