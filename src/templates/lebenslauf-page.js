@@ -89,18 +89,12 @@ LebenslaufBlogPost.propTypes = {
 
 export default LebenslaufBlogPost;
 
+// OLD
 export const pageQuery = graphql`
   query LebenslaufBlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
-      frontmatter {
-        entries {
-          title
-          startdate
-          enddate
-        }
-      }
     }
   }
 `;
