@@ -19,17 +19,14 @@ export default class FrankfurtIndexPage extends React.Component {
     return (
       <Layout>
         <div
+          id="frankfurt-cover"
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('img/IMG_20201102_184803.jpg')`,
-            backgroundPosition: "0 40%"
           }}
         >
           <h1
             className="has-text-weight-bold is-size-1 red-header"
-            style={{
-              marginLeft: "66%",
-            }}
           >
             Frankfurt
           </h1>
