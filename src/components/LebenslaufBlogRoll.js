@@ -13,19 +13,19 @@ class LebenslaufBlogRollTemplate extends React.Component {
 
 
     // Sort it, baby!
-    if (posts[0].node.frontmatter.entries) {
-      posts[0].node.frontmatter.entries.sort(function(a, b) {
-        return (
-          (b.startdate.substring(6) + b.startdate.substring(3,5) + b.startdate.substring(0,2)) - (a.startdate.substring(6) + a.startdate.substring(3,5) + a.startdate.substring(0,2))
-        )
-      })
-    }
+    // if (posts[0].node.frontmatter.entries) {
+    //   posts[0].node.frontmatter.entries.sort(function(a, b) {
+    //     return (
+    //       (b.startdate.substring(6) + b.startdate.substring(3,5) + b.startdate.substring(0,2)) - (a.startdate.substring(6) + a.startdate.substring(3,5) + a.startdate.substring(0,2))
+    //     )
+    //   })
+    // }
     // console.log(data);
 
     return (
       <div>
         <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: posts[0].node.html }}></div>
-        {posts && posts[0].node.frontmatter.entries &&
+        {/* {posts && posts[0].node.frontmatter.entries &&
           posts[0].node.frontmatter.entries.map(( entry ) => (
             <div className="is-parent column is-12" key={entry.id}>
               <article>
@@ -50,7 +50,7 @@ class LebenslaufBlogRollTemplate extends React.Component {
                 </div>
               </article>
             </div>
-          ))}
+          ))} */}
       </div>
     )
   }

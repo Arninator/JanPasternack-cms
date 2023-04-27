@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 
 import Layout from "../../components/Layout";
 import VorstellungBlogRoll from "../../components/VorstellungBlogRoll";
-import PolitikBlogRoll from "../../components/PolitikBlogRoll";
 import LebenslaufBlogRoll from "../../components/LebenslaufBlogRoll";
 import LebenslaufBlogRollExcerpt from "../../components/LebenslaufBlogRollExcerpt";
 
