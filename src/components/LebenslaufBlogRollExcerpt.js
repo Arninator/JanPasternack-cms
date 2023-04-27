@@ -13,9 +13,9 @@ class LebenslaufBlogRollExcerptTemplate extends React.Component {
 
     return (
       <div
-        style={{
-          margin: "5% 0",
-        }}
+        // style={{
+        //   margin: "5% 0",
+        // }}
       >
         <div className='finerInnerHTML' ><p>{posts[0].node.excerpt}</p></div>
       </div>
