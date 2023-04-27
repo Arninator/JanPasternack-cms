@@ -8,21 +8,17 @@ class VorstellungBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    console.log(posts.length);
-
     return (
-      <div className="columns is-multiline">
+      <div 
+        className="columns is-multiline" 
+      >
         {posts.length > 0 ? 
           posts.map(({ node: post }) => (
             <div className="is-parent column is-12" key={post.id}>
               <article
                 className={`blog-list-item tile is-child`}
               >
-                <p>
-                  {post.html}
-                  <br />
-                  <br />
-                </p>
+                <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: post.html }}></div>
               </article>
             </div>
           )) : 
@@ -34,7 +30,8 @@ class VorstellungBlogRollTemplate extends React.Component {
             }}
           >
             Aktuell gibt es leider keine Neuigkeiten...
-          </div>}
+          </div>
+        }
       </div>
     )
   }
@@ -64,23 +61,12 @@ export default function VorstellungBlogRoll() {
               node {
                 excerpt(pruneLength: 400)
                 id
+                html
                 fields {
                   slug
                 }
                 frontmatter {
                   title
-                  templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
-                  featuredimage {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 120
-                        quality: 100
-                        layout: CONSTRAINED
-                      )
-                    }
-                  }
                 }
               }
             }
