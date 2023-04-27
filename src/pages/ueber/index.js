@@ -35,14 +35,12 @@ export default class UeberIndexPage extends React.Component {
             Über mich
           </h1>
         </div>
-        <section className="section whiteBackground fade-in">
+        {/* <section className="section whiteBackground fade-in">
           <div className="container">
-            {/* <div className="content">
-              
-            </div> */}
+
           </div>
-        </section>
-        <section className="section greyBackground fade-in">
+        </section> */}
+        <section className="section whiteBackground fade-in">
           <div className="container">
             <div className="content">
               <h2 className="has-text-weight-semibold is-size-2 flex-row flex-center">
@@ -57,7 +55,7 @@ export default class UeberIndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section whiteBackground fade-in">
+        <section className="section greyBackground fade-in">
           <div className="container">
             <div className="content">
               <h2 className="has-text-weight-semibold is-size-2 flex-row flex-center">
