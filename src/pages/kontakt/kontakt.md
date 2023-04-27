@@ -1,11 +1,7 @@
 ---
 templateKey: kontakt-page
 title: Kontakt
-socialmedia:
-  - name: Facebook
-    link: https://www.facebook.com/jan.pasternack
-  - link: https://www.instagram.com/jan.pasternack/
-    name: Instagram
+socialmedia: []
 ---
 ### Jan Pasternack
 
