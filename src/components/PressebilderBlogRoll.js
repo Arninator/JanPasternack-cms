@@ -91,7 +91,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                                 textDecoration: "none"
                               }}
                             >
-                              <i className="fa fa-download flex-row flex-center download-button" style={{width: "100%", height: "100%", fontSize: "10vh",}}></i>
+                              <i className="fa fa-download download-button" style={{ width: "100%", height: "100%", fontSize: "10vh", alignSelf: "center", justifySelf: "center" }}></i>
                             </a>
                           </div>
                           <div className="copyright">&#169;{ post.frontmatter.intro.blurbs[index].copyright }</div>
@@ -99,49 +99,7 @@ class PressebilderBlogRollTemplate extends React.Component {
                       )})
                     }
                   </div>
-                  {/* {post.frontmatter.image ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.image,
-                          alt: `featured image thumbnail for post ${post.frontmatter.alt}`,
-                          width:
-                            post.frontmatter.image.childImageSharp
-                              .gatsbyImageData.width,
-                          height:
-                            post.frontmatter.image.childImageSharp
-                              .gatsbyImageData.height,
-                        }}
-                      />
-                    </div>
-                  ) : null} */}
-                  {/* <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p> */}
                 </header>
-                {/* <p style={{ width: "100%" }}>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link 
-                    className="button column is-4" 
-                    to={post.fields.slug}
-                    style={{
-                      margin: "auto"
-                    }}
-                  >
-                    Alle anzeigen &rarr;
-                  </Link>
-                </p> */}
               </article>
             </div>
           ))}
