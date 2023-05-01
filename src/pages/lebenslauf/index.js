@@ -17,7 +17,7 @@ export default class LebenslaufIndexPage extends React.Component {
           }}
         >
           <h1
-            className="has-text-weight-bold is-size-1 red-header"
+            className="red-header"
             style={{
               marginRight: "66%",
             }}

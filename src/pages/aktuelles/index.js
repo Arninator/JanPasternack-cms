@@ -15,21 +15,17 @@ export default class AktuellesBlogIndexPage extends React.Component {
             backgroundPosition: "0% 33%"
           }}
         >
+          <h1 
+            className="red-header"
+            style={{
+              marginTop: "10%"
+            }}
+          >
+            Berichte & Neuigkeiten
+          </h1>
         </div>
         <section className="section">
           <div className="container">
-            <h1
-              className="has-text-weight-bold is-size-1 flex"
-              style={{
-                // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-                // backgroundColor: "transparent",
-                // color: "black",
-                padding: "1rem",
-                marginBottom: "0vh"
-              }}
-            >
-              Berichte & Neuigkeiten
-            </h1>
             <h2
               className="has-text-weight-bold is-size-4 flex"
               style={{

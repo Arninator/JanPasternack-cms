@@ -23,11 +23,7 @@ export default class KontaktIndexPage extends React.Component {
             backgroundImage: `url('/img/20220504pj209.jpg')`,
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-1 red-header"
-            style={{
-            }}
-          >
+          <h1 className="red-header">
             Kontakt
           </h1>
         </div>
