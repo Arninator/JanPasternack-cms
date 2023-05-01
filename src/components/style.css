@@ -260,6 +260,8 @@
     font-size: 8vh;
 }
 .red-header {
+    font-size: 50px;
+    font-weight: bold;
     background-color: var(--spd-red);
     color: white;
     padding: 1rem;
@@ -422,6 +424,7 @@
     }
     .red-header {
         margin: auto !important;
+        font-size: 35px;
     }
     #footer-section {
         display: flex;
@@ -455,5 +458,8 @@
     }
     #footer-section .footer-item{
         margin: 0vh 1.5vw !important;
+    }
+    .red-header {
+        font-size: 25px;
     }
 }
