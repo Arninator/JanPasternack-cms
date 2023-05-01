@@ -29,7 +29,7 @@ export default class NewsIndexPage extends React.Component {
           <h1
             className="red-header"
             style={{
-              marginRight: "50%",
+              marginTop: "10%",
             }}
           >
             News

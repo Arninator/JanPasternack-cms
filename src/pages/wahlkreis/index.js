@@ -27,8 +27,8 @@ export default class WahlkreisIndexPage extends React.Component {
           <h1
             className="red-header"
             style={{
-              marginRight: "33%",
-              marginBottom: "10%",
+              // marginRight: "33%",
+              // marginBottom: "5%",
             }}
           >
             Wahlkreis

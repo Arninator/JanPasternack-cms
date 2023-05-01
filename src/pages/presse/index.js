@@ -30,7 +30,7 @@ export default class PresseIndexPage extends React.Component {
               // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
               // color: "white",
               padding: "1rem",
-              marginLeft: "33%",
+              marginTop: "10%",
             }}
           >
             Pressemitteilungen
