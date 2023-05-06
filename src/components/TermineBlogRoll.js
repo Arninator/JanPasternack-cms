@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import { GatsbyImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 import $ from "jquery";
 
 class TermineBlogRollTemplate extends React.Component {
@@ -135,10 +136,11 @@ class TermineBlogRollTemplate extends React.Component {
                         margin: "0 0 2vh 0",
                       }}
                     >
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                      <GatsbyImage
+                        image={ getImage(post.frontmatter.featuredimage) }
+                        style={{
+                          width: "100%",
+                          aspectRatio: "1 / 0.5",
                         }}
                       />
                     </div>
