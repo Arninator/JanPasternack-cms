@@ -179,18 +179,19 @@ collections:
           default: "termine-page",
         }
       - { label: "Event Title", name: "title", widget: string }
-      - { label: "Event Date", name: "date", widget: "datetime" }
+      - { label: "Event Date", name: "date", widget: datetime }
+      - { label: "Event Time", name: "time", widget: datetime picker }
       - { label: "Event Link", name: "eventlink", widget: string, required: false}
       - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Description", name: "body", widget: markdown }
       - {
           label: Location,
           name: location,
           widget: object,
           fields:
             [
-              {label: "Name", name: "name", widget: "string" },
-              {label: "Link", name: "link", widget: "string" },
+              {label: "Name", name: "name", widget: string },
+              {label: "Link", name: "link", widget: string },
             ],
         }
   - name: "vorstellungBlog"
