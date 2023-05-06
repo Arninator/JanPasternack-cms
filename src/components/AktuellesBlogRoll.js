@@ -8,7 +8,7 @@ class AktuellesBlogRollTemplate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      columns: 12,
+      columns: 4,
     };
   }
 
