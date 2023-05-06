@@ -9,28 +9,81 @@ class TermineBlogRollTemplate extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
-      columns: 12,
+      columns: 3,
+      frequency: 4,
+      currentIndex: 0,
     };
   }
 
   componentWillMount() {
 
-    if (typeof window !== "undefined" && (window.location.href.includes("termine") || window.location.href.includes("news"))) {
+    if (typeof window !== "undefined" && window.location.href.includes("news")) {
+      if ( window.innerWidth > 992) {
+        this.setState({
+          columns: 3,
+          frequency: 3,
+        });
+      } else if ( window.innerWidth > 700 ) {
+        this.setState({
+          columns: 7,
+          frequency: 2,
+        });
+      } else {
+        this.setState({
+          columns: 10,
+          frequency: 1,
+        });
+      }
+    } else if (typeof window !== "undefined" && window.location.href.includes("termine")) {
       if ( window.innerWidth > 992) {
         this.setState({
           columns: 4,
+          frequency: 99,
         });
       } else if ( window.innerWidth > 700 ) {
         this.setState({
           columns: 8,
+          frequency: 99,
         });
       } else {
         this.setState({
           columns: 12,
+          frequency: 99,
+        });
+      }
+    } else {
+      if ( window.innerWidth > 992) {
+        this.setState({
+          columns: 3,
+          frequency: 3,
+        });
+      } else if ( window.innerWidth > 700 ) {
+        this.setState({
+          columns: 7,
+          frequency: 2,
+        });
+      } else {
+        this.setState({
+          columns: 10,
+          frequency: 1,
         });
       }
     }
+  }
+
+  prev() {
+    this.setState({
+      currentIndex: this.state.currentIndex > 0 ? this.state.currentIndex - 1 : 0,
+    })
+    console.log(this.state);
+  }
+  next( max ) {
+    this.setState({
+      currentIndex: this.state.currentIndex < max - this.state.frequency ? this.state.currentIndex + 1 : max - this.state.frequency,
+    })
+    console.log(this.state);
   }
 
   render() {
@@ -39,8 +92,22 @@ class TermineBlogRollTemplate extends React.Component {
 
     return (
       <div className="columns is-multiline">
+        {this.state.frequency < 4 ? (
+          <div
+            className="flex-column flex-center invisible-button"
+            style={{
+              fontSize: "3vh",
+              fontWeight: "400",
+              color: `${ this.state.currentIndex == 0 ? "lightgrey" : "black"}`,
+            }}
+            onClick={ () => this.prev() }
+          >
+            &lt;
+          </div>
+        ) : ""}
         {posts.length > 0 ?
-          posts.map(({ node: post }) => (
+          posts.map(({ node: post }, index) => ( 
+            index < ( this.state.currentIndex + this.state.frequency ) && index >= ( this.state.currentIndex ) ? (
             <div 
               className={`is-parent column is-${ this.state.columns }`} 
               key={post.id}
@@ -62,7 +129,12 @@ class TermineBlogRollTemplate extends React.Component {
                     { post.frontmatter.title }
                   </p>
                   { post.frontmatter.featuredimage ? (
-                    <div style={{ margin: "0 0 2vh 0" }}>
+                    <div
+                      className=""
+                      style={{ 
+                        margin: "0 0 2vh 0",
+                      }}
+                    >
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -87,7 +159,7 @@ class TermineBlogRollTemplate extends React.Component {
                 </div>
               </article>
             </div>
-          )) : 
+          ): (""))) : 
           <div 
             className="is-parent column is-12"
             style={{
@@ -97,6 +169,19 @@ class TermineBlogRollTemplate extends React.Component {
           >
             Aktuell stehen keine Termine an...
           </div>}
+          {this.state.frequency < 4 ? (
+          <div
+            className="flex-column flex-center invisible-button"
+            style={{
+              fontSize: "3vh",
+              fontWeight: "400",
+              color: `${ this.state.currentIndex == posts.length - this.state.frequency ? "lightgrey" : "black"}`,
+            }}
+            onClick={ () => this.next( posts.length ) }
+          >
+            &gt;
+          </div>
+        ) : ""}
       </div>
     )
   }
@@ -119,7 +204,7 @@ export default function TermineBlogRoll() {
       query={graphql`
         query TermineBlogRollQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
+            sort: { order: ASC, fields: [frontmatter___date] }
             filter: { frontmatter: { templateKey: { eq: "termine-page" } } }
           ) {
             edges {
