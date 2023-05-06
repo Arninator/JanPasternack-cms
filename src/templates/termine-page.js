@@ -15,6 +15,7 @@ export const TermineBlogPostTemplate = ({
   title,
   date,
   eventlink,
+  location,
   featuredImage,
   helmet,
 }) => {
@@ -22,30 +23,35 @@ export const TermineBlogPostTemplate = ({
   const image = getImage(featuredImage);
 
   return (
-    <section className="section">
+    <section className="section greyBackground" style={{ minHeight: "95vh"}}>
       {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <p style={{ fontWeight: "400", fontSize: "larger" }}>{ title }</p>
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              { title }
-            </h1>
-            <h3>
-              { title }
-            </h3>
+      <div className="container content" style={{ marginTop: "5vh"}}>
+        <div className="flex-row space-between whiteBackground" style={{ margin: "auto", padding: "5%"}}>
+          <div className="flex-column space-between full-width">
+            <div>
+              <p className="subtitle is-size-3">{ date.substring(0,10) }<br/></p>
+              <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{ title }<br/></h1>
+              <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: content }}></div>
+              <br/>
+              <br/>
+              <br/>
+            </div>
+            <div>
+              {eventlink ? <div className="flex-row space-between"><div>Link</div><div><a href={ eventlink } target="_blank">{ eventlink }</a></div></div> : ""}
+              <div className="flex-row space-between"><div>Wo</div><div><a href={ location.link } target="_blank">{ location.name }</a></div></div>
+              <div className="flex-row space-between"><div>Wann</div><div>{ date.substring(0,10) }<br/>{ date.substring(10) }</div></div>
+            </div>
+          </div>
+          <div className="flex-column start-end full-width">
             <GatsbyImage
+              className=""
               image={ image }
               alt="alt2"
               style={{
-                width: "100%",
-                margin: "2vh 0"
+                margin: "0 0 8% 8%",
+                aspectRatio: "0.6/ 0.5"
               }}
             />
-            <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: content }}></div>
-            {/* <PostContent content={content} /> */}
-            <br /><br />
-            <div>Lesen Sie den Artikel auf <a href={ eventlink } target="_blank">{ eventlink }</a></div>
           </div>
         </div>
       </div>
@@ -84,6 +90,7 @@ const TermineBlogPost = ({ data }) => {
         date={post.frontmatter.date}
         featuredImage={post.frontmatter.featuredimage}
         eventlink={post.frontmatter.eventlink}
+        location={post.frontmatter.location}
       />
     </Layout>
   );
@@ -104,7 +111,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date
+        date (formatString: "DD.MM.YYYY HH:mm")
         featuredimage {
           childImageSharp {
             gatsbyImageData(
@@ -113,7 +120,7 @@ export const pageQuery = graphql`
           }
         }
         eventlink
-        location{
+        location {
           name
           link
         }
