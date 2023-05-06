@@ -209,7 +209,7 @@
     cursor: pointer;
 }
 .invisible-button:hover {
-    color: var(--spd-red);
+    color: var(--spd-red) !important;
 }
 .plain-button {
     border: 1px solid lightgray;
