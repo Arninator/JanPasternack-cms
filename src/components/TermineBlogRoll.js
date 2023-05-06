@@ -121,11 +121,14 @@ class TermineBlogRollTemplate extends React.Component {
                   <header className="flex-column flex-center">
                     {post.frontmatter.featuredimage ? (
                       <div 
-                        className="flex-row flex-center"
+                        className="flex-column flex-center"
                         style={{
                           marginBottom: "1vh",
                         }}
                       >
+                        <p className="subtitle is-size-5 is-block" style={{ alignSelf: "flex-start"}}>
+                          {post.frontmatter.date}
+                        </p>
                         <GatsbyImage
                           image={ getImage(post.frontmatter.featuredimage) }
                           style={{
@@ -140,20 +143,13 @@ class TermineBlogRollTemplate extends React.Component {
                         width: "100%"
                       }}
                     >
-                      {post.frontmatter.title}
-                          <span></span>
-                          <span className="subtitle is-size-5 is-block">
-                            {post.frontmatter.date}
-                          </span>
-                      </p>
+                      {post.frontmatter.title}                          
+                    </p>
                   </header>
-                  <p className="flex-column center">
+                  <p className="flex-column" style={{ fontWeight: "400" }}>
                     { post.excerpt }
                     <br />
                     <br />
-                    {/* <span href={post.frontmatter.location.link}>
-                      {post.frontmatter.location.name}
-                    </span> */}
                     <br />
                   </p>
                   <span
@@ -234,6 +230,10 @@ export default function TermineBlogRoll() {
                     }
                   }
                   eventlink
+                  location{
+                    name
+                    link
+                  }
                 }
               }
             }
