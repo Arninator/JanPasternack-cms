@@ -114,52 +114,59 @@ class TermineBlogRollTemplate extends React.Component {
               key={post.id}
             >
               <article
-                className={`blog-list-item tile is-child notification kachel ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <div style={{ fontWeight: "400" }}>{ post.frontmatter.title }<br /><br /><br /></div>
-                <header className="flex-column flex-center">
-                  <p 
-                    className="post-meta blog-title"
-                    style={{ 
-                      fontWeight: "600",
-                      fontSize: "24px"
-                    }}
-                  >
-                    { post.frontmatter.title }
-                  </p>
-                  { post.frontmatter.featuredimage ? (
-                    <div
-                      className=""
-                      style={{ 
-                        margin: "0 0 2vh 0",
+                  className={`blog-list-item tile is-child notification kachel ${
+                    post.frontmatter.featuredpost ? 'is-featured' : ''
+                  }`}
+                >
+                  <header className="flex-column flex-center">
+                    {post.frontmatter.featuredimage ? (
+                      <div 
+                        className="flex-row flex-center"
+                        style={{
+                          marginBottom: "1vh",
+                        }}
+                      >
+                        <GatsbyImage
+                          image={ getImage(post.frontmatter.featuredimage) }
+                          style={{
+                            aspectRatio: "1 / 0.5"
+                          }}
+                        />
+                      </div>
+                    ) : null}
+                    <p 
+                      className="post-meta blog-title"
+                      style={{
+                        width: "100%"
                       }}
                     >
-                      <GatsbyImage
-                        image={ getImage(post.frontmatter.featuredimage) }
-                        style={{
-                          width: "100%",
-                          aspectRatio: "1 / 0.5",
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p style={{ margin: "0vh", fontWeight: "400" }}>
-                    { post.frontmatter.title }
+                      {post.frontmatter.title}
+                          <span></span>
+                          <span className="subtitle is-size-5 is-block">
+                            {post.frontmatter.date}
+                          </span>
+                      </p>
+                  </header>
+                  <p className="flex-column center">
+                    { post.excerpt }
+                    <br />
+                    <br />
+                    {/* <span href={post.frontmatter.location.link}>
+                      {post.frontmatter.location.name}
+                    </span> */}
+                    <br />
                   </p>
-                </header>
-                <p style={{ fontWeight: "100"}} >
-                  { post.excerpt }
-                  <br />
-                  <br />
-                </p>
-                <div className="flex-row flex-center">
-                  <Link className="button" to={ post.fields.slug }>
-                    Weiterlesen &rarr;
-                  </Link>
-                </div>
-              </article>
+                  <span
+                    className="flex-row flex-center"
+                    style={{
+                      width: "100%"
+                    }}
+                  >
+                    <Link className="button" to={post.fields.slug}>
+                      Zeigen &rarr;
+                    </Link>
+                  </span>
+                </article>
             </div>
           ): (""))) : 
           <div 
@@ -218,7 +225,7 @@ export default function TermineBlogRoll() {
                 }
                 frontmatter {
                   title
-                  date
+                  date (formatString: "DD.MM.YYYY")
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
