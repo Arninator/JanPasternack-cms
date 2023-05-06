@@ -153,6 +153,10 @@
     justify-content: flex-end;
     align-items: center;
 }
+.start-end {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
 .centerEnd {
     justify-content: center;
     align-items: flex-end;
