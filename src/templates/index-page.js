@@ -38,10 +38,10 @@ export const IndexPageTemplate = ({
   // console.log("index-blurbs: " + intro.blurbs);
 
   return (
-    <div>
+    <div className="">
       <div
         id="cover"
-        className="full-width-image-container margin-top-0 flex column flexEnd"
+        className="full-width-image-container margin-top-0 flex-column flexEnd"
         style={{
           backgroundImage: 'url("../img/jan-cover.jpg")',
         }}
@@ -49,19 +49,9 @@ export const IndexPageTemplate = ({
       </div>      
       <section 
         className=""
-        style={{
-          // width: "100vw",
-          margin: "0 0 0 0"
-        }}
         >
-        <div
-          className=""
-        >
-          <div
-            className=""
-          >
-            <div className="columns">
-              <div className="column is-12">
+            <div className="">
+              <div className="column is-12" style={{ padding: "0"}}>
                 <div 
                   className="content"
                 >
@@ -72,7 +62,7 @@ export const IndexPageTemplate = ({
                       className="flex-row flex-center"
                       style={{
                         alignSelf: "flex-start",
-                        marginRight: "2vw",
+                        margin: "0 2vw",
                       }}
                     >
                       <GatsbyImage
@@ -124,7 +114,6 @@ export const IndexPageTemplate = ({
                         <br />
                       </h3>
                     </div>
-                    
                     <AktuellesBlogRoll />
                     <div className="column is-12 has-text-centered" style={{ marginTop: "3vh", }}>
                       <Link className="plain-button" to="/aktuelles">
@@ -190,8 +179,6 @@ export const IndexPageTemplate = ({
                 </div>
               </div>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   );
