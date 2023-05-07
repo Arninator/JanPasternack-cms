@@ -93,7 +93,7 @@ class TermineBlogRollTemplate extends React.Component {
 
     return (
       <div 
-        className={`columns ${ typeof window !== "undefined" && window.location.href.includes("termine") ? "is-multiline flex-column" : "flex-row" }`} 
+        className={`columns is-multiline ${ typeof window !== "undefined" && window.location.href.includes("termine") && window.innerWidth < 700 ? "flex-column" : "flex-row" }`} 
         style={{margin: "0% 2%"}}
       >
         {this.state.frequency < 4 ? (
