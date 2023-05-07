@@ -372,7 +372,7 @@ const Navbar = class extends React.Component {
                     className="flex row center"
                   >
                     <Link className="navbarItem ueberItem column" to="/ueber">
-                      Über mich
+                      Über&nbsp;mich
                     </Link>
                     <div
                       id="ueber-dropdown"
