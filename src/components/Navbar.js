@@ -242,19 +242,14 @@ const Navbar = class extends React.Component {
           }}
         >
           <div
-            className="flex column center"
+            className="flex-row column flex-center"
             style={{
               // width: "100vw",
             }}
           >
             <div 
-              className=""
+              className="flex-row space-between"
               style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "space-between",
-
-                // width: "100vw",
                 maxHeight: "4.8vh",
                 minHeight: "40px"
               }}
