@@ -33,7 +33,7 @@ class TermineBlogRollTemplate extends React.Component {
         });
       } else {
         this.setState({
-          columns: 11,
+          columns: 12,
           frequency: 1,
         });
       }
@@ -57,12 +57,12 @@ class TermineBlogRollTemplate extends React.Component {
     } else if (typeof window !== "undefined") {
       if ( window.innerWidth > 992) {
         this.setState({
-          columns: 3,
+          columns: 12,
           frequency: 3,
         });
       } else if ( window.innerWidth > 700 ) {
         this.setState({
-          columns: 7,
+          columns: 8,
           frequency: 2,
         });
       } else {
