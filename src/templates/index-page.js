@@ -50,7 +50,7 @@ export const IndexPageTemplate = ({
       <section 
         className=""
         style={{
-          width: "100vw",
+          // width: "100vw",
           margin: "0 0 0 0"
         }}
         >

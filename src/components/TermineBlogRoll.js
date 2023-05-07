@@ -57,7 +57,7 @@ class TermineBlogRollTemplate extends React.Component {
     } else if (typeof window !== "undefined") {
       if ( window.innerWidth > 992) {
         this.setState({
-          columns: 12,
+          columns: 4,
           frequency: 3,
         });
       } else if ( window.innerWidth > 700 ) {
