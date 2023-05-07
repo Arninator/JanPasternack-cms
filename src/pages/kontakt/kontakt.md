@@ -6,6 +6,8 @@ socialmedia:
     link: https://www.instagram.com/jan.pasternack/
   - name: Twitter
     link: https://twitter.com/jan_pasternack
+  - name: Facebook
+    link: https://www.facebook.com/people/Jan-Pasternack/100087765296791/
 ---
 ### Jan Pasternack
 
