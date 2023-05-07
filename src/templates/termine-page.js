@@ -25,6 +25,7 @@ export const TermineBlogPostTemplate = ({
   return (
     <section className="section greyBackground" style={{ minHeight: "95vh"}}>
       {helmet || ""}
+      { typeof window !== "undefined" && window.innerWidth > 700 ? (
       <div className="container content" style={{ marginTop: "5vh"}}>
         <div className="flex-row space-between whiteBackground" style={{ margin: "auto", padding: "5%"}}>
           <div className="flex-column space-between full-width">
@@ -54,7 +55,39 @@ export const TermineBlogPostTemplate = ({
             />
           </div>
         </div>
+      </div>) : (
+      <div className="container content" style={{ marginTop: "5vh"}}>
+        <div className="flex-row space-between whiteBackground" style={{ margin: "auto", padding: "5%"}}>
+          <div className="flex-column space-between full-width">
+            <div>
+              <p className="subtitle is-size-3">{ date.substring(0,10) }<br/></p>
+              <div className="flex-column start-end full-width">
+                <GatsbyImage
+                  className=""
+                  image={ image }
+                  alt="alt2"
+                  style={{
+                    margin: "0",
+                    aspectRatio: "0.6/ 0.5"
+                  }}
+                />
+            	</div>
+              <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{ title }<br/></h1>
+              <div className='finerInnerHTML' dangerouslySetInnerHTML={{ __html: content }}></div>
+              <br/>
+              <br/>
+              <br/>
+            </div>
+            <div>
+              {eventlink ? <div className="flex-row space-between"><div>Link</div><div><a href={ eventlink } target="_blank">{ eventlink }</a></div></div> : ""}
+              <div className="flex-row space-between"><div>Wo</div><div><a href={ location.link } target="_blank">{ location.name }</a></div></div>
+              <div className="flex-row space-between"><div>Wann</div><div>{ date.substring(0,10) }<br/>{ date.substring(10) }</div></div>
+            </div>
+          </div>
+          
+        </div>
       </div>
+      )}
     </section>
   );
 };

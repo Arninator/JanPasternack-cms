@@ -28,12 +28,12 @@ class TermineBlogRollTemplate extends React.Component {
         });
       } else if ( window.innerWidth > 700 ) {
         this.setState({
-          columns: 7,
+          columns: 6,
           frequency: 2,
         });
       } else {
         this.setState({
-          columns: 10,
+          columns: 11,
           frequency: 1,
         });
       }
@@ -67,7 +67,7 @@ class TermineBlogRollTemplate extends React.Component {
         });
       } else {
         this.setState({
-          columns: 10,
+          columns: 12,
           frequency: 1,
         });
       }
@@ -92,13 +92,14 @@ class TermineBlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className={`columns ${ typeof window !== "undefined" && window.location.href.includes("termine") ? "is-multiline" : "" } flex-row`}>
         {this.state.frequency < 4 ? (
           <div
             className="flex-column flex-center invisible-button"
             style={{
               fontSize: "3vh",
               fontWeight: "400",
+              height: "100%",
               color: `${ this.state.currentIndex == 0 ? "lightgrey" : "black"}`,
             }}
             onClick={ () => this.prev() }
