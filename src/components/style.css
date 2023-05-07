@@ -177,6 +177,7 @@
 #cover {
     background-position: 0% 50%;
     height: 80vh;
+    max-width: 170vw !important;
 }
 #kontakt-cover {
     background-position: 0% 100%;
