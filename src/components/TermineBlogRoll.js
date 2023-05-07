@@ -92,7 +92,10 @@ class TermineBlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className={`columns ${ typeof window !== "undefined" && window.location.href.includes("termine") ? "is-multiline" : "" } flex-row`} style={{margin: "0% 2%"}}>
+      <div 
+        className={`columns ${ typeof window !== "undefined" && window.location.href.includes("termine") ? "is-multiline flex-column" : "flex-row" }`} 
+        style={{margin: "0% 2%"}}
+      >
         {this.state.frequency < 4 ? (
           <button
             className="flex-column flex-center invisible-button"
@@ -114,6 +117,9 @@ class TermineBlogRollTemplate extends React.Component {
             <div 
               className={`is-parent column is-${ this.state.columns }`} 
               key={post.id}
+              style={{
+                width: "100% !important"
+              }}
             >
               <article
                   className={`blog-list-item tile is-child notification kachel ${
