@@ -35,28 +35,28 @@ const Footer = class extends React.Component {
               <div className="flex row center">
                 <a 
                   className="footer-item greyBackground" 
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/jan.pasternack/"
                   target="_blank"
                 >
                   <i className="fa fa-instagram greyBackground"></i>
                   </a>
                 <a 
                   className="footer-item" 
-                  href="https://www.twitter.com"
+                  href="https://twitter.com/jan_pasternack"
                   target="_blank"
                 >
                   <i className="fa fa-twitter"></i>
                 </a>
                 <a 
                   className="footer-item" 
-                  href=""
+                  href="https://www.facebook.com/people/Jan-Pasternack/100087765296791/"
                   target="_blank"
                 >
                   <i className="fa fa-facebook"></i>
                 </a>
                 <a 
                   className="footer-item" 
-                  href=""
+                  href="https://www.linkedin.com"
                   target="_blank"
                 >
                   <i className="fa fa-linkedin"></i>
