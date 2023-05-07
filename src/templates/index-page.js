@@ -152,11 +152,11 @@ export const IndexPageTemplate = ({
                         className="twitter-div"
                       >
                         <TwitterTimelineEmbed
-                        sourceType="profile"
-                        screenName="jan_pasternack"
-                        tweetLimit="1"
-                        // options={{}}
-                      />
+                          sourceType="profile"
+                          screenName="jan_pasternack"
+                          tweetLimit="1"
+                          // options={{}}
+                        />
                       </div>
                     </div>
                   </div>
