@@ -12,7 +12,7 @@ class TermineBlogRollTemplate extends React.Component {
     super(props);
 
     this.state = {
-      columns: 3,
+      columns: 12,
       frequency: 4,
       currentIndex: 0,
     };
@@ -92,20 +92,21 @@ class TermineBlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className={`columns ${ typeof window !== "undefined" && window.location.href.includes("termine") ? "is-multiline" : "" } flex-row`}>
+      <div className={`columns ${ typeof window !== "undefined" && window.location.href.includes("termine") ? "is-multiline" : "" } flex-row`} style={{margin: "0% 2%"}}>
         {this.state.frequency < 4 ? (
-          <div
+          <button
             className="flex-column flex-center invisible-button"
             style={{
               fontSize: "3vh",
-              fontWeight: "400",
+              fontWeight: "600",
               height: "100%",
               color: `${ this.state.currentIndex == 0 ? "lightgrey" : "black"}`,
+              alignSelf: "center",
             }}
             onClick={ () => this.prev() }
           >
             &lt;
-          </div>
+          </button>
         ) : ""}
         {posts.length > 0 ?
           posts.map(({ node: post }, index) => ( 
@@ -176,17 +177,18 @@ class TermineBlogRollTemplate extends React.Component {
             Aktuell stehen keine Termine an...
           </div>}
           {this.state.frequency < 4 ? (
-          <div
+          <button
             className="flex-column flex-center invisible-button"
             style={{
               fontSize: "3vh",
-              fontWeight: "400",
+              fontWeight: "600",
               color: `${ this.state.currentIndex == posts.length - this.state.frequency ? "lightgrey" : "black"}`,
+              alignSelf: "center",
             }}
             onClick={ () => this.next( posts.length ) }
           >
             &gt;
-          </div>
+          </button>
         ) : ""}
       </div>
     )
