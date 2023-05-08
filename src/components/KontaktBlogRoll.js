@@ -21,30 +21,31 @@ class KontaktBlogRollTemplate extends React.Component {
                 {/* {console.log(post.frontmatter.socialmedia)} */}
                 <div className="finerInnerHTML largerInnerHTML" dangerouslySetInnerHTML={{__html: post.html}}></div>
                 <div
-                  className="flex-row"
+                  id="social-media-container"
+                  className="flex-row space-around full-width"
                   style={{
-                    marginTop: "2vh"
+                    margin: "15% 0",
+                    alignItems: "center",
                   }}
                 >
                   { post.frontmatter.socialmedia.map(media => (
-                    <div
-                      className='flex-row flex-center'
+                    <a 
+                      className="footer-item flex-column flex-center" 
+                      href={ media.link }
+                      target="_blank"
                       style={{
+                        margin: "0 2vw",
+                        fontSize: "3vh",
+                        color: "white",
+                        width: "4vh",
+                        height: "4vh",
+                        backgroundColor: "rgb(227, 0, 15)",
+                        borderRadius: "50%"
                       }}
-                    >
+                    >                      
                       {console.log(post.frontmatter.socialmedia.length)}
-                      <a 
-                        className="footer-item" 
-                        href={ media.link }
-                        target="_blank"
-                        style={{
-                          margin: "0 2vw",
-                          fontSize: "10vh",
-                        }}
-                      >
-                        <i className={`fa fa-${media.name.toLowerCase()}`}></i>
-                      </a>
-                    </div>
+                      <i className={`fa fa-${media.name.toLowerCase()}`}></i>
+                    </a>
                   ))}
                 </div>
               </article>
