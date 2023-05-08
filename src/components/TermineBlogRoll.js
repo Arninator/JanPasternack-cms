@@ -23,12 +23,12 @@ class TermineBlogRollTemplate extends React.Component {
     if (typeof window !== "undefined" && window.location.href.includes("news")) {
       if ( window.innerWidth > 992) {
         this.setState({
-          columns: 3,
+          columns: 4,
           frequency: 3,
         });
       } else if ( window.innerWidth > 700 ) {
         this.setState({
-          columns: 6,
+          columns: 8,
           frequency: 2,
         });
       } else {
