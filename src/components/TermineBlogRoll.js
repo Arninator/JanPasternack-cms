@@ -91,14 +91,22 @@ class TermineBlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    var dateString = yyyy + "." + mm + "." + dd
+
+    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date >= dateString )) : "" ;
+
     return (
       <div 
-        className={`columns ${ typeof window !== "undefined" && window.location.href.includes("termine") && window.innerWidth < 700 ? "is-multiline flex-column" : "flex-row" }`} 
+        className={`columns full-width ${ typeof window !== "undefined" && window.location.href.includes("termine") && window.innerWidth < 700 ? "is-multiline flex-column" : "flex-row space-between" }`} 
         style={{margin: "0% 2%"}}
       >
         {this.state.frequency < 4 ? (
           <button
-            className="flex-column flex-center invisible-button"
+            className="invisible-button"
             style={{
               fontSize: "3vh",
               fontWeight: "600",
@@ -111,16 +119,22 @@ class TermineBlogRollTemplate extends React.Component {
             &lt;
           </button>
         ) : ""}
-        {posts.length > 0 ?
-          posts.map(({ node: post }, index) => ( 
+        <div 
+          className={`full-width ${ typeof window !== "undefined" && window.location.href.includes("termine") && window.innerWidth < 700 ? "flex-column" : "flex-row" } startStart`} 
+          style={{ flexWrap: "wrap" }}
+        >
+        {postList.length > 0 ?
+          postList.map(({ node: post }, index) => (
             index < ( this.state.currentIndex + this.state.frequency ) && index >= ( this.state.currentIndex ) ? (
             <div 
               className={`is-parent column is-${ this.state.columns }`} 
               key={post.id}
               style={{
-                width: "100% !important"
+                // alignSelf: "flex-start"
               }}
             >
+              {console.log("currIndex: " + this.state.currentIndex + " filterlength: " + posts.length)}
+              { console.log("ID: " + index) }
               <article
                   className={`blog-list-item tile is-child notification kachel ${
                     post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -135,7 +149,7 @@ class TermineBlogRollTemplate extends React.Component {
                         }}
                       >
                         <p className="subtitle is-size-5 is-block" style={{ alignSelf: "flex-start"}}>
-                          {post.frontmatter.date}
+                          { (post.frontmatter.date.substring(8) + "." + post.frontmatter.date.substring(5,7) + "." + post.frontmatter.date.substring(0,4)) }
                         </p>
                         <GatsbyImage
                           image={ getImage(post.frontmatter.featuredimage) }
@@ -182,20 +196,19 @@ class TermineBlogRollTemplate extends React.Component {
           >
             Aktuell stehen keine Termine an...
           </div>}
-          {this.state.frequency < 4 ? (
-          <button
-            className="flex-column flex-center invisible-button"
-            style={{
-              fontSize: "3vh",
-              fontWeight: "600",
-              color: `${ this.state.currentIndex == posts.length - this.state.frequency ? "lightgrey" : "black"}`,
-              alignSelf: "center",
-            }}
-            onClick={ () => this.next( posts.length ) }
-          >
-            &gt;
-          </button>
-        ) : ""}
+        </div>
+        {this.state.frequency < 4 ? (
+        <button
+          className="invisible-button"
+          style={{
+            fontSize: "3vh",
+            fontWeight: "600",
+            color: `${ this.state.currentIndex == postList.length - this.state.frequency ? "lightgrey" : "black"}`,
+           }}
+          onClick={ () => this.next( postList.length ) }
+        >
+          &gt;
+        </button>) : ""}
       </div>
     )
   }
@@ -230,7 +243,7 @@ export default function TermineBlogRoll() {
                 }
                 frontmatter {
                   title
-                  date (formatString: "DD.MM.YYYY")
+                  date (formatString: "YYYY.MM.DD")
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
