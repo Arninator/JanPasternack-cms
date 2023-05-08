@@ -30,13 +30,13 @@ class KontaktBlogRollTemplate extends React.Component {
                   }}
                 >
                   { post.frontmatter.socialmedia.map(media => (
-                    <div className="flex-row endEnd" style={{ fontWeight: "600", fontSize: "2vh"}}>
+                    <div className="flex-row flex-center" style={{ fontWeight: "600", fontSize: "2vh"}}>
                       <a 
                         className="footer-item flex-column flex-center" 
                         href={ media.link }
                         target="_blank"
                         style={{
-                          margin: "0 1vw",
+                          margin: "1vw",
                           fontSize: "3vh",
                           color: "white",
                           width: "4vh",

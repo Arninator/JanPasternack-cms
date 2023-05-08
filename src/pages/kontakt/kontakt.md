@@ -8,6 +8,8 @@ socialmedia:
     link: https://twitter.com/jan_pasternack
   - name: Facebook
     link: https://www.facebook.com/people/Jan-Pasternack/100087765296791/
+  - name: Spotify
+    link: https://open.spotify.com/show/4MNRVmUE0Sx552xTez27Fn
 ---
 ### Jan Pasternack
 
