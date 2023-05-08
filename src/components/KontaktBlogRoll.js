@@ -28,16 +28,18 @@ class KontaktBlogRollTemplate extends React.Component {
                 >
                   { post.frontmatter.socialmedia.map(media => (
                     <div
-                      className='flex-row'
+                      className='flex-row flex-center'
+                      style={{
+                      }}
                     >
-                      {/* <p>Besuche mich auf { media.name }:&nbsp;</p> */}
+                      {console.log(post.frontmatter.socialmedia.length)}
                       <a 
                         className="footer-item" 
                         href={ media.link }
                         target="_blank"
                         style={{
                           margin: "0 2vw",
-                          fontSize: "5vh",
+                          fontSize: "10vh",
                         }}
                       >
                         <i className={`fa fa-${media.name.toLowerCase()}`}></i>
