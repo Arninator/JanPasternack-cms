@@ -26,26 +26,30 @@ class KontaktBlogRollTemplate extends React.Component {
                   style={{
                     margin: "15% 0",
                     alignItems: "center",
+                    flexWrap: "wrap"
                   }}
                 >
                   { post.frontmatter.socialmedia.map(media => (
-                    <a 
-                      className="footer-item flex-column flex-center" 
-                      href={ media.link }
-                      target="_blank"
-                      style={{
-                        margin: "0 2vw",
-                        fontSize: "3vh",
-                        color: "white",
-                        width: "4vh",
-                        height: "4vh",
-                        backgroundColor: "rgb(227, 0, 15)",
-                        borderRadius: "50%"
-                      }}
-                    >                      
-                      {console.log(post.frontmatter.socialmedia.length)}
-                      <i className={`fa fa-${media.name.toLowerCase()}`}></i>
-                    </a>
+                    <div className="flex-row endEnd" style={{ fontWeight: "600", fontSize: "2vh"}}>
+                      <a 
+                        className="footer-item flex-column flex-center" 
+                        href={ media.link }
+                        target="_blank"
+                        style={{
+                          margin: "0 1vw",
+                          fontSize: "3vh",
+                          color: "white",
+                          width: "4vh",
+                          height: "4vh",
+                          backgroundColor: "rgb(227, 0, 15)",
+                          borderRadius: "50%"
+                        }}
+                      >                      
+                        {console.log(post.frontmatter.socialmedia.length)}
+                        <i className={`fa fa-${media.name.toLowerCase()}`}></i>
+                      </a>
+                      Jan auf { media.name }
+                    </div>
                   ))}
                 </div>
               </article>
