@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import Layout from "../../components/Layout";
 import VorstellungBlogRoll from "../../components/VorstellungBlogRoll";
+import VorstellungBlogRollExcerpt from "../../components/VorstellungBlogRollExcerpt";
 import LebenslaufBlogRoll from "../../components/LebenslaufBlogRoll";
 import LebenslaufBlogRollExcerpt from "../../components/LebenslaufBlogRollExcerpt";
 
@@ -50,7 +51,7 @@ export default class UeberIndexPage extends React.Component {
             </div>
             <div className="column is-12 has-text-centered">
               <Link className="plain-button" to="/vorstellung">
-                Mehr... &rarr;
+                Weiterlesen... &rarr;
               </Link>
             </div>
           </div>
