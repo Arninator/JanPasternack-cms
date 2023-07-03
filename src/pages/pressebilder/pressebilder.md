@@ -1,6 +1,6 @@
 ---
 templateKey: pressebilder-page
-title: Pressebilder Neu
+title: Pressebilder
 intro:
   description: Pressebilder
   blurbs:
@@ -10,7 +10,7 @@ intro:
     - image: /img/20220504pj201.jpg
       alt: Bockenheimer Warte
       copyright: Peter Jülich
-    - image: /img/20220504pj151.jpg
-      alt: Jan ist kurz davor in die U-Bahn zu steigen
-      copyright: Jan Pasternack
+    - image: /img/pasternack_jan_spd_hessen_2023_gs_105_150srgb-2-3-.jpg
+      alt: Offizielles Kampagnenfoto
+      copyright: Götz Schleser
 ---
