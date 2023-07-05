@@ -466,25 +466,25 @@ const Navbar = class extends React.Component {
                         display: "none"
                       }}
                     >
-                      <Link className="navbarItem wahlkreisItem column endEnd" to="/bockenheim">
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/wahlkreis/bockenheim">
                         Bockenheim
                       </Link>
-                      <Link className="navbarItem wahlkreisItem column endEnd" to="/hausen">
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/wahlkreis/hausen">
                         Hausen
                       </Link>
-                      <Link className="navbarItem wahlkreisItem column endEnd" to="/heddernheim">
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/wahlkreis/heddernheim">
                         Heddernheim
                       </Link>
-                      <Link className="navbarItem wahlkreisItem column endEnd" to="/niederursel">
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/wahlkreis/niederursel">
                         Niederursel
                       </Link>
-                      <Link className="navbarItem wahlkreisItem column endEnd" to="/nordweststadt">
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/wahlkreis/nordweststadt">
                         Nordweststadt
                       </Link>
-                      <Link className="navbarItem wahlkreisItem column endEnd" to="/praunheim">
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/wahlkreis/praunheim">
                         Praunheim
                       </Link>
-                      <Link className="navbarItem wahlkreisItem column endEnd" to="/rödelheim">
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/wahlkreis/rödelheim">
                         Rödelheim
                       </Link>
                     </div>
