@@ -1,7 +1,7 @@
 ---
 templateKey: aktuelles-page
 info: ""
-title: Neues hessisches „Versammlungsfreiheit- gesetz“ schränkt
+title: Neues hessisches „Versammlungsfreiheit-gesetz“ schränkt
   Versammlungsfreiheit in Hessen ein
 subtitle: ""
 featuredimage: /img/microsoftteams-image2.jpg
