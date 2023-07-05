@@ -320,7 +320,7 @@ const Navbar = class extends React.Component {
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Lebenslauf</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Podcast</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Themen</Link>
-                <Link className="navbarItem burgerItem flex-row endEnd" to="/frankfurt">Wahlkreis</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/wahlkreis">Wahlkreis</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/kontakt">Kontakt</Link>
               </div>
 
