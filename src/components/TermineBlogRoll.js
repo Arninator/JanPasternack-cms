@@ -78,13 +78,13 @@ class TermineBlogRollTemplate extends React.Component {
     this.setState({
       currentIndex: this.state.currentIndex > 0 ? this.state.currentIndex - 1 : 0,
     })
-    console.log(this.state);
+    // console.log(this.state);
   }
   next( max ) {
     this.setState({
       currentIndex: this.state.currentIndex < max - this.state.frequency ? this.state.currentIndex + 1 : max - this.state.frequency,
     })
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   render() {
@@ -133,8 +133,8 @@ class TermineBlogRollTemplate extends React.Component {
                 // alignSelf: "flex-start"
               }}
             >
-              {console.log("currIndex: " + this.state.currentIndex + " filterlength: " + posts.length)}
-              { console.log("ID: " + index) }
+              {/* {console.log("currIndex: " + this.state.currentIndex + " filterlength: " + posts.length)}
+              { console.log("ID: " + index) } */}
               <article
                   className={`blog-list-item tile is-child notification kachel ${
                     post.frontmatter.featuredpost ? 'is-featured' : ''
