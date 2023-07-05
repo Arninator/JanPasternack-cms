@@ -152,7 +152,6 @@ export const pageQuery = graphql`
             )
           }
         }
-        eventlink
         location {
           name
           link
