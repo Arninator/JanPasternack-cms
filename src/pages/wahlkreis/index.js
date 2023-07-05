@@ -20,7 +20,7 @@ export default class WahlkreisIndexPage extends React.Component {
         <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: `url('/img/20220504pj151.jpg')`,
+            backgroundImage: `url('img/IMG_20201102_184803.jpg')`,
             backgroundPosition: "0% 50%",
             height: "66vh"
           }}
