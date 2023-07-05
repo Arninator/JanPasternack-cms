@@ -30,7 +30,7 @@ class WahlkreisBlogRollTemplate extends React.Component {
                 </div>
                 
               </article>
-              <div className="flex-row flex-center" style={{ marginTop: "2rem"}}>
+              <div className="flex-row flex-center" style={{ margin: "2rem"}}>
                 <Link className="plain-button" to={ post.fields.slug }>
                   Weiterlesen &rarr;
                 </Link>
