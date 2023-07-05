@@ -48,7 +48,7 @@ export default class NewsIndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section greyBackground">
+        {/* <section className="section greyBackground">
           <div className="container">
             <h2 className="has-text-weight-semibold is-size-2 flex-row flex-center">Presse</h2>
             <div className="content">
@@ -60,8 +60,8 @@ export default class NewsIndexPage extends React.Component {
               </Link>
             </div>
           </div>
-        </section>
-        <section className="section whiteBackground">
+        </section> */}
+        <section className="section greyBackground">
           <div className="container">
           <h2 className="has-text-weight-semibold is-size-2 flex-row flex-center">Nächste Termine</h2>
             <div className="content">
