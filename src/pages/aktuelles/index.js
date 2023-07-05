@@ -21,7 +21,7 @@ export default class AktuellesBlogIndexPage extends React.Component {
               marginTop: "10%"
             }}
           >
-            Berichte & Neuigkeiten
+            Presse & Aktuelles
           </h1>
         </div>
         <section className="section">
