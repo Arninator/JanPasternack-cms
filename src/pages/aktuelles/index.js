@@ -18,7 +18,7 @@ export default class AktuellesBlogIndexPage extends React.Component {
           <h1 
             className="red-header"
             style={{
-              marginTop: "10%"
+              marginTop: "10%",
             }}
           >
             Presse & Aktuelles
@@ -26,18 +26,19 @@ export default class AktuellesBlogIndexPage extends React.Component {
         </div>
         <section className="section">
           <div className="container">
-            <h2
-              className="has-text-weight-bold is-size-4 flex"
+            <h1
+              className="is-size-3 flex"
               style={{
                 // boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
                 // backgroundColor: "transparent",
                 color: "black",
                 padding: "1rem",
-                marginBottom: "8vh"
+                marginBottom: "8vh",
+                fontWeight: "100"
               }}
             >
               Informationen über aktuelle Geschehnisse und Termine in Frankfurt
-            </h2>
+            </h1>
             <div className="content">
               <AktuellesBlogRoll />
             </div>
