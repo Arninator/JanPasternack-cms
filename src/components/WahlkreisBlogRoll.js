@@ -17,16 +17,24 @@ class WahlkreisBlogRollTemplate extends React.Component {
             <div className="" key={post.id}>
               <article>
 
-                <h1 className="flex-row flex-center">{ post.frontmatter.title }</h1>
+                <h1 className="is-flex is-flex-row" style={{ fontSize: "3rem", marginBottom: "2rem" }}>{ post.frontmatter.title }</h1>
 
                 <div 
                   className="finerInnerHTML" 
                   // dangerouslySetInnerHTML={{__html: post.excerpt}}
+                  style={{
+                    fontWeight: "400"
+                  }}
                 >
                   {post.excerpt}
                 </div>
                 
               </article>
+              <div className="flex-row flex-center" style={{ marginTop: "2rem"}}>
+                <Link className="plain-button" to={ post.fields.slug }>
+                  Weiterlesen &rarr;
+                </Link>
+              </div>
             </div>
           ))}
       </div>
@@ -56,7 +64,7 @@ export default function WahlkreisBlogRoll() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 400)
+                excerpt(pruneLength: 500)
                 html
                 id
                 fields {
