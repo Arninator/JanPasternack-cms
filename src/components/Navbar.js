@@ -81,6 +81,19 @@ const Navbar = class extends React.Component {
         "display": "none"
       });
     });
+    $("#themen-link").hover( function() {
+      $("#themen-dropdown").css({
+        "position": "absolute",
+        "display": "block",
+        "top": "6vh",
+        "left": ($(this).offset().left + ($(this).width() / 2)) - ($("#themen-dropdown").width() / 2.),
+      });
+      // console.log($(this).offset().top + " " + $(this).offset().left);
+    }, function() {
+      $("#themen-dropdown").css({
+        "display": "none"
+      });
+    });
 
     /* change color, when reload and scrolled down */
     if ( document.documentElement.scrollTop > 0 ) {
@@ -304,8 +317,10 @@ const Navbar = class extends React.Component {
               >
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/">Home</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/news">News</Link>
-                <Link className="navbarItem burgerItem flex-row endEnd" to="/ueber">Über&nbsp;mich</Link>
-                <Link className="navbarItem burgerItem flex-row endEnd" to="/frankfurt">Frankfurt</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Lebenslauf</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Podcast</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Themen</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/frankfurt">Wahlkreis</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/kontakt">Kontakt</Link>
               </div>
 
@@ -351,11 +366,11 @@ const Navbar = class extends React.Component {
                       }}
                     >
                       <Link className="navbarItem newsItem column startStart" to="/aktuelles">
-                        Aktuelles
+                        Aktuelles / Presse
                       </Link>
-                      <Link className="navbarItem newsItem column startStart" to="/presse">
+                      {/* <Link className="navbarItem newsItem column startStart" to="/presse">
                         Pressemitteilungen
-                      </Link>
+                      </Link> */}
                       <Link className="navbarItem newsItem column startStart" to="/termine">
                         Termine
                       </Link>
@@ -363,6 +378,50 @@ const Navbar = class extends React.Component {
                   </div>
 
                   <div
+                    id="podcast-link"
+                    className="flex row center"
+                  >
+                    <Link className="navbarItem newsItem column" to="/podcast">
+                      Podcast
+                    </Link>
+                  </div>
+
+                  <div
+                    id="lebenslauf-link"
+                    className="flex row center"
+                  >
+                    <Link className="navbarItem newsItem column" to="/lebenslauf">
+                      Lebenslauf
+                    </Link>
+                  </div>
+
+                  <div
+                    id="themen-link"
+                    className="flex row center"
+                  >
+                    <Link className="navbarItem themenItem column" to="/themen">
+                      Meine&nbsp;Themen
+                    </Link>
+                    <div
+                      id="themen-dropdown"
+                      className="dropdown"
+                      style={{
+                        display: "none"
+                      }}
+                    >
+                      <Link className="navbarItem themenItem flex column" to="/bildung">
+                        Bildung
+                      </Link>
+                      <Link className="navbarItem themenItem column endEnd" to="/sicherheit">
+                        Sicherheit
+                      </Link>
+                      <Link className="navbarItem themenItem column" to="/bezahlbar">
+                        bezahlbares&nbsp;Leben
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* <div
                     id="ueber-link"
                     className="flex row center"
                   >
@@ -378,18 +437,18 @@ const Navbar = class extends React.Component {
                     >
                       <Link className="navbarItem ueberItem flex column" to="/vorstellung">
                         Warum ich kandidiere
-                        {/* <span className="flex column flexStart" style={{margin: "0px"}}>Warum ich für den</span>
+                        <span className="flex column flexStart" style={{margin: "0px"}}>Warum ich für den</span>
                         <span className="flex column flexStart" style={{margin: "0px"}}>Hessischen Landtag</span>
-                        <span className="flex column flexStart" style={{margin: "0px"}}>kandidiere</span> */}
+                        <span className="flex column flexStart" style={{margin: "0px"}}>kandidiere</span>
                       </Link>
-                      {/* <Link className="navbarItem ueberItem column endEnd" to="/politik">
+                      <Link className="navbarItem ueberItem column endEnd" to="/politik">
                         Politik
-                      </Link> */}
+                      </Link>
                       <Link className="navbarItem ueberItem column" to="/lebenslauf">
                         Lebenslauf
                       </Link>
                     </div>
-                  </div>             
+                  </div>   */}
                   {/* <Link className="navbarItem flex row center" to="/blog">
                     Presse
                   </Link> */}
@@ -397,8 +456,8 @@ const Navbar = class extends React.Component {
                     id="frankfurt-link"
                     className="flex row center"
                   >
-                    <Link className="navbarItem frankfurtItem column endEnd" to="/frankfurt">
-                      Frankfurt
+                    <Link className="navbarItem frankfurtItem column endEnd" to="/wahlkreis">
+                      Wahlkreis
                     </Link>
                     <div
                       id="frankfurt-dropdown"
@@ -407,11 +466,26 @@ const Navbar = class extends React.Component {
                         display: "none"
                       }}
                     >
-                      <Link className="navbarItem frankfurtItem column endEnd" to="/wahlkreis">
-                        Wahlkreis
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/bockenheim">
+                        Bockenheim
                       </Link>
-                      <Link className="navbarItem frankfurtItem column endEnd" to="/ontour">
-                        Jan unterwegs
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/hausen">
+                        Hausen
+                      </Link>
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/heddernheim">
+                        Heddernheim
+                      </Link>
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/niederursel">
+                        Niederursel
+                      </Link>
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/nordweststadt">
+                        Nordweststadt
+                      </Link>
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/praunheim">
+                        Praunheim
+                      </Link>
+                      <Link className="navbarItem wahlkreisItem column endEnd" to="/rödelheim">
+                        Rödelheim
                       </Link>
                     </div>
                   </div>
