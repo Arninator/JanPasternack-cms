@@ -114,7 +114,7 @@ export const IndexPageTemplate = ({
                   >
                     <div className="tile flex-row flex-center">
                       <h3 className="has-text-weight-semibold is-size-1">
-                        <span>Aktuelles</span>
+                        <span>Aktuelles & Presse</span>
                         <br />
                         <br />
                       </h3>
@@ -127,18 +127,38 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="fragment tile flex-column whiteBackground fade-in"
+                    className="fragment tile is-flex is-flex-direction-row columns whiteBackground fade-in"
                   >
-                    <div className="tile flex-row flex-center">
-                      <h3 className="" style={{ fontWeight: "400", fontSize: "28px"}}>
-                        <span>Die aktuelle Folge des Podcastes <a href="https://open.spotify.com/show/4MNRVmUE0Sx552xTez27Fn?si=1cdc6a33cf1c4f64" target="_blank">Gude&nbsp;Zukunft!</a> von Hendrik Simon und mir:</span>
-                        <br />
-                        <br />
-                      </h3>
+                    <div className="column is-6">
+                      <div className="tile flex-column flex-center">
+                        <h3 className="has-text-weight-semibold is-size-1">Podcast</h3>
+                        <h4 className="" style={{ fontWeight: "400", fontSize: "28px"}}>
+                          <span>Die aktuelle Folge des Podcastes <a href="https://open.spotify.com/show/4MNRVmUE0Sx552xTez27Fn?si=1cdc6a33cf1c4f64" target="_blank">Gude&nbsp;Zukunft!</a> von Hendrik Simon und mir:</span>
+                          <br />
+                        </h4>
+                      </div>
+                      <iframe src="https://open.spotify.com/embed/show/4MNRVmUE0Sx552xTez27Fn?utm_source=generator" style={{ width:"100%", height:"352px", frameBorder:"0", allowfullscreen:"", allow:"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture", border:"none"}} loading="lazy"></iframe>                    
                     </div>
-                    <iframe src="https://open.spotify.com/embed/show/4MNRVmUE0Sx552xTez27Fn?utm_source=generator" style={{ width:"100%", height:"352px", frameBorder:"0", allowfullscreen:"", allow:"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture", border:"none"}} loading="lazy"></iframe>                    
+                    <div
+                      className="twitter-div column is-6"
+                    >
+                      <div className="tile flex-row flex-center">
+                        <h3 className="has-text-weight-semibold is-size-1" style={{ fontWeight: "400", fontSize: "28px"}}>
+                          <span>Jan auf Twitter: </span>
+                          <br />
+                          <br />
+                        </h3>
+                      </div>
+                      <TwitterTimelineEmbed
+                        sourceType="profile"
+                        screenName="jan_pasternack"
+                        tweetLimit="1"
+                        // options={{}}
+                      />
+                    </div>
                   </div>
-                  <div 
+                  
+                  {/* <div 
                     className="fragment tile flex-column greyBackground fade-in"
                     style={{
                       // borderTop: "1px solid black",
@@ -176,9 +196,9 @@ export const IndexPageTemplate = ({
                         />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div 
-                    className="fragment tile flex-column whiteBackground fade-in"
+                    className="fragment tile flex-column greyBackground fade-in"
                   >
                     <div className="tile flex-row flex-center">
                       <h3 className="has-text-weight-semibold is-size-1">
