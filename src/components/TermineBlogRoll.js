@@ -251,7 +251,6 @@ export default function TermineBlogRoll() {
                       )
                     }
                   }
-                  eventlink
                   location{
                     name
                     link
