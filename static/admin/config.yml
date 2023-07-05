@@ -115,24 +115,24 @@ collections:
   #     - { label: "Featured Image", name: "featuredimage", widget: image }
   #     - { label: "Body", name: "body", widget: "markdown" }
   #     - { label: "Tags", name: "tags", widget: "list" }
-  - name: "presseBlog"
-    label: "Presse"
-    folder: "src/pages/presse"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "presse-page",
-        }
-      - { label: "Info", name: "info", widget: "string", default: "Artikel vom ---- aus der ----."}
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "text" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Link", name: "link", widget: "string" }
+  # - name: "presseBlog"
+  #   label: "Presse"
+  #   folder: "src/pages/presse"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - {
+  #         label: "Template Key",
+  #         name: "templateKey",
+  #         widget: "hidden",
+  #         default: "presse-page",
+  #       }
+  #     - { label: "Info", name: "info", widget: "string", default: "Artikel vom ---- aus der ----."}
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Subtitle", name: "subtitle", widget: "text" }
+  #     - { label: "Featured Image", name: "featuredimage", widget: image }
+  #     - { label: "Body", name: "body", widget: "markdown" }
+  #     - { label: "Link", name: "link", widget: "string" }
   - name: "pressebilderBlog"
     label: "Pressebilder"
     folder: "src/pages/pressebilder"
@@ -193,20 +193,20 @@ collections:
               {label: "Link", name: "link", widget: string },
             ],
         }
-  - name: "vorstellungBlog"
-    label: "Warum ich kandidiere"
-    folder: "src/pages/vorstellung"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "vorstellung-page",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  # - name: "vorstellungBlog"
+  #   label: "Warum ich kandidiere"
+  #   folder: "src/pages/vorstellung"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - {
+  #         label: "Template Key",
+  #         name: "templateKey",
+  #         widget: "hidden",
+  #         default: "vorstellung-page",
+  #       }
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Body", name: "body", widget: "markdown" }
   - name: "wahlkreisBlog"
     label: "Wahlkreis"
     folder: "src/pages/wahlkreis"
