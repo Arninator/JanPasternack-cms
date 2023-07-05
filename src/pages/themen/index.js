@@ -29,7 +29,7 @@ export default class ThemenIndexPage extends React.Component {
               marginRight: "50%",
             }}
           >
-            Warum ich kandidiere...
+            Meine Themen
           </h1>
         </div>
         <section className="section">
