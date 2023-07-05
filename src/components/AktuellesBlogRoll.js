@@ -62,7 +62,7 @@ class AktuellesBlogRollTemplate extends React.Component {
                     { post.frontmatter.title }
                   </p>
                   { post.frontmatter.featuredimage ? (
-                    <div style={{ margin: "0 0 2vh 0" }}>
+                    <div style={{ margin: "0 0 2vh 0", minHeight: "25vh", maxHeight: "25vh", overflow: "hidden"}}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
