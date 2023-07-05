@@ -7,11 +7,9 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import PresseBlogRoll from "../components/PresseBlogRoll";
 import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
-import InstaBlogRoll from "../components/InstaBlogRoll";
 import TermineBlogRoll from "../components/TermineBlogRoll";
 
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
-import InstagramEmbed from 'react-instagram-embed';
 
 import jancover from "../img/jan-cover.jpg";
 import janUnterschrift from "../img/Unterschrift.jpg"
@@ -19,7 +17,7 @@ import janUnterschrift from "../img/Unterschrift.jpg"
 import "../components/style.css";
 
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-// import FullWidthImage from "../components/FullWidthImage";
+import FullWidthImage from "../components/FullWidthImage";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
@@ -32,18 +30,25 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  // const heroImage = getImage(image) || image;
+
+  const coverImage = getImage(image) || image;
   const helloImage = getImage(mainpitch.image) || mainpitch.image;
   const signatureImage = getImage(mainpitch.signature) || mainpitch.signature;
-  // console.log("index-blurbs: " + intro.blurbs);
 
   return (
     <div className="">
+      {/* <div
+        id="cover"
+        className="full-width-image-container margin-top-0"
+      > */}
+        {/* <FullWidthImage img={ coverImage } style={{ height: "75vh", top: "-5vh" }}/> */}
+      {/* </div> */}
+      
       <div
         id="cover"
         className="full-width-image-container margin-top-0 flex-column flexEnd"
         style={{
-          backgroundImage: 'url("../img/jan-cover.jpg")',
+          backgroundImage: "url(" + coverImage.images.fallback.src + ")",
         }}
       >
       </div>      
@@ -197,8 +202,9 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  // image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  // title: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  // image: PropTypes.object,
+  title: PropTypes.string,
   // heading: PropTypes.string,
   // subheading: PropTypes.string,
   mainpitch: PropTypes.object,
@@ -214,8 +220,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        // image={frontmatter.image}
-        // title={frontmatter.title}
+        image={frontmatter.image}
+        title={frontmatter.title}
         // heading={frontmatter.heading}
         // subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
@@ -240,6 +246,11 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
         mainpitch {
           title
           description
