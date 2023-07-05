@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import WahlkreisBlogRoll from "../../components/WahlkreisBlogRoll";
 
 export default class WahlkreisIndexPage extends React.Component {
+  
   componentDidMount() {
 
     if (document.location.href.includes("blog")) {
