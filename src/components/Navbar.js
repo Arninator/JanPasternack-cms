@@ -319,7 +319,7 @@ const Navbar = class extends React.Component {
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/news">News</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Lebenslauf</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Podcast</Link>
-                <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Themen</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/themen">Themen</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/wahlkreis">Wahlkreis</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/kontakt">Kontakt</Link>
               </div>
@@ -409,14 +409,14 @@ const Navbar = class extends React.Component {
                         display: "none"
                       }}
                     >
-                      <Link className="navbarItem themenItem flex column" to="/bildung">
+                      <Link className="navbarItem themenItem flex column" to="/themen/bildung">
                         Bildung
                       </Link>
-                      <Link className="navbarItem themenItem column endEnd" to="/sicherheit">
+                      <Link className="navbarItem themenItem column endEnd" to="/themen/sicherheit">
                         Sicherheit
                       </Link>
-                      <Link className="navbarItem themenItem column" to="/bezahlbar">
-                        bezahlbares&nbsp;Leben
+                      <Link className="navbarItem themenItem column" to="/themen/bezahlbares-leben">
+                        Bezahlbares&nbsp;Leben
                       </Link>
                     </div>
                   </div>
