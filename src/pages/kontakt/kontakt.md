@@ -21,4 +21,4 @@ SPD-Unterbezirk Frankfurt am Main\
 Fischerfeldstr. 7-11\
 60311 Frankfurt am Main\
 \
-E-Mail: [kontakt@janpasternack.de](mailto:vorname.name@spd.de)
+E-Mail: [kontakt@janpasternack.de](mailto:kontakt@janpasternack.de)
