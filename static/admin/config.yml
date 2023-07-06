@@ -13,6 +13,54 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "aktuellesBlog"
+    label: "Aktuelles"
+    folder: "src/pages/aktuelles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "aktuelles-page",
+        }
+      - { label: "Info", name: "info", widget: "string", required: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Link", name: "link", widget: "string", required: false }
+  - name: "datenschutzBlog"
+    label: "Datenschutz"
+    folder: "src/pages/datenschutz"
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "datenschutz-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Zuletzt aktualisiert:", name: "date", widget: "datetime" }
+  - name: "impressumBlog"
+    label: "Impressum"
+    folder: "src/pages/impressum"
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "impressum-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Zuletzt aktualisiert:", name: "date", widget: "datetime" }
   - name: "kontaktBlog"
     label: "Kontakt"
     folder: "src/pages/kontakt"
@@ -38,24 +86,6 @@ collections:
               { label: "Link", name: "link", widget: "string" },
             ]
         }
-  - name: "aktuellesBlog"
-    label: "Aktuelles"
-    folder: "src/pages/aktuelles"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "aktuelles-page",
-        }
-      - { label: "Info", name: "info", widget: "string", required: false }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Link", name: "link", widget: "string", required: false }
   - name: "lebenslaufBlog"
     label: "Lebenslauf"
     folder: "src/pages/lebenslauf"
@@ -133,6 +163,20 @@ collections:
   #     - { label: "Featured Image", name: "featuredimage", widget: image }
   #     - { label: "Body", name: "body", widget: "markdown" }
   #     - { label: "Link", name: "link", widget: "string" }
+  - name: "podcast"
+    label: "Podcast"
+    folder: "src/pages/podcast"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "podcast-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown"}
   - name: "pressebilderBlog"
     label: "Pressebilder"
     folder: "src/pages/pressebilder"
@@ -193,6 +237,36 @@ collections:
               {label: "Link", name: "link", widget: string },
             ],
         }
+  - name: "themenBlog"
+    label: "Themen"
+    folder: "src/pages/themen"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "themen-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "themeneinleitung"
+    label: "Themeneinleitung"
+    folder: "src/pages/themen"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "themeneinleitung-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      # - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
   # - name: "vorstellungBlog"
   #   label: "Warum ich kandidiere"
   #   folder: "src/pages/vorstellung"
@@ -220,66 +294,6 @@ collections:
           default: "wahlkreis-page",
         }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "impressumBlog"
-    label: "Impressum"
-    folder: "src/pages/impressum"
-    create: false
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "impressum-page",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Zuletzt aktualisiert:", name: "date", widget: "datetime" }
-  - name: "datenschutzBlog"
-    label: "Datenschutz"
-    folder: "src/pages/datenschutz"
-    create: false
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "datenschutz-page",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Zuletzt aktualisiert:", name: "date", widget: "datetime" }
-  - name: "themeneinleitung"
-    label: "Themeneinleitung"
-    folder: "src/pages/themen"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "themeneinleitung-page",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      # - { label: "Description", name: "description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "themenBlog"
-    label: "Themen"
-    folder: "src/pages/themen"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "themen-page",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "pages"
     label: "Startseite"
