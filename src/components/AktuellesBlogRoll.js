@@ -55,8 +55,8 @@ class AktuellesBlogRollTemplate extends React.Component {
                   <p 
                     className="post-meta blog-title"
                     style={{ 
-                      fontWeight: "600",
-                      fontSize: "24px"
+                      fontWeight: "400",
+                      fontSize: "1.5rem"
                     }}
                   >
                     { post.frontmatter.title }
