@@ -2,6 +2,7 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import ThemenBlogRoll from "../../components/ThemenBlogRoll";
+import Themeneinleitung from "../../components/Themeneinleitung";
 
 export default class ThemenIndexPage extends React.Component {
   componentDidMount() {
@@ -35,6 +36,7 @@ export default class ThemenIndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
+              <Themeneinleitung />
               <ThemenBlogRoll />
             </div>
           </div>
