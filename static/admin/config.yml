@@ -166,7 +166,7 @@ collections:
   - name: "podcast"
     label: "Podcast"
     folder: "src/pages/podcast"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - {

@@ -17,7 +17,7 @@ export const WahlkreisCoverTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  const image = getImage(image);
+  const image = getImage(image) || image;
 
   return (
     <section className="section">
