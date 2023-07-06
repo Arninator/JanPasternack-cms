@@ -12,12 +12,8 @@ import { GatsbyImage } from "gatsby-plugin-image";
 export const WahlkreisCoverTemplate = ({
   content,
   contentComponent,
-  info,
   title,
-  subtitle,
-  date,
-  link,
-  featuredImage,
+  image,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
@@ -59,7 +55,7 @@ WahlkreisCoverTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   // info: PropTypes.string,
-  // title: PropTypes.string,
+  title: PropTypes.string,
   // subtitle: PropTypes.string,
   image: PropTypes.object,
   // link: PropTypes.string,
@@ -84,7 +80,7 @@ const WahlkreisCover  = ({ data }) => {
           </Helmet>
         }
         // info={post.frontmatter.info}
-        // title={post.frontmatter.title}
+        title={post.frontmatter.title}
         // subtitle={post.frontmatter.subtitle}
         image={post.frontmatter.image}
         // link={post.frontmatter.link}

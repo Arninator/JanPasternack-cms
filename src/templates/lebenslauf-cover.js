@@ -11,12 +11,8 @@ import { GatsbyImage } from "gatsby-plugin-image";
 export const LebenslaufCoverTemplate = ({
   content,
   contentComponent,
-  info,
   title,
-  subtitle,
-  date,
-  link,
-  featuredImage,
+  image,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;

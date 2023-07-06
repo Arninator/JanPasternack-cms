@@ -12,12 +12,8 @@ import { GatsbyImage } from "gatsby-plugin-image";
 export const TermineCoverTemplate = ({
   content,
   contentComponent,
-  info,
   title,
-  subtitle,
-  date,
-  link,
-  featuredImage,
+  image,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
