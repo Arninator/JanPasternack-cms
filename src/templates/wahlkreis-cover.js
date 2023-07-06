@@ -17,7 +17,7 @@ export const WahlkreisCoverTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  const image = getImage(image) || image;
+  const img = getImage(image) || image;
 
   return (
     <section className="section">
@@ -33,7 +33,7 @@ export const WahlkreisCoverTemplate = ({
               { subtitle }
             </h3> */}
             <GatsbyImage
-              image={ image }
+              image={ img }
               alt="alt2"
               style={{
                 width: "100%",

@@ -16,7 +16,7 @@ export const LebenslaufCoverTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  const image = getImage(image);
+  const img = getImage(image);
 
   return (
     <section className="section">
@@ -32,7 +32,7 @@ export const LebenslaufCoverTemplate = ({
               { subtitle }
             </h3> */}
             <GatsbyImage
-              image={ image }
+              image={ img }
               alt="alt2"
               style={{
                 width: "100%",

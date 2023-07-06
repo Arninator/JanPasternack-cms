@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
@@ -17,7 +16,7 @@ export const AktuellesCoverTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  const image = getImage(image);
+  const img = getImage(image);
 
   return (
     <section className="section">
@@ -33,7 +32,7 @@ export const AktuellesCoverTemplate = ({
               { subtitle }
             </h3> */}
             <GatsbyImage
-              image={ image }
+              image={ img }
               alt="alt2"
               style={{
                 width: "100%",
