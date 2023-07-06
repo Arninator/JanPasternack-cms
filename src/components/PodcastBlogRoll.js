@@ -22,12 +22,12 @@ class PodcastBlogRollTemplate extends React.Component {
 
                 <div 
                   className="finerInnerHTML" 
-                  // dangerouslySetInnerHTML={{__html: post.excerpt}}
+                  dangerouslySetInnerHTML={{__html: post.excerpt}}
                   style={{
                     fontWeight: "400"
                   }}
                 >
-                  {post.excerpt}
+                  {/* {post.excerpt} */}
                 </div>
                 
               </article>
