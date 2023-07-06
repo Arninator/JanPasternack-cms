@@ -318,7 +318,7 @@ const Navbar = class extends React.Component {
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/">Home</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/news">News</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Lebenslauf</Link>
-                <Link className="navbarItem burgerItem flex-row endEnd" to="/lebenslauf">Podcast</Link>
+                <Link className="navbarItem burgerItem flex-row endEnd" to="/podcast">Podcast</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/themen">Themen</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/wahlkreis">Wahlkreis</Link>
                 <Link className="navbarItem burgerItem flex-row endEnd" to="/kontakt">Kontakt</Link>
