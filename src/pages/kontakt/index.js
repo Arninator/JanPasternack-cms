@@ -2,6 +2,7 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import KontaktBlogRoll from "../../components/KontaktBlogRoll";
+import KontaktCover from "../../components/KontaktCover";
 
 export default class KontaktIndexPage extends React.Component {
 
@@ -16,7 +17,8 @@ export default class KontaktIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
+        <KontaktCover />
+        {/* <div
           id="kontakt-cover"
           className="full-width-image-container margin-top-0"
           style={{
@@ -26,7 +28,7 @@ export default class KontaktIndexPage extends React.Component {
           <h1 className="red-header">
             Kontakt
           </h1>
-        </div>
+        </div> */}
         <section className="section">
           <div className="container">
             <div className="content">

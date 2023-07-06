@@ -2,13 +2,14 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import LebenslaufBlogRoll from "../../components/LebenslaufBlogRoll";
+import LebenslaufCover from "../../components/LebenslaufCover";
 
 export default class LebenslaufIndexPage extends React.Component {
 
   render() {
     return (
       <Layout>
-        <div
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/20220504pj201.jpg')`,
@@ -24,7 +25,8 @@ export default class LebenslaufIndexPage extends React.Component {
           >
             Lebenslauf
           </h1>
-        </div>
+        </div> */}
+        <LebenslaufCover />
         <section className="section">
           <div className="container">
             <div className="content">

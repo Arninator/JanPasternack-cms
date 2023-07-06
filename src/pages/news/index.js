@@ -3,8 +3,9 @@ import { Link } from "gatsby";
 
 import Layout from "../../components/Layout";
 import AktuellesBlogRoll from "../../components/AktuellesBlogRoll";
-import PresseBlogRoll from "../../components/PresseBlogRoll";
 import TermineBlogRoll from "../../components/TermineBlogRoll";
+import NewsCover from "../../components/NewsCover";
+
 
 export default class NewsIndexPage extends React.Component {
   componentDidMount() {
@@ -19,7 +20,8 @@ export default class NewsIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
+        <NewsCover />
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/20220504pj181.jpg')`,
@@ -34,7 +36,7 @@ export default class NewsIndexPage extends React.Component {
           >
             News
           </h1>
-        </div>
+        </div> */}
         <section className="section whiteBackground">
           <div className="container">
             <h2 className="has-text-weight-semibold is-size-2 flex-row flex-center">Aktuelles & Presse</h2><br /><br />

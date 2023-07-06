@@ -3,6 +3,7 @@ import * as React from "react";
 import Layout from "../../components/Layout";
 import ThemenBlogRoll from "../../components/ThemenBlogRoll";
 import Themeneinleitung from "../../components/Themeneinleitung";
+import ThemenCover from "../../components/ThemenCover";
 
 export default class ThemenIndexPage extends React.Component {
   componentDidMount() {
@@ -17,7 +18,7 @@ export default class ThemenIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/20220504pj209.jpg')`,
@@ -32,7 +33,8 @@ export default class ThemenIndexPage extends React.Component {
           >
             Meine Themen
           </h1>
-        </div>
+        </div> */}
+        <ThemenCover />
         <section className="section">
           <div className="container">
             <div className="content">

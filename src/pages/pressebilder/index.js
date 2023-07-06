@@ -2,6 +2,7 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import PressebilderBlogRoll from "../../components/PressebilderBlogRoll";
+import PressebilderCover from "../../components/PressebilderCover";
 
 export default class PressebilderIndexPage extends React.Component {
   componentDidMount() {
@@ -16,7 +17,7 @@ export default class PressebilderIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/20220504pj275.jpg')`,
@@ -31,7 +32,8 @@ export default class PressebilderIndexPage extends React.Component {
           >
             Pressebilder
           </h1>
-        </div>
+        </div> */}
+        <PressebilderCover />
         <section className="section">
           <div className="container">
             <div className="content">

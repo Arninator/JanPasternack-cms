@@ -2,13 +2,14 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import TermineBlogRoll from "../../components/TermineBlogRoll";
+import TermineCover from "../../components/TermineCover";
 
 export default class TermineIndexPage extends React.Component {
 
   render() {
     return (
       <Layout>
-        <div
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/IMG-20220507-WA0007.jpg')`,
@@ -23,7 +24,8 @@ export default class TermineIndexPage extends React.Component {
           >
             Termine
           </h1>
-        </div>
+        </div> */}
+        <TermineCover />
         <section className="section">
           <div className="container">
             <div className="content">

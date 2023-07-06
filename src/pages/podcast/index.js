@@ -2,38 +2,46 @@ import * as React from "react";
 import $ from "jquery";
 
 import Layout from "../../components/Layout";
-// import PodcastBlogRoll from "../../components/PodcastBlogRoll";
+import PodcastCover from "../../components/PodcastCover";
 
 export default class PodcastBlogIndexPage extends React.Component {
 
   componentDidMount() {
     let i = 1;
-    let allI = [];
-    let result = $.ajax({
-      type: 'HEAD',
-      url: `https://gudezukunft.podigee.io/${ i }-new-episode/embed?context=website`,
-      success: function() {
-          return true
-      },
-      error: function() {
-          return false
-      }
-    })
-    
-    console.log(result);
-    allI.map(( number ) => {
-      $("#podcast-episodes").append(`<iframe id="actPodcast" src="https://gudezukunft.podigee.io/${ number }-new-episode/embed?context=website" height="" width="100%"></iframe>`)
-    })
+    let allEpisodes = [];
+    let result = true;
+
+    // while (result && i < 50) {
+    //  var request = new XMLHttpRequest();  
+    //   // console.log(request)
+    //   request.open('GET', `https://gudezukunft.podigee.io/${ i }-new-episode/embed?context=website`, true);
+    //   request.onreadystatechange = function(){
+    //     // console.log("whatsGoingOn? " + request.status)
+    //     if (request.readyState === 4){
+    //         if (request.status === 200) {
+    //           console.log(i);
+    //           allEpisodes.push(i);
+    //           i++;
+    //         } else {
+    //           result = false;
+    //         }
+    //     } else {
+    //       result = false;
+    //     }
+    //   }
+    //   request.send();
+    // }
   }
 
   render() {
     return (
       <Layout>
-        <div
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/Twitter Header.jpg')`,
-            backgroundPosition: "0% 33%"
+            backgroundPosition: "0% 91%",
+            height: "66vh"
           }}
         >
           <h1 
@@ -44,7 +52,8 @@ export default class PodcastBlogIndexPage extends React.Component {
           >
             Podcast
           </h1>
-        </div>
+        </div> */}
+        <PodcastCover />
         <section className="section">
           <div className="container">
             <h2
@@ -76,22 +85,6 @@ export default class PodcastBlogIndexPage extends React.Component {
             <div id="podcast-episodes">
 
             </div>
-            {/* {  
-            $.ajax({
-                type: 'HEAD',
-                url: `https://gudezukunft.podigee.io/${ i }-new-episode/embed?context=website`,
-                success: function() {
-                    return (
-                        <iframe src={`https://gudezukunft.podigee.io/${ i }-new-episode/embed?context=website`} border="0" height="100" width="100%"></iframe>
-                    )
-                },
-                error: function() {
-                    return (
-                      ""
-                    )
-                }
-              })
-            } */}
           </div>
         </section>
       </Layout>

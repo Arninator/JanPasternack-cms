@@ -2,6 +2,7 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import WahlkreisBlogRoll from "../../components/WahlkreisBlogRoll";
+import WahlkreisCover from "../../components/WahlkreisCover";
 
 export default class WahlkreisIndexPage extends React.Component {
   
@@ -17,12 +18,12 @@ export default class WahlkreisIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('img/IMG_20201102_184803.jpg')`,
             backgroundPosition: "0% 50%",
-            height: "66vh"
+            // height: "66vh"
           }}
         >
           <h1
@@ -34,7 +35,8 @@ export default class WahlkreisIndexPage extends React.Component {
           >
             Wahlkreis
           </h1>
-        </div>
+        </div> */}
+        <WahlkreisCover />
         <section className="section">
           <div className="container">
             <div className="content finerInnerHTML">

@@ -2,13 +2,14 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import AktuellesBlogRoll from "../../components/AktuellesBlogRoll";
+import AktuellesCover from "../../components/AktuellesCover";
 
 export default class AktuellesBlogIndexPage extends React.Component {
   render() {
 ;
     return (
       <Layout>
-        <div
+        {/* <div
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/aktuelles-cover.jpg')`,
@@ -23,7 +24,8 @@ export default class AktuellesBlogIndexPage extends React.Component {
           >
             Presse & Aktuelles
           </h1>
-        </div>
+        </div> */}
+        <AktuellesCover />
         <section className="section">
           <div className="container">
             <h1
