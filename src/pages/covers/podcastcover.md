@@ -1,5 +1,5 @@
 ---
 templateKey: podcast-cover
 title: Podcast
-image: \img\Twitter Header.jpg
+image: /img/twitter-header.jpg
 ---
