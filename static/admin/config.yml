@@ -295,6 +295,118 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "cover"
+    label: "Cover"
+    files:
+      - file: "src/pages/covers/newscover.md"
+        label: "News Cover"
+        name: "newscover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "news-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
+      - file: "src/pages/covers/aktuellescover.md"
+        label: "Aktuelles Cover"
+        name: "aktuellescover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "aktuelles-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
+      - file: "src/pages/covers/terminecover.md"
+        label: "Termine"
+        name: "terminecover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "termine-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
+      - file: "src/pages/covers/podcastcover.md"
+        label: "Podcast"
+        name: "podcastcover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "podcast-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
+      - file: "src/pages/covers/lebenslaufcover.md"
+        label: "Lebenslauf"
+        name: "lebenslaufcover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "lebenslauf-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
+      - file: "src/pages/covers/themencover.md"
+        label: "Meine Themen"
+        name: "themencover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "themen-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
+      - file: "src/pages/covers/wahlkreiscover.md"
+        label: "Wahlkreis"
+        name: "wahlkreiscover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "wahlkreis-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
+      - file: "src/pages/covers/kontaktcover.md"
+        label: "Kontakt"
+        name: "kontaktcover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "kontakt-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
+      - file: "src/pages/covers/pressebildercover.md"
+        label: "Pressebilder"
+        name: "pressebildercover"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "pressebilder-cover",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Cover, name: image, widget: image }
   - name: "pages"
     label: "Startseite"
     files:
