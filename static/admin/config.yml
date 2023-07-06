@@ -251,6 +251,21 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Zuletzt aktualisiert:", name: "date", widget: "datetime" }
+  - name: "themeneinleitung"
+    label: "Themeneinleitung"
+    folder: "src/pages/themen"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "themeneinleitung-page",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      # - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "themenBlog"
     label: "Themen"
     folder: "src/pages/themen"
