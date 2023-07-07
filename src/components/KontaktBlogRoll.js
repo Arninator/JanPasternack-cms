@@ -22,21 +22,24 @@ class KontaktBlogRollTemplate extends React.Component {
                 <div className="finerInnerHTML largerInnerHTML" dangerouslySetInnerHTML={{__html: post.html}}></div>
                 <div
                   id="social-media-container"
-                  className="flex-row space-around full-width"
+                  className="flex-column space-around full-width"
                   style={{
-                    margin: "15% 0",
-                    alignItems: "center",
+                    margin: "0 15%",
+                    alignItems: "flex-end",
                     flexWrap: "wrap"
                   }}
                 >
                   { post.frontmatter.socialmedia.map(media => (
                     <div className="flex-row flex-center" style={{ fontWeight: "600", fontSize: "2vh"}}>
+                      <a className="footer-item" href={ media.link } target="_blank">
+                        Jan auf { media.name }&nbsp;&nbsp;&nbsp;&rarr;
+                      </a>   
                       <a 
                         className="footer-item flex-column flex-center" 
                         href={ media.link }
                         target="_blank"
                         style={{
-                          margin: "1vw",
+                          // margin: "1vw",
                           fontSize: "3vh",
                           color: "white",
                           width: "4vh",
@@ -48,7 +51,7 @@ class KontaktBlogRollTemplate extends React.Component {
                         {console.log(post.frontmatter.socialmedia.length)}
                         <i className={`fa fa-${media.name.toLowerCase()}`}></i>
                       </a>
-                      Jan auf { media.name }
+                           
                     </div>
                   ))}
                 </div>
