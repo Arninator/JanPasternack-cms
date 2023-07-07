@@ -4,20 +4,18 @@ import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import PresseBlogRoll from "../components/PresseBlogRoll";
 import AktuellesBlogRoll from "../components/AktuellesBlogRoll";
 import TermineBlogRoll from "../components/TermineBlogRoll";
 
-import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+// import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 
-import jancover from "../img/jan-cover.jpg";
-import janUnterschrift from "../img/Unterschrift.jpg"
+// import jancover from "../img/jan-cover.jpg";
+// import janUnterschrift from "../img/Unterschrift.jpg"
 
 import "../components/style.css";
 
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import FullWidthImage from "../components/FullWidthImage";
+// import FullWidthImage from "../components/FullWidthImage";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
@@ -127,9 +125,9 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="fragment tile is-flex is-flex-direction-row columns whiteBackground fade-in"
+                    className="fragment tile flex-column centerCenter whiteBackground fade-in"
                   >
-                    <div className="column is-6">
+                    <div className="">
                       <div className="tile flex-column flex-center">
                         <h3 className="has-text-weight-semibold is-size-1">Podcast</h3>
                         <h4 className="" style={{ fontWeight: "400", fontSize: "28px"}}>
@@ -137,10 +135,17 @@ export const IndexPageTemplate = ({
                           <br />
                         </h4>
                       </div>
-                      <iframe src="https://open.spotify.com/embed/show/4MNRVmUE0Sx552xTez27Fn?utm_source=generator" style={{ width:"100%", height:"352px", frameBorder:"0", allowfullscreen:"", allow:"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture", border:"none"}} loading="lazy"></iframe>                    
+                      <div style={{ marginBottom: "3rem"}}>
+                        <iframe src="https://open.spotify.com/embed/show/4MNRVmUE0Sx552xTez27Fn?utm_source=generator" style={{ width:"100%", height:"352px", frameBorder:"0", allowfullscreen:"", allow:"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture", border:"none"}} loading="lazy"></iframe>                    
+                      </div>
                     </div>
-                    <div
-                      className="twitter-div column is-6"
+                    <div className="" style={{ justifySelf: "center", alignSelf: "center"}}>
+                      <Link className="plain-button" to={ "/podcast" }>
+                        Mehr erfahren &rarr;
+                      </Link>
+                    </div>
+                    {/* <div
+                      className="twitter-div column"
                     >
                       <div className="tile flex-row flex-center">
                         <h3 className="has-text-weight-semibold is-size-1" style={{ fontWeight: "400", fontSize: "28px"}}>
@@ -155,7 +160,7 @@ export const IndexPageTemplate = ({
                         tweetLimit="1"
                         // options={{}}
                       />
-                    </div>
+                    </div> */}
                   </div>
                   
                   {/* <div 
