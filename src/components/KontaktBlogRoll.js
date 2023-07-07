@@ -62,7 +62,8 @@ class KontaktBlogRollTemplate extends React.Component {
             className="button column is-4 plain-button" 
             to="/pressebilder"
             style={{
-              margin: "5vh auto"
+              margin: "5vh auto",
+              paddingBottom: "2rem"
             }}
           >
             Pressebilder &rarr;
