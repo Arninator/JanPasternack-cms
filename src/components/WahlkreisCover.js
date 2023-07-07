@@ -23,12 +23,13 @@ class WahlkreisCoverTemplate extends React.Component {
         {posts.length > 0 ?
           posts.map(({ node: post }) => (
             <div
-                className="full-width-image-container margin-top-0"
-                style={{
-                  backgroundImage: `url("${ post.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src }")`,
-                  backgroundPosition: "0% 42%",
-                }}
-              >
+              id="frankfurt-cover"
+              className="full-width-image-container margin-top-0"
+              style={{
+                backgroundImage: `url("${ post.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src }")`,
+                backgroundPosition: "0% 42%",
+              }}
+            >
                 <h1
                   className="red-header"
                   style={{

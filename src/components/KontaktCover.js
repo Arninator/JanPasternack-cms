@@ -23,13 +23,14 @@ class KontaktCoverTemplate extends React.Component {
         {posts.length > 0 ?
           posts.map(({ node: post }) => (
             <div
-                className="full-width-image-container margin-top-0"
-                style={{
-                  backgroundImage: `url("${ post.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src }")`,
-                  // backgroundPosition: "0% 91%",
-                  // height: "66vh"
-                }}
-              >
+              id="kontakt-cover"
+              className="full-width-image-container margin-top-0"
+              style={{
+                backgroundImage: `url("${ post.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src }")`,
+                // backgroundPosition: "0% 91%",
+                // height: "66vh"
+              }}
+            >
                 <h1
                   className="red-header"
                   style={{
