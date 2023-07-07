@@ -139,7 +139,7 @@ export const IndexPageTemplate = ({
                         <iframe src="https://open.spotify.com/embed/show/4MNRVmUE0Sx552xTez27Fn?utm_source=generator" style={{ width:"100%", height:"352px", frameBorder:"0", allowfullscreen:"", allow:"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture", border:"none"}} loading="lazy"></iframe>                    
                       </div>
                     </div>
-                    <div className="" style={{ justifySelf: "center", alignSelf: "center"}}>
+                    <div className="full-width flex-row flex-center">
                       <Link className="plain-button" to={ "/podcast" }>
                         Mehr erfahren &rarr;
                       </Link>
