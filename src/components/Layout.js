@@ -7,6 +7,7 @@ import "../components/style.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import $ from "jquery";
+// import { kebabCase } from "lodash";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -15,7 +16,8 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <Helmet>
         <html lang="de" />
-        <title>{ title }</title>
+        { console.log(children)}
+        <title>{ title + " | " + (children[0] !== undefined ? (children[0]._owner.key).substring(1,2).toUpperCase() + (children[0]._owner.key).substring(2, (children[0]._owner.key).length - 1) : children.props.title !== undefined ? children.props.title : "Home" ) }</title>
         <meta name="description" content={ description } />
 
         <link
