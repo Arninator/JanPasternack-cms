@@ -441,6 +441,13 @@
     #kontakt-article {
         flex-direction: column;
     }
+    #social-media-container {
+        margin-top: 3rem !important;
+        align-items: flex-start !important;
+    }
+    #social-media-label {
+        flex-direction: row-reverse;
+    }
 }
 @media only screen and (min-width: 0px) and (max-width: 479px){
     #cover {
