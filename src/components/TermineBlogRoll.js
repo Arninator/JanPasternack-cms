@@ -102,7 +102,10 @@ class TermineBlogRollTemplate extends React.Component {
     return (
       <div 
         className={`columns full-width ${ typeof window !== "undefined" && window.location.href.includes("termine") && window.innerWidth < 700 ? "is-multiline flex-column" : "flex-row space-between" }`} 
-        style={{margin: "0% 2%"}}
+        style={{
+          margin: "0% 2%",
+          minHeight: "33vh"
+        }}
       >
         {this.state.frequency < 4 ? (
           <button
@@ -188,13 +191,14 @@ class TermineBlogRollTemplate extends React.Component {
             </div>
           ): (""))) : 
           <div 
-            className="is-parent column is-12"
+            className="is-parent column is-12 flex-row flex-center "
             style={{
               margin: "1vw",
-              color: "darkolivegreen"
+              color: "darkolivegreen",
+              alignSelf: "center"
             }}
           >
-            Aktuell stehen keine Termine an...
+            <p className="column is-4" style={{ margin: "auto", fontSize: "1.5rem", fontWeight: "400"}}>Aktuell stehen keine Termine an...</p>
           </div>}
         </div>
         {this.state.frequency < 4 ? (
