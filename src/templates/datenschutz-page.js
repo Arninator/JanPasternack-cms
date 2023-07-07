@@ -53,7 +53,7 @@ const DatenschutzBlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         // description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="Datenschutz">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -61,7 +61,7 @@ const DatenschutzBlogPost = ({ data }) => {
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
+        // tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
     </Layout>
@@ -85,7 +85,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
       }
     }
   }
