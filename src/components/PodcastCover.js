@@ -26,7 +26,7 @@ class PodcastCoverTemplate extends React.Component {
                 className="full-width-image-container margin-top-0"
                 style={{
                   backgroundImage: `url("${ post.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src }")`,
-                  backgroundPosition: "0% 91%",
+                  backgroundPosition: "50% 91%",
                   height: "66vh"
                 }}
               >
