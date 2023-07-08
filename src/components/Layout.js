@@ -17,7 +17,7 @@ const TemplateWrapper = ({ children }) => {
       <Helmet>
         <html lang="de" />
         { console.log(children)}
-        <title>{ title + " | " + (children[0] !== undefined && children[0]._owner.key ? (children[0]._owner.key).substring(1,2).toUpperCase() + (children[0]._owner.key).substring(2, (children[0]._owner.key).length - 1) : children.props.title !== undefined ? children.props.title : "Home" ) }</title>
+        <title>{ title + " | " + (children[0] !== undefined && children[0]._owner ? (children[0]._owner.key).substring(1,2).toUpperCase() + (children[0]._owner.key).substring(2, (children[0]._owner.key).length - 1) : children.props.title !== undefined ? children.props.title : "Home" ) }</title>
         <meta name="description" content={ description } />
 
         <link
