@@ -8,4 +8,4 @@ Ich liebe das besondere Flair und den Zusammenhalt dieses schönen Stadtteils. H
 
 **Das ist mein Lieblingsplatz:**
 
-Das habel.elf ist ein ehrenamtlich geführter Kulturtreff, das neben großartigen Live-Events auch spannende Fußballabende organisiert.
+Das habel.elf habe ich neu entdeckt. Es ist ein ehrenamtlich geführter Kulturtreff, das neben großartigen Live-Events auch spannende Fußballabende organisiert.
