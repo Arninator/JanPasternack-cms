@@ -26,7 +26,7 @@ class AktuellesCoverTemplate extends React.Component {
                 className="full-width-image-container margin-top-0"
                 style={{
                   backgroundImage: `url("${ post.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src }")`,
-                  backgroundPosition: "50% 75%"
+                  backgroundPosition: "50% 50%"
                 }}
               >
                 <h1
