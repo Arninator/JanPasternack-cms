@@ -16,7 +16,7 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <Helmet>
         <html lang="de" />
-        { console.log(children)}
+        {/* { console.log(children)} */}
         <title>{ title + " | "
                   // (children[0] !== undefined && children[0]._owner ? (children[0]._owner.key).substring(1,2).toUpperCase() + (children[0]._owner.key).substring(2, (children[0]._owner.key).length - 1) : children.props.title !== undefined && children.props !== undefined ? children.props.title : "Home" ) 
                 }
@@ -60,6 +60,15 @@ const TemplateWrapper = ({ children }) => {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         {/* INSTAGRAM */}
         {/* <script async src="//www.instagram.com/embed.js"></script> */}
+
+        {/*  D3  */}
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+        <script src="https://d3js.org/topojson.v2.min.js"></script>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
       </Helmet>
       <div 
         id="placeholder"
