@@ -75,7 +75,7 @@ export default class PodcastBlogIndexPage extends React.Component {
               {/* <iframe id="actPodcast" src="https://gudezukunft.podigee.io/45-new-episode/embed?context=website" height="400px" width="100%"></iframe> */}
               
             </div>
-            <iframe style={{borderRadius: "12px"}} src="https://open.spotify.com/embed/playlist/1DkMPXzanSWh5F8PdO8rQQ?utm_source=generator&theme=0" width="100%" height="500vh" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            {/* <iframe style={{borderRadius: "12px"}} src="https://open.spotify.com/embed/playlist/1DkMPXzanSWh5F8PdO8rQQ?utm_source=generator&theme=0" width="100%" height="500vh" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
             <div id="podcast-episodes">
 
             </div>
