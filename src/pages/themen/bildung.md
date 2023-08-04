@@ -1,6 +1,9 @@
 ---
 templateKey: themen-page
-title: Bildung
-description: starke öffentliche Schulen und eine Erwachsenenbildung am Puls der Zeit
+title: Gute Bildung ohne Bezahlschranke
+description: >
+  Was aus unseren Kindern wird, darf nicht vom Geldbeutel der Eltern abhängen.
+  Wir brauchen mehr Kita-Plätze und Fachkräfte, beste öffentliche Schulen und
+  eine starke Erwachsenenbildung.
 ---
 DiesDas

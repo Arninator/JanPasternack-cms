@@ -2,8 +2,10 @@
 templateKey: wahlkreis-page
 title: Bockenheim
 ---
-Bockeheim
+**Was macht den Stadtteil so liebenswert?**
 
-![Newspaper](/img/newspaper-g946beeca8_1280.png "Dies ist eine Zeitung")
+Bockenheim ist mein Lebensmittelpunkt seit 17 Jahren. Hier habe ich gelebt, studiert, geheiratet. Meine Kinder wurden hier geboren und viele meiner Freundinnen und Freunde habe ich in Bockenheim kennengelernt. Das Besondere ist sicher die große gesellschaftliche Diversität, die Familienfreundlichkeit und die Weltoffenheit. Durch meine große Vertrautheit mit dem Stadtteil fühle ich mich manchmal wie in einem kleinen Dorf. Das trägt ganz maßgeblich dazu bei, mich hier zu Hause zu fühlen. 
 
-Hier gehts weiter
+**Das ist mein Lieblingsplatz:**
+
+Da muss ich ganz klar meine Stammkneipe, die Volkswirtschaft in der Jordanstraße, nennen.
