@@ -1,5 +1,5 @@
 ---
 templateKey: news-cover
 title: News
-image: /img/newspaper-g946beeca8_1280.png
+image: /img/lpt-1.jpg
 ---
