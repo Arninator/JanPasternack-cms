@@ -36,7 +36,7 @@ export default class WahlkreisIndexPage extends React.Component {
         <WahlkreisCover />
         <section className="section">
           <div className="container">
-            <div className="content finerInnerHTML">
+            <div className="content" style={{ marginBottom: "3rem"}}>
               <p>
                 Der Landtagswahlkreis 35 (Frankfurt am Main II), für den ich bei der Landtagswahl am 8. Oktober 2023 kandidiere, besteht aus den folgenden Stadtteilen:
                 Bockenheim, Hausen, Heddernheim, NiederurselFrankfurt-Niederursel, Nordweststadt, Praunheim und Rödelheim.

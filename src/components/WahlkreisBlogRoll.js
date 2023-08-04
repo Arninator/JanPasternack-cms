@@ -21,12 +21,12 @@ class WahlkreisBlogRollTemplate extends React.Component {
 
                 <div 
                   className="finerInnerHTML" 
-                  // dangerouslySetInnerHTML={{__html: post.excerpt}}
+                  dangerouslySetInnerHTML={{__html: post.html}}
                   style={{
                     fontWeight: "400"
                   }}
                 >
-                  {post.excerpt}
+                  {/* {post.excerpt} */}
                 </div>
                 
               </article>
