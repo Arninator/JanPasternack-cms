@@ -6,7 +6,7 @@ description: >
   Wir brauchen mehr Kita-Plätze und Fachkräfte, beste öffentliche Schulen und
   eine starke Erwachsenenbildung.
 ---
-Wenn wir unsere Zukunft gestalten wollen, müssen wir die Bereiche Schule und lebenslanges Lernen stärken. Hier bin ich auch beruflich zu Hause, sodass dies einen Schwerpunkt meiner politischen Arbeit ist. Nachfolgend möchte ich Ihnen die wichtigsten Maßnahmen unseres Wahlprogramms für den Bereich Bildung vorstellen.
+Wenn wir unsere Zukunft gestalten wollen, müssen wir die Bereiche Schule und lebenslanges Lernen stärken. Hier bin ich auch beruflich zu Hause, sodass dies einen Schwerpunkt meiner politischen Arbeit ist. *Nachfolgend möchte ich Ihnen die wichtigsten Maßnahmen unseres Wahlprogramms für den Bereich Bildung vorstellen.*
 
 **Demokratie braucht echte Bildungschancen**
 
