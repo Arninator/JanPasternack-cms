@@ -27,7 +27,8 @@ export const WahlkreisBlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            <PostContent content={content} />
+            <div className="finerInnerHTML" dangerouslySetInnerHTML={{__html: content}}></div>
+            {/* <PostContent content={content} /> */}
           </div>
         </div>
       </div>
