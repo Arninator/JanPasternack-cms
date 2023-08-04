@@ -19,16 +19,17 @@ class ThemenBlogRollTemplate extends React.Component {
 
                 <h1 className="is-flex is-flex-row" style={{ fontSize: "3rem", marginBottom: "2rem" }}>{ post.frontmatter.title }</h1>
 
-                <div 
-                  className="finerInnerHTML" 
-                  // dangerouslySetInnerHTML={{__html: post.excerpt}}
+                <div
+                  // className="finerInnerHTML"
+                  dangerouslySetInnerHTML={{__html: post.frontmatter.description}}
                   style={{
-                    fontWeight: "400"
+                    fontWeight: "400",
+                    fontSize: "1.5rem"
                   }}
                 >
-                  {post.excerpt}
+                  {/* {post.excerpt} */}
                 </div>
-                
+
               </article>
               <div className="flex-row flex-center" style={{ margin: "2rem"}}>
                 <Link className="plain-button" to={ post.fields.slug }>

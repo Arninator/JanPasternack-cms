@@ -6,4 +6,3 @@ description: >
   lokale Gewerbetreibende müssen Unterstützung erhalten, damit unsere Stadtteile
   nicht veröden.
 ---
-die sollten mal mehr arbeiten und weniger genderen, genZ hat so eine schlechte arbeitsmoral, furchtbar

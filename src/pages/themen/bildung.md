@@ -6,4 +6,3 @@ description: >
   Wir brauchen mehr Kita-Plätze und Fachkräfte, beste öffentliche Schulen und
   eine starke Erwachsenenbildung.
 ---
-DiesDas

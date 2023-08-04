@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
 // eslint-disable-next-line
-export const ThemenPageTemplate = ({ title, content, contentComponent }) => {
+export const ThemenPageTemplate = ({ title, description, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -14,9 +14,12 @@ export const ThemenPageTemplate = ({ title, content, contentComponent }) => {
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+              <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                 {title}
-              </h2>
+              </h1>
+              <h3 className="is-size-4">
+                {description}
+              </h3>
               <PageContent className="content" content={content} />
             </div>
           </div>

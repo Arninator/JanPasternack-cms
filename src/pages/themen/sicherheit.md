@@ -6,4 +6,3 @@ description: >
   Eine gerechte Sicherheitspolitik schützt zugleich unsere Demokratie und
   bekämpft rechte Gewalt.
 ---
-lass alles mit überwachungskameras zupflastern
