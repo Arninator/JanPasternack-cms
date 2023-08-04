@@ -2,6 +2,7 @@
 templateKey: aktuelles-page
 title: Mauerbau im Juridicum darf nicht zu langfristigem Leerstand führen!
 subtitle: Frankfurt am Main, 22.07.23
+date: 2023-07-22T14:24:37.162Z
 featuredimage: /img/IMG_20201102_184803.jpg
 ---
 Die Goethe Universität hat mit Mauerarbeiten im Erdgeschoss des Juridicums begonnen, die allem Anschein nach dazu dienen sollen, dieses unzugänglich zu machen.  

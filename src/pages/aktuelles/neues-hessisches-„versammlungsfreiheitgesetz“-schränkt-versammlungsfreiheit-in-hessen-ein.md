@@ -4,6 +4,7 @@ info: ""
 title: Neues hessisches „Versammlungsfreiheit-gesetz“ schränkt
   Versammlungsfreiheit in Hessen ein
 subtitle: ""
+date: 2023-06-04T14:24:37.162Z
 featuredimage: /img/microsoftteams-image2.jpg
 link: ""
 ---

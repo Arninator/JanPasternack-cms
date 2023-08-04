@@ -4,6 +4,7 @@ title: Das Land Hessen wird seiner Verantwortung nicht gerecht - Die
   Dondorf-Druckerei muss als Pilotprojekt für eine neue (Um)Bauordnung erhalten
   bleiben!
 subtitle: Frankfurt am Main, 29.06.23
+date: 2023-06-29T14:24:37.162Z
 featuredimage: /img/pxl_20230624_200201939.jpg
 ---
 Studierende und viele andere Engagierte aus Bockenheim zeigen aktuell anhand der Dondorf-Druckerei, wie man kreativ, nachhaltig und verantwortungsbewusst mit historischem Baubestand umgeht. 

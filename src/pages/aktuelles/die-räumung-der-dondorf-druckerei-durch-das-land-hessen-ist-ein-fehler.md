@@ -4,6 +4,7 @@ info: ""
 title: Die Räumung der Dondorf-Druckerei durch das Land Hessen ist ein Fehler!
 subtitle: |
   Frankfurt am Main, 12.07.23 
+date: 2023-07-12T14:24:37.162Z
 featuredimage: /img/pxl_20230624_200201939.jpg
 ---
 Nach Wochen des friedlichen, kreativen und verantwortungsbewussten Protests sowie einer Hausbesetzung gegen einen Abriss der Dondorf-Druckerei begann heute Morgen gegen 7:00 Uhr die Räumung der Dondorf-Druckerei in Frankfurt Bockenheim. 
