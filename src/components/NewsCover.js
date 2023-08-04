@@ -26,7 +26,7 @@ class NewsCoverTemplate extends React.Component {
                 className="full-width-image-container margin-top-0"
                 style={{
                   backgroundImage: `url("${ post.frontmatter.image.childImageSharp.gatsbyImageData.images.fallback.src }")`,
-                  backgroundPosition: "0% 25%"
+                  backgroundPosition: "50% 66%"
                 }}
               >
                 <h1
