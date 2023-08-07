@@ -19,8 +19,11 @@ export const ThemenPageTemplate = ({ title, description, content, contentCompone
               </h1>
               <h3 className="is-size-4">
                 {description}
+                
               </h3>
-              <PageContent className="content" content={content} />
+              <br />
+              {/* <div>{content}</div> */}
+              <PageContent className="content finerInnerHTML" content={content} />
             </div>
           </div>
         </div>
