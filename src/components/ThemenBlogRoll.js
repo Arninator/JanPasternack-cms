@@ -11,20 +11,21 @@ class ThemenBlogRollTemplate extends React.Component {
     // console.log(posts);
 
     return (
+      <section>
       <div className="">
         {posts &&
           posts.map(({ node: post }) => (
             <div className="" key={post.id}>
               <article>
 
-                <h1 className="is-flex is-flex-row" style={{ fontSize: "3rem", marginBottom: "2rem" }}>{ post.frontmatter.title }</h1>
+                <h1 className="is-flex is-flex-row" style={{ fontSize: "2.5rem", marginBottom: "2rem" }}>{ post.frontmatter.title }</h1>
 
                 <div
                   // className="finerInnerHTML"
                   dangerouslySetInnerHTML={{__html: post.frontmatter.description}}
                   style={{
                     fontWeight: "400",
-                    fontSize: "1.5rem"
+                    fontSize: "1.2rem"
                   }}
                 >
                   {/* {post.excerpt} */}
@@ -38,7 +39,7 @@ class ThemenBlogRollTemplate extends React.Component {
               </div>
             </div>
           ))}
-      </div>
+      </div></section>
     )
   }
 }
