@@ -277,7 +277,7 @@
 .fragment {
     padding: 5% 15%;
 }
-.finerInnerHTML > p, a{
+.finerInnerHTML > p, a, em{
     font-weight: 400;
 }
 .largerInnerHTML > p {
