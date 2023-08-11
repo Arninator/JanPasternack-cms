@@ -40,7 +40,7 @@ export const TermineBlogPostTemplate = ({
             <div>
               {eventlink ? <div className="flex-row space-between"><div>Link</div><div><a href={ eventlink } target="_blank">{ eventlink }</a></div></div> : ""}
               <div className="flex-row space-between"><div>Wo</div><div><a href={ location.link } target="_blank">{ location.name }</a></div></div>
-              <div className="flex-row space-between"><div>Wann</div><div>{ date.substring(0,10) }&nbsp;{ (parseInt(date.substring(10,12)) + 2) + date.substring(12) }</div></div>
+              <div className="flex-row space-between"><div>Wann</div><div>{ date.substring(0,10) }&nbsp;{ (parseInt(date.substring(11,13)) + 2) + date.substring(13) }</div></div>
             </div>
           </div>
           <div className="flex-column start-end full-width">
@@ -81,7 +81,7 @@ export const TermineBlogPostTemplate = ({
             <div>
               {eventlink ? <div className="flex-row space-between"><div>Link</div><div><a href={ eventlink } target="_blank">{ eventlink }</a></div></div> : ""}
               <div className="flex-row space-between"><div>Wo</div><div><a href={ location.link } target="_blank">{ location.name }</a></div></div>
-              <div className="flex-row space-between"><div>Wann</div><div>{ date.substring(0,10) }&nbsp;{ (parseInt(date.substring(10,12)) + 2) + date.substring(12) }</div></div>
+              <div className="flex-row space-between"><div>Wann</div><div>{ date.substring(0,10) }&nbsp;{ (parseInt(date.substring(11,13)) + 2) + date.substring(13) }</div></div>
             </div>
           </div>
           
