@@ -40,7 +40,55 @@ class AktuellesBlogRollTemplate extends React.Component {
     return (
       <div className="columns is-multiline">
         {posts.length > 0 ?
-          posts.map(({ node: post }) => (
+          posts.map(({ node: post }, index ) => (
+            typeof document !== "undefined" && document.URL.indexOf("aktuelles") > -1 ? (
+              <div 
+                className={`is-parent column is-${ this.state.columns }`} 
+                key={post.id}
+              >
+                <article
+                  className={`blog-list-item tile is-child notification kachel ${
+                    post.frontmatter.featuredpost ? 'is-featured' : ''
+                  }`}
+                >
+                  { post.frontmatter.info ? <div style={{ fontWeight: "400" }}>{ post.frontmatter.info }<br /><br /><br /></div> : ""}
+                  <header className="flex-column flex-center">
+                    <p 
+                      className="post-meta blog-title"
+                      style={{ 
+                        fontWeight: "400",
+                        fontSize: "1.5rem"
+                      }}
+                    >
+                      { post.frontmatter.title }
+                    </p>
+                    { post.frontmatter.featuredimage ? (
+                      <div style={{ margin: "0 0 2vh 0", minHeight: "25vh", maxHeight: "25vh", overflow: "hidden"}}>
+                        <PreviewCompatibleImage
+                          imageInfo={{
+                            image: post.frontmatter.featuredimage,
+                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          }}
+                        />
+                      </div>
+                    ) : null}
+                    <p style={{ margin: "0vh", fontWeight: "400" }}>
+                      { post.frontmatter.subtitle }
+                    </p>
+                  </header>
+                  <p style={{ fontWeight: "100"}} >
+                    { post.excerpt }
+                    <br />
+                    <br />
+                  </p>
+                  <div className="flex-row flex-center">
+                    <Link className="button" to={ post.fields.slug }>
+                      Weiterlesen &rarr;
+                    </Link>
+                  </div>
+                </article>
+              </div>
+            ) : index < 3 ?
             <div 
               className={`is-parent column is-${ this.state.columns }`} 
               key={post.id}
@@ -86,7 +134,7 @@ class AktuellesBlogRollTemplate extends React.Component {
                   </Link>
                 </div>
               </article>
-            </div>
+            </div> : ""
           )) : 
           <div 
             className="is-parent column is-4"
