@@ -88,7 +88,7 @@ class AktuellesBlogRollTemplate extends React.Component {
                   </div>
                 </article>
               </div>
-            ) : index < 3 ?
+            ) : index < ( 12 / this.state.columns ) ?
             <div 
               className={`is-parent column is-${ this.state.columns }`} 
               key={post.id}
