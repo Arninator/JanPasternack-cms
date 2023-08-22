@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+// import PreviewCompatibleImage from './PreviewCompatibleImage'
 import { GatsbyImage } from "gatsby-plugin-image";
 import { getImage } from "gatsby-plugin-image";
-import $ from "jquery";
+// import $ from "jquery";
 
 class TermineBlogRollTemplate extends React.Component {
 
