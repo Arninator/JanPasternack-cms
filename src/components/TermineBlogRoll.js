@@ -107,6 +107,11 @@ class TermineBlogRollTemplate extends React.Component {
           minHeight: "33vh"
         }}
       >
+        {/* 
+            //--------------------------
+            //---------- PREV ----------
+            //-------------------------- 
+        */}
         {this.state.frequency < 4 ? (
           <button
             className="invisible-button"
@@ -114,7 +119,7 @@ class TermineBlogRollTemplate extends React.Component {
               fontSize: "3vh",
               fontWeight: "600",
               height: "100%",
-              color: `${ this.state.currentIndex == 0 ? "lightgrey" : "black"}`,
+              color: `${ this.state.currentIndex == 0 ? "transparent" : "black"}`,
               alignSelf: "center",
             }}
             onClick={ () => this.prev() }
@@ -201,13 +206,19 @@ class TermineBlogRollTemplate extends React.Component {
             <p className="column is-4" style={{ margin: "auto", fontSize: "1.5rem", fontWeight: "400"}}>Aktuell stehen keine Termine an...</p>
           </div>}
         </div>
+        {/* 
+            //--------------------------
+            //---------- NEXT ----------
+            //-------------------------- 
+        */}
+        { console.log("currIndex: " + this.state.currentIndex + " == postList.length: " + postList.length + " - this.state.frequency: " + this.state.frequency) }
         {this.state.frequency < 4 ? (
         <button
           className="invisible-button"
           style={{
             fontSize: "3vh",
             fontWeight: "600",
-            color: `${ this.state.currentIndex == postList.length - this.state.frequency ? "lightgrey" : "black"}`,
+            color: `${ this.state.currentIndex >= postList.length - this.state.frequency ? "transparent" : "black"}`,
            }}
           onClick={ () => this.next( postList.length ) }
         >
