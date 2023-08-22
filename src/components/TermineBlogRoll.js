@@ -211,7 +211,7 @@ class TermineBlogRollTemplate extends React.Component {
             //---------- NEXT ----------
             //-------------------------- 
         */}
-        { console.log("currIndex: " + this.state.currentIndex + " == postList.length: " + postList.length + " - this.state.frequency: " + this.state.frequency) }
+        {/* { console.log("currIndex: " + this.state.currentIndex + " == postList.length: " + postList.length + " - this.state.frequency: " + this.state.frequency) } */}
         {this.state.frequency < 4 ? (
         <button
           className="invisible-button"
