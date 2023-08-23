@@ -97,7 +97,7 @@ class TermineBlogRollTemplate extends React.Component {
     var yyyy = today.getFullYear();
     var dateString = yyyy + "." + mm + "." + dd
 
-    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date >= dateString )) : "" ;
+    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date < dateString )) : "" ;
 
     return (
       <div 
@@ -149,49 +149,54 @@ class TermineBlogRollTemplate extends React.Component {
                   }`}
                 >
                   <header className="flex-column flex-center">
-                    {post.frontmatter.featuredimage ? (
-                      <div 
-                        className="flex-column flex-center"
-                        style={{
-                          marginBottom: "1vh",
-                        }}
-                      >
-                        <p className="subtitle is-size-5 is-block" style={{ alignSelf: "flex-start"}}>
-                          { (post.frontmatter.date.substring(8) + "." + post.frontmatter.date.substring(5,7) + "." + post.frontmatter.date.substring(0,4)) }
-                        </p>
+                    <p className="subtitle is-size-5 is-block" style={{ alignSelf: "flex-start", fontWeight: "600"}}>
+                      { (post.frontmatter.date.substring(8) + "." + post.frontmatter.date.substring(5,7) + "." + post.frontmatter.date.substring(0,4)) }
+                    </p>
+                    <div 
+                      className="is-flex is-flex-direction-row is-justify-content-space-between"
+                      style={{
+                        width: "100%",
+                        marginBottom: "1vh",
+                      }}
+                    >
+                      {post.frontmatter.featuredimage ? (
                         <GatsbyImage
                           image={ getImage(post.frontmatter.featuredimage) }
                           style={{
-                            aspectRatio: "1 / 0.5"
+                            // aspectRatio: "1 / 1",
+                            // backgroundSize: "cover",
+                            width: "100%",
                           }}
                         />
+                      ) : null}
+                      <div
+                        className="post-meta blog-title"
+                        style={{
+                          margin: "0 0 0 5%"
+                        }}
+                      >
+                        {post.frontmatter.title}
+                        <p className="flex-column" style={{ fontSize: "1rem", fontWeight: "100" }}>
+                          { post.excerpt }
+                          <br />
+                          <br />
+                          <br />
+                        </p>
+                        <span
+                          className="flex-row flex-center"
+                          style={{
+                            width: "100%"
+                          }}
+                        >
+                          <Link className="button" to={post.fields.slug}>
+                            Zeigen &rarr;
+                          </Link>
+                        </span>                          
                       </div>
-                    ) : null}
-                    <p 
-                      className="post-meta blog-title"
-                      style={{
-                        width: "100%"
-                      }}
-                    >
-                      {post.frontmatter.title}                          
-                    </p>
+                    </div>
                   </header>
-                  <p className="flex-column" style={{ fontWeight: "400" }}>
-                    { post.excerpt }
-                    <br />
-                    <br />
-                    <br />
-                  </p>
-                  <span
-                    className="flex-row flex-center"
-                    style={{
-                      width: "100%"
-                    }}
-                  >
-                    <Link className="button" to={post.fields.slug}>
-                      Zeigen &rarr;
-                    </Link>
-                  </span>
+                  
+                  
                 </article>
             </div>
           ): (""))) : 
