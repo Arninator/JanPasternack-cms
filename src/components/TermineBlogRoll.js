@@ -97,7 +97,7 @@ class TermineBlogRollTemplate extends React.Component {
     var yyyy = today.getFullYear();
     var dateString = yyyy + "." + mm + "." + dd
 
-    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date < dateString )) : "" ;
+    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date >= dateString )) : "" ;
 
     return (
       <div 
