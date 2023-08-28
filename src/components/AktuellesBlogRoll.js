@@ -2,6 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { GatsbyImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
+
+import $ from "jquery";
 
 class AktuellesBlogRollTemplate extends React.Component {
 
@@ -50,43 +54,59 @@ class AktuellesBlogRollTemplate extends React.Component {
                   className={`blog-list-item tile is-child notification kachel ${
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
+                  style={{
+                    minHeight: "45rem",
+                    // aspectRatio: "1 / 1.5",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    alignItems: "center"
+                  }}
                 >
                   { post.frontmatter.info ? <div style={{ fontWeight: "400" }}>{ post.frontmatter.info }<br /><br /><br /></div> : ""}
                   <header className="flex-column flex-center">
                     <p 
                       className="post-meta blog-title"
                       style={{ 
-                        fontWeight: "400",
-                        fontSize: "1.5rem"
+                        fontWeight: "600",
+                        fontSize: "1.5rem",
+                        minHeight: "4.5rem",
+                        marginBottom: "0"
                       }}
                     >
                       { post.frontmatter.title }
                     </p>
+                    <p style={{ minHeight: "1.5rem", margin: "1vh auto", fontWeight: "600" }}>
+                      { post.frontmatter.subtitle }
+                    </p>
                     { post.frontmatter.featuredimage ? (
-                      <div style={{ margin: "0 0 2vh 0", minHeight: "25vh", maxHeight: "25vh", overflow: "hidden"}}>
-                        { console.log(post.frontmatter.featuredimage) }
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                            style: {
-                              // maxHeight: "10px !important",
-                              border: "2px solid red",
-                            }
+                      <div 
+                        style={{ 
+                          margin: "0 0 2vh 0", 
+                          overflow: "hidden"
+                        }}
+                      >
+                        <GatsbyImage
+                          id={ `image-${post.id}` }
+                          image={ getImage(post.frontmatter.featuredimage) }
+                          style={{
+                      
+                            // backgroundSize: "cover",
+                            // width: "100%",
+                            // minHeight: "10rem",
+                            // maxHeight: "rem",
+                            // maxWidth: "75%",
+                            aspectRatio: "1 / 0.8",
+                            // aspectRatio: post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.width > post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.height ? "1 / 0.75" : "1 / 1",
                           }}
                         />
                       </div>
                     ) : null}
-                    <p style={{ margin: "0vh", fontWeight: "400" }}>
-                      { post.frontmatter.subtitle }
-                    </p>
                   </header>
-                  <p style={{ fontWeight: "100"}} >
+                  <p className="" style={{ height: "200%", fontWeight: "100"}} >
                     { post.excerpt }
-                    <br />
-                    <br />
                   </p>
-                  <div className="flex-row flex-center">
+                  <div className="">
                     <Link className="button" to={ post.fields.slug }>
                       Weiterlesen &rarr;
                     </Link>
@@ -102,38 +122,59 @@ class AktuellesBlogRollTemplate extends React.Component {
                 className={`blog-list-item tile is-child notification kachel ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
+                style={{
+                  minHeight: "45rem",
+                  // aspectRatio: "1 / 1.5",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  alignItems: "center"
+                }}
               >
                 { post.frontmatter.info ? <div style={{ fontWeight: "400" }}>{ post.frontmatter.info }<br /><br /><br /></div> : ""}
                 <header className="flex-column flex-center">
                   <p 
                     className="post-meta blog-title"
                     style={{ 
-                      fontWeight: "400",
-                      fontSize: "1.5rem"
+                      fontWeight: "600",
+                      fontSize: "1.5rem",
+                      minHeight: "4.5rem",
+                      marginBottom: "0"
                     }}
                   >
                     { post.frontmatter.title }
                   </p>
+                  <p style={{ minHeight: "1.5rem", margin: "1vh auto", fontWeight: "600" }}>
+                    { post.frontmatter.subtitle }
+                  </p>
                   { post.frontmatter.featuredimage ? (
-                    <div style={{ margin: "0 0 2vh 0", minHeight: "25vh", maxHeight: "25vh", overflow: "hidden"}}>
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                    <div 
+                      style={{ 
+                        margin: "0 0 2vh 0", 
+                        overflow: "hidden"
+                      }}
+                    >
+                      <GatsbyImage
+                        id={ `image-${post.id}` }
+                        image={ getImage(post.frontmatter.featuredimage) }
+                        style={{
+                    
+                          // backgroundSize: "cover",
+                          // width: "100%",
+                          // minHeight: "10rem",
+                          // maxHeight: "rem",
+                          // maxWidth: "75%",
+                          aspectRatio: "1 / 0.8",
+                          // aspectRatio: post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.width > post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.height ? "1 / 0.75" : "1 / 1",
                         }}
                       />
                     </div>
                   ) : null}
-                  <p style={{ margin: "0vh", fontWeight: "400" }}>
-                    { post.frontmatter.subtitle }
-                  </p>
                 </header>
-                <p style={{ fontWeight: "100"}} >
+                <p className="" style={{ height: "200%", fontWeight: "100"}} >
                   { post.excerpt }
-                  <br />
-                  <br />
                 </p>
-                <div className="flex-row flex-center">
+                <div className="">
                   <Link className="button" to={ post.fields.slug }>
                     Weiterlesen &rarr;
                   </Link>
@@ -177,7 +218,7 @@ export default function AktuellesBlogRoll() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 100)
+                excerpt(pruneLength: 250)
                 id
                 fields {
                   slug
