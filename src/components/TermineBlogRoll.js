@@ -12,7 +12,7 @@ class TermineBlogRollTemplate extends React.Component {
     super(props);
 
     this.state = {
-      columns: 12,
+      columns: 4,
       frequency: 4,
       currentIndex: 0,
     };
@@ -97,7 +97,7 @@ class TermineBlogRollTemplate extends React.Component {
     var yyyy = today.getFullYear();
     var dateString = yyyy + "." + mm + "." + dd
 
-    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date >= dateString )) : "" ;
+    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date < dateString )) : "" ;
 
     return (
       <div 
@@ -163,20 +163,27 @@ class TermineBlogRollTemplate extends React.Component {
                         <GatsbyImage
                           image={ getImage(post.frontmatter.featuredimage) }
                           style={{
-                            // aspectRatio: "1 / 1",
+                            
                             // backgroundSize: "cover",
-                            width: "100%",
+                            // width: "100%",
+                            // minHeight: "150%",
+                            aspectRatio: "3 / 2",
                           }}
                         />
                       ) : null}
                       <div
                         className="post-meta blog-title"
                         style={{
-                          margin: "0 0 0 5%"
+                          margin: "0 0 0 5%",
+                          alignSelf: "center"
                         }}
                       >
                         {post.frontmatter.title}
-                        <p className="flex-column" style={{ fontSize: "1rem", fontWeight: "100" }}>
+                                    
+                      </div>
+                               
+                    </div>
+                    <p className="flex-column" style={{ fontSize: "1rem", fontWeight: "100" }}>
                           { post.excerpt }
                           <br />
                           <br />
@@ -191,9 +198,7 @@ class TermineBlogRollTemplate extends React.Component {
                           <Link className="button" to={post.fields.slug}>
                             Zeigen &rarr;
                           </Link>
-                        </span>                          
-                      </div>
-                    </div>
+                        </span>     
                   </header>
                   
                   
