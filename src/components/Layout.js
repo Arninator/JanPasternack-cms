@@ -16,8 +16,9 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <Helmet>
         <html lang="de" />
-        {/* { console.log(children)} */}
-        <title>{ title + " | "
+        { console.log(description)}
+        <title>{ title
+                  // " | "
                   // (children[0] !== undefined && children[0]._owner ? (children[0]._owner.key).substring(1,2).toUpperCase() + (children[0]._owner.key).substring(2, (children[0]._owner.key).length - 1) : children.props.title !== undefined && children.props !== undefined ? children.props.title : "Home" ) 
                 }
         </title>
