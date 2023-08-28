@@ -12,7 +12,7 @@ class TermineBlogRollTemplate extends React.Component {
     super(props);
 
     this.state = {
-      columns: 4,
+      columns: 12,
       frequency: 4,
       currentIndex: 0,
     };
@@ -97,7 +97,7 @@ class TermineBlogRollTemplate extends React.Component {
     var yyyy = today.getFullYear();
     var dateString = yyyy + "." + mm + "." + dd
 
-    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date < dateString )) : "" ;
+    const postList = posts.length > 0 ? posts.filter(({ node: post }) => ( post.frontmatter.date >= dateString )) : "" ;
 
     return (
       <div 
@@ -138,25 +138,37 @@ class TermineBlogRollTemplate extends React.Component {
               className={`is-parent column is-${ this.state.columns }`} 
               key={post.id}
               style={{
-                // alignSelf: "flex-start"
+                
+                height: ""
               }}
             >
               {/* {console.log("currIndex: " + this.state.currentIndex + " filterlength: " + posts.length)}
               { console.log("ID: " + index) } */}
               <article
-                  className={`blog-list-item tile is-child notification kachel ${
+                  className={`blog-list-item tile is-child notification kachel column is-flex ${
                     post.frontmatter.featuredpost ? 'is-featured' : ''
                   }`}
+                  style={{
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    aspectRatio: "1 / 1",
+                  }}
                 >
-                  <header className="flex-column flex-center">
-                    <p className="subtitle is-size-5 is-block" style={{ alignSelf: "flex-start", fontWeight: "600"}}>
-                      { (post.frontmatter.date.substring(8) + "." + post.frontmatter.date.substring(5,7) + "." + post.frontmatter.date.substring(0,4)) }
-                    </p>
+                  <p className="subtitle is-block" style={{ fontSize: "1.8rem", fontWeight: "600", alignSelf: "flex-start"}}>
+                    { (post.frontmatter.date.substring(8) + "." + post.frontmatter.date.substring(5,7) + "." + post.frontmatter.date.substring(0,4)) }
+                  </p>
+                  <header 
+                    className="flex-column space-between" 
+                    style={{ 
+                      height: "100%" 
+                    }}
+                  >
                     <div 
                       className="is-flex is-flex-direction-row is-justify-content-space-between"
                       style={{
                         width: "100%",
                         marginBottom: "1vh",
+                        // justifySelf: "flex-start"
                       }}
                     >
                       {post.frontmatter.featuredimage ? (
@@ -166,8 +178,9 @@ class TermineBlogRollTemplate extends React.Component {
                             
                             // backgroundSize: "cover",
                             // width: "100%",
-                            // minHeight: "150%",
-                            aspectRatio: "3 / 2",
+                            minHeight: "10rem",
+                            maxWidth: "33%",
+                            aspectRatio: "5 / 3",
                           }}
                         />
                       ) : null}
@@ -179,29 +192,27 @@ class TermineBlogRollTemplate extends React.Component {
                         }}
                       >
                         {post.frontmatter.title}
-                                    
                       </div>
-                               
                     </div>
-                    <p className="flex-column" style={{ fontSize: "1rem", fontWeight: "100" }}>
-                          { post.excerpt }
-                          <br />
-                          <br />
-                          <br />
-                        </p>
-                        <span
-                          className="flex-row flex-center"
-                          style={{
-                            width: "100%"
-                          }}
-                        >
-                          <Link className="button" to={post.fields.slug}>
-                            Zeigen &rarr;
-                          </Link>
-                        </span>     
+                    <p className="" style={{ fontSize: "1rem", fontWeight: "100", alignSelf: "flex-end !important"}}>
+                      { post.excerpt }
+                      {/* <br />
+                      <br />
+                      <br /> */}
+                    </p>
                   </header>
-                  
-                  
+
+                  <div
+                    className="is-flex is-flex-direction-row"
+                    style={{
+                      width: "100%",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Link className="button" to={post.fields.slug}>
+                      Zeigen &rarr;
+                    </Link>
+                  </div>
                 </article>
             </div>
           ): (""))) : 
