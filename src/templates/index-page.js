@@ -106,9 +106,19 @@ export const IndexPageTemplate = ({
                       />
                     </div>
                   </div>
-                  
-                  <div 
+                  <div
                     className="fragment tile flex-column greyBackground fade-in"
+                  >
+                    <p 
+                      className="" 
+                      style={{
+                        fontSize: "2rem"
+                    }}>
+                      Wenn Sie meine Kampagne unterstützen wollen, können Sie das <a href="https://www.paypal.com/donate/?hosted_button_id=6CDAER4X3ZXAQ" target="_blank" style={{textDecoration: "underline"}}>hier &rarr;</a> mit einer Spende tun. Für Ihren Beitrag Danke ich Ihnen recht herzlich!
+                    </p>
+                  </div>
+                  <div 
+                    className="fragment tile flex-column whiteBackground fade-in"
                   >
                     <div className="tile flex-row flex-center">
                       <h3 className="has-text-weight-semibold is-size-1">
@@ -125,7 +135,7 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <div 
-                    className="fragment tile flex-column centerCenter whiteBackground fade-in"
+                    className="fragment tile flex-column centerCenter greyBackground fade-in"
                   >
                     <div className="">
                       <div className="tile flex-column flex-center">
@@ -202,8 +212,9 @@ export const IndexPageTemplate = ({
                       </div>
                     </div>
                   </div> */}
+                  
                   <div 
-                    className="fragment tile flex-column greyBackground fade-in"
+                    className="fragment tile flex-column whiteBackground fade-in"
                   >
                     <div className="tile flex-row flex-center">
                       <h3 className="has-text-weight-semibold is-size-1">
