@@ -112,9 +112,10 @@ export const IndexPageTemplate = ({
                     <p 
                       className="" 
                       style={{
-                        fontSize: "2rem"
+                        fontSize: "2rem",
+                        fontWeight: "600"
                     }}>
-                      Wenn Sie meine Kampagne unterstützen wollen, können Sie das <a href="https://www.paypal.com/donate/?hosted_button_id=6CDAER4X3ZXAQ" target="_blank" style={{textDecoration: "underline"}}>hier &rarr;</a> mit einer Spende tun. Für Ihren Beitrag Danke ich Ihnen recht herzlich!
+                      Wenn Sie meine Kampagne unterstützen wollen, können Sie das <a href="https://www.paypal.com/donate/?hosted_button_id=6CDAER4X3ZXAQ" target="_blank" style={{textDecoration: "underline"}}>hier &rarr;</a> mit einer Spende tun.
                     </p>
                   </div>
                   <div 
