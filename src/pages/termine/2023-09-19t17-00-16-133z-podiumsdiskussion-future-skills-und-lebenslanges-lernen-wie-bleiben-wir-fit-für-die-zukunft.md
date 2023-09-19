@@ -1,7 +1,6 @@
 ---
 templateKey: termine-page
-title: "Podiumsdiskussion: Future Skills und lebenslanges Lernen - Wie bleiben
-  wir fit für die Zukunft?"
+title: "Podiumsdiskussion: Future Skills und lebenslanges Lernen - Wie bleiben wir fit für die Zukunft?"
 date: 2023-09-19T17:00:16.133Z
 featuredimage: /img/9c310a09-d8fd-4a18-8e82-e28d07e159d7.jpeg
 location:
